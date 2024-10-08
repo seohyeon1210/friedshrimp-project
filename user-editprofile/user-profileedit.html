@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang=ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Edit Profile</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <main id="main">
+            <div class="container">
+                <div class="title">
+                    <h1>회원 정보 수정</h1>
+                    <hr>
+                </div>
+                <!-- <div class="profile">
+                    <div class="image">
+                        <img src="./img/profile.png" alt="프로필 기본 이미지" id="pro-image">
+                            <br>
+                            <input type="file" accept="image/jpeg, image/png, image/jpg" id="input" class="input">
+                            <label for="input" class="upload">
+                                <i class="fa-solid fa-camera"></i>
+                            </label>
+                    </div>
+                </div> -->
+
+                <!-- 프로필 수정 폼 시작 -->
+
+                <div class="form-container">
+
+                    
+
+                    <form action="#" id="profileEdit">
+                        <div class="column-left">
+
+                            <div class="profile">
+                                <div class="image">
+                                    <img src="./img/profile.png" alt="프로필 기본 이미지" id="pro-image">
+                                        <br>
+                                        <input type="file" accept="image/jpeg, image/png, image/jpg" id="input" class="input">
+                                        <label for="input" class="upload">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </label>
+                                </div>
+                            </div>
+
+
+                            <!-- <label for="id">아이디:</label>
+                            <input type="text" name="id" id="id" required>
+
+                            <label for="pw">비밀번호:</label>
+                            <input type="password" name="pw" id="pw" required>
+
+                            <label for="pw">새 비밀번호:</label>
+                            <input type="password" name="pw" id="pw" required>
+
+                            <label for="pw">새 비밀번호 확인:</label>
+                            <input type="password" name="pw" id="pw" required>
+
+                            <label for="gender">성별:</label>
+                            <select name="gender" id="gender" required>
+                                <option value="male">남자</option>
+                                <option value="female">여자</option>
+                                <option value="other">상관없음</option>
+                            </select>
+
+                            <label for="height">키:</label>
+                            <input type="text" name="height" id="height" required>
+
+                            <label for="weight">몸무게:</label>
+                            <input type="text" name="weight" id="weight" required>
+
+                            <button type="button" onclick="submitForm()">수정</button> -->
+                        </div>
+
+                        <div class="column-right">
+                            <label for="id">아이디:</label>
+                            <input type="text" name="id" id="id" required>
+
+                            <label for="pw">비밀번호:</label>
+                            <input type="password" name="pw" id="pw" required>
+
+                            <label for="pw">새 비밀번호:</label>
+                            <input type="password" name="pw" id="pw" required>
+
+                            <label for="pw">새 비밀번호 확인:</label>
+                            <input type="password" name="pw" id="pw" required>
+
+                            <label for="gender">성별:</label>
+                            <select name="gender" id="gender" required>
+                                <option value="male">남자</option>
+                                <option value="female">여자</option>
+                                <option value="other">상관없음</option>
+                            </select>
+
+                            <label for="height">키:</label>
+                            <input type="text" name="height" id="height" required>
+
+                            <label for="weight">몸무게:</label>
+                            <input type="text" name="weight" id="weight" required>
+
+                            <button class="btn" type="button" onclick="submitForm()">수정</button>
+                        </div>
+                    </form>
+                 </div>
+
+            </div>
+
+            <hr>
+        </main>
+        <!-- 자바 스크립트 연결 -->
+        <script src="script.js"></script>
+    </body>
+</html>
