@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+   /* 전체화면 비율 */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Top large div spanning all columns */
+.large-div {
+    grid-column: 1 / 4;
+    height: 300px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 100px;
+}
+
+/* Left ranking div */
+.ranking-div {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Center play button div */
+.play-button-div {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Play button (triangle) inside center div */
+.play-button-div::before {
+    content: "▶";
+    font-size: 30px;
+}
+
+/* 3개 레이아웃 틀 */
+.small-div {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* 3개 레이아웃 - 알알꿀팁게시글*/
+.top {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    height: 180px;
+}
+
+/* 3개 레이아웃 - 광고 */
+.bottom-left {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    height: 200px;
+    margin-bottom: 80px;
+}
+
+/* 3개 레이아웃 - 크루게시글 */
+.bottom-right {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    height: 200px;
+    margin-bottom: 80px;
+}

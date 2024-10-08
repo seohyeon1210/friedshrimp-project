@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 모달</title>
+    <link rel="stylesheet" href="usersingup.css">
+</head>
+<body>
+
+    <!-- 모달 창 -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form>
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name"><br><br>
+                
+                <label for="birth-year">생년월일</label>
+                <input type="text" id="birth-year" name="birth-year" placeholder="년" style="width: 50px;">
+                <input type="text" id="birth-month" name="birth-month" placeholder="월" style="width: 30px;">
+                <input type="text" id="birth-day" name="birth-day" placeholder="일" style="width: 30px;"><br><br>
+                
+                <label for="id">아이디</label>
+                <input type="text" id="id" name="id">
+                <button type="button">중복ID 확인</button><br><br>
+
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password"><br><br>
+                
+                <label for="password-confirm">비밀번호 재입력</label>
+                <input type="password" id="password-confirm" name="password-confirm"><br><br>
+
+                <label for="password-keyword">비밀번호 키워드</label>
+                <input type="text" id="password-keyword" name="password-keyword"><br><br>
+
+                <label for="textarea">추가 정보</label>
+                <textarea id="textarea" name="textarea" rows="4" cols="40"></textarea><br><br>
+
+                <input type="checkbox" id="privacy-consent" name="privacy-consent">
+                <label for="privacy-consent">개인정보수집허용</label><br><br>
+
+                <button type="submit">회원가입</button>
+            </form>
+        </div>
+    </div>
+
+    <button id="openModalBtn">회원가입</button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
