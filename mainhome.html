@@ -3,28 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout</title>
-    <link rel="stylesheet" href="mainstyles.css">
+    <title>Manual Slide and Video</title>
+    <link rel="stylesheet" href="mainstyles.css"> <!-- CSS 파일 연결 -->
 </head>
 <body>
-    <div class="container">
-        <!-- Top large div -->
-        <div class="large-div"></div>
-
-        <!-- Left ranking div -->
-        <div class="ranking-div"></div>
-
-        <!-- Center play button div -->
-        <div class="play-button-div"></div>
-
-        <!-- Right top div -->
-        <div class="small-div top"></div>
-
-        <!-- Right bottom left div -->
-        <div class="small-div bottom-left"></div>
-
-        <!-- Right bottom right div -->
-        <div class="small-div bottom-right"></div>
+  <!-- 헤더 영역 -->
+        <header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <a href="#" class="logo">Fried <br> Shrimp</a>
+                <ul id="nav-bar">
+                    <li>
+                        <a href="#" class="btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn"><i class="fa-solid fa-circle-exclamation"></i>알알꿀팁</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+   <!-- 메인 홈페이지 영역 -->
+   <div class="container">
+    <!-- Main banner 슬라이드 -->
+    <div class="mainbanner">
+        <div class="slides">
+            <!-- 1번 슬라이드: 프로필 등록 박스 -->
+            <div class="slide slide1">
+                <div class="profile-box">
+                    <img class="profile-img" src="path/to/your/profile.jpg" alt="프로필 사진"> <!-- 여기에 경로 설정 -->
+                    <p>프로필 등록</p>
+                </div>
+            </div>
+            <!-- 2번 슬라이드 -->
+            <div class="slide slide2">Slide 2</div>
+            <!-- 3번 슬라이드 -->
+            <div class="slide slide3">Slide 3</div>
+        </div>
+        <!-- 좌/우 화살표 버튼 -->
+        <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
     </div>
+
+    <!-- 런닝 랭킹 배너 -->
+    <div class="ranking"></div>
+
+    <!-- 동영상 배너 -->
+    <div class="playmp4">
+        <video width="100%" height="100%" controls>
+            <source src="yourvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Right top div -->
+    <div class="small-div honeybanner"></div>
+
+    <!-- Right bottom left div -->
+    <div class="small-div adbanner"></div>
+
+    <!-- Right bottom right div -->
+    <div class="small-div crewbanner"></div>
+</div>
+
+<!-- JavaScript to control slides -->
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    // 다음 슬라이드로 이동
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlidePosition();
+    }
+
+    // 이전 슬라이드로 이동
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlidePosition();
+    }
+
+    // 슬라이드 위치 업데이트
+    function updateSlidePosition() {
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    // 화살표 버튼 클릭 시 자동 슬라이드 멈춤
+    document.querySelector('.arrow.left').addEventListener('click', () => clearInterval(autoSlide));
+    document.querySelector('.arrow.right').addEventListener('click', () => clearInterval(autoSlide));
+</script>
 </body>
 </html>
+
+
