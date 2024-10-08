@@ -5,13 +5,36 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
         <title>Edit Profile</title>
+        <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
-        <link rel="stylesheet" href="editprofile-style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
-            
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <a href="#" class="logo">Fried <br> Shrimp</a>
+                <ul id="nav-bar">
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+                    </li>
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+                    </li>
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                    </li>
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알꿀팁</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
+
         <main id="main">
             <div class="container">
                 <div class="title">
@@ -75,6 +98,6 @@
 
         </main>
         <!-- 자바 스크립트 연결 -->
-        <script src="editprofile-script.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
