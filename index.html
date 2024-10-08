@@ -1,13 +1,78 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <title>Fried Shrimp Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>메인페이지</title>
+        <link rel="stylesheet" href="./css/test_css.css">
+        <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
+        <link rel="stylesheet" href="./css/navstyle.css">
     </head>
-    <body>
-        <h1>Group Project</h1>
-        <p>lock test</p>
+    <body class="main_def">
+        <header class="header_nav">
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <a href="" class="logo">Fried <br> Shrimp</a>
+                <ul id="nav-bar">
+                    <li>
+                        <a href="#" class="btn sign_open"><i class="fa-solid fa-circle-exclamation"></i>회원가입</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn login_open"><i class="fa-solid fa-people-group"></i>로그인</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- <nav class="top_menu">
+                <a href="./index.html">
+                    <img class="f_logo" src="./image/f_logo.png">
+                </a>
+                <button class="mai_menu sign_open">Join</span>
+                <button class="mai_menu login_open">Login</button>
+            </nav> -->
+        </header>
+        <div class="modal_log">
+            <div class="login_modal">
+                <h3 class="modal_tit">로그인</h3>
+                <div class="content_modal">
+                    <img class="close_ic close1 log_close" src="./image/close_ic.png">
+                    <form class="start_form">
+                        <input name="user_id" class="form_deg" type="text" placeholder="아이디" maxlength="10">
+                        <input name="user_pw" class="form_deg" type="password" placeholder="비밀번호" maxlength="10">
+                        <button type="button" class="btn login_ck" onclick="check_login()">로그인</button>
+                        <button type="button" class="log_sig sign_open" onclick="location.href='./index.html'">회원이 아니신가요?</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal_sig">
+            <div class="sign_modal">
+                <div class="content_modal">
+                    <img class="sig_logo" src="./image/f_logo.png">
+                    <img class="close_ic close2 sig_close" src="./image/close_ic.png">
+                    <form class="start_form" action="./index.html">
+                        <input name="user_id" class="form_deg" type="text" placeholder="아이디" maxlength="10">
+                        <input name="user_pw" class="form_deg" type="password" placeholder="비밀번호"  maxlength="10">
+                        <input id="user_pw2" class="form_deg" type="password" placeholder="비밀번호 확인" maxlength="10">
+                        <input id="user_name" class="form_deg" type="text" placeholder="이름" maxlength="5">
+                        <input id="user_age" class="form_deg birth" type="date" placeholder="생년월일">
+                        <input id="user_age" class="form_deg" type="number" placeholder="나이" maxlength="3">
+                        <button type="submit" class="btn sig_save" onclick="save()">회원가입</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="wel_main">
+            <span class="wel_main_font">러닝이 좋을 때나 싫을 때나<br> 늘 함께 달릴게요</span>
+        </div>
+        
+        <script src="./js/test_js.js"></script>
+        <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
+        <script src="./js/navscript.js"></script>
     </body>
 </html>
