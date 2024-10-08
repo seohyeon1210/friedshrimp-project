@@ -45,7 +45,7 @@ body{
 .slide {
     width: 100%;
     flex-shrink: 0;
-    height: 300px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,6 +58,7 @@ body{
     background-color: lightblue;
     align-items: center;
     justify-content: flex-start;
+    height: 400px;
 }
 
 .slide2 {
@@ -70,22 +71,23 @@ body{
 
 /* 1번 슬라이드에 프로필 등록 박스 스타일 */
 .profile-box {
-    width: 200px;
+    width: 400px;
+    height: 300px;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    position: relative; 
+    left: 20px;
 }
 
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 300px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
-
-
 
 
 /* 화살표 버튼 스타일 */
