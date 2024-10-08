@@ -1,16 +1,16 @@
-.div1{
+.div1 {
     position: absolute;
     margin-top: 150px;
     left: 300px;
     display: flex;
 }
-.div2{
+.div2 {
     position: absolute;
     margin-top: 400px;
     left: 300px;
     display: flex;
 }
-.div3{
+.div3 {
     position: absolute;
     margin-top: 300px;
     display: flex;
@@ -76,6 +76,16 @@
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
+}
+.button2 {
+    background-color: #E23E57;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 250px;
 }
 
 /* --------------------navstyle(상단 메뉴 바)------------------------- */
