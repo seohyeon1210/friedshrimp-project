@@ -15,6 +15,7 @@ let time_date = new Date();
 let pass_age = time_date.getFullYear() - 19;
 let user_id, user_pw, user_name, user_age, sta_us, days;
 
+// birth.attributes('max', `${pass_age}-12-31`);
 login_open.addEventListener('click', () => {
     modal_log.style.display = 'block';
 });
@@ -24,8 +25,6 @@ sign_open.forEach(sign => {
         modal_sig.style.display = 'block';
     }) 
 });
-
-birth.setAttributes('max' , `${pass_age}-12-31`);
 
 log_close.addEventListener('click', () => {
     modal_log.style.display = 'none';
@@ -70,7 +69,6 @@ function login_btn_state() {
 
 function log_check() {
     if(localStorage.getItem('login_value') == 1) {
-        // now_time.innerText = `${time_date.getFullYear()}년 ${time_date.getMonth()+1}월 ${time_date.getDate()}일 ${date_sh()}요일,　`;
         location.href = './log_main.html'
     } else {
         location.href = './index.html';

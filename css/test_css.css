@@ -1,14 +1,6 @@
 input {
     margin-bottom: 10px;
 }
-header {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 48px;
-    background: #ffffff;
-}
 .f_logo {
     width: 80px;
 }
@@ -32,7 +24,7 @@ header {
     color: #9bd6fd;
 }
 .main_def {
-    background-image : url('./image/main_photo.png');
+    background-image : url('../image/main_photo.png');
     background-size: 110%;
 }
 .modal_sig, .modal_log {
@@ -56,7 +48,8 @@ header {
 }
 .modal_tit {
     text-align: center;
-    color: #ED8728;
+    color: #b64e72;
+    margin-bottom: 20px;
 }
 .content_modal {
     display: flex;
@@ -113,7 +106,7 @@ input::placeholder {
     padding: 5px;
     width: 230px;
     height: 25px;
-    border: solid 1px #ED8728;
+    border: solid 1px #b64e72;
     border-radius: 8px;
 }
 .start_form {
