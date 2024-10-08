@@ -1,0 +1,76 @@
+.div-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    /* background-color: #f0f0f0; */
+}
+.grid-container {
+    display: grid;               /* Grid 사용 */
+    grid-template-columns: 1fr 1fr; /* 2개의 열을 생성 (각각 1fr) */
+    grid-template-rows: 1fr 1fr;    /* 2개의 행을 생성 (각각 1fr) */
+    gap: 10px;                    /* 칸 사이에 간격 추가 */
+    width: 700px;                 /* Grid 전체 너비 */
+    height: 400px;                /* Grid 전체 높이 */
+}
+.grid-item {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.calorie-progress {
+    width: 100%;
+    margin: 15px 0;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+}
+.calorie-bar {
+    height: 100%;
+    width: 40%;
+    background-color: #e74c3c;
+    position: absolute;
+}    
+.calorie-details {
+    font-size: 16px;
+}    
+.calorie-details span {
+    color: #e74c3c;
+}   
+.activity-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}   
+.activity-bar div {
+    height: 60px;
+    width: 25px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}   
+.activity-bar div.highlight {
+    background-color: #e74c3c;
+}  
+.footer-text {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #888;
+}   
+.button {
+    background-color: #8e44ad;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
