@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Top large div spanning all columns */
+.large-div {
+    grid-column: 1 / 4;
+    height: 100px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Left ranking div */
+.ranking-div {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Center play button div */
+.play-button-div {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Play button (triangle) inside center div */
+.play-button-div::before {
+    content: "▶";
+    font-size: 30px;
+}
+
+/* Right top div */
+.small-div {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.top {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    height: 100px;
+}
+
+.bottom-left {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    height: 100px;
+}
+
+.bottom-right {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    height: 100px;
+}
