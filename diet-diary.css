@@ -14,7 +14,7 @@
     position: absolute;
     margin-top: 300px;
     display: flex;
-    left: 50%;           
+    left: 40%;           
     transform: translateX(-50%);
 }
 .card {
@@ -26,6 +26,7 @@
     max-width: 400px;
     width: 250px;
     height: 180px;
+    margin: 0 10px;
 }
 .calorie-progress {
     width: 100%;
@@ -68,7 +69,7 @@
     color: #888;
 }   
 .button {
-    background-color: #8e44ad;
+    background-color: #E23E57;
     color: white;
     padding: 5px 10px;
     border: none;
