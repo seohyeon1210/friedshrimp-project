@@ -113,6 +113,14 @@ input::placeholder {
     display: flex;
     flex-direction: column;
 }
+.mai_tit1 {
+    font-size: 100px;
+    font-weight: bold;
+}
+.mai_tit2 {
+    font-size: 130px;
+    font-weight: bold;
+}
 .wel_main {
     height: 90vh;
     text-align: center;
