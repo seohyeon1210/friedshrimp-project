@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manual Slide and Video</title>
-    <link rel="stylesheet" href="mainstyles.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="./cssfolder/mainstyles.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="./cssfolder/navstyle.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="./cssfolder/hello.css"> <!-- CSS 파일 연결 -->
 </head>
 <body>
   <!-- 헤더 영역 -->
@@ -38,10 +40,13 @@
         <div class="slides">
             <!-- 1번 슬라이드: 프로필 등록 박스 -->
             <div class="slide slide1">
-                <div class="profile-box">
-                    <img class="profile-img" src="path/to/your/profile.jpg" alt="프로필 사진"> <!-- 여기에 경로 설정 -->
-                    <p>프로필 등록</p>
+                <img class="profile-img" src="./profile_img/friedshrimg.jpg" alt="프로필 사진"> <!-- 여기에 경로 설정 -->
+                <div class="profile-info">
+                        <p>이름 <input type="text" name="name"></p>
+                        <p>키&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="height"></p>
+                        <p>체중 <input type="text" name="kg"></p>
                 </div>
+                <div class="profile-hello" id="profile-hello"></div>
             </div>
             <!-- 2번 슬라이드 -->
             <div class="slide slide2">Slide 2</div>
@@ -59,8 +64,7 @@
     <!-- 동영상 배너 -->
     <div class="playmp4">
         <video width="100%" height="100%" controls>
-            <source src="yourvideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            <source src="./video/Shortstretching.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -74,34 +78,9 @@
     <div class="small-div crewbanner"></div>
 </div>
 
-<!-- JavaScript to control slides -->
-<script>
-    let currentSlide = 0;
-    const slides = document.querySelector('.slides');
-    const totalSlides = document.querySelectorAll('.slide').length;
-
-    // 다음 슬라이드로 이동
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateSlidePosition();
-    }
-
-    // 이전 슬라이드로 이동
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateSlidePosition();
-    }
-
-    // 슬라이드 위치 업데이트
-    function updateSlidePosition() {
-        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
-
-    // 화살표 버튼 클릭 시 자동 슬라이드 멈춤
-    document.querySelector('.arrow.left').addEventListener('click', () => clearInterval(autoSlide));
-    document.querySelector('.arrow.right').addEventListener('click', () => clearInterval(autoSlide));
-</script>
+<!-- JavaScript 파일 연결 -->
+<script src="./jsfolder/navscript.js"></script>
+<script src="./jsfolder/mainslide.js"></script>
+<script src="./jsfolder/hello.js"></script>
 </body>
 </html>
-
-

@@ -1,5 +1,5 @@
 
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -9,11 +9,13 @@
 
 body{
     font-family: Arial, sans-serif;
-    background-color: #F5F5F7;
+    background-color: rgba(226, 62, 87, 0.5);
 }
+
 
 /* 전체화면 비율 */
 .container {
+    background-image: url(../background_img/default.png);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -30,7 +32,7 @@ body{
     background-color: #f0f0f0;
     border-radius: 10px;
     border: 1px solid #ccc;
-    margin-top: 50px;
+    margin-top: 70px;
     position: relative; /* 추가: 슬라이드 버튼을 위한 위치 조정 */
     overflow: hidden; /* 추가: 슬라이드의 넘침을 숨김 */
 }
@@ -49,20 +51,20 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
     color: white;
 }
 
+
 /* 각 슬라이드 배경색 */
 .slide1 {
-    background-color: lightblue;
-    align-items: center;
+    background-color: white;
+    align-items: center;   
     justify-content: flex-start;
     height: 400px;
 }
 
 .slide2 {
-    background-color: lightcoral;
+    background-color: rgb(187, 187, 187);;
 }
 
 .slide3 {
@@ -70,23 +72,46 @@ body{
 }
 
 /* 1번 슬라이드에 프로필 등록 박스 스타일 */
-.profile-box {
-    width: 400px;
-    height: 300px;
+.profile-info {
+    width: 500px;
+    height: 200px;
     padding: 20px;
+    color:black;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    align-items: center;
     position: relative; 
-    left: 20px;
+    left: 150px;
+    bottom: 100px;
 }
 
+.profile-info p {
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; 
+    font-size: 34px;
+    display: flex; /* flexbox 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-bottom: 15px; /* 각 줄 간의 여백 설정 (필요 시) */
+}
+
+
+.profile-info input {
+    font-size: 34px;
+    margin-left: 20px; /* 입력 필드를 오른쪽으로 정렬 */
+    width: 50%; /* 적절한 너비 설정 */
+    padding: 30px; /* 내부 여백 */
+    border: 1px solid #ccc; /* 테두리 설정 */
+}
+
+
+/* 1번 슬라이드에 프로필 이미지 크기 */
 .profile-img {
     width: 400px;
     height: 300px;
+    position: relative; 
+    left: 100px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 
@@ -162,109 +187,4 @@ body{
     grid-row: 3 / 4;
     height: 200px;
     margin-bottom: 80px;
-}
-
-/* ------------------------------- */
-
-
-i{
-    padding: 10px;
-}
-
-header{
-    width: 100%;
-    background-color: #FFF;
-    position: fixed;
-    color: #121212;
-    padding: 0 20px;
-}
-
-header nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav a.logo{
-    color: #121212;
-    font-size: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    line-height: 35px;
-    cursor: pointer;
-    font-family: cursive;
-}
-
-nav ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: .5s;
-}
-
-nav ul li{
-    line-height: 60px;
-    margin: 0 5px;
-}
-
-nav ul a{
-    color: #121212;
-    font-size: 18px;
-    padding: 5px 13px;
-    border-radius: 4px;
-    transition: .4s;
-}
-
-.active, nav ul a:hover{
-    background: #E23E57;
-    color: #FFF;
-    padding: 10px;
-}
-
-main{
-    width: 100%;
-    height: 100vh;
-    scroll-behavior: smooth;
-    overflow-y: scroll;
-}
-
-section{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 80px;
-    font-size: 40px;
-}
-
-section#running{
-    /* background: url("https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753__340.jpg"); */
-    color: #121212;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-section#food{
-    color: #121212;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-section#crew{
-    color: #121212;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-section#tips{
-    color: #121212;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-.checkbtn{
-    cursor: pointer;
-    display: none;
-}
-
-#check{
-    display: none;
 }

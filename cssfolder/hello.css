@@ -1,0 +1,13 @@
+.profile-hello {
+    font-size: 60px; /* 글씨 크기 */
+    color: #333; /* 글씨 색 */
+    transition: opacity 0.5s ease; /* 투명도 변화 애니메이션 */
+    width: 700px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative; 
+    bottom: 130px;
+    left: 50px;
+    opacity: 0; /* 초기 투명도 */
+}
