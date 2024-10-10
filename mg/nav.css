@@ -113,18 +113,15 @@ a{
         width: 900px;
         text-align: center;
     }
-    /* 상세페이지닫기 */
     .close {
-        cursor: pointer;
         color: #d40d0d;
         float: right;
         font-size: 28px;
         font-weight: bold;
         position: absolute;
-        top: 230px;
-        left: 1800px;
+        top: 150px;
+        left: 2100px;
     }
-    /* 모집작성페이지닫기 */
     .close1 {
         cursor: pointer;
         color: #d40d0d;
