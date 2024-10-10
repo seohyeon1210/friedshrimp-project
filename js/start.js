@@ -76,6 +76,7 @@ function check_login() {
         location.href = './log_main.html';
     } else if(user_id == admin_id && user_pw == admin_pw) {
         alert(`관리자님 환영합니다.`);
+        location.href = 'admin-mainhome.html'
     } else {
         alert('아이디와 비밀번호를 확인하세요!');
     }
