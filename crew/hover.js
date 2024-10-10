@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
   // 다이얼로그 열기 함수
-  function openDialog() {
+function openDialog() {
     document.getElementById("myDialog").showModal();
 }
 

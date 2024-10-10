@@ -10,11 +10,42 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 	<script src="hover.js" defer></script>
 
+	<script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="header.css"/>
+    <link rel="stylesheet" href="mg.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a href="#" class="logo">Fried <br> Shrimp</a>
+            <ul id="nav-bar">
+                <li>
+                    <a href="#" class="n-btn"><i class="fa-solid fa-person-running"></i>회원관리</a>
+                </li>
+                <li>
+                    <a href="#" class="n-btn"><i class="fa-solid fa-bowl-food"></i>크루 모집 게시판관리</a>
+                </li>
+                <li>
+                    <a href="#" class="n-btn"><i class="fa-solid fa-people-group"></i>알알꿀팁 게시판관리</a>
+                </li>
+                <li>
+                    <a href="#" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>광고물관리</a>
+                </li>
+                <li>
+                    <a href="#" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>로그아웃</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<script src="header.js"></script>
+<!-- 헤더부분고정 -->
 	<form class="main_sup">
 		<label class="lebel" for="lang">장소</label>
-		<select class="select" name="languages" id="lang">
+		<select class="lebel" name="languages" id="lang">
 			<option class="option" value="seoul">서울특별시</option>
 			<option value="busan">부산광역시</option>
 			<option value="daegu">대구광역시</option>
@@ -78,11 +109,11 @@
 					</div>
 					<br>
 					<div class="flex-container">
-						  <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-boxx" />
-						  <label for="file" class="upload-btn">
+						<img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-boxx" />
+						<label for="file" class="upload-btn">
 							<input id="file" type="file" accept="image/*" />
 							<span>Upload Image</span>
-						  </label>
+						</label>
 						</div>
 					<br>
 						<textarea class="input2" id="lang" rows="5" cols="10" placeholder="상세 내용을 입력하세요"></textarea>
@@ -99,8 +130,8 @@
 			<script src="crewmodal.script.js"></script>
 			<script src="modal.js"></script>
 			<!-- 스크립트삽입 -->
-			 <!-- 모집생성모달종료 -->
-			  <!--화면리스트 박스-->
+			<!-- 모집생성모달종료 -->
+			<!--화면리스트 박스-->
 					<nav class="navbar">
 						<div class="navbar_logo">
 							<i class="fa-solid fa-circle-exclamation"></i>
@@ -127,7 +158,7 @@
 					<div><textarea class="input3" placeholder="상세 블라블라"></textarea>
 					</div>
 					<div class="flex-container1">
-						  <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-boxxx1" />
+						<img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-boxxx1" />
 					</div>
 				</div>
 					<!-- 크루상세페이지 모달 종료 -->
@@ -141,7 +172,7 @@
 						<li><a href="#">4</a></li>
 						<li><a href="#">&gt;</a></li>
 						<li><a href="#">&gt;&gt;</a></li>
-					  </ul>
+					</ul>
 		</form>
 </body>
 </html>
