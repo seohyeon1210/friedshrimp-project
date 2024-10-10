@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Fried Shrimp Project</title>
+        <link rel="stylesheet" href="diet-registration.css">
+    </head>
+    <body>
+        <!-- --------------navstyle(상단 메뉴 바)-------------------- -->
+        <header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <a href="#" class="logo">Fried <br> Shrimp</a>
+                <ul id="nav-bar">
+                    <li>
+                        <a href="#" class="btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn"><i class="fa-solid fa-circle-exclamation"></i>알알꿀팁</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- --------------식단 등록 페이지 칸-------------------- -->
+        <div class="div1">
+            <div class="header1">
+                <h2>아침 식단 <span id="date">2024.09.15</span></h2>
+                <button class="close-btn">X</button> <!-- 닫기 버튼 -->
+            </div>
+    
+            <!-- 음식 입력 부분 -->
+            <div class="input-section">
+                <label for="food-name">음식명</label> <!-- 음식명 입력 -->
+                <input type="text" id="food-name" placeholder="음식명">
+                <label for="calories">칼로리</label> <!-- 칼로리 입력 -->
+                <input type="text" id="calories" placeholder="칼로리">
+                <label for="time">먹은 시간</label> <!-- 먹은 시간 입력 -->
+                <input type="text" id="time" placeholder="시간">
+                <button class="add-btn">추가</button> <!-- 추가 버튼 -->
+            </div>
+    
+            <!-- 음식 리스트 부분 -->
+            <div class="food-list">
+                <!-- 음식 1 -->
+                <div class="food-item">
+                    <input type="checkbox" id="food1">
+                    <label for="food1">음식명 / 칼로리 / 먹은 시간</label> <!-- 음식명과 칼로리 표시 -->
+                </div>
+                <!-- 음식 2 -->
+                <div class="food-item">
+                    <input type="checkbox" id="food2">
+                    <label for="food2">음식명 / 칼로리 / 먹은 시간</label> <!-- 음식명과 칼로리 표시 -->
+                </div>
+            </div>
+    
+            <!-- 음식명과 칼로리 요약 표시 -->
+            <div class="summary">
+                <h4>음식명과 칼로리 표시</h4> <!-- 요약 제목 -->
+                <p>예시: 아침 사과 1개, 110kcal <br> 우유 500ml, 350kcal</p>
+            </div>
+    
+            <!-- 페이지 네비게이션 -->
+            <div class="pagination">
+                <button>&lt;&lt;</button> <!-- 이전 페이지 -->
+                <button class="page-num">1</button> <!-- 현재 페이지 -->
+                <button>&gt;&gt;</button> <!-- 다음 페이지 -->
+            </div>
+        </div>
+    </body>
+</html>
