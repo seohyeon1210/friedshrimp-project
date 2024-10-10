@@ -73,7 +73,7 @@ function check_login() {
     ) {
         alert(`'${localStorage.getItem('user_name')}'님, 환영합니다!`);
         localStorage.setItem('login_value', 1);
-        location.href = './log_main.html';
+        location.href = './mainhome.html';
     } else if(user_id == admin_id && user_pw == admin_pw) {
         alert(`관리자님 환영합니다.`);
         location.href = 'admin-mainhome.html'
