@@ -19,6 +19,10 @@ let time_date = new Date();
 let pass_age = time_date.getFullYear() - 19;
 let user_id, user_pw, user_name, user_age, sta_us, days;
 
+let admin_id = 'admin';
+let admin_pw = 'admin1';
+
+
 // birth.attributes('max', `${pass_age}-12-31`);
 login_open.addEventListener('click', () => {
     modal_log.style.display = 'block';
@@ -70,6 +74,8 @@ function check_login() {
         alert(`'${localStorage.getItem('user_name')}'님, 환영합니다!`);
         localStorage.setItem('login_value', 1);
         location.href = './log_main.html';
+    } else if(user_id == admin_id && user_pw == admin_pw) {
+        alert(`관리자님 환영합니다.`);
     } else {
         alert('아이디와 비밀번호를 확인하세요!');
     }
