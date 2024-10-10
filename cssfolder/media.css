@@ -1,0 +1,45 @@
+/* 모바일 디바이스 */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* 모든 콘텐츠가 한 열로 배치됨 */
+    }
+    
+    .mainbanner {
+        height: 250px; /* 배너 높이 조정 */
+    }
+
+    .ranking {
+        height: 300px; /* 높이 조정 */
+    }
+
+    .playmp4 {
+        height: 150px; /* 동영상 배너 높이 조정 */
+    }
+
+    .small-div {
+        height: 150px; /* 작은 div 높이 조정 */
+    }
+}
+
+/* 태블릿 디바이스 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 두 열로 구성 */
+    }
+
+    .mainbanner {
+        height: 300px; /* 배너 높이 조정 */
+    }
+
+    .ranking {
+        height: 350px; /* 높이 조정 */
+    }
+
+    .playmp4 {
+        height: 200px; /* 동영상 배너 높이 조정 */
+    }
+
+    .small-div {
+        height: 200px; /* 작은 div 높이 조정 */
+    }
+}

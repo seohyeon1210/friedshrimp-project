@@ -1,5 +1,5 @@
 var header = document.getElementById("nav-bar");
-var btns = header.getElementsByClassName("btn");
+var btns = header.getElementsByClassName("n-btn");
 
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {

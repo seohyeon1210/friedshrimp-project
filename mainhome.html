@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manual Slide and Video</title>
-    <link rel="stylesheet" href="mainstyles.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
+    <link rel="stylesheet" href="./cssfolder/mainstyles.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="./cssfolder/nav-style.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="./cssfolder/hello.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="./cssfolder/ustatuschange.css">
+    <link rel="stylesheet" href="./cssfolder/ranking.css">
+    <link rel="stylesheet" href="./cssfolder/adbanner.css">
+    <link rel="stylesheet" href="./cssfolder/media.css">
+    <link rel="stylesheet" href="./cssfolder/diet-diary.css">
 </head>
 <body>
   <!-- 헤더 영역 -->
@@ -20,7 +28,7 @@
                         <a href="#" class="btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
                     </li>
                     <li>
-                        <a href="#" class="btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+                        <a href="./diet-diary.html" class="btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
                     </li>
                     <li>
                         <a href="#" class="btn"><i class="fa-solid fa-people-group"></i>크루</a>
@@ -38,13 +46,30 @@
         <div class="slides">
             <!-- 1번 슬라이드: 프로필 등록 박스 -->
             <div class="slide slide1">
-                <div class="profile-box">
-                    <img class="profile-img" src="path/to/your/profile.jpg" alt="프로필 사진"> <!-- 여기에 경로 설정 -->
-                    <p>프로필 등록</p>
+                <img class="profile-img" src="./profile_img/friedshrimg.jpg" alt="프로필 사진"> <!-- 여기에 경로 설정 -->
+                <div class="profile-info">
+                        <p>이름 <input type="text" name="name"></p>
+                        <p>키&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="height"></p>
+                        <p>체중 <input type="text" name="kg"></p>
                 </div>
+                <div class="profile-hello" id="profile-hello"></div>
+                <div class="ustatus-change"></div>
             </div>
             <!-- 2번 슬라이드 -->
-            <div class="slide slide2">Slide 2</div>
+            <div class="slide slide2">
+                <div class="mainbanner-silde">
+                    <h3>오늘 칼로리</h3>
+                    <div class="calorie-progress">
+                        <div class="calorie-bar"></div>
+                    </div>
+                    <div class="calorie-details">
+                        <strong id="today-calorie">0 / 2000 Kcal</strong> <span>(0%)</span>
+                    </div>
+                    <div class="footer-text">
+                        아직 <span>1200kcal</span>가 남았어요!
+                </div>
+                </div>
+            </div>
             <!-- 3번 슬라이드 -->
             <div class="slide slide3">Slide 3</div>
         </div>
@@ -54,13 +79,30 @@
     </div>
 
     <!-- 런닝 랭킹 배너 -->
-    <div class="ranking"></div>
-
+    <div class="ranking">
+        <h2>주간 런닝 랭킹</h2>
+        <ul id="ranking-list">
+            <li class="first">
+                고길동 <span class="crown">👑</span> 40Km
+            </li>
+            <li>
+                도우너 30Km
+            </li>
+            <li>
+                둘리 25Km
+            </li>
+            <li>
+                홍길동 20Km
+            </li>
+            <li>
+                김철수 15Km
+            </li>
+        </ul>
+    </div>
     <!-- 동영상 배너 -->
     <div class="playmp4">
-        <video width="100%" height="100%" controls>
-            <source src="yourvideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+        <video width="100%" height="100%" controls >
+            <source src="./video/Shortstretching.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -68,40 +110,26 @@
     <div class="small-div honeybanner"></div>
 
     <!-- Right bottom left div -->
-    <div class="small-div adbanner"></div>
+    <div class="small-div adbanner">
+        <div class="ad-slides">
+            <img src="./banner_img/ad1.jpg" alt="Ad 1">
+            <img src="./banner_img/ad2.jpg" alt="Ad 2">
+            <img src="./banner_img/ad3.jpg" alt="Ad 3">
+            <img src="./banner_img/ad4.jpg" alt="Ad 4">
+            <img src="./banner_img/ad5.jpg" alt="Ad 5">
+        </div>
+    </div>
 
     <!-- Right bottom right div -->
     <div class="small-div crewbanner"></div>
 </div>
 
-<!-- JavaScript to control slides -->
-<script>
-    let currentSlide = 0;
-    const slides = document.querySelector('.slides');
-    const totalSlides = document.querySelectorAll('.slide').length;
-
-    // 다음 슬라이드로 이동
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateSlidePosition();
-    }
-
-    // 이전 슬라이드로 이동
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateSlidePosition();
-    }
-
-    // 슬라이드 위치 업데이트
-    function updateSlidePosition() {
-        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
-
-    // 화살표 버튼 클릭 시 자동 슬라이드 멈춤
-    document.querySelector('.arrow.left').addEventListener('click', () => clearInterval(autoSlide));
-    document.querySelector('.arrow.right').addEventListener('click', () => clearInterval(autoSlide));
-</script>
+<!-- JavaScript 파일 연결 -->
+<script src="./jsfolder/nav-script.js"></script>
+<script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
+<script src="./jsfolder/mainslide.js"></script>
+<script src="./jsfolder/hello.js"></script>
+<script src="./jsfolder/adslide.js"></script>
+<script src="./jsfolder/diet-diary.js"></script>
 </body>
 </html>
-
-
