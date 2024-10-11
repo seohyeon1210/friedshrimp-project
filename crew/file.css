@@ -1,3 +1,8 @@
+body {
+  background-image: url('/image/c_crew.png');
+  background-size: cover; /*이미지가 배경 전체를 덮도록 */
+  
+}
 .flex-container {
     display: flex;
   }
@@ -62,15 +67,16 @@
     .pagination1 li a {
       text-decoration: none;
       padding: 8px 16px;
-      border: 1px solid #ddd;
-      color: #000;
+      border: 1px solid #dddddd;
+      color: #312f2f;
       font-weight: bold;
+      font-size: 30px;
       position: relative;
-      top: 800px;
+      top: 850px;
       left: 600px;
 
     }
     
     .pagination1 li a:hover {
-      background-color: #ddd;
+      background-color: #ece2e2;
     }

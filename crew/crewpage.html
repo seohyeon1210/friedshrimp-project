@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 	<script src="hover.js" defer></script>
-
 	<script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="header.css"/>
     <link rel="stylesheet" href="mg.css">
@@ -89,6 +88,7 @@
 			<dialog class="met" id="myDialog">
 				<form method="dialog">
 					<span class="close1" onclick="closeDialog()">&times;</span>
+					
 				<div>크루모집 게시물 작성</div>
 						<input class="input1" type="text" id="lang" placeholder="제목을 입력하세요" ></input>
 						<input class="input1" type="text" id="lang" placeholder="인원수를 입력하세요" ></input>
@@ -109,13 +109,12 @@
 					</div>
 					<br>
 					<div class="flex-container">
-						<img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-boxx" />
+						<img id="preview" src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-boxx" />
 						<label for="file" class="upload-btn">
-							<input id="file" type="file" accept="image/*" />
+							<input id="file" type="file" accept="image/*" style="display: none;" onchange="previewImage(event)" />
 							<span>Upload Image</span>
 						</label>
-						</div>
-					<br>
+					</div>
 						<textarea class="input2" id="lang" rows="5" cols="10" placeholder="상세 내용을 입력하세요"></textarea>
 					<div class="box4">
 						<div class="form-container">

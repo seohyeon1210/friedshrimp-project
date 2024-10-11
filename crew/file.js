@@ -1,17 +1,11 @@
-const fileDOM = document.querySelector('#file');
-const previews = document.querySelectorAll('.image-box');
-
-fileDOM.addEventListener('change', () => {
-  const reader = new FileReader();
-  reader.onload = ({ target }) => {
-    previews[0].src = target.result;
-  };
-  reader.readAsDataURL(fileDOM.files[0]);
-});
-
-const fileDOM2 = document.querySelector('#file2');
-
-fileDOM2.addEventListener('change', () => {
-  const imageSrc = URL.createObjectURL(fileDOM2.files[0]);
-  previews[1].src = imageSrc;
-});
+function previewImage(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            const preview = document.getElementById('preview');
+            preview.src = reader.result;
+        };
+        reader.readAsDataURL(file);
+    }
+}
