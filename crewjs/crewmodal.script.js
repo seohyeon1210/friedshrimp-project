@@ -1,5 +1,5 @@
    // JavaScript로 수정 기능 구현
-   function editText() {
+    function editText() {
     // 수정할 텍스트 선택
     const textElement = document.getElementById("text");
 

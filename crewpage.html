@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>crew</title>
+<<<<<<< HEAD:crew/crewpage.html
     <link rel="stylesheet" href="crew.css">
 	<link rel="stylesheet" href="file.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 	<script src="hover.js" defer></script>
+=======
+    <link rel="stylesheet" href="./crewcss/crew.css">
+	<link rel="stylesheet" href="./crewcss/file.css">
+	<link rel="stylesheet" href="./crewcss/style.css">
+	<link rel="stylesheet" href="/cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./crewcss/header.css"/>
+>>>>>>> dee9dcaddbb136e8527b331dd0fc40b46c931289:crewpage.html
 	<script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="header.css"/>
-    <link rel="stylesheet" href="mg.css">
+	<script src="./crewjs/hover.js" defer></script>
 </head>
 <body>
     <header>
@@ -23,16 +30,16 @@
             <a href="#" class="logo">Fried <br> Shrimp</a>
             <ul id="nav-bar">
                 <li>
-                    <a href="#" class="n-btn"><i class="fa-solid fa-person-running"></i>회원관리</a>
+                    <a href="#" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
                 </li>
                 <li>
-                    <a href="#" class="n-btn"><i class="fa-solid fa-bowl-food"></i>크루 모집 게시판관리</a>
+                    <a href="#" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
                 </li>
                 <li>
-                    <a href="#" class="n-btn"><i class="fa-solid fa-people-group"></i>알알꿀팁 게시판관리</a>
+                    <a href="#" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
                 </li>
                 <li>
-                    <a href="#" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>광고물관리</a>
+                    <a href="#" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알꿀팁</a>
                 </li>
                 <li>
                     <a href="#" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>로그아웃</a>
@@ -40,9 +47,10 @@
             </ul>
         </nav>
     </header>
-<script src="header.js"></script>
+<script src="./crewjs/header.js"></script>
 <!-- 헤더부분고정 -->
-	<form class="main_sup">
+	<form class="main">
+		<strong><form class="main">
 		<label class="lebel" for="lang">장소</label>
 		<select class="lebel" name="languages" id="lang">
 			<option class="option" value="seoul">서울특별시</option>
@@ -63,13 +71,11 @@
 			<option value="Gyeongsangnam-do">경상남도</option>
 			<option value="Jeju">제주도</option>
 		</select>
-		</select>
 		<label class="datee" for="date">날짜를 선택하세요:</label>
-		<input class="datee" type="date"
-				id="date"
-				max="2070-12-31"
-				min="2024-10-08"
-				value="2024-10-08">
+		<input class="datee" type="date" id="date"
+			max="2070-12-31"
+			min="2024-10-08"
+			value="2024-10-08">
 		<label class="datee" for="money">회비</label>
 			<select class="datee"name="">
 				<option value="실제 값1">5000</option>
@@ -83,6 +89,9 @@
 				<option value="실제 값1">45000</option>
 				<option value="실제 값1">50000</option>
 			</select>
+		</strong>
+		</form>
+	</form>
 			<!-- 모달창호출버튼 -->
 			<button type="button" class="button" onclick="openDialog()">크루모집</button>
 			<dialog class="met" id="myDialog">
@@ -125,24 +134,52 @@
 					<button class="button2">저장</button>
 				</form>
 			</dialog>
-			<script src="file.js"></script>
-			<script src="crewmodal.script.js"></script>
-			<script src="modal.js"></script>
+			<script src="./crewjs/file.js"></script>
+			<script src="./crewjs/crewmodal.script.js"></script>
+			<script src="./crewjs/upload.php"></script>
 			<!-- 스크립트삽입 -->
 			<!-- 모집생성모달종료 -->
 			<!--화면리스트 박스-->
+			<i class="fa-solid fa-circle-exclamation"></i> <!-- 아이콘로직 -->
 					<nav class="navbar">
 						<div class="navbar_logo">
-							<i class="fa-solid fa-circle-exclamation"></i>
 							<ul class="navbar__menu">
-								<li><a href="">모집제목</a></li>
-								<li><a href="">모집인원</a></li>
-								<li><a href="">날짜/시간/장소</a></li>
-								<li><a href="">회비</a></li>
-								<li><a href="">사진</a></li>
-							</ul>
-						</nav>
-						
+							<nav>모집제목</nav>
+							<img class="image-box"</img>
+						</ul>
+					</nav>
+					<nav class="navbar1">
+						<div class="navbar_logo">
+							<ul class="navbar__menu">
+							<nav>모집제목</nav>
+							<img class="image-box"</img>
+						</ul>
+					</nav>
+					<nav class="navbar2">
+						<div class="navbar_logo">
+							<ul class="navbar__menu">
+							<nav>모집제목</nav>
+							<img class="image-box"</img>
+						</ul>
+					</nav>
+					<nav class="navbar3">
+						<div class="navbar_logo">
+							<ul class="navbar__menu">
+							<nav>모집제목</nav>
+							<img class="image-box"</img>
+						</ul>
+					</nav>						
+					
+					<ul class="pagination1">
+						<li><a href="#">&lt;&lt;</a></li>
+						<li><a href="#">&lt;</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">&gt;</a></li>
+						<li><a href="#">&gt;&gt;</a></li>
+					</ul>
 							<!-- 크루상세페이지 모달시작-->
 				<div id="myModal" class="modal">
 					<div class="modal-content">
@@ -157,21 +194,10 @@
 					<div><textarea class="input3" placeholder="상세 블라블라"></textarea>
 					</div>
 					<div class="flex-container1">
-						<img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-boxxx1" />
+						<img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" />
 					</div>
 				</div>
 					<!-- 크루상세페이지 모달 종료 -->
-				
-					<ul class="pagination1">
-						<li><a href="#">&lt;&lt;</a></li>
-						<li><a href="#">&lt;</a></li>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">&gt;</a></li>
-						<li><a href="#">&gt;&gt;</a></li>
-					</ul>
 		</form>
 </body>
 </html>
