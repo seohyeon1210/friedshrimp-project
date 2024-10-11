@@ -167,14 +167,14 @@ section#tips{
 .calorie-bar {
     height: 100%;
     width: 40%;
-    background-color: #e74c3c;
+    background-color: #E23E57;
     position: absolute;
 }    
 .calorie-details {
     font-size: 16px;
 }    
 .calorie-details span {
-    color: #e74c3c;
+    color: #E23E57;
 }   
 .activity-bar {
     display: flex;
@@ -188,16 +188,20 @@ section#tips{
     border-radius: 5px;
 }   
 .activity-bar div.highlight {
-    background-color: #e74c3c;
+    background-color: #E23E57;
 }  
 .footer-text {
     font-size: 14px;
     margin-top: 10px;
     color: #888;
-}   
+}
+
+button:hover {
+    transform: scale(1.3);  /* 커졌을 때 1.1배 */
+}
 
 .button2 {
-    background-color: #E23E57;
+    background-color: #892c4d;
     color: white;
     padding: 5px 10px;
     border: none;
@@ -205,10 +209,11 @@ section#tips{
     font-size: 14px;
     cursor: pointer;
     margin-top: 250px;
+    transition: transform 0.1s ease;
 }
 
 .button3 {
-    background-color: #E23E57;
+    background-color: #892c4d;
     color: white;
     padding: 5px 10px;
     border: none;
@@ -216,6 +221,7 @@ section#tips{
     font-size: 14px;
     cursor: pointer;
     margin-top: 250px;
+    transition: transform 0.1s ease;
 }
 
 /* -------------목표설정,식단등록 모달 css--------------- */
@@ -251,13 +257,14 @@ section#tips{
 }
 
 .button4 {
-    background-color: #E23E57;
+    background-color: #892c4d;
     color: white;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
+    transition: transform 0.1s ease;
 }
 
 .close:hover,
@@ -268,5 +275,5 @@ section#tips{
 
 #total-calories {
     font-weight: bold;
-    color: #FF4500; /* 강조 색상 */
+    color: #E23E57; /* 강조 색상 */
 }
