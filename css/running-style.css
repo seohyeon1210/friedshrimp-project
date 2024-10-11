@@ -1,0 +1,49 @@
+body {
+    background-color: #f5f5f7;
+}
+.running {
+    margin-top: 30px;
+}
+.running .run-left {
+    float: left;
+    margin-left: 150px;
+}
+.running .run-left img {
+    width: 450px;
+}
+.running .run-btns {
+    float: right;
+    margin: 20px;
+    margin-right: 150px;
+}
+.running .run-btns .rbtn {
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #892c4d;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+.running .run-btns .rbtn:hover {
+    background-color: #8b757d;
+}
+.run-paging {
+    margin-left: 500px;
+    margin-top: 730px;
+}
+
+.run-paging button {
+    border: none;
+    margin: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.add-content {
+    display: flex;
+    margin-top: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

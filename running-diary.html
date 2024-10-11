@@ -5,68 +5,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>런닝일기</title>
         <link rel="stylesheet" href="./css/navstyle.css" />
-        <link rel="stylesheet" href="./css/start-style.css" />
+        <link rel="stylesheet" href="./css/running-style.css" />
     </head>
     <body>
+        <header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <a href="#" class="logo">Fried <br> Shrimp</a>
+                <ul id="nav-bar">
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+                    </li>
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+                    </li>
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                    </li>
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알꿀팁</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <div class="running">
             <div class="run-left">
                 <img class="run-img" src="./image/running-img.jpg">
             </div>
             <div class="run-btns">
-                <button class="rbtn">기록추가</button>
+                <button class="rbtn" onclick="location.href='./running-add.html'">기록추가</button>
                 <button class="rbtn">통계보기</button>
                 <button class="rbtn">삭제</button>
             </div>
         </div>
-
-        <div class="modal_log">
-            <div class="run_add_modal">
-                <h3 class="modal_tit">런닝 기록 추가</h3>
-                <div class="content_modal">
-                    <img
-                        class="close_ic close1 run_add_close"
-                        src="./image/close-ic.png"
-                    />
-                    <form class="start_form">
-                        <input
-                            name="user_id"
-                            class="form_deg"
-                            type="text"
-                            placeholder="아이디"
-                            maxlength="10"
-                        />
-                        <input
-                            name="user_pw"
-                            class="form_deg"
-                            type="password"
-                            placeholder="비밀번호"
-                            maxlength="10"
-                        />
-                        <div class="log_btns">
-                            <button
-                                type="button"
-                                class="btn login_ck"
-                                onclick="check_login()"
-                            >
-                                로그인
-                            </button>
-                            <button
-                                type="button"
-                                class="btn login_ck"
-                            >
-                                비밀번호찾기
-                            </button>
-                        </div>
-                        <button
-                            type="button"
-                            class="log_sig sign_open"
-                            onclick=""
-                        >
-                            회원이 아니신가요?
-                        </button>
-                    </form>
-                </div>
-            </div>
+        <div class="run-paging">
+            <button><<</button>
+            <button><</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>></button>
+            <button>>></button>
         </div>
         <script src="./js/start.js"></script>
         <script src="./js/navscript.js"></script>

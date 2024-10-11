@@ -300,27 +300,3 @@ input::placeholder {
     background-color: #E23E57;
     font-size: 17px;
 }
-.running {
-    margin-top: 80px;
-}
-.running .run-left {
-    float: left;
-}
-.running .run-left img {
-    width: 450px;
-}
-.running .run-btns {
-    float: right;
-    margin: 20px;
-}
-.running .run-btns .rbtn {
-    padding: 10px;
-    border: none;
-    border-radius: 15px;
-    background-color: #892c4d;
-    color: white;
-    cursor: pointer;
-}
-.running .run-btns .rbtn:hover {
-    background-color: #8b757d;
-}
