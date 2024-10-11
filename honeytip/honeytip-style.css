@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
 
 *{
     margin: 0;
@@ -70,6 +71,7 @@ nav ul a{
     padding: 5px 13px;
     border-radius: 4px;
     transition: .4s;
+    font-family: Pretendard;
 }
 
 .active, nav ul a:hover{
@@ -141,6 +143,7 @@ section#tips{
     margin: 0 auto;
     margin-top: 125px;
     padding-bottom: 100px;
+    font-family: Pretendard;
 }
 
 img{
@@ -209,9 +212,9 @@ img{
     display: block;
     margin-top: 20px;
     margin-right: 70px;
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
-    /* font-family: ; */
+    font-family: Pretendard;
 }
 
 .readMorebtn:hover{
@@ -234,9 +237,82 @@ img{
     font-size: 15px;
     cursor: pointer;
     margin-left: 90%;
+    font-family: Pretendard;
 }
 
 .writebtn:hover{
     background-color: #E23E57;
     color: #FFF;
 }
+
+.l-btn{
+    color: #121212;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 5px 13px;
+    border-radius: 4px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.l-btn:hover{
+    background: #E23E57;
+    color: #FFF;
+    padding: 10px;
+}
+
+.tip-container{
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* width: 100%; */
+    box-sizing: border-box;
+    margin-top: 20px;
+    display: flex;
+    width: 90vmin;
+    padding: 50px 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+
+button{
+    height: 28px;
+}
+/* 
+.btn-file{
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+input[readonly]{
+    background-color: white !important;
+    cursor: text !important;
+} */
