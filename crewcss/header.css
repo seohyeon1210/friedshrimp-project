@@ -17,7 +17,7 @@ i{
 header{
     width: 100%;
     background-color: #FFF;
-    /* position: fixed; */
+    position: fixed;
     color: #121212;
     padding: 0 20px;
 }

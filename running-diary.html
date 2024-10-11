@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>런닝일기</title>
+        <link rel="stylesheet" href="./css/navstyle.css" />
+        <link rel="stylesheet" href="./css/running-style.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <a href="#" class="logo">Fried <br> Shrimp</a>
+                <ul id="nav-bar">
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+                    </li>
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+                    </li>
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                    </li>
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알꿀팁</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="running">
+            <div class="run-left">
+                <img class="run-img" src="./image/running-img.jpg">
+            </div>
+            <div class="run-btns">
+                <button class="rbtn" onclick="location.href='./running-add.html'">기록추가</button>
+                <button class="rbtn">통계보기</button>
+                <button class="rbtn">삭제</button>
+            </div>
+        </div>
+        <div class="run-paging">
+            <button><<</button>
+            <button><</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>></button>
+            <button>>></button>
+        </div>
+        <script src="./js/start.js"></script>
+        <script src="./js/navscript.js"></script>
+        <script
+            src="https://kit.fontawesome.com/1e52e7745d.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

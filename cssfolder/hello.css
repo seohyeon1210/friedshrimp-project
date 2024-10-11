@@ -7,7 +7,7 @@
     padding: 20px;
     border-radius: 10px;
     position: relative; 
-    left: -60px;
-    bottom: 130px;
+    right: 250px;
+    bottom: 10px;
     opacity: 0; /* 초기 투명도 */
 }
