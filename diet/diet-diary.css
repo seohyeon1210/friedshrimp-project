@@ -8,7 +8,6 @@
 }
 
 body{
-    background-image: url(../img/main_photo.png);
     background-color: #F5F5F7;
 }
 
@@ -138,7 +137,6 @@ section#tips{
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300%;
     max-width: 400px;
     width: 300px;
     height: 200px;
@@ -220,7 +218,7 @@ section#tips{
     margin-top: 250px;
 }
 
-/* 목표설정,식단등록 모달 css */
+/* -------------목표설정,식단등록 모달 css--------------- */
 /* 모달 기본 스타일 */
 .modal {
     display: none; /* 기본적으로 숨김 처리 */
@@ -241,6 +239,7 @@ section#tips{
     border: 1px solid #888;
     width: 80%;
     max-width: 500px;
+    border-radius: 10px;
 }
 
 /* 닫기 버튼 스타일 */

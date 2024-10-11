@@ -18,7 +18,7 @@ i{
 header{
     width: 100%;
     background-color: #FFF;
-    position: fixed;
+    /* position: fixed; */
     color: #121212;
     padding: 0 20px;
 }
@@ -111,4 +111,24 @@ section#tips{
 
 #check{
     display: none;
+}
+
+/* ---------알알꿀팁 관리 구역------------ */
+.div1{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    margin: 20px 20px;
+}
+
+.div2{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    height: 100%;
+    margin: 20px 20px;
 }
