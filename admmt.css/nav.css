@@ -1,7 +1,6 @@
 body{
     margin: 0;
 }
-
 a{
     text-decoration: none;
     color: aliceblue;
@@ -10,10 +9,6 @@ a{
     position:absolute;
     background-color: #3e444d;
     cursor: pointer;
-    width: 400px;
-    height: 400px;
-    left: 200px;
-    top: 170px;
 }
 
 .navbar:hover{
