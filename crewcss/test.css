@@ -1,0 +1,175 @@
+/* 모든 요소의 기본 여백과 패딩을 제거하고, box-sizing을 설정 */
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; /* 요소의 크기를 패딩과 보더를 포함한 크기로 설정 */
+}
+
+/* Header 섹션 스타일 */
+.header-section {
+    display: flex; /* Flexbox를 사용하여 아이템을 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: space-between; /* 아이템 사이의 공간을 균등하게 배분 */
+    padding: 10px 20px; /* 상하 10px, 좌우 20px 패딩 */
+    background-color: #f5f5f5; /* 배경색 설정 */
+}
+
+/* Header 제목 스타일 */
+.header-title h1 {
+    font-size: 1.5rem; /* 제목 글자 크기 */
+    font-weight: bold; /* 제목 두껍게 */
+    margin: 0; /* 기본 여백 제거 */
+}
+
+/* 제목 아래 밑줄 스타일 */
+.header-line hr {
+    border: none; /* 기본 테두리 제거 */
+    border-top: 2px solid #8b3a4a; /* 위쪽 테두리 두께와 색상 */
+    margin: 10px 0; /* 제목과 선 사이의 여백 */
+}
+.header-line {
+    text-align: center; /* 가운데 정렬 */
+}
+
+/* 등록하기 버튼 스타일 */
+.header-button .submit-btn {
+    background-color: #8b3a4a; /* 버튼 배경색 */
+    color: white; /* 글자색 */
+    border: none; /* 기본 테두리 제거 */
+    padding: 5px 15px; /* 상하 5px, 좌우 15px 패딩 */
+    border-radius: 5px; /* 둥근 모서리 */
+    cursor: pointer; /* 마우스 커서 포인터로 변경 */
+}
+
+.header-button .submit-btn:hover {
+    background-color: #702a3a; /* 버튼 호버 시 색상 변화 */
+}
+
+/* 본문 글꼴 및 기본 스타일 설정 */
+body {
+    font-family: Arial, sans-serif; /* 기본 글꼴 설정 */
+    margin: 0; /* 기본 여백 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+}
+
+/* 상단 배너 섹션 스타일 */
+.top-banner {
+    color: rgb(136, 12, 12); /* 텍스트 색상 */
+    padding: 300px 0; /* 상하 300px 패딩 */
+    text-align: center; /* 가운데 정렬 */
+}
+
+.top-banner h1 {
+    font-size: 3.5rem; /* 배너 제목 크기 */
+    margin-bottom: 100px; /* 아래 여백 */
+}
+
+.top-banner p {
+    font-size: 1.2rem; /* 배너 설명 텍스트 크기 */
+    margin-bottom: 100px; /* 아래 여백 */
+}
+
+/* 크루 모집 버튼 섹션 */
+.class-actions {
+    margin-top: 200px; /* 상단 여백 */
+}
+
+/* 버튼 스타일 (더 많은 정보 버튼) */
+.more-info {
+    color: #ff5a00; /* 텍스트 색상 */
+    border: 1px solid #ff5a00; /* 테두리 스타일 */
+    padding: 10px 20px; /* 패딩 */
+    margin-right: 10px; /* 오른쪽 여백 */
+    background-color: rgb(59, 63, 63); /* 배경색 */
+}
+
+.more-info:hover {
+    color: white; /* 호버 시 텍스트 색상 변화 */
+}
+
+/* 크루 모집하기 버튼 스타일 */
+.cta-button {
+    background-color: #ff5a00; /* 배경색 */
+    color: rgb(128, 33, 9); /* 글자색 */
+    padding: 15px 30px; /* 패딩 */
+    border: none; /* 기본 테두리 제거 */
+    cursor: pointer; /* 마우스 커서 포인터로 변경 */
+    font-size: 1rem; /* 글자 크기 */
+}
+
+.cta-button:hover {
+    background-color: #e60362; /* 호버 시 배경색 변화 */
+}
+
+/* 크루 모집 섹션 스타일 */
+.crew-section {
+    text-align: center; /* 가운데 정렬 */
+    padding: 20px; /* 패딩 */
+}
+
+/* 크루 박스 위치 조절 */
+.crew-container {
+    display: flex; /* Flexbox를 사용하여 박스를 나란히 배치 */
+    justify-content: space-between; /* 아이템 사이의 공간을 균등하게 배분 */
+    gap: 20px; /* 아이템 사이의 간격 */
+    margin-top: 10px; /* 상단 여백 */
+}
+
+/* 크루 박스 스타일 */
+.crew-box {
+    background-color: white; /* 배경색 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    overflow: hidden; /* 넘치는 내용 숨김 */
+    flex: 2; /* Flexbox 비율 */
+    width: 200px; /* 너비 */
+    height: auto; /* 높이 자동 조절 */
+}
+
+/* 크루 이미지 스타일 */
+.crew-image {
+    width: 100%; /* 박스 너비에 맞추기 */
+    height: auto; /* 자동 비율 유지 */
+}
+
+/* 크루 박스 제목 스타일 */
+.crew-box h3 {
+    margin: 4; /* 제목 여백 */
+}
+
+/* '더 보기' 링크 스타일 */
+.crew-more {
+    color: #d6134e; /* 링크 색상 */
+    text-decoration: none; /* 기본 밑줄 제거 */
+}
+
+/* '더 많은 크루 보기' 버튼 스타일 */
+.more-btn {
+    background-color: #ff5f5f; /* 배경색 */
+    color: white; /* 글자색 */
+    padding: 30px 20px; /* 패딩 */
+    border: none; /* 기본 테두리 제거 */
+    border-radius: 5px; /* 둥근 모서리 */
+    cursor: pointer; /* 마우스 커서 포인터로 변경 */
+    margin-top: 20px; /* 상단 여백 */
+}
+
+/* 하단 페이징 표시 스타일 */
+.pagination1 {
+    display: flex; /* Flexbox로 아이템 나열 */
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    justify-content: center; /* 중앙 정렬 */
+    margin-top: 20px; /* 상단 여백 */
+}
+
+.pagination1 li a {
+    text-decoration: none; /* 링크 기본 밑줄 제거 */
+    padding: 8px 16px; /* 패딩 */
+    border: 1px solid #dddddd; /* 테두리 스타일 */
+    color: #312f2f; /* 글자색 */
+    font-weight: bold; /* 글자 두껍게 */
+    font-size: 1rem; /* 글자 크기 */
+}
+
+.pagination1 li a:hover {
+    background-color: #ece2e2; /* 호버 시 배경색 변화 */
+}
