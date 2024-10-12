@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>런닝크루 모집페이지</title>
-    <link rel="stylesheet" href="/crewcss/recruitment.css">
-	<link rel="stylesheet" href="/cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <link rel="stylesheet" href="./crewcss/header.css"/>
+    <link rel="stylesheet" href="/crewcss/recruitment.css">
 	<script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
 	<script src="./crewjs/hover.js" defer></script>
 </head>
 <body>
-    <header>
+     <!-- 헤더 영역 -->
+     <header>
         <nav>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
@@ -20,23 +22,24 @@
             <a href="#" class="logo">Fried <br> Shrimp</a>
             <ul id="nav-bar">
                 <li>
-                    <a href="#" class="btn"><i class="fa-solid fa-user"></i>런닝일기</a>
+                    <a href="#" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
                 </li>
                 <li>
-                    <a href="#" class="btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                    <a href="#" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
                 </li>
                 <li>
-                    <a href="#" class="btn"><i class="fa-solid fa-circle-exclamation"></i>알알꿀팁</a>
+                    <a href="#" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
                 </li>
                 <li>
-                    <a href="#" class="btn"><i class="fa-solid fa-rectangle-ad"></i>광고물관리</a>
+                    <a href="#" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
                 </li>
                 <li>
-                    <a href="#" class="btn"><i class="fa-solid fa-rectangle-ad"></i>로그아웃</a>
+                    <button type="button" class="l-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
                 </li>
             </ul>
         </nav>
     </header>
+
     <div class="header-title">
         <h1>크루모집</h1>
         <hr class="header-line">
@@ -90,5 +93,7 @@
             <li><a href="#">&gt;&gt;</a></li>
         </ul>
     </section>
+    <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
+    <script src="nav-script.js"></script>
 </body>
 </html>
