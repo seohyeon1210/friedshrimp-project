@@ -53,19 +53,19 @@ nav a.logo{
     font-family: cursive;
 }
 
-nav ul{
+nav ul:not(:where([class~='pagebar'] *)){
     display: flex;
     align-items: center;
     justify-content: space-between;
     transition: .5s;
 }
 
-nav ul li{
+nav ul li:not(:where([class~='pagebar'] *)){
     line-height: 60px;
     margin: 0 5px;
 }
 
-nav ul a{
+nav ul a:not(:where([class~='pagebar'] *)){
     color: #121212;
     font-size: 18px;
     padding: 5px 13px;
@@ -74,7 +74,7 @@ nav ul a{
     font-family: Pretendard;
 }
 
-.active, nav ul a:hover{
+.active, nav ul a:hover:not(:where([class~='pagebar'] *)){
     background: #E23E57;
     color: #FFF;
     padding: 10px;
@@ -141,8 +141,8 @@ section#tips{
 .container{
     width: 1140px;
     margin: 0 auto;
-    margin-top: 125px;
-    padding-bottom: 100px;
+    margin-top: 135px;
+    padding-bottom: 15px;
     font-family: Pretendard;
 }
 
@@ -262,57 +262,153 @@ img{
     padding: 10px;
 }
 
-.tip-container{
+.containerform{
     background-color: #FFF;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    /* width: 100%; */
+    width: 100%;
     box-sizing: border-box;
     margin-top: 20px;
     display: flex;
-    width: 90vmin;
-    padding: 50px 30px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
+    height: 775px;
 }
 
-.options{
+.form-container{
+    margin: 0 20px;
+}
+
+.column-left{
+    padding: 70px;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.column-right{
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* 대표 이미지 */
+#root{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 350px;
+}
+
+.fileTitle{
+    text-align: center;
+    margin-top: 130px;
+}
+
+.fileImage{
+    /* display: flex; */
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.fileImage .upload-box{
+    width: 100%;
+    margin-right: 30px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
+    height: 400px;
 }
 
-
-button{
-    height: 28px;
-}
-/* 
-.btn-file{
+.fileImage .upload-box .drag-file{
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #DBDBDB;
 }
 
-.btn-file input[type=file]{
+.fileImage .upload-box .drag-file .highlight{
+    border: 3px dashed #E23E57;
+}
+.fileImage .upload-box .drag-file .image{
+    width: 40px;
+    /* height: 350px; */
+}
+.fileImage .upload-box .drag-file .message{
+    margin-bottom: 0;
+}
+.fileImage .upload-box .drag-file .preview{
+    display: none;
     position: absolute;
-    top: 0;
     left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
+    height: 0;
+    width: 100%;
+    height: 100%;
+}
+.fileImage .upload-box .file-label{
+    margin-top: 30px;
+    background-color: #E23E57;
+    color: #FFF;
+    text-align: center;
+    padding: 10px 0;
+    width: 65%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.fileImage .upload-box .file{
+    display: none;
 }
 
-input[readonly]{
-    background-color: white !important;
-    cursor: text !important;
-} */
+.btn{
+    background-color: #88304E;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+    font-family: Pretendard;
+    margin-top: 100px;
+    width: 100px;
+}
+
+.btn:hover{
+    background-color: #E23E57;
+}
+
+
+.textForm{
+    margin-bottom: 20px;
+}
+.textTitle{
+    padding: 10px;
+    width: 500px;
+    font-size: 16px;
+    border: 2px solid #CCC;
+    color: #121212;
+    outline: none;
+}
+
+@media (max-width: 700px) {
+    .fileImage{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .fileImage .upload-box{
+        width: 100%;
+        box-sizing: border-box;
+        margin-right: 0;
+    }
+    .fileImage .upload-box .drag-file{
+        height: 150px;
+    }
+    .fileImage .files{
+        width: 100%;
+        box-sizing: border-box;
+        margin-right: 0;
+        overflow: initial;
+    }
+}

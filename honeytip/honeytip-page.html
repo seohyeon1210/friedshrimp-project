@@ -9,6 +9,7 @@
         <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
         <link rel="stylesheet" href="honeytip-style.css"/>
+        <link rel="stylesheet" href="../additional-pagination/page-style.css"
     </head>
     <body>
         <!-- 헤더 영역 -->
@@ -41,6 +42,7 @@
 
         <!-- 메인 영역 -->
         <main>
+            <div class="form-container">
             <div class="container">
             <div class="title">
                 <h1>알알 꿀팁</h1>
@@ -152,6 +154,25 @@
             </div>
 
             </div>
+            </div>
+
+            <!-- 페이징네이션 스타일시트는 절대경로 "../additional-pagination/page-style.css"에 연결 시켜두었기 때문에 잘 확인하기 -->
+            <footer>
+                <nav data-pagination class="pagebar">
+                    <a href="#" disabled><i class="fa-solid fa-chevron-left"></i></a>
+                        <ul>
+                            <li class="current"><a href="#1">1</a></li>
+                            <li><a href="#2">2</a></li>
+                            <li><a href="#3">3</a></li>
+                            <li><a href="#4">4</a></li>
+                            <li><a href="#5">5</a></li>
+                            <li><a href="#6">6</a></li>
+                            <li><a href="#9">...</a></li>
+                            <li><a href="#10">10</a></li>
+                        </ul>
+                        <a href="#2"><i class="fa-solid fa-chevron-right"></i></a>
+                </nav>
+            </footer>
 
         </main>
 
