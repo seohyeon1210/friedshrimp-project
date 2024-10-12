@@ -1,35 +1,35 @@
 .header-title h1 {
-    font-size: 1.5rem; 
-    font-weight: bold; 
-    position: absolute; 
-    top: 70px; 
-    left: 22%; 
-    transform: translateX(-50%); 
-    overflow: hidden; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 70px;
+    left: 22%;
+    transform: translateX(-50%);
+    overflow: hidden;
     margin-top: 20px;
 }
 .header-line {
     position: absolute;
-    top:13%;
+    top: 13%;
     left: 19%;
     overflow: hidden;
     border: none; /* 기본 테두리 제거 */
     height: 1px; /* 줄 두께 */
     background-color: #0e0c0d; /* 줄 색상 */
-    width: 62%; 
+    width: 62%;
 }
 /* 등록하기 버튼 스타일 */
 .header-button .submit-btn {
-    margin-top: 20px; 
-    position: absolute; 
-    top: 115px; 
-    left: 78%; 
-    transform: translateX(-50%); 
-    background-color: #8b3a4a; 
-    color: white; 
-    border: none; 
-    padding: 5px 15px; 
-    border-radius: 5px; 
+    margin-top: 20px;
+    position: absolute;
+    top: 115px;
+    left: 78%;
+    transform: translateX(-50%);
+    background-color: #8b3a4a;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
 }
 
 .header-button .submit-btn:hover {
@@ -39,7 +39,7 @@
 /* 본문 글꼴 및 기본 스타일 설정 */
 body {
     padding-top: 0px; /* 헤더 높이 만큼 패딩 추가 */
-    background-color: #F5F5F7;
+    background-color: #f5f5f7;
 }
 
 /* 크루 모집 버튼 섹션 */
@@ -48,61 +48,49 @@ body {
 }
 
 .more-info:hover {
-    color: white; 
+    color: white;
 }
-/* 크루 모집 섹션 스타일 */
-.crew-section {
-    text-align: center; /* 가운데 정렬 */
-    padding: 20px; /* 패딩 */
-}
-
 /* 크루 박스 위치 조절 */
 .crew-container {
-    display: flex;             
-    flex-wrap: wrap;           
-    justify-content: space-between; 
-    gap: 10px; /* 원하는 간격으로 조정 */
-    width: 1140px;            
-    margin: 100px auto;       
-    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
+
 .crew-box {
-    width: calc(33.33% - 13px); /* 3개의 박스를 한 줄에 놓고 10px 간격 설정 */
-    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
-    border-radius: 1em;
-    margin-top: 50px; 
-    background-color: white; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    overflow: hidden; 
-    height: auto; 
+    width: calc(33.33% - 20px); /* Each box takes 1/3 of the row with a 20px gap */
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
 }
-/* 크루 이미지 스타일 */
+
 .crew-image {
-   width: 300px;
-   padding: 0%;
+    width: 100%;
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image scales properly */
 }
-/* '더 보기' 링크 스타일 */
-.read-more {
-    margin-top: 2em; /* 폰트 크기에 비례한 마진 */
-    color: #ad1639;
-    text-decoration: none; 
-    font-size: 12px;
+
+h3, h4 {
+    margin: 10px 0;
 }
+
 /* 하단 페이징 표시 스타일 */
 .pagination1 {
     color: chocolate;
-    display: flex; /* Flexbox로 아이템 나열 */
-    list-style: none; /* 기본 리스트 스타일 제거 */
-    justify-content: center; /* 중앙 정렬 */
-    margin-top: -60px; /* 상단 여백 */
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: -60px;
 }
 
 .pagination1 li a {
     padding: 8px 16px; /* 패딩 */
-    border: 1px solid #dddddd; /* 테두리 스타일 */
-    color: #080707dc; /* 글자색 */
-    font-weight: bold; /* 글자 두껍게 */
-    font-size: 1rem; /* 글자 크기 */
+    border: 1px solid #dddddd;
+    color: #080707dc;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 .pagination1 li a:hover {
@@ -110,12 +98,46 @@ body {
 }
 /* 자식 요소에 절대 위치를 설정할 수 있도록 */
 .image-container {
-    position: relative; 
+    position: relative;
 }
 .icon-alert {
-    position: absolute !important; /* 우선순위를 높이기 위해 !important 추가 */
-    top: -10px !important; 
-    right: -8px !important; 
-    color: #d6134e; 
-    font-size: 30px; 
+    position: absolute;
+    top: 180px;
+    right: 1150px;
+    color: #d6134e;
+    font-size: 24px;
+    z-index: 1;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+/* 장소 날짜 회비 를 나타내는 박스 */
+.main {
+    position: absolute;
+    top: 15%;
+    display: inline block;
+    width: 700px;
+    height: 50px;
+    border: 3px solid #88304e;
+    overflow: hidden;
+}
+/* 장소칸 설정 */
+/* 날짜 회비 선택창 조절 */
+.place {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 크루 모집 섹션 스타일 */
+.crew-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top-box {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
 }

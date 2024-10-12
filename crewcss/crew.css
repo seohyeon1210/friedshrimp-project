@@ -1,50 +1,4 @@
-/* 장소 날짜 회비 를 나타내는 박스
-.main{
-    position: relative;
-    left: 200px;
-    top:110px;
-    display: inline block;
-    width: 1100px;
-    height: 1000px;
-    border: 3px solid #88304E;
-    overflow: hidden;
-    }
-.mainsup{
-    position: relative;
-    left: 200px;
-    top:110px;
-    display: inline block;
-    width: 1100px;
-    height: 100px;
-    border: 3px solid #88304E;
-    overflow: hidden;
-}
-/* 장소칸 설정
-.lebel{
-    cursor: pointer;
-    border-color: #f5f5f7;
-    color: #747774;
-    position: relative;
-    font-size: 30px;
-    right: -100px;
-}
 
-/* 날짜 회비 선택창 조절 */
-.datee{
-    cursor: pointer;
-    position: relative;
-    top: -5px;
-    height: 40px;
-    right: -150px;
-    color: #747774;
-    font-size: 22px;
-}
-.datee2{
-    position: relative;
-    top: 2px;
-    height: 25px;
-    right: 0px;
-} */
 /* 상세페이지 회비버튼  */
 .datee3{
     position: relative;
@@ -95,10 +49,10 @@
     overflow: hidden;
 }
 /* 메뉴 이미지 박스 조정*/
-/* .image-box {
+.image-box {
     border: 3px solid #192019;
     width:400px;
-    height:200px;
+    height:50px;
     margin:0 auto;
 }
 
@@ -122,7 +76,7 @@
     width: 500px;
     height: 85px;
     border: 2px solid black;
-    } */
+    }
 .met {
     position: absolute; /* 포지션센터고정 */
     top: 50%;
@@ -187,4 +141,3 @@ input{
     height: 70px;
     width: 100px;
 }
-
