@@ -61,13 +61,16 @@ body {
     display: flex;             
     flex-wrap: wrap;           
     justify-content: space-between; 
-    gap: 50px;                 
+    gap: 10px; /* 원하는 간격으로 조정 */
     width: 1140px;            
     margin: 100px auto;       
     margin-bottom: 100px;
 }
 .crew-box {
-    margin-top: 50px;
+    width: calc(33.33% - 13px); /* 3개의 박스를 한 줄에 놓고 10px 간격 설정 */
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    margin-top: 50px; 
     background-color: white; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     overflow: hidden; 
@@ -80,12 +83,14 @@ body {
 }
 /* '더 보기' 링크 스타일 */
 .read-more {
-    color: #d6134e; 
+    margin-top: 2em; /* 폰트 크기에 비례한 마진 */
+    color: #ad1639;
     text-decoration: none; 
-    font-size: 13px;
+    font-size: 12px;
 }
 /* 하단 페이징 표시 스타일 */
 .pagination1 {
+    color: chocolate;
     display: flex; /* Flexbox로 아이템 나열 */
     list-style: none; /* 기본 리스트 스타일 제거 */
     justify-content: center; /* 중앙 정렬 */
@@ -95,20 +100,22 @@ body {
 .pagination1 li a {
     padding: 8px 16px; /* 패딩 */
     border: 1px solid #dddddd; /* 테두리 스타일 */
-    color: #312f2f; /* 글자색 */
+    color: #080707dc; /* 글자색 */
     font-weight: bold; /* 글자 두껍게 */
     font-size: 1rem; /* 글자 크기 */
 }
 
 .pagination1 li a:hover {
-    background-color: #ece2e2; /* 호버 시 배경색 변화 */
+    background-color: #ece2e2;
 }
-/* 밑줄 스타일  */
-/* .header-title h3::after {
-    content: ""; 
-    display: block; 
-    width: 100px; 
-    height: 3px;
-    background-color: #0e0c0d; 
-    margin: 6px auto;
-} */
+/* 자식 요소에 절대 위치를 설정할 수 있도록 */
+.image-container {
+    position: relative; 
+}
+.icon-alert {
+    position: absolute !important; /* 우선순위를 높이기 위해 !important 추가 */
+    top: -10px !important; 
+    right: -8px !important; 
+    color: #d6134e; 
+    font-size: 30px; 
+}
