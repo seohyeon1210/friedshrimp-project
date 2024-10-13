@@ -13,9 +13,9 @@
     top: 13%;
     left: 19%;
     overflow: hidden;
-    border: none; /* 기본 테두리 제거 */
-    height: 1px; /* 줄 두께 */
-    background-color: #0e0c0d; /* 줄 색상 */
+    border: none;
+    height: 1px; 
+    background-color: #0e0c0d; 
     width: 62%;
 }
 /* 등록하기 버튼 스타일 */
@@ -26,10 +26,11 @@
     left: 78%;
     transform: translateX(-50%);
     background-color: #8b3a4a;
+    box-shadow: 0 .1rem 1rem #da093d;
+    border-radius: 1rem;
     color: white;
     border: none;
     padding: 5px 15px;
-    border-radius: 5px;
     font: bold;
 }
 
@@ -39,7 +40,7 @@
 
 /* 본문 글꼴 및 기본 스타일 설정 */
 body {
-    padding-top: 0px; /* 헤더 높이 만큼 패딩 추가 */
+    padding-top: 0px; 
     background-color: #f5f5f7;
 }
 
@@ -61,7 +62,7 @@ body {
     border: 1px solid #ccc;
     width: 230px;
     height: 350px;
-    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .1rem 1rem #201f20;
     border-radius: 1em;
 }
 
@@ -72,7 +73,7 @@ body {
 }
 .icon-alert {
     position: absolute;
-    top: 22%;
+    top: 23%;
     left: 39%;
     color: #d6134e;
     font-size: 24px;
@@ -86,16 +87,18 @@ body {
     display: inline block;
     width: 520px;
     height: 50px;
-    border: 2px solid #d6134e;
+    box-shadow: 0 .1rem 1rem #7e7c7c;
+    border-radius: 1em;
     overflow: hidden;
 }
-/* 장소칸 설정 */
-/* 날짜 회비 선택창 조절 */
+
+/*장소 날짜 회비 선택창 조절 */
 .place {
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
 
 /* 크루 모집 섹션 스타일 */
 .crew-section {
@@ -114,11 +117,12 @@ body {
     background: #E23E57;
     color: #eee7e8;
     padding: 2px;
-    border-radius: 1px;
+    box-shadow: 0 .1rem 1rem #da093d;
+    border-radius: 1rem;
 }
 .h5{
     width: auto;
     text-align: center;
     color: #E23E57;
-    margin: 3px;
+    margin: 3px;    
 }

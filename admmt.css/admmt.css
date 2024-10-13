@@ -212,3 +212,11 @@ th, td {
     top: -25px;
     width: 10%;
   }
+div > i{
+    cursor: pointer;
+    font-size: 3rem;
+    position: absolute;
+    top: 6.8%;
+    left: 83%;
+
+  }
