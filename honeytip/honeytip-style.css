@@ -21,6 +21,7 @@ body{
 
 i{
     padding: 10px;
+    color: #121212;
 }
 
 header{
@@ -328,9 +329,6 @@ img{
     border: 3px solid #DBDBDB;
 }
 
-.fileImage .upload-box .drag-file .highlight{
-    border: 3px dashed #E23E57;
-}
 .fileImage .upload-box .drag-file .image{
     width: 40px;
     /* height: 350px; */
@@ -411,4 +409,17 @@ img{
         margin-right: 0;
         overflow: initial;
     }
+}
+
+/* 알알꿀팁 상세 페이지 */
+.post-container{
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 65px;
 }

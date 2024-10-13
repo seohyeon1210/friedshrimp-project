@@ -1,7 +1,6 @@
 // 파일 업로드
 function DropFile(dropAreaId, fileListId){
     let dropArea = document.getElementById(dropAreaId);
-    let fileList = document.getElementById(fileListId);
 
     function preventDefaults(e) {
         e.preventDefault();
