@@ -35,7 +35,7 @@
   }
   /* 상세페이지 이미지박스 */
   .postdetall-box {
-    width: 870px;
+    width: 600px;
     height: 350px;
     padding: 10px;
     margin-top: 20px;
@@ -45,9 +45,11 @@
   }
   /* 신고하기 */
   .report-container {
+    position: absolute;
     display: flex; /* 아이콘과 버튼을 수평으로 정렬 */
     align-items: center; /* 아이템을 수직으로 중앙 정렬 */
-    margin-top: 20px; /* 다른 요소와의 간격 추가 */
+    left: 31%;
+    top: 94%;
 }
 
 .report-icon {

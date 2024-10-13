@@ -66,9 +66,9 @@ body {
 }
 
 .crew-image {
-    height: 228px; /* Set a fixed height */
+    height: 228px;
     gap: 30px;
-    object-fit: cover; /* Ensures the image scales properly */
+    object-fit: cover; 
 }
 .icon-alert {
     position: absolute;
