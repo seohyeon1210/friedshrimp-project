@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .recrut {
     display: flex;
     flex-direction: column;
@@ -22,39 +21,12 @@
 
     }
 } */
-=======
-.header-title h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    position: absolute;
-    top: 70px;
-    left: 22%;
-    transform: translateX(-50%);
-    overflow: hidden;
-    margin-top: 20px;
-}
-.header-line {
-    position: absolute;
-    top: 13%;
-    left: 19%;
-    overflow: hidden;
-    border: none;
-    height: 1px; 
-    background-color: #0e0c0d; 
-    width: 62%;
-}
->>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
 /* 등록하기 버튼 스타일 */
 .header-button .submit-btn {
     margin-top: 20px;
     position: absolute;
-<<<<<<< HEAD
     top: 170px;
     left: 90%;
-=======
-    top: 115px;
-    left: 78%;
->>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
     transform: translateX(-50%);
     background-color: #8b3a4a;
     border-radius: 1em;
@@ -63,11 +35,8 @@
     border: none;
     padding: 5px 15px;
     font: bold;
-<<<<<<< HEAD
     font-size: 1rem;
     font-family: sans-serif;
-=======
->>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
 }
 
 .header-button .submit-btn:hover {
@@ -88,16 +57,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-<<<<<<< HEAD
     width: 900px;
     gap: 20px;
     margin-top: 125px;
-=======
-    width: 800px;
-    gap: 20px;
-    margin-top: 250px;
-
->>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
 }
 .crew-box {
     width: calc(33.33% 25px); 
@@ -106,13 +68,8 @@ body {
     height: 350px;
     border-radius: 1em;
     box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
-<<<<<<< HEAD
     font-family: Pretendard;
 }
-=======
-}
-
->>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
 .crew-image {
     height: 228px;
     gap: 30px;
@@ -120,28 +77,17 @@ body {
 }
 .icon-alert {
     position: absolute;
-<<<<<<< HEAD
     top: 27.5%;
     left: 29%;
     color: #d6134e;
     font-size: 2rem;
-=======
-    top: 23%;
-    left: 39%;
-    color: #d6134e;
-    font-size: 24px;
->>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
     overflow: hidden;
     }
 
 /* 장소 날짜 회비 를 나타내는 박스 */
 .main {
     position: absolute;
-<<<<<<< HEAD
     top: 19%;
-=======
-    top: 15%;
->>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
     display: inline block;
     width: 520px;
     height: 50px;
@@ -182,12 +128,8 @@ body {
     width: auto;
     text-align: center;
     color: #E23E57;
-<<<<<<< HEAD
     margin: 3px;
     font-family: Pretendard;
-=======
-    margin: 3px;    
->>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
 }
 .img{
     width: calc(33.33% 25px); 
@@ -196,8 +138,4 @@ body {
     height: 220px;
     border-top-right-radius: 1em;
     border-top-left-radius: 1em;
-<<<<<<< HEAD
-=======
-   
->>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
 }
