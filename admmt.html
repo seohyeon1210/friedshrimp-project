@@ -62,7 +62,10 @@
     <table>
         <thead>
         <tr>
-            <th type="checkbox" class="star"><i class="fa-regular fa-star"></i></th>
+            <td >
+                <i class="fa-regular fa-star star" id="star1"></i>
+                <input type="checkbox" id="selectAllCheckbox" style="display: none;">
+            </td>
             <th>작성자</th>
             <th>제목</th>
             <th>장소</th>
@@ -118,82 +121,82 @@
         </thead>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
 
@@ -215,11 +218,20 @@
             <a href="#2"><i class="fa-solid fa-chevron-right"></i></a>
     </nav>
 </footer>
-<div>
+<dialog id="deleteModal">
+    <div class="delete-modal-content">
+        <h2>삭제하시겠습니까?</h2>
+        <div class="modal-buttons">
+            <button class="confirm-btn" onclick="confirmDelete()">Y</button>
+            <button class="cancel-btn" onclick="closeDeleteModal()">N</button>
+        </div>
+    </div>
+</dialog>
+<div type="reset" class="reset-btn1">
 <i class="fa-solid fa-trash-can"></i>
 </div>
 <script src="./admmt.css/admmt.js"></script>
-<script src="./crewjs/star.js"></script>
+<script src="./admmt.css/star.js"></script>
 </body>
 </html>
 	

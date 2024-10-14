@@ -10,25 +10,14 @@
     margin-top: 110px;
     font-family: Pretendard;
 }
-/* @keyframes slide {
-    from{
-        left: -100px;
-        opacity: 0;
-    }
-    to{
-        left: 296px;
-        opacity: 1;
-
-    }
-} */
 /* 등록하기 버튼 스타일 */
 .header-button .submit-btn {
-    margin-top: 20px;
+    margin-top: 40px;
     position: absolute;
     top: 170px;
     left: 90%;
     transform: translateX(-50%);
-    background-color: #8b3a4a;
+    background-color: #d6134e;
     border-radius: 1em;
     box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
     color: white;
@@ -37,12 +26,37 @@
     font: bold;
     font-size: 1rem;
     font-family: sans-serif;
+    cursor: pointer;
 }
 
+.crew{
+    position: absolute;
+    top: 17%;
+    font-size: 3rem;
+    left: 88%;
+    overflow: hidden;
+    color: #0f0e0f;
+    animation: slide 2s;
+}
+@keyframes slide {
+    0% {
+        left: -100px; 
+    }
+    100% {
+        left: 1110px; 
+    }
+}
 .header-button .submit-btn:hover {
     background-color: #d6134e;
 }
-
+.icon-alert {
+    position: absolute;
+    top: 27.5%;
+    left: 29%;
+    color: #d6134e;
+    font-size: 2rem;
+    overflow: hidden;
+    }
 /* 본문 글꼴 및 기본 스타일 설정 */
 body {
     padding-top: 0px; 
@@ -75,14 +89,7 @@ body {
     gap: 30px;
     object-fit: cover; 
 }
-.icon-alert {
-    position: absolute;
-    top: 27.5%;
-    left: 29%;
-    color: #d6134e;
-    font-size: 2rem;
-    overflow: hidden;
-    }
+
 
 /* 장소 날짜 회비 를 나타내는 박스 */
 .main {

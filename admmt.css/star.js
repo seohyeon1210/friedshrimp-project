@@ -1,5 +1,5 @@
 // Get the star element and checkbox
-const star = document.getElementById('star');
+const star = document.getElementById('star1');
 const checkbox = document.getElementById('selectAllCheckbox');
 
 // Add click event listener to the star
@@ -11,7 +11,7 @@ star.addEventListener('click', () => {
     checkbox.checked = star.classList.contains('filled');
 });
 
-// Optional: Add an event listener to the checkbox if you want to handle individual selections
+// Optional: Add an event listener to the checkbox if needed
 checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
         star.classList.add('filled'); // Fill the star when checkbox is checked

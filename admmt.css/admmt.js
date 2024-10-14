@@ -38,3 +38,6 @@ function confirmDelete() {
 document.querySelectorAll(".reset-btn").forEach(button => {
     button.addEventListener("click", openDeleteModal);
 });
+document.querySelectorAll(".reset-btn1").forEach(button => {
+    button.addEventListener("click", openDeleteModal);
+});
