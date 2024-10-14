@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>recruitment</title>
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+        <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
+        <link rel="stylesheet" href="./css/recruitment-style.css"/>
+        <link rel="stylesheet" href="./css/page-style.css">
+        <link rel="stylesheet" href="./css/postdetall.css">
+        <link rel="stylesheet" href="./css/postedit.css">
+    </head>
+    <body>
+          <!-- 헤더 영역 -->
+          <header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <a href="#" class="logo">Fried <br> Shrimp</a>
+                <ul id="nav-bar">
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+                    </li>
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+                    </li>
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                    </li>
+                    <li>
+                        <a href="#" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
+                    </li>
+                    <li>
+                        <button type="button" class="l-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <!-- 메인 영역 -->
+        <main>
+            <div class="form-container">
+                <div class="container">
+                    <div class="title">
+                        <h1>크루 모집</h1>
+                        <hr>
+                        <div class="write">
+                            <button type="button" class="writebtn" onclick="openRecruitmentModal()">크루 모집</button>
+                        </div>
+                    </div> 
+                    <div class="containerBox">
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="./c.imge/3.jpg" alt="card-image" class="card-image" width="600" height="240">
+                            </div>
+                            <div class="card-body">
+                                <span class="tag tag-blue">Tip</span>
+                                <h4>에펠탑 러닝 클럽</h4>
+                                <p>본문입니다.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="readMore">
+                                    <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="./c.imge/girl.jpg" alt="card-image" class="card-image" width="600" height="240">
+                            </div>
+                            <div class="card-body">
+                                <span class="tag tag-blue">Tip</span>
+                                <h4>한강 스트레칭 동호회</h4>
+                                <p>본문입니다.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="readMore">
+                                    <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="./c.imge/2.jpg" alt="card-image" class="card-image" width="600">
+                            </div>
+                            <div class="card-body">
+                                <span class="tag tag-blue">Tip</span>
+                                <h4>모닝 러닝팀</h4>
+                                <p>본문입니다.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="readMore">
+                                    <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="containerBox">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="./c.imge/7.jpg" alt="card-image" class="card-image" width="600">
+                                </div>
+                                <div class="card-body">
+                                    <span class="tag tag-blue">Tip</span>
+                                    <h4>자연과 함께하는 트레일 러닝</h4>
+                                    <p>본문입니다.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="readMore">
+                                        <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="./c.imge/8.jpg" alt="card-image" class="card-image" width="600">
+                                </div>
+                                <div class="card-body">
+                                    <span class="tag tag-blue">Tip</span>
+                                    <h4>함께 달리기 러닝 크루</h4>
+                                    <p>본문입니다.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="readMore">
+                                        <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="./c.imge/stretching.jpg" alt="card-image" class="card-image" width="600" height="235">
+                                </div>
+                                <div class="card-body">
+                                    <span class="tag tag-blue">Tip</span>
+                                    <h4>러너의 스트레칭 모임</h4>
+                                    <p>본문입니다.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="readMore">
+                                        <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <nav data-pagination class="pagebar">
+                        <a href="#" disabled><i class="fa-solid fa-chevron-left"></i></a>
+                        <ul>
+                            <li class="current"><a href="#1">1</a></li>
+                            <li><a href="#2">2</a></li>
+                            <li><a href="#3">3</a></li>
+                            <li><a href="#4">4</a></li>
+                            <li><a href="#5">5</a></li>
+                            <li><a href="#6">6</a></li>
+                            <li><a href="#9">...</a></li>
+                            <li><a href="#10">10</a></li>
+                        </ul>
+                        <a href="#2"><i class="fa-solid fa-chevron-right"></i></a>
+                    </nav>
+                </footer>
+            </div>
+
+            <!-- 크루모집 모달 시작 -->
+            <dialog id="myDialog">
+                <form class="modal">
+                    <img class="close_ic" src="./c.imge/close-ic.png" alt="Close Button" onclick="closeDialog()" />
+                    <h1>크루모집</h1>
+                    <hr>
+                    <div>
+                        <input class="input1" type="text" id="title" placeholder="제목">
+                        <input class="input1" type="text" id="number" placeholder="인원수">
+                        <input class="input1" type="text" id="date" placeholder="날짜/시간/장소/회비 최대50.000원">
+                    </div>
+                    <textarea class="input3" id="details" rows="4" placeholder="상세페이지 입력칸 최대 50글자"></textarea>
+                    <div class="preview-container">
+                        <span>미리보기 이미지가 여기에 나타납니다.</span>
+                    </div>
+                    <label class="file-label" for="chooseFile">파일 찾기</label>
+                    <input class="file" id="chooseFile" type="file" onchange="handleFiles(this.files)" accept="image/png, image/jpeg, image/gif">
+                    <div class="btn-container">
+                        <button class="inside" type="button" onclick="saveAndCloseModal()">등록</button>
+                    </div>
+                </form>
+            </dialog>
+<!-- 크루모집 모달 끝 -->
+
+<!-- 게시글 상세보기 모달 시작 -->
+            <dialog id="myDialog1">
+                <form class="modal">
+                    <img class="close_ic" src="./c.imge/close-ic.png" alt="Close Button" onclick="closeDetailDialog()" />
+                    <h1>상세보기</h1>
+                    <hr>
+                    <div>
+                        <input class="input1" type="text" id="teamName" placeholder="모닝 러닝팀">
+                        <input class="input1" type="text" id="teamSize" placeholder="15명">
+                        <input class="input1" type="text" id="details" placeholder="2024-10-19/AM7시/한강/회비10000원">
+                    </div>
+                    <textarea class="input3" id="description" rows="4" placeholder="상세페이지 입력칸 최대 50글자"></textarea>
+                    <div>
+                        <img src="" class="postedit-box" /> <!-- 상세보기 이미지 -->
+                    </div>
+                    <div class="btn-container1">
+                        <button class="inside1" type="button" onclick="closeDetailDialog()">신고하기</button>
+                    </div>
+                </form>
+            </dialog>
+<!-- 게시글 상세보기 모달 끝 -->
+
+    <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
+    <script src=".js/header.js"></script>
+    <script src="./js/upload.php"></script>
+    <script src="./js/hover.js"></script>
+    </body>
+</html>
