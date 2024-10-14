@@ -9,7 +9,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* 센터 */
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
 }
 .modal-content {
     background-color: #F5F5F7;
@@ -23,6 +27,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 15px; 
+<<<<<<< HEAD
     top: -25px;
     width: 100%;
 }
@@ -40,10 +45,31 @@ h1{
     height: 300px;
     padding: 10px;
     margin-top: -10px;
+=======
+    
+}
+.h1{
+    color: red;
+}
+/* 상세페이지 이미지박스위치 */
+.flex-container1{
+    display: flex;
+    position: relative;
+    top: -25px;
+    width: 100%;
+  }
+  /* 상세페이지 이미지박스 */
+  .postdetall-box {
+    width: 600px;
+    height: 350px;
+    padding: 10px;
+    margin-top: 10px;
+>>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
     margin-bottom: 15px;
     border: 1px solid #E23E57;
     border-radius: 5px;
     overflow: auto;
+<<<<<<< HEAD
 }
   /* 신고하기 */
 .report-container {
@@ -53,6 +79,16 @@ h1{
     align-items: center; 
     left: 36%;
     top: 92%;
+=======
+  }
+  /* 신고하기 */
+  .report-container {
+    position: absolute;
+    display: flex; 
+    align-items: center; 
+    left: 31%;
+    top: 94%;
+>>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
 }
 
 /* 신고버튼 */
@@ -60,7 +96,11 @@ h1{
     position: relative;
     top: 8px;
     left: 70%;
+<<<<<<< HEAD
     padding: 5px 5px;
+=======
+    padding: 10px 15px;
+>>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
     background-color: #E23E57; 
     color: #fff;
     border-radius: 5px; 
@@ -73,4 +113,14 @@ h1{
 
 .report-button:hover {
     background-color: #d7354c; /* 호버 시 색상 어둡게 변경 */
+<<<<<<< HEAD
 }
+=======
+}
+/* 아이콘 크기 설정 */
+/* .report-icon {
+    width: 24px; 
+    height: 24px; 
+    margin-right: 8px; 
+} */
+>>>>>>> fb07df2bf008dee6082ee9fb177f17f6b8d200cd
