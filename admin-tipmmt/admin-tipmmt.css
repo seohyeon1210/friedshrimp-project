@@ -1,14 +1,22 @@
-/* ---------상단 메뉴바 구역------------ */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
 *{
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+
+    -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body{
     background-color: #F5F5F7;
+
+    display: grid;
+    place-items: center;
 }
 
 i{
@@ -18,9 +26,14 @@ i{
 header{
     width: 100%;
     background-color: #FFF;
-    /* position: fixed; */
+    position: fixed;
     color: #121212;
     padding: 0 20px;
+    /* 헤더 고정 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 header nav{
@@ -31,7 +44,7 @@ header nav{
 
 nav a.logo{
     color: #121212;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -58,6 +71,7 @@ nav ul a{
     padding: 5px 13px;
     border-radius: 4px;
     transition: .4s;
+    font-family: Pretendard;
 }
 
 .active, nav ul a:hover{
@@ -83,7 +97,6 @@ section{
 }
 
 section#running{
-    /* background: url("https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753__340.jpg"); */
     color: #121212;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -113,17 +126,30 @@ section#tips{
     display: none;
 }
 
+.l-btn{
+    color: #121212;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 5px 13px;
+    border-radius: 4px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.l-btn:hover{
+    background: #E23E57;
+    color: #FFF;
+    padding: 10px;
+}
+
 /* ---------알알꿀팁 관리 구역------------ */
-.div1{
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 1100px;
-    margin: 20px 20px;
-    display: flex;  /* Flexbox 적용 */
-    justify-content: space-between;  /* 제목과 삭제 버튼을 양 끝에 배치 */
-    align-items: center;  /* 수직 정렬 */
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: 125px;
+    padding-bottom: 100px;
+    font-family: Pretendard;
 }
 
 .div2{
@@ -136,19 +162,24 @@ section#tips{
     margin: 20px 20px;
 }
 
-button:hover {
-    transform: scale(1.3);  /* 커졌을 때 1.1배 */
+.button1{
+    margin-left: 90%;
+    margin-top: 30px;
 }
 
-.button1{
+button:hover {
+    background-color: #E23E57;
+}
+
+.button2{
     background-color: #892c4d;
     color: white;
-    padding: 5px 10px;
+    padding: 10px 18px;
+    width: 100px;
     border: none;
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    transition: transform 0.1s ease;  /* 부드럽게 커지도록 transition 설정 */
 }
 
 /* ---------페이징 처리 구역------------ */

@@ -1,14 +1,22 @@
-/* --------------------navstyle(상단 메뉴 바)------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
 *{
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+
+    -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body{
     background-color: #F5F5F7;
+
+    display: grid;
+    place-items: center;
 }
 
 i{
@@ -18,9 +26,14 @@ i{
 header{
     width: 100%;
     background-color: #FFF;
-    /* position: fixed; */
+    position: fixed;
     color: #121212;
     padding: 0 20px;
+    /* 헤더 고정 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 header nav{
@@ -58,6 +71,7 @@ nav ul a{
     padding: 5px 13px;
     border-radius: 4px;
     transition: .4s;
+    font-family: Pretendard;
 }
 
 .active, nav ul a:hover{
@@ -112,26 +126,46 @@ section#tips{
     display: none;
 }
 
+.l-btn{
+    color: #121212;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 5px 13px;
+    border-radius: 4px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.l-btn:hover{
+    background: #E23E57;
+    color: #FFF;
+    padding: 10px;
+}
+
 /* --------------------식단일기 페이지 구역------------------------- */
-.div1 {
-    position: absolute;
-    margin-top: 100px;
-    left: 250px;
-    display: flex;
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: 125px;
+    padding-bottom: 100px;
+    font-family: Pretendard;
 }
-.div2 {
-    position: absolute;
-    margin-top: 350px;
-    left: 250px;
+
+.div1{
     display: flex;
+    gap: 1rem;
+    margin-top: 30px;
+    justify-content: center;
 }
-.div3 {
-    position: absolute;
-    margin-top: 300px;
+
+.div2{
     display: flex;
-    left: 350px;           
-    transform: translateX(-50%);
+    gap: 1rem;
+    margin-top: 35px;
+    justify-content: center;
 }
+
 .card {
     background-color: white;
     border-radius: 10px;
@@ -153,6 +187,7 @@ section#tips{
     width: 300px;
     height: 500px;
     margin: 0 10px;
+    font-size: 25px;
 }
 
 .calorie-progress {
@@ -164,40 +199,52 @@ section#tips{
     height: 20px;
     position: relative;
 }
+
 .calorie-bar {
     height: 100%;
     width: 40%;
     background-color: #E23E57;
     position: absolute;
 }    
+
 .calorie-details {
     font-size: 16px;
-}    
+}
+
 .calorie-details span {
     color: #E23E57;
-}   
+}
+
 .activity-bar {
     display: flex;
     justify-content: space-between;
     margin: 10px 0;
-}   
+}
+
 .activity-bar div {
     height: 60px;
     width: 25px;
     background-color: #e0e0e0;
     border-radius: 5px;
-}   
+}
+
 .activity-bar div.highlight {
     background-color: #E23E57;
-}  
+}
+
 .footer-text {
     font-size: 14px;
     margin-top: 10px;
     color: #888;
 }
 
+.button1{
+    margin-left: 85%;
+    margin-top: 30px;
+}
+
 button:hover {
-    transform: scale(1.3);  /* 커졌을 때 1.1배 */
+    background-color: #E23E57;
 }
 
 .button2 {
@@ -208,8 +255,6 @@ button:hover {
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    margin-top: 250px;
-    transition: transform 0.1s ease;
 }
 
 .button3 {
@@ -220,8 +265,6 @@ button:hover {
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    margin-top: 250px;
-    transition: transform 0.1s ease;
 }
 
 /* -------------목표설정,식단등록 모달 css--------------- */
@@ -240,12 +283,27 @@ button:hover {
 /* 모달 내용 스타일 */
 .modal-content {
     background-color: #fff;
-    margin: 15% auto;
+    margin: 20% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
+}
+
+/* 타이틀 아래 간격 */
+.modal-content h2 {
+    margin-bottom: 5px; 
+}
+
+/* 입력 필드와 버튼 사이 간격 조정 */
+.modal-content input, .modal-content button {
+    margin-bottom: 5px; 
+}
+
+/* 모달창 내 텍스트 간 간격을 추가하려면 */
+.modal-content div {
+    margin-bottom: 5px;
 }
 
 /* 닫기 버튼 스타일 */
@@ -264,7 +322,6 @@ button:hover {
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    transition: transform 0.1s ease;
 }
 
 .close:hover,

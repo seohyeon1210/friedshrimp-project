@@ -1,14 +1,23 @@
 /* ---------상단 메뉴바 구역------------ */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
 *{
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+
+    -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body{
     background-color: #F5F5F7;
+
+    display: grid;
+    place-items: center;
 }
 
 i{
@@ -21,6 +30,11 @@ header{
     position: fixed;
     color: #121212;
     padding: 0 20px;
+    /* 헤더 고정 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 header nav{
@@ -31,7 +45,7 @@ header nav{
 
 nav a.logo{
     color: #121212;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -58,6 +72,7 @@ nav ul a{
     padding: 5px 13px;
     border-radius: 4px;
     transition: .4s;
+    font-family: Pretendard;
 }
 
 .active, nav ul a:hover{
@@ -83,7 +98,6 @@ section{
 }
 
 section#running{
-    /* background: url("https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753__340.jpg"); */
     color: #121212;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -113,19 +127,42 @@ section#tips{
     display: none;
 }
 
+.l-btn{
+    color: #121212;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 5px 13px;
+    border-radius: 4px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.l-btn:hover{
+    background: #E23E57;
+    color: #FFF;
+    padding: 10px;
+}
+
 /* ---------관리자 메인페이지 구역------------ */
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: 125px;
+    padding-bottom: 100px;
+    font-family: Pretendard;
+}
+
 .div1{
-    position: absolute;
-    margin-top: 150px;
-    left: 40px;
     display: flex;
+    margin-top: 30px;
+    justify-content: center;
 }
 
 .div2{
-    position: absolute;
-    margin-top: 450px;
-    left: 40px;
     display: flex;
+    margin-top: 30px;
+    justify-content: center;
 }
 
 .card {
