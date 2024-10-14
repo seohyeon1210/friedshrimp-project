@@ -35,7 +35,7 @@
         </nav>
     </header>
     <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
-
+<section class="section2">
 <div class="admmt">
     <div class="admmt-contents">
         <div class="admmt-title">
@@ -66,7 +66,7 @@
                 <i class="fa-regular fa-star star" id="star1"></i>
                 <input type="checkbox" id="selectAllCheckbox" style="display: none;">
             </td>
-            <th>작성자</th>
+            <td>작성자</td>
             <th>제목</th>
             <th>장소</th>
             <th>등록일</th>
@@ -75,37 +75,7 @@
             <th>삭제</th>
         </tr>
     </thead>
-    <dialog id="deleteModal">
-        <div class="delete-modal-content">
-            <h2>삭제하시겠습니까?</h2>
-            <div class="modal-buttons">
-                <button class="confirm-btn" onclick="confirmDelete()">Y</button>
-                <button class="cancel-btn" onclick="closeDeleteModal()">N</button>
-            </div>
-        </div>
-    </dialog>
-    <dialog id="myDialog">
-        <div class="detail-modal-content">
-            <img class="close_ic" src="./image/close-ic.png" alt="Close Button" onclick="closeDetailModa2()" />
-            <h1>천안역런닝</h1>
-            <hr>
-            <h3>현재 게시물은 신고1건 되었습니다.</h3>
-            <input class="input1" type="text" id="detail-title" placeholder="강남역 DO RUN 모집">
-            <input class="input1" type="text" id="detail-member" placeholder="인원수 5명모집">
-            <input class="input1" type="text" id="detail-info" placeholder="강남역 3번출구 3시">
-            <input class="input1" type="text" id="detail-fee" placeholder="무료">
-            <textarea class="input3" placeholder="페이스 러너가 되어드릴게요 !
-문의전화 010-0010-1234 "></textarea>
-            
-            <div class="flex-container1">
-                <img class="postdetall-box" src="https://th.bing.com/th/id/OIP.Jz3w_6m0zJEjNN4fw9JDSgHaHa?w=160&h=160&c=7&r=0&o=5&pid=1.7"/>
-            </div>
-            <div class="report-container">
-                <i class="fa-duotone fa-solid fa-light-emergency-on"></i>
-                <button class="report-button" onclick="reportPost()">신고하기</button>
-            </div>
-        </div>
-    </dialog>
+    
     <tbody>
         <thead>
             <tr>
@@ -218,9 +188,10 @@
             <a href="#2"><i class="fa-solid fa-chevron-right"></i></a>
     </nav>
 </footer>
+</section>
 <dialog id="deleteModal">
     <div class="delete-modal-content">
-        <h2>삭제하시겠습니까?</h2>
+        <h3>삭제하시겠습니까?</h3>
         <div class="modal-buttons">
             <button class="confirm-btn" onclick="confirmDelete()">Y</button>
             <button class="cancel-btn" onclick="closeDeleteModal()">N</button>
@@ -230,6 +201,37 @@
 <div type="reset" class="reset-btn1">
 <i class="fa-solid fa-trash-can"></i>
 </div>
+<dialog id="deleteModal">
+    <div class="delete-modal-content">
+        <h2>삭제하시겠습니까?</h2>
+        <div class="modal-buttons">
+            <button class="confirm-btn" onclick="confirmDelete()">Y</button>
+            <button class="cancel-btn" onclick="closeDeleteModal()">N</button>
+        </div>
+    </div>
+</dialog>
+<dialog id="myDialog">
+    <div class="detail-modal-content">
+        <img class="close_ic" src="./image/close-ic.png" alt="Close Button" onclick="closeDetailModa2()" />
+        <h1>천안역런닝</h1>
+        <hr>
+        <h3>현재 게시물은 신고1건 되었습니다.</h3>
+        <input class="input1" type="text" id="detail-title" placeholder="강남역 DO RUN 모집">
+        <input class="input1" type="text" id="detail-member" placeholder="인원수 5명모집">
+        <input class="input1" type="text" id="detail-info" placeholder="강남역 3번출구 3시">
+        <input class="input1" type="text" id="detail-fee" placeholder="무료">
+        <textarea class="input3" placeholder="페이스 러너가 되어드릴게요 !
+문의전화 010-0010-1234 "></textarea>
+        
+        <div class="flex-container1">
+            <img class="postdetall-box" src="https://th.bing.com/th/id/OIP.Jz3w_6m0zJEjNN4fw9JDSgHaHa?w=160&h=160&c=7&r=0&o=5&pid=1.7"/>
+        </div>
+        <div class="report-container">
+            <i class="fa-duotone fa-solid fa-light-emergency-on"></i>
+            <button class="report-button" onclick="reportPost()">신고하기</button>
+        </div>
+    </div>
+</dialog>
 <script src="./admmt.css/admmt.js"></script>
 <script src="./admmt.css/star.js"></script>
 </body>

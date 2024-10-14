@@ -1,3 +1,9 @@
+.section2{
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: -80px;
+    font-family: Pretendard;
+    }
 body {
     margin: 0;
 }
@@ -70,7 +76,7 @@ a {
 
 .edit-btn,
 .reset-btn {
-    padding: 5px 50px;
+    padding: 50px 50px;
     background-color: red;
     color: white;
     border: none;
@@ -83,7 +89,7 @@ a {
 }
 
 .reset-btn1 {
-    padding: 5px 50px;
+    padding: 5px 15px;
     color: rgb(3, 2, 2);
     border: none;
     cursor: pointer;
@@ -116,21 +122,23 @@ a {
 
 .delete-modal-content,
 .detail-modal-content {
-    border: none;
+    border: 2rem;
     border-radius: 8px;
-    padding: 20px;
+    padding: 0px;
     text-align: center; /* For delete modal */
-    height: 130px; /* Specific for delete modal */
+    height: 110px; /* Specific for delete modal */
     background-color: white;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 570;;
 }
 
 .detail-modal-content {
-    height: 850px; /* Specific for detail modal */
+    height: 100%; /* Specific for detail modal */
     text-align: left;
+    width: 100%;
 }
 
 .modal-content1 h2 {
@@ -146,7 +154,7 @@ a {
 
 .confirm-btn,
 .cancel-btn {
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 10px 20px;
     border: none;
     border-radius: 1rem;
@@ -188,8 +196,8 @@ div > i {
     cursor: pointer;
     font-size: 2rem;
     position: absolute;
-    top: 19%;
-    right: 5%;
+    top: 20.5%;
+    right: 10%;
 }
 
 .star {
@@ -198,7 +206,6 @@ div > i {
     color: gray; 
     transition: color 0.3s ease; 
 }
-
 .star.filled {
     color: rgb(223, 15, 15); 
 }
@@ -226,34 +233,30 @@ div > i {
 }
 
 .report-button:hover {
-    background-color: #d7354c;
+    background-color: #d87382;
 }
 
 /* 테이블 스타일 */
 table {
+    margin-top: 3%;
     position: relative;
-    left: 5%;
-    width: 90%;
+    left: 0%;
+    width: 100%;
     border-collapse: collapse;
 }
-
-table, th, td {
-    border: 3px solid #dfd3d3;
-    text-align: center;
-    margin-top: 1%;
-}
-
 th, td {
-    padding: 16px;
+    
+    width: 0%;
+    border: 2px solid #252424;
     text-align: center;
+    margin-top: 3%;
 }
-
 /* 제목조절 */
 .search-container {
     width: 13%; 
     height: auto; 
-    margin-left: 10%;
-    margin-top: 15px; 
+    margin-left: -67%;
+    margin-top: 0px; 
     overflow: hidden;
 }
 
@@ -262,13 +265,12 @@ th, td {
     width: 50%; 
     height: 30px; 
     position: absolute;
-    top: 18.3%;
-    right: 33.5%; 
+    top: 21.3%;
+    right: 25.9%; 
 }
 select {
-    width: 50%; /* Make it fill the container */
-    padding: 5px; /* Add some padding */
-    margin-bottom: 10px; /* Space between select and input */
+    width: 50%; 
+    padding: 5px;  
 }
 /* 헤드고정 */
 .admmt {
@@ -281,6 +283,6 @@ select {
 }
 .admmt .admmt-contents {
     width: 1140px;
-    margin-top: 110px;
+    margin-top: 100px;
     font-family: Pretendard;
 }
