@@ -1,3 +1,6 @@
+.section{
+    width: 1140px;
+}
 .recrut {
     display: flex;
     flex-direction: column;
