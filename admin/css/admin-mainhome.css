@@ -1,0 +1,179 @@
+/* ---------상단 메뉴바 구역------------ */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body{
+    background-color: #F5F5F7;
+
+    display: grid;
+    place-items: center;
+}
+
+i{
+    padding: 10px;
+}
+
+header{
+    width: 100%;
+    background-color: #FFF;
+    position: fixed;
+    color: #121212;
+    padding: 0 20px;
+    /* 헤더 고정 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a.logo{
+    color: #121212;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 35px;
+    cursor: pointer;
+    font-family: cursive;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+}
+
+nav ul li{
+    line-height: 60px;
+    margin: 0 5px;
+}
+
+nav ul a{
+    color: #121212;
+    font-size: 18px;
+    padding: 5px 13px;
+    border-radius: 4px;
+    transition: .4s;
+    font-family: Pretendard;
+}
+
+.active, nav ul a:hover{
+    background: #E23E57;
+    color: #FFF;
+    padding: 10px;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px;
+    font-size: 40px;
+}
+
+section#running{
+    color: #121212;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+section#food{
+    color: #121212;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+section#crew{
+    color: #121212;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+section#tips{
+    color: #121212;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.checkbtn{
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.l-btn{
+    color: #121212;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 5px 13px;
+    border-radius: 4px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.l-btn:hover{
+    background: #E23E57;
+    color: #FFF;
+    padding: 10px;
+}
+
+/* ---------관리자 메인페이지 구역------------ */
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: 125px;
+    padding-bottom: 100px;
+    font-family: Pretendard;
+}
+
+.div1{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.div2{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 250px;
+    height: 180px;
+    margin: 0 10px;
+}
+
+

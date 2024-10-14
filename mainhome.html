@@ -2,43 +2,56 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Slide and Video</title>
+    <title>MRLS 메인홈페이지</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
-    <link rel="stylesheet" href="./cssfolder/mainstyles.css"> <!-- CSS 파일 연결 -->
-    <link rel="stylesheet" href="./cssfolder/nav-style.css"> <!-- CSS 파일 연결 -->
-    <link rel="stylesheet" href="./cssfolder/hello.css"> <!-- CSS 파일 연결 -->
-    <link rel="stylesheet" href="./cssfolder/ustatuschange.css">
-    <link rel="stylesheet" href="./cssfolder/ranking.css">
-    <link rel="stylesheet" href="./cssfolder/adbanner.css">
-    <link rel="stylesheet" href="./cssfolder/media.css">
-    <link rel="stylesheet" href="./cssfolder/diet-diary.css">
+    <link rel="stylesheet" href="./css/mainstyles.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="./css/navstyle.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="./css/media.css">
 </head>
 <body>
   <!-- 헤더 영역 -->
-        <header>
-            <nav>
-                <input type="checkbox" id="check">
-                <label for="check" class="checkbtn">
-                    <i class="fa-solid fa-bars"></i>
-                </label>
-                <a href="#" class="logo">Fried <br> Shrimp</a>
-                <ul id="nav-bar">
-                    <li>
-                        <a href="./running-diary" class="btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
-                    </li>
-                    <li>
-                        <a href="./diet-diary.html" class="btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
-                    </li>
-                    <li>
-                        <a href="./crewpage.html" class="btn"><i class="fa-solid fa-people-group"></i>크루</a>
-                    </li>
-                    <li>
-                        <a href="./honeytip-page" class="btn"><i class="fa-solid fa-circle-exclamation"></i>알알꿀팁</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+  <header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <div class="imgHoverEvent logo-show" onclick="location.href='./mainhome.html'">
+            <div class="imgBox1">
+                <img src="./img/f-logo.png" />
+            </div>
+            <div class="imgBox2">
+                <img src="./img/shrimp_st_ic.png" />
+            </div>
+            <div class="imgBox3">
+                <img src="./img/home_logo.png" />
+            </div>
+        </div>
+        <ul id="nav-bar">
+            <li>
+                <a href="./running-diary.html" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+            </li>
+            <li>
+                <a href="./diet-diary.html" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+            </li>
+            <li>
+                <a href="./recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+            </li>
+            <li>
+                <a href="./honeytip-page.html" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
+            </li>
+            <li>
+                <button type="button" class="l-btn" onclick="location.href='./start-home.html'">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
    <!-- 메인 홈페이지 영역 -->
    <div class="container">
     <!-- Main banner 슬라이드 -->
@@ -46,19 +59,20 @@
         <div class="slides">
             <!-- 1번 슬라이드: 프로필 등록 박스 -->
             <div class="slide slide1">
-                <img class="profile-img" src="./profile_img/friedshrimg.jpg" alt="프로필 사진">
-                <a href="./user-editprofile"></a> <!-- 여기에 경로 설정 -->
+                <img class="profile-img" id="pro-image" src="./img/profile.png" alt="profiledefault" onclick="redirectToProfilePage()" style="cursor: pointer;">
                 <div class="profile-info">
-                        <p>윤상민 <input type="text" name="name"></p>
+                        <p>오늘의 기분은 ?</p>
                         <!-- <p>키&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="height"></p>
                         <p>체중 <input type="text" name="kg"></p> -->
                 </div>
                 <div class="profile-hello" id="profile-hello"></div>
-                <div class="ustatus-change"></div>
+                <div>
+                    <img class="emotion-box" id="emotion-image" src="./img/emotion/thrill.png" onclick="emotionlevelm()" style="cursor: pointer;">
+                </div>
             </div>
             <!-- 2번 슬라이드 -->
             <div class="slide slide2">
-                <div class="mainbanner-silde">
+                <div class="slide2-dietbanner">
                     <h3>오늘 칼로리</h3>
                     <div class="calorie-progress">
                         <div class="calorie-bar"></div>
@@ -72,7 +86,7 @@
                 </div>
             </div>
             <!-- 3번 슬라이드 -->
-            <div class="slide slide3">Slide 3</div>
+            <div class="slide slide3"></div>
         </div>
         <!-- 좌/우 화살표 버튼 -->
         <button class="arrow left" onclick="prevSlide()">&#10094;</button>
@@ -80,56 +94,119 @@
     </div>
 
     <!-- 런닝 랭킹 배너 -->
-    <div class="ranking">
-        <h2>주간 런닝 랭킹</h2>
+    <div class="small-div ranking">
+        <h2 style="text-align: center">주간 런닝 랭킹</h2>
         <ul id="ranking-list">
             <li class="first">
-                고길동 <span class="crown">👑</span> 40Km
+                1위&nbsp;&nbsp;&nbsp;고길동&nbsp;&nbsp;40Km
+                <!-- 1위&nbsp;&nbsp;&nbsp;고길동 <span class="runner">🏃</span>&nbsp;&nbsp;40Km -->
             </li>
             <li>
-                도우너 30Km
+                2위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;윤봉길&nbsp;&nbsp;&nbsp;&nbsp;30Km
             </li>
             <li>
-                둘리 25Km
+                3위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;고길동&nbsp;&nbsp;&nbsp;&nbsp;25Km
             </li>
             <li>
-                홍길동 20Km
+                4위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;홍길동&nbsp;&nbsp;&nbsp;&nbsp;20Km
             </li>
             <li>
-                김철수 15Km
+                5위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;김철수&nbsp;&nbsp;&nbsp;&nbsp;15Km
+            </li>
+            <li>
+                6위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;박영희&nbsp;&nbsp;&nbsp;&nbsp;12Km
+            </li>
+            <li>
+                7위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이순신&nbsp;&nbsp;&nbsp;&nbsp;10Km
+            </li>
+            <li>
+                8위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;강감찬&nbsp;&nbsp;&nbsp;&nbsp;9Km
+            </li>
+            <li>
+                9위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;윤길동&nbsp;&nbsp;&nbsp;&nbsp;8Km
+            </li>
+            <li>
+                10위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;김송수&nbsp;&nbsp;&nbsp;&nbsp;6Km
+            </li>
+            <li>
+                11위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;장동건&nbsp;&nbsp;&nbsp;&nbsp;5Km
+            </li>
+            <li>
+                12위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이민정&nbsp;&nbsp;&nbsp;&nbsp;4Km
             </li>
         </ul>
     </div>
     <!-- 동영상 배너 -->
-    <div class="playmp4">
-        <video width="100%" height="100%" controls >
-            <source src="./video/Shortstretching.mp4" type="video/mp4">
+    <div class="small-div playmp4">
+        <video class="playmp4-set" controls loop autoplay>
+            <source src="./video/krunstretching.mp4" type="video/mp4" >
         </video>
     </div>
 
     <!-- Right top div -->
-    <div class="small-div honeybanner"></div>
-
+     <div class="small-div card-box">
+            <div class="card-header">
+                <img src="./img/weight-loss.jpg" alt="card-image" class="card-image" width="358px" height="170px">
+            </div>
+            <div class="card-body">
+                <span class="tag-cardcolor">Tip</span>
+                <h4>올바른 다이어트 방법</h4>
+            </div>
+            <div class="card-footer">
+                <!-- <div class="readMore">
+                    <button type="button" class="readMorebtn" onclick="location.href='./honeytip/honeytip-page.html'"> 보기</button>
+                /div> -->
+        </div>
+    </div>
     <!-- Right bottom left div -->
-    <div class="small-div adbanner">
+    <div class="small-div adbanner"> 
         <div class="ad-slides">
-            <img src="./banner_img/ad1.jpg" alt="Ad 1">
-            <img src="./banner_img/ad2.jpg" alt="Ad 2">
-            <img src="./banner_img/ad3.jpg" alt="Ad 3">
-            <img src="./banner_img/ad4.jpg" alt="Ad 4">
-            <img src="./banner_img/ad5.jpg" alt="Ad 5">
+            <img src="./img/ad_image/ad1.jpg" alt="Ad 1" width="358px" height="170px">
+            <img src="./img/ad_image/ad2.gif" alt="Ad 2" width="358px" height="170px">
+            <img src="./img/ad_image/ad3.jpg" alt="Ad 3" width="358px" height="170px">
         </div>
     </div>
 
     <!-- Right bottom right div -->
-    <div class="small-div crewbanner"></div>
+        <div class="small-div crew-box">
+            <!-- <div class="image-container">
+                    <img
+                    src="https://th.bing.com/th/id/OIP.JPrx-_jn5OExZrLujhOqXQHaFS?w=358&h=170&c=7&r=0&o=5&pid=1.7"
+                    class="crew-image"
+                    />
+                <h2>천안역 런닝</h2>
+                <h4>모집인원 : 4명</h4>
+                <h4>일시 : 24/10/13 3시</h4>
+                <h4>장소 : 중앙시장</h4>
+                <h4>회비 : FREE</h4>
+            </div> -->
+
+            <div class="image-container">
+                <img src="https://th.bing.com/th/id/OIP.JPrx-_jn5OExZrLujhOqXQHaFS?w=358&h=170&c=7&r=0&o=5&pid=1.7" class="crew-image">
+            </div>
+            <div class="crew-body">
+                <span class="tag-crewcolor">CREW</span>
+                <h4>천안역 런닝모임</h4>
+                <h5>모집인원 : 4명</h5>
+                <h5>일시 : 2024.10.13 / 15시</h5>
+                <h5>장소 : 중앙시장</h5>
+                <h5>회비 : FREE</h5>
+            </div>
+            <div class="crew-footer">
+                <!-- <div class="readMore">
+                    <button type="button" class="readMorebtn" onclick="location.href='./recruitment.html'">게시글보기</button>
+                </div> -->
+        </div>
+    </div>
 </div>
 <!-- JavaScript 파일 연결 -->
-<script src="./jsfolder/navscript.js"></script>
 <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
-<script src="./jsfolder/mainslide.js"></script>
-<script src="./jsfolder/hello.js"></script>
-<script src="./jsfolder/adslide.js"></script>
-<script src="./jsfolder/diet-diary.js"></script>
+<script src="./js/mainslide.js"></script>
+<script src="./js/hello.js"></script>
+<script src="./js/adslide.js"></script>
+<script src="./js/diet-diary.js"></script>
+<script src="./js/navscript.js"></script>
+<script src="./js/start.js"></script>
+<script src="./js/mainnav.js"></script>
 </body>
 </html>

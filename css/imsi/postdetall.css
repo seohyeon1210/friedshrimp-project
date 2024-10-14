@@ -1,0 +1,82 @@
+#myDialog1 {
+    width: 900px;
+    height: 95%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F7;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 센터 */
+   
+}
+.modal-content {
+    background-color: #F5F5F7;
+    border-radius: 5px;
+}
+/* 상세 이미지박스 */
+.flex-container1 {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px; 
+    
+}
+.h1{
+    color: red;
+}
+/* 상세페이지 이미지박스위치 */
+.flex-container1{
+    display: flex;
+    position: relative;
+    top: -25px;
+    width: 100%;
+  }
+  /* 상세페이지 이미지박스 */
+  .postdetall-box {
+    width: 600px;
+    height: 350px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #E23E57;
+    border-radius: 5px;
+    overflow: auto;
+  }
+  /* 신고하기 */
+  .report-container {
+    position: absolute;
+    display: flex; 
+    align-items: center; 
+    left: 31%;
+    top: 94%;
+}
+
+/* 신고버튼 */
+.report-button {
+    position: relative;
+    top: 8px;
+    left: 70%;
+    padding: 10px 15px;
+    background-color: #E23E57; 
+    color: #fff;
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    display: flex; 
+    align-items: center;
+    border: none;  
+}
+
+.report-button:hover {
+    background-color: #d7354c; /* 호버 시 색상 어둡게 변경 */
+}
+/* 아이콘 크기 설정 */
+/* .report-icon {
+    width: 24px; 
+    height: 24px; 
+    margin-right: 8px; 
+} */

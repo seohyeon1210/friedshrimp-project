@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>홈페이지</title>
+        <script
+            src="https://kit.fontawesome.com/c39c442009.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+        />
+        <link rel="stylesheet" href="./css/navstyle.css" />
+        <link rel="stylesheet" href="./css/start-home.css" />
+    </head>
+    <body>
+        <header class="top-menu">
+            <nav>
+                <input type="checkbox" id="check" />
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <div
+                    class="imgHoverEvent logo-show"
+                    onclick="location.href='./mainhome.html'"
+                >
+                    <div class="imgBox1">
+                        <img src="./img/f-logo.png" />
+                    </div>
+                    <div class="imgBox2">
+                        <img src="./img/shrimp_st_ic.png" />
+                    </div>
+                    <div class="imgBox3">
+                        <img src="./img/home_logo.png" />
+                    </div>
+                </div>
+                <ul id="nav-bar">
+                    <li>
+                        <button onclick="scrill_move('about')" class="st_btn">
+                            ABOUT
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="scrill_move('contact')" class="st_btn">
+                            CONTACT
+                        </button>
+                    </li>
+                    <li>
+                        <button class="st_btn login_open">LOGIN</button>
+                    </li>
+                    <li>
+                        <button class="st_btn sign_open">SIGN</button>
+                    </li>
+                </ul>
+            </nav>
+            <!-- <nav class="top_menu">
+                <a href="./start.html">
+                    <img class="f_logo" src="./image/f_logo.png">
+                </a>
+                <button class="mai_menu sign_open">Join</span>
+                <button class="mai_menu login_open">Login</button>
+            </nav> -->
+        </header>
+
+        <div class="modal_log">
+            <div class="login_modal">
+                <h3 class="modal_tit">로그인</h3>
+                <div class="content_modal">
+                    <img class="close_ic log_close" src="./img/close-ic.png" />
+                    <form class="start_form">
+                        <input
+                            name="user_id"
+                            class="form_deco log_ent"
+                            type="text"
+                            placeholder="아이디"
+                            maxlength="10"
+                        />
+                        <input
+                            name="user_pw"
+                            class="form_deco log_ent"
+                            type="password"
+                            placeholder="비밀번호"
+                            maxlength="10"
+                        />
+                        <div class="log_btns">
+                            <button
+                                type="button"
+                                class="btn login_ck"
+                                onclick="check_login()"
+                            >
+                                로그인
+                            </button>
+                            <button
+                                type="button"
+                                class="btn login_ck"
+                                id="openPasswordModal"
+                            >
+                                비밀번호찾기
+                            </button>
+                        </div>
+                    </form>
+                    <button type="button" class="log_sig sign_open">
+                        회원이 아니신가요?
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal_sig">
+            <div class="sign_modal">
+                <div class="content_modal">
+                    <img class="sig_logo" src="./img/f-logo.png" />
+                    <img
+                        class="close_ic close2 sig_close"
+                        src="./img/close-ic.png"
+                    />
+                    <form class="start_form" action="./start-home.html">
+                        <input
+                            name="user_id"
+                            class="form_deco sign_ent"
+                            type="text"
+                            placeholder="아이디"
+                            maxlength="10"
+                        />
+                        <input
+                            name="user_pw"
+                            class="form_deco sign_ent"
+                            type="password"
+                            placeholder="비밀번호"
+                            maxlength="10"
+                        />
+                        <input
+                            id="user_pw2"
+                            class="form_deco sign_ent"
+                            type="password"
+                            placeholder="비밀번호 확인"
+                            maxlength="10"
+                        />
+                        <input
+                            id="user_name"
+                            class="form_deco sign_ent"
+                            type="text"
+                            placeholder="이름"
+                            maxlength="5"
+                        />
+                        <input
+                            id="user_age"
+                            class="birth form_deco sign_ent"
+                            type="date"
+                            placeholder="생년월일"
+                        />
+                        <button
+                            type="submit"
+                            class="btn sig_save"
+                            onclick="save()"
+                        >
+                            회원가입
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- 비밀번호 찾기 Modal (Initially hidden) -->
+        <div class="modal_log" id="passwordFindModal" style="display: none">
+            <div class="login_modal">
+                <h3 class="modal_tit">비밀번호 찾기</h3>
+                <div class="content_modal">
+                    <img
+                        class="close_ic close1 log_close"
+                        src="./img/close-ic.png"
+                        id="closePasswordFindModal"
+                    />
+                    <form class="start_form">
+                        <input
+                            name="user_id"
+                            class="form_deg"
+                            type="text"
+                            placeholder="아이디"
+                            maxlength="10"
+                            required
+                        />
+                        <input
+                            name="user_pw"
+                            class="form_deg"
+                            type="password"
+                            placeholder="키워드"
+                            maxlength="10"
+                            required
+                        />
+                        <div class="log_btns">
+                            <button
+                                type="button"
+                                class="btn login_ck"
+                                id="confirmPasswordFind"
+                            >
+                                확인
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- 비밀번호 변경 Modal (Initially hidden) -->
+        <div class="modal_log" id="passwordChangeModal" style="display: none">
+            <div class="login_modal">
+                <h3 class="modal_tit">비밀번호 변경</h3>
+                <div class="content_modal">
+                    <img
+                        class="close_ic close1 log_close"
+                        src="./img/close-ic.png"
+                        id="closePasswordChangeModal"
+                    />
+                    <form class="start_form">
+                        <input
+                            name="user_id"
+                            class="form_deg"
+                            type="text"
+                            placeholder="아이디"
+                            maxlength="10"
+                            required
+                        />
+                        <input
+                            name="user_pw"
+                            class="form_deg"
+                            type="password"
+                            placeholder="새 비밀번호"
+                            maxlength="10"
+                            required
+                        />
+                        <input
+                            name="user_pw_confirm"
+                            class="form_deg"
+                            type="password"
+                            placeholder="비밀번호 재입력"
+                            maxlength="10"
+                            required
+                        />
+                        <div class="log_btns">
+                            <button
+                                type="button"
+                                class="btn login_ck"
+                                id="confirmPasswordChange"
+                            >
+                                변경 저장
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="welcom-modal">
+            <div class="welcom-content">
+                <p class="welcom-mhell"></p>
+            </div>
+        </div>
+
+        <div class="admin-modal">
+            <div class="admin-content">
+                <p class="admin-mhell"></p>
+            </div>
+        </div>
+
+        <div class="wel_main">
+            <div>
+                <h3>Hello</h3>
+                <h2>MY RUNNING LIFESTYLE</h2>
+                <button class="mouse" onclick="scrill_move('contact')">
+                    <img class="main_scroll" src="./img/shrimp-ic.png" />
+                </button>
+            </div>
+        </div>
+        <div class="about">
+            <div class="ab-backg">
+                <div class="ab-title">
+                    <h2>About Us</h2>
+                    <h4>For runners everywhere.</h4>
+                </div>
+            </div>
+            <div class="ab-introdu">
+                <div class="ab-in-card">
+                    <img src="./img/running-in.png" />
+                    <h2>런닝/식단 기록</h2>
+                    <br />
+                    <span>
+                        우리는 튼튼한 서버로 여러분의 소중한 자료인<br />
+                        런닝기록과 식단기록을 암호화하여 영구적으로 보관하며<br />
+                        삭제를 원하신다면 언제든지 바로 삭제가 가능합니다!<br />
+                        또한 체계적인 통계로 한번에 기록을 살펴볼 수 있죠!
+                    </span>
+                </div>
+                <div class="ab-in-card">
+                    <img src="./img/crew.PNG" />
+                    <h2>크루모집</h2>
+                    <br />
+                    <span>
+                        혼자 외롭게 달리는 런닝은 이제 그만!!<br />
+                        이제는 신나게 생각만하는 사람들과<br />
+                        편한 장소 또는 멋진 장소에서 같은 목적을 가진
+                        사람들과<br />
+                        구슬땀을 흘리는 것이 꿈처럼 느껴지시나요?<br />
+                        우리에게 합류하시면 하신다면 더 이상 꿈이 아닙니다!<br />
+                        그 꿈을 우리와 함께하는 멤버들과 지금 바로
+                        이루어보세요!!
+                    </span>
+                </div>
+                <div class="ab-in-card">
+                    <img src="./img/rrtips.JPG" />
+                    <h2>알알꿀팁</h2>
+                    <br />
+                    <span>
+                        우리와 함께하는 멤버가 되신다면<br />
+                        다양한 주제의 운동, 런닝, 식단에 관련 <br />
+                        노하우를 전수 받을 수 있습니다!<br />
+                        벌써 가입하고 싶다구요?! <br />
+                        당장 위에 'SIGN'을 누르세요!!
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="con-center">
+                <div class="cn-title">
+                    <h4>CONTACT</h4>
+                    <h2>우리 회사와 컨택하길 원하시나요?</h2>
+                </div>
+                <div class="contact-sect">
+                    <div class="cn-first">
+                        <div class="cn-info">
+                            <p>우리 회사와 광고 계약을 위한 문의</p>
+                            <h2>OK</h2>
+                        </div>
+                        <div class="cn-info">
+                            <p>우리 회사와 협업을 위한 문의</p>
+                            <h2>OK</h2>
+                        </div>
+                        <div class="cn-info">
+                            <p>우리 회사에 인터뷰 요청을 위한 문의</p>
+                            <h2>OK</h2>
+                        </div>
+                        <div class="cn-info">
+                            <p>우리 회사에 건의 및 제안을 위한 문의</p>
+                            <h2>OK</h2>
+                        </div>
+                    </div>
+                    <div class="cn-left">
+                        <div class="cn-card">
+                            <div class="ic">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="ic-text">
+                                <h3>연락처</h3>
+                                <p>010-8282-8282</p>
+                            </div>
+                        </div>
+                        <div class="cn-card">
+                            <div class="ic">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="ic-text">
+                                <h3>이메일</h3>
+                                <p>running82@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="cn-card">
+                            <div class="ic">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="ic-text">
+                                <h3>주소</h3>
+                                <p>충남 천안시 동남구 대흥로 215, 7층</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cn-right">
+                        <form class="cn-form">
+                            <div class="form-group">
+                                <label for="cn-name">이름</label>
+                                <input type="text" id="cn-name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="cn-email">이메일</label>
+                                <input type="email" id="cn-email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="cn-contents">내용</label>
+                                <textarea id="cn-contents"></textarea>
+                            </div>
+                            <button
+                                type="button"
+                                class="cn-btns"
+                                onclick="con_sub()"
+                            >
+                                SEND
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/js/resetpw.js"></script>
+        <script src="./js/start-home.js"></script>
+        <script src="./js/navscript.js"></script>
+        <script
+            src="https://kit.fontawesome.com/1e52e7745d.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

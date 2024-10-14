@@ -1,70 +1,91 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="zxx">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <title>Fried Shrimp Project</title>
-        <link rel="stylesheet" href="./cssfolder/diet-diary.css">
+        <title>Fried Shrimp 식단일기 페이지</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
+        <link rel="stylesheet" href="./css/diet-diary.css">
+        <link rel="stylesheet" href="./css/navstyle.css" />
     </head>
     <body>
-        <!-- --------------navstyle(상단 메뉴 바)-------------------- -->
+        <!-- --------------상단 메뉴 바 영역-------------------- -->
         <header>
             <nav>
                 <input type="checkbox" id="check">
                 <label for="check" class="checkbtn">
                     <i class="fa-solid fa-bars"></i>
                 </label>
-                <a href="#" class="logo">Fried <br> Shrimp</a>
+                <div class="imgHoverEvent logo-show" onclick="location.href='./mainhome.html'">
+                    <div class="imgBox1">
+                        <img src="./img/f-logo.png" />
+                    </div>
+                    <div class="imgBox2">
+                        <img src="./img/shrimp_st_ic.png" />
+                    </div>
+                    <div class="imgBox3">
+                        <img src="./img/home_logo.png" />
+                    </div>
+                </div>
                 <ul id="nav-bar">
                     <li>
-                        <a href="#" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+                        <a href="./running-diary.html" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
                     </li>
                     <li>
-                        <a href="#" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+                        <a href="./diet-diary.html" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
                     </li>
                     <li>
-                        <a href="#" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                        <a href="./recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
                     </li>
                     <li>
-                        <a href="#" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알꿀팁</a>
+                        <a href="./honeytip-page.html" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
+                    </li>
+                    <li>
+                        <button type="button" class="l-btn" onclick="location.href='./start-home.html'">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        </button>
                     </li>
                 </ul>
             </nav>
         </header>
 
-        <!-- diet-diary(식단일기페이지) -->
-        <div>
+        <!-------------- 식단일기페이지 영역 --------------->
+        <div class="container">
+
+            <div>
+                <h1>식단 일기</h1>
+                <hr>
+                <div class="button1">
+                <button class="button2">목표설정</button>
+                <button class="button3">식단등록</button>
+                </div>
+            </div>
+
             <div class="div1">
                 <div class="card">
                     어제의 총 섭취 칼로리
                 </div>
-                <div class="card">
-                    오늘의 총 섭취 칼로리
-                </div>
-            </div>
-            <div class="div2">
+
                 <div class="card">
                     오늘은 어제보다 100kcal 적게 먹었어요!
                 </div>
+
                 <div class="card calorie-card">
                     <h3>오늘 칼로리</h3>
                     <div class="calorie-progress">
                         <div class="calorie-bar"></div>
                     </div>
                     <div class="calorie-details">
-                        <strong id="today-calorie">0 / 2000 Kcal</strong> <span>(0%)</span>
+                        <strong id="today-calorie">0 / 0 Kcal</strong>
                     </div>
                     <div class="footer-text">
                         아직 <span>1200kcal</span>가 남았어요!
+                    </div>
                 </div>
             </div>
-            <div>
-                <button class="button2">목표설정</button>
-                <button class="button3">식단등록</button>
-            </div>
-
-            <div class="div3">               
+  
+            <div class="div2">
                 <div class="card2" id="breakfast-card">
                     아침
                 </div>
@@ -75,8 +96,9 @@
                     저녁
                 </div>
             </div>
+        </div>
 
-            <!-- 목표설정 모달 -->
+            <!-- 목표설정 모달 영역 -->
             <!-- 아침, 점심, 저녁 칼로리 입력 모달 -->
             <div id="goal-modal" class="modal">
                 <div class="modal-content">
@@ -111,8 +133,8 @@
                 </div>
             </div>
 
-             <!-- 식단 등록 모달 -->
-             <div id="meal-modal" class="modal">
+            <!-- 식단 등록 모달 영역 -->
+            <div id="meal-modal" class="modal">
                 <div class="modal-content">
                     <span class="close" id="close-meal">&times;</span>
                     <h2>식단 등록</h2>
@@ -150,6 +172,12 @@
                 </div>
             </div>
         </div>
-        <script src="./jsfolder/diet-diary.js"></script>
+
+        <!-- 상단메뉴바관련js -->
+        <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>   
+        <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
+        
+        <!-- 식단일기관련js -->
+        <script src="./js/diet-diary.js"></script>
     </body>
 </html>
