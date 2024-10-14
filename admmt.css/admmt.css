@@ -1,21 +1,42 @@
-table {
-    width: 80%;
-    direction: inherit;
-    border-collapse: collapse;
-    margin-top :100px /* 상단 여백 추가 */
-    
+body {
+    margin: 0;
 }
 
-table, th, td {
-    border: 3px solid #dfd3d3;
-    text-align: center;
-    margin-top: 80px;
+#myDialog {
+    width: 900px;
+    height: 95%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F7;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-th, td {
-    position: relative;
-    padding: 25px;
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
 
+.header-title h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 70px;
+    left: 22%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+.header-line {
+    position: absolute;
+    top: 13%;
+    left: 16%;
+    height: 1px;
+    background-color: #0e0c0d;
+    width: 70%;
 }
 
 .pagination {
@@ -47,22 +68,203 @@ th, td {
     margin-bottom: 10px;
 }
 
-.search-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+.edit-btn,
+.reset-btn {
+    padding: 5px 50px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.search-container input[type="text"] {
-    width: 200px;
+.edit-btn:hover,
+.reset-btn:hover {
+    background-color: darkred;
+}
+
+.close_ic {
+    display: flex;
+    position: absolute;
+    left: 95%;
+    width: 24px;  
+    height: 24px; 
+    cursor: pointer;
+}
+.input1,
+.input2,
+.input3 {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #E23E57;
+    border-radius: 5px;
+}
+
+.input3 {
+    height: 110px;
+}
+
+.delete-modal-content,
+.detail-modal-content {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center; /* For delete modal */
+    height: 130px; /* Specific for delete modal */
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.detail-modal-content {
+    height: 850px; /* Specific for detail modal */
+    text-align: left;
+}
+
+.modal-content1 h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.confirm-btn,
+.cancel-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background-color: red;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: grey;
+    color: white;
+}
+
+.postdetall-box {
+    width: 860px;
+    height: 300px;
+    padding: 10px;
+    margin: -10px 0 15px 0;
+    border: 1px solid #E23E57;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.flex-container1 {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px; 
+    width: 60%;
+    margin-left: 18%;
+}
+
+div > i {
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    top: 19%;
+    right: 5%;
+}
+
+.star {
+    cursor: pointer;
+    font-size:1.5rem;
+}
+.report-container {
+    font-family: sans-serif;
+    position: absolute;
+    display: flex; 
+    align-items: center; 
+    left: 39%;
+    top: 92%;
+}
+
+/* 신고버튼 */
+.report-button {
+    position: relative;
+    top: 8px;
+    left: 70%;
     padding: 5px;
+    background-color: #E23E57; 
+    color: #fff;
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    border: none;  
+}
+
+.report-button:hover {
+    background-color: #d7354c;
+}
+
+/* 테이블 스타일 */
+table {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 3px solid #dfd3d3;
+    text-align: center;
+    margin-top: 1%;
+}
+
+th, td {
+    padding: 16px;
+    text-align: center;
+}
+
+/* 제목조절 */
+.search-container {
+    width: 13%; 
+    height: auto; 
+    margin-left: 10%;
+    margin-top: 15px; 
+    overflow: hidden;
 }
 
 /* 텍스트 입력 필드 위치 조정 */
 .text {
+    width: 50%; 
+    height: 30px; 
     position: absolute;
-    margin-left:100px; /* absolute 대신 margin으로 위치 조정 */
+    top: 18.3%;
+    right: 33.5%; 
 }
-.navbar{
-    background-color: #3e444d;
+select {
+    width: 50%; /* Make it fill the container */
+    padding: 5px; /* Add some padding */
+    margin-bottom: 10px; /* Space between select and input */
+}
+/* 헤드고정 */
+.admmt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Pretendard;
+    overflow: hidden;
+}
+.admmt .admmt-contents {
+    width: 1140px;
+    margin-top: 110px;
+    font-family: Pretendard;
 }

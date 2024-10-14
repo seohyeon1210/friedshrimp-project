@@ -1,0 +1,302 @@
+body {
+    background-color: #f5f5f7;
+}
+input {
+    margin-bottom: 10px;
+}
+.f_logo {
+    width: 80px;
+}
+.modal_sig,
+.modal_log {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.login_modal,
+.sign_modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+}
+.modal_tit {
+    text-align: center;
+    color: #b64e72;
+    margin-bottom: 20px;
+}
+.content_modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* 연도-월-일 삭제 */
+/* 하이픈 삭제 */
+input[type='date']::-webkit-datetime-edit-text {
+    -webkit-appearance: none;
+    display: none;
+}
+.birth {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    width: 230px;
+    height: 35px;
+    border: solid 1px #b64e72;
+    border-radius: 8px;
+}
+/* 월 삭제 */
+input[type='date']::-webkit-datetime-edit-month-field {
+    -webkit-appearance: none;
+    display: none;
+}
+/* 일 삭제 */
+input[type='date']::-webkit-datetime-edit-day-field {
+    -webkit-appearance: none;
+    display: none;
+}
+/* 연도 삭제 */
+input[type='date']::-webkit-datetime-edit-year-field {
+    -webkit-appearance: none;
+    display: none;
+}
+/* placeholder적용 */
+input[type='date']::before {
+    color: #a5a5a5;
+    content: attr(placeholder);
+    margin-left: 5px;
+}
+/* /* 연도-월-일 삭제 끝 */
+
+.login_ck {
+    width: 48%;
+    float: left;
+    margin: 2px;
+}
+.login_ck:hover {
+    background-color: #b64e72;
+}
+input::placeholder {
+    color: #a5a5a5;
+}
+.sig_logo {
+    margin: 10px;
+    width: 150px;
+}
+.log_sig {
+    margin: 10px;
+    font-size: 15px;
+    text-decoration: underline;
+    border: none;
+    background-color: transparent;
+}
+.form_deg {
+    padding: 20px;
+    width: 230px;
+    height: 25px;
+    border: solid 1px #b64e72;
+    border-radius: 8px;
+}
+.start_form {
+    display: flex;
+    flex-direction: column;
+}
+.wel_main {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background: url('../image/main_photo.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.wel_main h3 {
+    font-size: 55px;
+    margin-bottom: -30px;
+}
+.wel_main h2 {
+    font-size: 80px;
+    margin: 20px 0;
+    letter-spacing: 3px;
+    font-family: 'Varela Round', sans-serif;
+}
+.main_scroll {
+    width: 50px;
+}
+.wel_main button.mouse {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: upDown 2s ease-in-out infinite;
+    cursor: pointer;
+}
+@keyframes upDown {
+    0% {
+        bottom: 10px;
+    }
+    50% {
+        bottom: 20px;
+    }
+    100% {
+        bottom: 10px;
+    }
+}
+.btn {
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: #892c4d;
+}
+.close_ic {
+    position: absolute;
+    top: 20px;
+    left: 85%;
+    width: 20px;
+}
+/* section.contact .contact_sect::after {
+    content: '';
+    display: block;
+    clear: both;
+} */
+.about .ab_title{
+    width: 100%;
+    height: 70vh;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../image/about_img.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.about .ab_title h2{
+    font-size: 85px;
+    color: white;
+}
+.about .ab_title h4{
+    margin-top: 20px;
+    font-size: 24px;
+    color: white;
+}
+.about .abo_sect{
+    margin: 20px;
+}
+
+.contact .cn_title {
+    margin: 20px;
+}
+.contact .cn_title h4 {
+    font-size: 30px;
+}
+.contact .cn_title h2 {
+    font-size: 35px;
+}
+.contact .contact_sect {
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+}
+.contact .contact_sect .cn_left {
+    width: 40%;
+    margin-left: 20px;
+    float: left;
+}
+.contact .contact_sect .cn_left .ic_text h3 {
+    font-size: 25px;
+}
+.contact .contact_sect .cn_left .ic_text p {
+    font-size: 25px;
+}
+.contact .contact_sect .cn_right {
+    width: 70%;
+    float: right;
+    margin: 10px 0 0 30px;
+    border: 1px solid #892c4d;
+    padding: 10px;
+}
+.contact .contact_sect .cn_right form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+.contact .contact_sect .cn_right form .form-group label {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: #892c4d;
+}
+.contact .contact_sect .cn_right form .form-group input, textarea {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #892c4d;
+    border-radius: 15px;
+    font-size: 25px;
+    resize: none;
+}
+.contact .contact_sect .cn_right form button {
+    float: right;
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 25px;
+    color: white;
+    background-color: #892c4d;
+    cursor: pointer;
+}
+.contact .contact_sect .cn_right button:hover {
+    background-color: #8f6674;
+}
+.contact .contact_sect .cn_right .form-group textarea {
+    height: 180px;
+}
+.contact .contact_sect .cn_left .card {
+    border: 1px solid #892c4d;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: 10px 10px;
+    width: 400px;
+}
+.contact .contact_sect .cn_left .card .ic i {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.st_btn {
+    color: white;
+    background-color: #892c4d;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    transition: .4s;
+}
+.st_btn:hover {
+    background-color: #E23E57;
+    font-size: 17px;
+}
