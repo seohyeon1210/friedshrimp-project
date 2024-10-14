@@ -42,12 +42,44 @@
                 <h1>알알꿀팁 게시글 관리</h1>
                 <hr>
                 <div class="button1">
-                <button class="button2">삭제</button>
+                    <input type="text" id="searchInput" placeholder="게시물 제목 검색..." style="display:none;">
+                    <button class="button3" id="searchButton">검색</button>
+                    <button class="button2" id="deleteButton">삭제</button>
                 </div>
             </div>
             
-            <div class="div2">
-                           
+            <div class="post-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="selectAll"></th>
+                            <th>날짜</th>
+                            <th>제목</th>
+                            <th>상세보기</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-14</td>
+                            <td>첫 번째 게시글 제목</td>
+                            <td><button class="view-button">상세보기</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-13</td>
+                            <td>두 번째 게시글 제목</td>
+                            <td><button class="view-button">상세보기</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-12</td>
+                            <td>세 번째 게시글 제목</td>
+                            <td><button class="view-button">상세보기</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
                 <!-- ---------페이징 처리 영역------------  -->
                 <ul class="pagination">
                     <li><a href="#">&lt;&lt;</a></li>
@@ -62,6 +94,8 @@
                 </ul>
             </div>
         </div>
+
+        <script src="./admin-tipmmt.js"></script>
         <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
     </body>
 </html>
