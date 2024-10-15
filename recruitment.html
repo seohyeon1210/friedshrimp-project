@@ -198,7 +198,7 @@
             </div>
     </main>
             <!-- 크루모집 모달 시작 -->
-            <dialog id="myDialog">
+            <<dialog id="myDialog">
                 <form class="modal">
                     <img class="close_ic" src="./c.imge/close-ic.png" alt="Close Button" onclick="closeDialog()" />
                     <h1>크루모집</h1>
@@ -206,7 +206,11 @@
                     <div>
                         <input class="input1" type="text" id="title" placeholder="제목">
                         <input class="input1" type="text" id="number" placeholder="인원수">
-                        <input class="input1" type="text" id="date" placeholder="날짜/시간/장소/회비 최대50.000원">
+                        <form class="inputput">
+                        <input class="input-date" type="date" placeholder="날짜" />
+                        <input class="input-time" type="text" placeholder="시간 입력" />
+                        <input class="input-fee" type="text" placeholder="회비 입력" />
+                        </form>
                     </div>
                     <textarea class="input3" id="details" rows="4" placeholder="상세페이지 입력칸 최대 50글자"></textarea>
                     <div class="preview-container">
