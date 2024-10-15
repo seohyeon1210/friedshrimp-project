@@ -147,7 +147,7 @@ main{
 .container{
     font-family: Pretendard;
     margin: 0 auto;
-    margin-top: 0px;
+    margin-top: 125px;
     padding-bottom: 30px;
 }
 
@@ -266,4 +266,8 @@ input, select{
     background: #E23E57;
     color: #FFF;
     padding: 10px;
+}
+
+.person{
+    width: 10em;
 }

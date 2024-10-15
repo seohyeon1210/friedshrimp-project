@@ -7,31 +7,6 @@ function DropFile(dropAreaId, fileListId){
         e.stopPropagation();
     }
 
-    function highlight(e) {
-        preventDefaults(e);
-
-        dropArea.classList.add("hightlight");
-    }
-
-    function unhighlight(e){
-        preventDefaults(e);
-
-        dropArea.classList.remove("highlight");
-    }
-
-    function handleDrop(e){
-        unhighlight(e);
-        let dt = e.dataTransfer;
-        let files= dt.files;
-
-        handleFiles(files);
-
-        const fileList = document.getElementById(fileListId);
-            if(fileList){
-                fileList.scrollTo({ top:fileList.scrollHeight });
-            }
-    }
-
     function handleFiles(files){
         files=[...files];
         // files.forEach(uploadFile);
@@ -52,14 +27,6 @@ function DropFile(dropAreaId, fileListId){
           img.style.display = "block";
         };
       }
-    
-    dropArea.addEventListener("dragenter", highlight, false);
-
-    dropArea.addEventListener("dragover", highlight, false);
-
-    dropArea.addEventListener("dragleave", unhighlight, false);
-
-    dropArea.addEventListener("drop", handleDrop, false);
 
     return{
         handleFiles
@@ -68,65 +35,20 @@ function DropFile(dropAreaId, fileListId){
 
 const dropFile = new DropFile("drop-file", "files");
 
-// 글쓰기
+// 로컬 스토리지 honeytip-postedit
+const titleElement = document.getElementById("titleByhoney"); // const 변수명 = document.getElementById("html아이디명")
+const contentElement = document.getElementById("contentByhoney");
+const submitButton = document.getElementById("submitByhoney");
 
-function formatDoc(cmd, value=null) {
-    if(value){
-        document.execCommand(cmd, false, value);
-    }else{
-        document.execCommand(cmd);
-    }
-}
+submitButton.addEventListener("click", () => {
+    // console.log(titleElement.value);
+    // console.log(contentElement.innerText); //contenteditable 요소에 console.log(contentElement.value);로 출력 시도하면 undefined가 뜸
+    // contenteditable 속성은 input 요소와 달리 .value 속성이 없기 때문에, 그 안에 있는 텍스트 내용을 가져오려면 innerText 또는 innerHTML을 사용해야 함
+    // innerText: 요소 내부의 텍스트만 가져옴
+    // innerHTML: 요소 내부의 HTML 구조를 포함한 텍스트를 가져옴
+    // localStorage.setItem("titleByhoney", titleElement); // 첫번째 매개변수는 key값인 저장될 값의 이름, 두번째 매개변수는 value값인 실제로 저장될 값
+    // localStorage.setItem("contentByhoney", contentElement);
 
-function addLink(){
-    const url = prompt('Insert url');
-    formatDoc('createLink', url);
-}
-
-const content = document.getElementById('content');
-
-content.addEventListener('mouseenter', function() {
-    const a = content.querySelectorAll('a');
-    a.forEach(item=>{
-        item.addEventListener('mouseenter', function(){
-            content.setAttribute('contenteditable', false);
-            item.target = '_blank';
-        })
-        item.addEventListener('mouseleave', function(){
-            content.setAttribute('contenteditable', true);
-        })
-    })
+    let userTip = { titleByhoney: titleElement.value, contentByhoney: contentElement.innerText }
+    localStorage.setItem("userTip", JSON.stringify(userTip));
 })
-
-const showCode = document.getElementById('show-code');
-let active = false;
-
-showCode.addEventListener('click', function(){
-    showCode.dataset.active = !active;
-    active = !active
-    if(active){
-        content.textContent = content.innerHTML;
-        content.setAttribute('contenteditable', false);
-    }else{
-        content.innerHTML = content.textContent;
-        content.setAttribute('contenteditable', true);
-    }
-})
-
-const filename = document.getElementById('filename');
-
-function fileHandle(value){
-    if(value === 'new'){
-        content.innerHTML = '';
-        filename.value = 'untitled';
-    }else if(value === 'txt'){
-        const blob = new Blob([content.innerText])
-        const url = URL.createObjectURL(blob)
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `${filename.value}.txt`;
-        link.click();
-    }else if(value === 'pdf'){
-        html2pdf(content).save(filename.value);
-    }
-}

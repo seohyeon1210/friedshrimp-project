@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang=ko">
+<html lang="ko">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Edit Profile</title>
         <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
@@ -68,30 +68,31 @@
                         </div>
 
                         <div class="column-right">
-                            <label for="id">아이디:</label>
-                            <input type="text" name="id" id="id" required>
+                            <label for="id">이름:</label>
+                            <input type="text" name="id" id="id" value="고길동" required disabled>
 
                             <label for="pw">비밀번호:</label>
-                            <input type="password" name="pw" id="pw" required>
+                            <input type="password" name="pw" id="pw" value="1234" required>
 
                             <label for="pw">새 비밀번호:</label>
-                            <input type="password" name="pw" required>
+                            <input type="password" name="pw" value="12345" required>
 
                             <label for="pw">새 비밀번호 확인:</label>
-                            <input type="password" name="pw" required>
+                            <input type="password" name="pw" value="12345" required>
 
                             <label for="gender">성별:</label>
                             <select name="gender" id="gender" required>
                                 <option value="male">남자</option>
                                 <option value="female">여자</option>
-                                <option value="other">상관없음</option>
+                                <option value="other" selected>상관없음</option>
                             </select>
-
+                            <div class="person">
                             <label for="height">키:</label>
-                            <input type="text" name="height" id="height" required>
+                            <input type="text" name="height" id="height" value="168cm" required>
 
                             <label for="weight">몸무게:</label>
-                            <input type="text" name="weight" id="weight" required>
+                            <input type="text" name="weight" id="weight" value="62kg" required>
+                            </div>
 
                             <button class="btn" type="button" onclick="submitForm()">수정</button>
                         </div>
