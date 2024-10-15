@@ -8,60 +8,82 @@
         <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
         <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
+        <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/recruitment-style.css"/>
         <link rel="stylesheet" href="./css/page-style.css">
         <link rel="stylesheet" href="./css/postdetall.css">
         <link rel="stylesheet" href="./css/postedit.css">
+        <link rel="stylesheet" href="./css/navstyle.css" />
     </head>
     <body>
-        <!-- 헤더 영역 -->
-        <header>
-            <nav>
-                <input type="checkbox" id="check">
-                <label for="check" class="checkbtn">
-                    <i class="fa-solid fa-bars"></i>
-                </label>
-                <a href="#" class="logo">Fried <br> Shrimp</a>
-                <ul id="nav-bar">
-                    <li>
-                        <a href="#" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
-                    </li>
-                    <li>
-                        <a href="#" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
-                    </li>
-                    <li>
-                        <a href="#" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
-                    </li>
-                    <li>
-                        <a href="#" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
-                    </li>
-                    <li>
-                        <button type="button" class="l-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
+    <!-- 헤더 영역 -->
+<header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <div class="imgHoverEvent logo-show" onclick="location.href='./mainhome.html'">
+            <div class="imgBox1">
+                <img src="./c.imge/f-logo copy.png" />
+            </div>
+            <div class="imgBox2">
+                <img src="./c.imge/shrimp_st_ic copy.png" />
+            </div>
+            <div class="imgBox3">
+                <img src="./c.imge/home_logo.png" />
+            </div>
+        </div>
+        <ul id="nav-bar">
+            <li>
+                <a href="./running-diary.html" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+            </li>
+            <li>
+                <a href="./diet-diary.html" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+            </li>
+            <li>
+                <a href="./recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+            </li>
+            <li>
+                <a href="./honeytip-page.html" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
+            </li>
+            <li>
+                <button type="button" class="l-btn" onclick="location.href='./start-home.html'">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
 
         <!-- 메인 영역 -->
-        <main>
+        <main class="main">
             <div class="form-container">
                 <div class="container">
                     <div class="title">
                         <h1>크루 모집</h1>
                         <hr>
-                        <div class="write">
-                            <button type="button" class="writebtn" onclick="openRecruitmentModal()">크루 모집</button>
-                        </div>
-                    </div> 
+                    </div>
+                </div>
+            <div>
+                <button type="button" class="writebtn" onclick="openRecruitmentModal()">크루 모집</button>
+            </div>
+
+            <div>
+                <button type="button" class="writebtn1" onclick="opensearch()">검색하기</button>
+            </div>
+            
+            <div class="search-result">
+                    <img id="resultImage" src="" alt="Result Image" style="display:none; width: 100px;">
+                </div>
                     <div class="containerBox">
-                        <div class="card">
+                        <div class="card">                        
                             <div class="card-header">
                                 <img src="./c.imge/3.jpg" alt="card-image" class="card-image" width="600" height="240">
                             </div>
                             <div class="card-body">
-                                <span class="tag tag-blue">Tip</span>
-                                <h4>에펠탑 러닝 클럽</h4>
+                                <span class="tag tag-blue">Crew</span>
+                                <h4>제목</h4>
                                 <p>본문입니다.</p>
                             </div>
                             <div class="card-footer">
@@ -73,11 +95,11 @@
 
                         <div class="card">
                             <div class="card-header">
-                                <img src="./c.imge/girl.jpg" alt="card-image" class="card-image" width="600" height="240">
+                                <img src="./c.imge/2.jpg" alt="card-image" class="card-image" width="600" height="240">
                             </div>
                             <div class="card-body">
-                                <span class="tag tag-blue">Tip</span>
-                                <h4>한강 스트레칭 동호회</h4>
+                                <span class="tag tag-blue">Crew</span>
+                                <h4>제목</h4>
                                 <p>본문입니다.</p>
                             </div>
                             <div class="card-footer">
@@ -89,11 +111,11 @@
 
                         <div class="card">
                             <div class="card-header">
-                                <img src="./c.imge/2.jpg" alt="card-image" class="card-image" width="600">
+                                <img src="./c.imge/7.jpg" alt="card-image" class="card-image" width="600">
                             </div>
                             <div class="card-body">
-                                <span class="tag tag-blue">Tip</span>
-                                <h4>모닝 러닝팀</h4>
+                                <span class="tag tag-blue">Crew</span>
+                                <h4>제목</h4>
                                 <p>본문입니다.</p>
                             </div>
                             <div class="card-footer">
@@ -106,11 +128,11 @@
                         <div class="containerBox">
                             <div class="card">
                                 <div class="card-header">
-                                    <img src="./c.imge/7.jpg" alt="card-image" class="card-image" width="600">
+                                    <img src="./c.imge/8.jpg" alt="card-image" class="card-image" width="600">
                                 </div>
                                 <div class="card-body">
-                                    <span class="tag tag-blue">Tip</span>
-                                    <h4>자연과 함께하는 트레일 러닝</h4>
+                                    <span class="tag tag-blue">Crew</span>
+                                    <h4>제목</h4>
                                     <p>본문입니다.</p>
                                 </div>
                                 <div class="card-footer">
@@ -122,11 +144,11 @@
         
                             <div class="card">
                                 <div class="card-header">
-                                    <img src="./c.imge/8.jpg" alt="card-image" class="card-image" width="600">
+                                    <img src="./c.imge/girl.jpg" alt="card-image" class="card-image" width="600" height="235">
                                 </div>
                                 <div class="card-body">
-                                    <span class="tag tag-blue">Tip</span>
-                                    <h4>함께 달리기 러닝 크루</h4>
+                                    <span class="tag tag-blue">Crew</span>
+                                    <h4>제목</h4>
                                     <p>본문입니다.</p>
                                 </div>
                                 <div class="card-footer">
@@ -141,8 +163,8 @@
                                     <img src="./c.imge/stretching.jpg" alt="card-image" class="card-image" width="600" height="235">
                                 </div>
                                 <div class="card-body">
-                                    <span class="tag tag-blue">Tip</span>
-                                    <h4>러너의 스트레칭 모임</h4>
+                                    <span class="tag tag-blue">Crew</span>
+                                    <h4>제목</h4>
                                     <p>본문입니다.</p>
                                 </div>
                                 <div class="card-footer">
@@ -172,7 +194,7 @@
                     </nav>
                 </footer>
             </div>
-
+    </main>
             <!-- 크루모집 모달 시작 -->
             <dialog id="myDialog">
                 <form class="modal">
@@ -198,29 +220,34 @@
 <!-- 크루모집 모달 끝 -->
 
 <!-- 게시글 상세보기 모달 시작 -->
-            <dialog id="myDialog1">
-                <form class="modal">
-                    <img class="close_ic" src="./c.imge/close-ic.png" alt="Close Button" onclick="closeDetailDialog()" />
-                    <h1>상세보기</h1>
-                    <hr>
-                    <div>
-                        <input class="input1" type="text" id="teamName" placeholder="모닝 러닝팀">
-                        <input class="input1" type="text" id="teamSize" placeholder="15명">
-                        <input class="input1" type="text" id="details" placeholder="2024-10-19/AM7시/한강/회비10000원">
-                    </div>
-                    <textarea class="input3" id="description" rows="4" placeholder="상세페이지 입력칸 최대 50글자"></textarea>
-                    <div>
-                        <img src="" class="postedit-box" /> <!-- 상세보기 이미지 -->
-                    </div>
-                    <div class="btn-container1">
-                        <button class="inside1" type="button" onclick="closeDetailDialog()">신고하기</button>
-                    </div>
-                </form>
-            </dialog>
+<dialog id="myDialog1">
+    <form class="modal">
+        <img class="close_ic" src="./c.imge/close-ic.png" alt="Close Button" onclick="closeDetailDialog()" />
+        <h1>상세보기</h1>
+        <hr>
+        <div class="badge">신고된 게시물</div> <!-- 신고 배지 -->
+        <div>
+        <div>
+            <input class="input1" type="text" id="teamName" readonly>
+            <input class="input1" type="text" id="teamSize" readonly>
+            <input class="input1" type="text" id="details" readonly>
+        </div>
+        <textarea class="input3" id="description"></textarea>
+        <div class="image-container">
+            <img src="" class="postedit-box" /> <!-- 상세보기 이미지 -->
+        </div>
+        <div class="report-count-container">
+            <p>신고 횟수: <span id="reportCount">0</span></p> <!-- 신고 횟수 표시 -->
+        </div>
+        <p class="report-message">이 게시물은 신고되었습니다. 검토 중입니다.</p> <!-- 신고 메시지 -->
+        <div class="btn-container1">
+            <button class="inside1" type="button" onclick="reportPost()">신고하기</button> <!-- 신고하기 버튼 -->
+        </div>
+    </form>
+</dialog>
 <!-- 게시글 상세보기 모달 끝 -->
-
     <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
-    <script src=".js/header.js"></script>
+    <script src="./js/navscript.js"></script>
     <script src="./js/upload.php"></script>
     <script src="./js/hover.js"></script>
     </body>

@@ -1,14 +1,14 @@
-// 크루 모집 모달 열기
+// 모달 열기
 function openRecruitmentModal() {
+    document.querySelector('.modal-backdrop').style.display = 'block'; // 배경 보이기
     document.getElementById('myDialog').showModal();
 }
 
-// 크루 모집 모달 닫기
+// 모달 닫기
 function closeDialog() {
-    console.log("Close Dialog Function Called");
+    document.querySelector('.modal-backdrop').style.display = 'none'; // 배경 숨기기
     document.getElementById('myDialog').close();
 }
-
 // 게시글 상세보기 모달 열기
 function openDetailModal() {
     // 크루 모집 페이지에서 저장된 값을 상세보기 모달에 입력
@@ -79,7 +79,7 @@ function handleFiles(files) {
 }
 let teamName = '';
 let teamSize = '';
-let details = '';
+let details = ''; // 날짜, 시간, 장소
 let description = '';
 let imageSrc = ''; // 이미지 src 저장
 
@@ -95,10 +95,10 @@ function closeDialog() {
 
 // 등록 버튼 클릭 시, 데이터를 저장하고 모달 닫기
 function saveAndCloseModal() {
-    teamName = document.getElementById('title').value;
-    teamSize = document.getElementById('number').value;
-    details = document.getElementById('date').value;
-    description = document.getElementById('details').value;
+    teamName = document.getElementById('title').value || '제목 없음';
+    teamSize = document.getElementById('number').value || '없음';
+    details = document.getElementById('date').value || '없음'; // 날짜, 시간, 장소
+    description = document.getElementById('details').value || '상세 내용 없음';
 
     // 이미지 src 저장 (미리보기 이미지가 있으면)
     const previewImage = document.querySelector('.preview-container img');
@@ -106,14 +106,27 @@ function saveAndCloseModal() {
         imageSrc = previewImage.src;
     }
 
+    // 카드에 내용 업데이트
+    // 카드에 내용 업데이트
+    const cardBody = document.querySelector('.card-body');
+    const cardTitle = cardBody.querySelector('h4');
+    const cardDetails = cardBody.querySelector('p');
+
+    cardTitle.textContent = teamName;
+    cardDetails.innerHTML = `
+        ${description}<br>
+        인원수: ${teamSize}<br>
+        날짜/시간/장소/회비: ${details}
+`;
     closeDialog(); // 모달 닫기
+    
 }
 
 // 게시글 상세보기 모달 열기 (자세히보기 버튼 클릭 시)
 function openDetailModal() {
     document.getElementById('teamName').value = teamName;
     document.getElementById('teamSize').value = teamSize;
-    document.getElementById('details').value = details;
+    document.getElementById('details').value = details; // 날짜, 시간, 장소
     document.getElementById('description').value = description;
 
     // 저장된 이미지가 있으면 상세보기 모달에 표시
@@ -126,17 +139,51 @@ function openDetailModal() {
 
 // 파일 선택 및 미리보기 핸들러
 function handleFiles(files) {
-    const previewContainer = document.querySelector('.preview-container');
-    previewContainer.innerHTML = ''; // 미리보기 초기화
-
-    Array.from(files).forEach(file => {
+    if (files.length > 0) {
+        const file = files[0];
         const reader = new FileReader();
-        reader.onload = function(event) {
-            const img = document.createElement('img');
-            img.src = event.target.result;
-            img.style.width = 'auto'; // 이미지 크기 조정
-            previewContainer.appendChild(img); // 이미지 미리보기 추가
-        }
-        reader.readAsDataURL(file); // 파일을 읽어 미리보기
-    });
+
+        reader.onload = function(e) {
+            const imageUrl = e.target.result;
+
+            // Update the preview image in the modal
+            const previewContainer = document.querySelector('.preview-container');
+            previewContainer.innerHTML = `<img src="${imageUrl}" alt="Preview Image" class="preview-image" />`;
+
+            // Update the main card image
+            const cardImage = document.querySelector('.card-header img');
+            if (cardImage) {
+                cardImage.src = imageUrl;
+            }
+
+            // 저장된 이미지 src 갱신
+            imageSrc = imageUrl;
+        };
+
+        reader.readAsDataURL(file);
+    }
 }
+
+// Function to search and display preview content in the result box
+function opensearch() {
+    const title = document.getElementById('title').value || '제목 없음';
+    const details = document.getElementById('details').value || '상세 내용 없음';
+
+    // Display the result in the search-result input field
+    const resultInput = document.getElementById('resultInput');
+
+    // Set the value of the result input field
+    resultInput.value = `${title} - ${details}`;
+}
+let reportCount = 0; // 신고 횟수 초기화
+
+// 신고하기 버튼 클릭 시
+function reportPost() {
+    const confirmation = confirm("신고하시겠습니까?");
+    if (confirmation) {
+        reportCount++; // 신고 횟수 증가
+        document.getElementById('reportCount').textContent = reportCount; // UI에 업데이트
+        alert(`게시물이 신고되었습니다. 현재 신고 횟수: ${reportCount}`);
+    }
+}
+
