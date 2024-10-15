@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 비밀번호 변경 Modal 요소
     const passwordChangeModal = document.getElementById('passwordChangeModal');
     const closePasswordChangeModalBtn = document.getElementById('closePasswordChangeModal');
-    const confirmPasswordFindBtn = document.getElementById('confirmPasswordFind');
+    const confirmPasswordFindBtn = document.querySelector('.confirmPasswordFind');
     const savePasswordChangeBtn = document.getElementById('confirmPasswordChange');
 
     // 로그인 Modal 요소

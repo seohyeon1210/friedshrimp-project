@@ -4,71 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>emotionm</title>
+    <title>감정 선택</title>
     <link rel="stylesheet" href="./css/emotionm.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 </head>
 <body>
-    <!-- 모달 구조 -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="grid-container">
-                <div class="grid-item1">
-                    기쁨
-                    <div class="image-container">
-                        <img id="image1" src="./img/emotion/happy.jpg" alt="기쁨 이미지"/>
-                    </div>
-                </div>
-                <div class="grid-item2">
-                    보통
-                    <div class="image-container">
-                        <img id="image2" src="./img/emotion/neutral.png" alt="보통 이미지"/>
-                    </div>
-                </div>
-                <div class="grid-item3">
-                    나쁨
-                    <div class="image-container">
-                        <img id="image3" src="./img/emotion/bad.png" alt="나쁨 이미지"/>
-                    </div>
-                </div>
-                <div class="grid-item4">
-                    우울
-                    <div class="image-container">
-                        <img id="image4" src="./img/emotion/sad.png" alt="우울 이미지"/>
-                    </div>
-                </div>
-                <div class="grid-item5">
-                    설렘
-                    <div class="image-container">
-                        <img id="image5" src="./img/emotion/thrill.png" alt="설렘 이미지"/>
-                    </div>
-                </div>
-                <div class="grid-item6">
-                    잘모르겠어요
-                    <div class="image-container">
-                        <img id="image6" src="./img/emotion/idontno.png" alt="잘모르겠어요 이미지"/>
-                    </div>
-                </div>
+    <h1>감정 선택하기</h1>
+    <div class="grid-container">
+        <div class="grid-item1">
+            기쁨
+            <div class="image-container">
+                <img id="image1" src="./img/emotion/happy.jpg" alt="기쁨 이미지" onclick="updateImage(this.src)"/>
+            </div>
+        </div>
+        <div class="grid-item2">
+            보통
+            <div class="image-container">
+                <img id="image2" src="./img/emotion/neutral.png" alt="보통 이미지" onclick="updateImage(this.src)"/>
+            </div>
+        </div>
+        <div class="grid-item3">
+            나쁨
+            <div class="image-container">
+                <img id="image3" src="./img/emotion/bad.png" alt="나쁨 이미지" onclick="updateImage(this.src)"/>
+            </div>
+        </div>
+        <div class="grid-item4">
+            우울
+            <div class="image-container">
+                <img id="image4" src="./img/emotion/sad.png" alt="우울 이미지" onclick="updateImage(this.src)"/>
+            </div>
+        </div>
+        <div class="grid-item5">
+            설렘
+            <div class="image-container">
+                <img id="image5" src="./img/emotion/thrill.png" alt="설렘 이미지" onclick="updateImage(this.src)"/>
+            </div>
+        </div>
+        <div class="grid-item6">
+            잘모르겠어요
+            <div class="image-container">
+                <img id="image6" src="./img/emotion/idontno.png" alt="잘모르겠어요 이미지" onclick="updateImage(this.src)"/>
             </div>
         </div>
     </div>
 
-    <script>
-        // 모달 열기
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
-
-        // 모달 닫기
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-
-        // 페이지 로드 시 모달 열기 (필요할 경우 주석 처리)
-        window.onload = function() {
-            openModal();
-        }
-    </script>
 </body>
 </html>

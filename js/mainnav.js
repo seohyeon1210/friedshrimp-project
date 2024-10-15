@@ -4,7 +4,7 @@ function redirectToProfilePage() {
     console.log(profileImage.src); // 이미지의 경로를 출력하거나 조작 가능
 
     // 이후 원하는 페이지로 이동
-    window.location.href = './profilespage.html';
+    window.location.href = './user-editprofile/user-editprofile.html';
 }
 
 
@@ -16,4 +16,9 @@ function emotionlevelm() {
 
     // 이후 원하는 페이지로 이동
     window.location.href = './emotionm.html';
+}
+
+
+function openEmotionPopup() {
+    window.open('./emotionm.html', 'emotionPopup', 'width=700,height=500');
 }

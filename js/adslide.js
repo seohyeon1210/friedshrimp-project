@@ -15,8 +15,8 @@ function startAdSlide() {
     }
     ads[0].style.display = 'block';
     
-    // 5초마다 이미지 슬라이드 변경
-    setInterval(showNextAd, 5000);
+    // 6초마다 이미지 슬라이드 변경
+    setInterval(showNextAd, 6000);
 }
 
 // 슬라이드 시작

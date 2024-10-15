@@ -9,6 +9,9 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body{
@@ -143,6 +146,9 @@ main{
 
 .container{
     font-family: Pretendard;
+    margin: 0 auto;
+    margin-top: 125px;
+    padding-bottom: 30px;
 }
 
 main .container .profile .image{
@@ -260,4 +266,8 @@ input, select{
     background: #E23E57;
     color: #FFF;
     padding: 10px;
+}
+
+.person{
+    width: 10em;
 }

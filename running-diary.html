@@ -2,7 +2,6 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>런닝일기</title>
         <link rel="stylesheet" href="./css/navstyle.css" />
@@ -64,18 +63,19 @@
                 </ul>
             </nav>
         </header>
-
         <div class="running-modal">
             <div class="running-content">
                 <h3 class="rmodal_tit">런닝 기록 추가</h3>
                 <div class="rmodal-cont">
-                    <img
-                        class="radd-close-ic radd-close"
-                        src="./img/close-ic.png"
-                    />
                     <form class="radd_form">
+                        <button class="add_rebtn" type="reset">
+                            <img
+                                class="radd-close-ic radd-close"
+                                src="./img/close-ic.png"
+                            />
+                        </button>
                         <div class="radd-card">
-                            <select class="radd-months">
+                            <select  class="radd-months">
                                 <option>월 선택</option>
                             </select>
                         </div>
@@ -85,11 +85,11 @@
                             </select>
                         </div>
                         <div class="radd-card">
-                            <input type="time" class="run-time" />
+                            <input type="number" class="run-time" placeholder="시간 입력" />
                         </div>
                         <div class="radd-card">
                             <input
-                                type="text"
+                                type="number"
                                 class="run-km"
                                 maxlength="5"
                                 placeholder="km 입력"
@@ -97,7 +97,7 @@
                         </div>
                     </form>
                     <div class="radd-btns clear">
-                        <button type="button" class="radd-btn" onclick="todo()">
+                        <button type="reset" class="radd-btn" onclick="add_rrecode()">
                             추가하기
                         </button>
                     </div>
@@ -118,53 +118,41 @@
                         >
                             통계보기
                         </button>
-                        <button class="rbtn" onclick="todo()">삭제</button>
+                        <button class="rbtn remov-add">삭제</button>
                     </div>
                 </div>
                 <div class="run-main">
                     <div class="run-left">
-                        <img class="run-img" src="./img/running-img.jpg" />
+                        <iframe class="run-img" width="540" height="315" src="https://www.youtube.com/embed/34utxQymhMU?autoplay=1&mute=1&si=gDBimKL0I5H2pBS1&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <div class="run-right">
                         <p class="run-ctitle">런닝 기록</p>
-                        <card class="run-card" value="1">
-                            <div class="run-elem">
-                                <p class="run-date">10월 5일</p>
-                                <div class="relem-card">
-                                    <input type="checkbox" class="rch-box" />
-                                    <div class="run-car-el run-evn1">
-                                        <span class="run-time rcard-title">
-                                            런닝시간
-                                        </span>
-                                        <span class="run-time">2시간</span>
-                                    </div>
-                                    <div class="run-car-el run-evn2">
-                                        <span class="run-km rcard-title">
-                                            런닝거리
-                                        </span>
-                                        <span class="run-km">40km</span>
-                                    </div>
-                                    <div class="run-car-el run-evn3">
-                                        <span class="run-kcal rcard-title">
-                                            소모칼로리
-                                        </span>
-                                        <span class="run-kcal">600kcal</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </card>
+                        <div class="first_add">
+                            <p class="first_atitle">
+                                아직 등록된 런닝 기록이 없습니다!
+                            </p>
+                        </div>
+                        <ul class="radd-recodes">
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="run-paging">
-                <button class="run-pbtn"><<</button>
-                <button class="run-pbtn"><</button>
-                <button class="run-pbtn">1</button>
-                <button class="run-pbtn">2</button>
-                <button class="run-pbtn">3</button>
-                <button class="run-pbtn">></button>
-                <button class="run-pbtn">>></button>
-            </div>
+            <footer>
+                <nav data-pagination class="pagebar">
+                    <a href="#" disabled><i class="fa-solid fa-chevron-left"></i></a>
+                        <ul>
+                            <li class="current"><a href="#1">1</a></li>
+                            <li><a href="#2">2</a></li>
+                            <li><a href="#3">3</a></li>
+                            <li><a href="#4">4</a></li>
+                            <li><a href="#5">5</a></li>
+                            <li><a href="#6">6</a></li>
+                            <li><a href="#9">...</a></li>
+                            <li><a href="#10">10</a></li>
+                        </ul>
+                        <a href="#2"><i class="fa-solid fa-chevron-right"></i></a>
+                </nav>
+            </footer>
         </div>
         <script src="./js/navscript.js"></script>
         <script

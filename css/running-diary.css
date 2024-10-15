@@ -2,7 +2,7 @@
     font-family: Pretendard;
 }
 body {
-    background-color: #f5f5f7;
+    background-color: #F5F5F7;
 }
 .running {
     display: flex;
@@ -12,27 +12,27 @@ body {
 }
 .running .run-contents {
     width: 1140px;
-    margin-top: 125px;
+    margin-top: 135px;
 }
 .running .run-contents .run-title .run-btns {
     position: relative;
     float: right;
-    margin: 20px;
+    margin: 20px 10px 0 0;
 }
 .running .run-contents .run-title .run-btns .rbtn {
-    background-color: #88304e;
-    color: #fff;
+    background-color: #88304E;
+    color: #ffffff;
     border-radius: 3px;
     width: 100px;
     margin: 0 5px;
     padding: 10px 18px;
-    font-size: 13px;
     border: none;
+    font-size: 15px;
+    cursor: pointer;
 }
+
 .running .run-contents .run-title .run-btns .rbtn:hover {
     background-color: #e23e57;
-    padding: 13px 18px;
-    font-size: 18px;
 }
 .running .run-contents .run-main {
     width: 100%;
@@ -42,9 +42,12 @@ body {
 .running .run-contents .run-main .run-left {
     float: left;
 }
-.running .run-contents .run-main .run-left img {
+.running .run-contents .run-main .run-left .run-img {
     box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 1em;
+    width: 389px;
+    height: 692px;
+    margin-bottom: 9px;
 }
 .running .run-contents .run-main .run-right {
     float: left;
@@ -61,7 +64,7 @@ body {
     flex-direction: row;
     background-color: white;
     height: 150px;
-    width: 600px;
+    width: 610px;
     box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 1em;
     margin: 15px 0;
@@ -76,7 +79,7 @@ body {
     flex-direction: row;
     margin-left: 20px;
 }
-.running .run-contents .run-main .run-right .run-card .rch-box {
+.running .run-contents .run-main .run-right .run-card .rch-boxs {
     width: 20px;
     margin-right: 5px;
 }
@@ -88,7 +91,7 @@ body {
     border-radius: 1em;
     color: #121212;
     box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
-    background-color: #35b99fa2;
+    background-color: #EEE1E3;
     padding: 20px;
     margin: 10px;
     margin-bottom: 0px;
@@ -99,7 +102,7 @@ body {
 }
 @keyframes run-event1 {
     0% {
-        background: #35b99fa2;
+        background: #EEE1E3;
         color: #121212;
     }
     70% {
@@ -107,7 +110,7 @@ body {
         color: #ffffff;
     }
     100% {
-        background: #35b99fa2;
+        background: #EEE1E3;
         color: #121212;
     }
 }
@@ -117,7 +120,7 @@ body {
 }
 @keyframes run-event2 {
     0% {
-        background: #35b99fa2;
+        background: #EEE1E3;
         color: #121212;
     }
     70% {
@@ -125,7 +128,7 @@ body {
         color: #ffffff;
     }
     100% {
-        background: #35b99fa2;
+        background: #EEE1E3;
         color: #121212;
     }
 }
@@ -135,7 +138,7 @@ body {
 }
 @keyframes run-event3 {
     0% {
-        background: #35b99fa2;
+        background: #EEE1E3;
         color: #121212;
     }
     70% {
@@ -143,7 +146,7 @@ body {
         color: #ffffff;
     }
     100% {
-        background: #35b99fa2;
+        background: #EEE1E3;
         color: #121212;
     }
 }
@@ -184,7 +187,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 600px;
+    width: 400px;
     transform: translate(-50%, -50%);
     padding: 20px;
     background: #ffffff;
@@ -200,29 +203,46 @@ body {
 .running-modal .running-content .rmodal_tit {
     text-align: center;
     color: #121212;
+    margin-top: 30px;
     font-size: 30px;
     margin-bottom: 20px;
 }
 .running-modal .running-content .rmodal-cont .radd-close-ic {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 85%;
     width: 20px;
+    margin-top: 20px;
 }
 .running-modal .running-content .rmodal-cont .radd_form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 350px;
 }
 .running-modal .running-content .rmodal-cont .radd_form .radd-card {
     display: flex;
     flex-direction: column;
     margin: 10px;
 }
+.running-modal .running-content .rmodal-cont .radd_form .radd-card .run-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .running-modal .running-content .rmodal-cont .radd_form .radd-card select,
 input {
-    padding: 20px;
+    padding: 15px;
+    font-size: 20px;
     border: 1px solid;
     border-radius: 10px;
+    text-align: center;
+}
+input[type='time']::before {
+    color: #a5a5a5;
+    content: attr(placeholder);
+    text-align: center;
+    margin-right: 15px;
 }
 .running-modal .running-content .rmodal-cont .radd-btns .radd-btn {
     float: right;
@@ -230,7 +250,7 @@ input {
     color: #fff;
     border-radius: 3px;
     width: 100px;
-    margin: 0 5px;
+    margin: 20px 5px;
     padding: 10px 18px;
     font-size: 13px;
     border: none;
@@ -239,6 +259,12 @@ input {
 .running-modal .running-content .rmodal-cont .radd-btns .radd-btn:hover {
     background-color: #e23e57;
 }
-.running-modal .running-content .rmodal-cont .radd_form .run-km {
-    width: 100px;
+.add_rebtn {
+    border: none;
+    background-color: white;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

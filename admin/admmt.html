@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판</title>
     <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/imsi/header.css">
     <link rel="stylesheet" href="./css/admmt.css">
+    <link rel="stylesheet" href="../css/imsi/header.css">
     <link rel="stylesheet" href="../css/imsi/page-style.css">
-    <link rel="stylesheet" href="../css/imsi/postdetall.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
@@ -21,51 +20,56 @@
             <a href="./admin-mainhome.html" class="logo">Fried <br> Shrimp</a>
             <ul id="nav-bar">
                 <li>
-                    <a href="#" class="btn"
-                        ><i class="fa-solid fa-user"></i>회원관리</a
-                    >
+                    <a href="#" class="btn"><i class="fa-solid fa-user"></i>회원관리</a>
                 </li>
                 <li>
-                    <a href="./admmt.html" class="btn"
-                        ><i class="fa-solid fa-people-group"></i
-                        >크루모집관리</a
-                    >
+                    <a href="./admmt.html" class="btn"><i class="fa-solid fa-people-group"></i>크루모집관리</a>
                 </li>
                 <li>
-                    <a href="./admin-tipmmt.html" class="btn"
-                        ><i class="fa-solid fa-circle-exclamation"></i
-                        >알알꿀팁관리</a
-                    >
+                    <a href="./admin-tipmmt.html" class="btn"><i class="fa-solid fa-circle-exclamation"></i>알알꿀팁관리</a>
                 </li>
                 <li>
-                    <a href="#" class="btn"
-                        ><i class="fa-solid fa-rectangle-ad"></i
-                        >광고물관리</a
-                    >
+                    <a href="./admin-adpage.html" class="btn"><i class="fa-solid fa-rectangle-ad"></i>광고물관리</a>
                 </li>
                 <li>
-                    <button
-                        type="button"
-                        class="l-btn"
-                        onclick="location.href='../start-home.html'"
-                    >
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    </button>
+                    <button type="button" class="l-btn" onclick="location.href='../start-home.html'"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
                 </li>
+            </ul>
             </ul>
         </nav>
     </header>
     <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
-</div>
 
-<div class="header-title">
-    <h1>크루모집 게시판관리</h1>
-    <hr class="header-line">
+<div class="admmt">
+    <div class="admmt-contents">
+        <div class="admmt-title">
+            <h1>크루 모집게시판 관리</h1>
+            <hr/>
+        </div>
+    </div>
 </div>
-<table>
-    <thead>
+<div class="search-container">
+    <select name="languages" id="lang">
+        <option value="seoul">제목</option>
+        <option value="busan">날짜</option>
+        <option value="daegu">시간</option>
+        <option value="incheon">인원</option>
+        <option value="gwangju">카테고리</option>
+        <option value="daejeon">참가비</option>
+        <option value="ulsan">모집 상태</option>
+        <option value="sejong">지역</option>
+    </select>
+</div>
+<div>
+    <input class="text" type="text" placeholder="Search">
+</div>
+    <table>
+        <thead>
         <tr>
-            <td><input type="checkbox"></td>
+            <td >
+                <i class="fa-regular fa-star star" id="star1"></i>
+                <input type="checkbox" id="selectAllCheckbox" style="display: none;">
+            </td>
             <th>작성자</th>
             <th>제목</th>
             <th>장소</th>
@@ -84,7 +88,7 @@
             </div>
         </div>
     </dialog>
-    <dialog id="myDialog2">
+    <dialog id="myDialog">
         <div class="detail-modal-content">
             <img class="close_ic" src="./image/close-ic.png" alt="Close Button" onclick="closeDetailModa2()" />
             <h1>천안역런닝</h1>
@@ -98,11 +102,11 @@
 문의전화 010-0010-1234 "></textarea>
             
             <div class="flex-container1">
-                <img src="https://th.bing.com/th/id/OIP.Jz3w_6m0zJEjNN4fw9JDSgHaHa?w=160&h=160&c=7&r=0&o=5&pid=1.7" class="postdetall-box" />
+                <img class="postdetall-box" src="https://th.bing.com/th/id/OIP.Jz3w_6m0zJEjNN4fw9JDSgHaHa?w=160&h=160&c=7&r=0&o=5&pid=1.7"/>
             </div>
             <div class="report-container">
                 <i class="fa-duotone fa-solid fa-light-emergency-on"></i>
-                <button class="report-button" onclick="reportPost()">관리자 권한으로 삭제</button>
+                <button class="report-button" onclick="reportPost()">신고하기</button>
             </div>
         </div>
     </dialog>
@@ -121,100 +125,87 @@
         </thead>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
 
     </tbody>
 </table>
-<select class="search-container" name="languages" id="lang">
-    <option class="option" value="seoul">제목</option>
-        <option value="busan">날짜</option>
-        <option value="daegu">시간 </option>
-        <option value="incheon">인원 </option>
-        <option value="gwangju">카테고리 </option>
-        <option value="daejeon">참가비 </option>
-        <option value="ulsan">모집 상태</option>
-        <option value="sejong">지역 </option>
-</select>
-<input class="text" type="text" placeholder="Search">
-</div>
-
 <footer>
     <nav data-pagination class="pagebar">
         <a href="#" disabled><i class="fa-solid fa-chevron-left"></i></a>
@@ -231,10 +222,20 @@
             <a href="#2"><i class="fa-solid fa-chevron-right"></i></a>
     </nav>
 </footer>
-<div>
+<dialog id="deleteModal">
+    <div class="delete-modal-content">
+        <h2>삭제하시겠습니까?</h2>
+        <div class="modal-buttons">
+            <button class="confirm-btn" onclick="confirmDelete()">Y</button>
+            <button class="cancel-btn" onclick="closeDeleteModal()">N</button>
+        </div>
+    </div>
+</dialog>
+<div type="reset" class="reset-btn1">
 <i class="fa-solid fa-trash-can"></i>
 </div>
 <script src="./js/admmt.js"></script>
+<script src="./js/star.js"></script>
 </body>
 </html>
 	

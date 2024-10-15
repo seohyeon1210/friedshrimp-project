@@ -8,9 +8,9 @@
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
-    <link rel="stylesheet" href="./css/mainstyles.css"> <!-- CSS 파일 연결 -->
-    <link rel="stylesheet" href="./css/navstyle.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="./css/mainstyles.css"> 
     <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/navstyle.css"> 
 </head>
 <body>
   <!-- 헤더 영역 -->
@@ -59,7 +59,10 @@
         <div class="slides">
             <!-- 1번 슬라이드: 프로필 등록 박스 -->
             <div class="slide slide1">
-                <img class="profile-img" id="pro-image" src="./img/profile.png" alt="profiledefault" onclick="redirectToProfilePage()" style="cursor: pointer;">
+                <img class="profile-img" id="pro-image" src="./img/cat.png" alt="profiledefault" onclick="redirectToProfilePage()" style="cursor: pointer;">
+               <form>
+                <input class="profile-button" type="button" id="pro-image"  alt="profiledefault" onclick="redirectToProfilePage()" style="cursor: pointer;" value="회원정보">
+               </form> 
                 <div class="profile-info">
                         <p>오늘의 기분은 ?</p>
                         <!-- <p>키&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="height"></p>
@@ -67,7 +70,8 @@
                 </div>
                 <div class="profile-hello" id="profile-hello"></div>
                 <div>
-                    <img class="emotion-box" id="emotion-image" src="./img/emotion/thrill.png" onclick="emotionlevelm()" style="cursor: pointer;">
+                    <!-- <img class="emotion-box" id="emotion-image" src="./img/emotion/thrill.png" onclick="emotionlevelm()" style="cursor: pointer;"> -->
+                    <img class="emotion-box" id="emotion-image" src="./img/emotion/thrill.png" onclick="openEmotionPopup()" style="cursor: pointer;">
                 </div>
             </div>
             <!-- 2번 슬라이드 -->
@@ -144,26 +148,58 @@
     </div>
 
     <!-- Right top div -->
-     <div class="small-div card-box">
-            <div class="card-header">
-                <img src="./img/weight-loss.jpg" alt="card-image" class="card-image" width="358px" height="170px">
+    <div class="small-div card-box">
+        <div class="adslides">
+            <!-- 1번 슬라이드: 프로필 등록 박스 -->
+            <div class="adslide adslide1">
+                <div class="card-header">
+                    <img src="./img/weight-loss.jpg" alt="card-image" class="card-image" width="358px" height="250px"
+                    onclick="location.href='./honeytip-detail1.html'">
+                </div>
+                <div class="card-body">
+                    <span class="tag-cardcolor">Tip</span>
+                    <h4>올바른 다이어트 방법</h4>
+                </div>
+                <div class="card-footer"></div>
             </div>
-            <div class="card-body">
-                <span class="tag-cardcolor">Tip</span>
-                <h4>올바른 다이어트 방법</h4>
+            <!-- 2번 슬라이드 -->
+            <div class="adslide adslide2">
+                <div class="card-header">
+                    <img src="./img/running.jpg" alt="card-image" class="card-image" width="358px" height="250px"
+                    onclick="location.href='./honeytip-detail2.html'">
+                </div>
+                <div class="card-body">
+                    <span class="tag-cardcolor">Tip</span>
+                    <h4>당신이 뛰는 이유</h4>
+                </div>
+                <div class="card-footer"></div>
             </div>
-            <div class="card-footer">
-                <!-- <div class="readMore">
-                    <button type="button" class="readMorebtn" onclick="location.href='./honeytip/honeytip-page.html'"> 보기</button>
-                /div> -->
+            <!-- 3번 슬라이드 -->
+            <div class="adslide adslide3">
+                <div class="card-header">
+                    <img src="./img/desperate.jpg" alt="card-image" class="card-image" width="358px" height="250px"
+                    onclick="location.href='./honeytip-detail3.html'">
+                </div>
+                <div class="card-body">
+                    <span class="tag-cardcolor">Tip</span>
+                    <h4>컨디션이 안 좋을 때는</h4>
+                </div>
+                <div class="card-footer"></div>
+            </div>
         </div>
+        <!-- 좌/우 화살표 버튼은 슬라이드 컨테이너와 같은 레벨에 배치 -->
+        <button class="adarrow left" onclick="prevSlide2()">&#10094;</button>
+        <button class="adarrow right" onclick="nextSlide2()">&#10095;</button>
     </div>
     <!-- Right bottom left div -->
     <div class="small-div adbanner"> 
         <div class="ad-slides">
-            <img src="./img/ad_image/ad1.jpg" alt="Ad 1" width="358px" height="170px">
-            <img src="./img/ad_image/ad2.gif" alt="Ad 2" width="358px" height="170px">
-            <img src="./img/ad_image/ad3.jpg" alt="Ad 3" width="358px" height="170px">
+            <img src="./img/ad_image/ad1.jpg" alt="Ad 1" width="358px" height="170px" 
+            onclick="location.href='https://smartstore.naver.com/neoshell/products/5006647672'">
+            <img src="./img/ad_image/ad2.gif" alt="Ad 2" width="358px" height="170px" 
+            onclick="location.href='https://www.nike.com/kr/t/%ED%8E%98%EA%B0%80%EC%88%98%EC%8A%A4-41-%EB%82%A8%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-k2kls9T1/FD2722-002'">
+            <img src="./img/ad_image/ad3.jpg" alt="Ad 3" width="358px" height="170px" 
+            onclick="location.href='https://brand.naver.com/pisnet/products/10748085499'">
         </div>
     </div>
 
@@ -193,20 +229,24 @@
                 <h5>회비 : FREE</h5>
             </div>
             <div class="crew-footer">
+
                 <!-- <div class="readMore">
                     <button type="button" class="readMorebtn" onclick="location.href='./recruitment.html'">게시글보기</button>
                 </div> -->
-        </div>
+            </div>
     </div>
 </div>
 <!-- JavaScript 파일 연결 -->
 <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
 <script src="./js/mainslide.js"></script>
+<script src="./js/mainslide2.js"></script>
 <script src="./js/hello.js"></script>
 <script src="./js/adslide.js"></script>
 <script src="./js/diet-diary.js"></script>
 <script src="./js/navscript.js"></script>
 <script src="./js/start.js"></script>
 <script src="./js/mainnav.js"></script>
+<script src="./js/emotionm.js"></script>
+<script src="./js/main
 </body>
 </html>

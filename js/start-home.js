@@ -19,12 +19,24 @@ const welcom_modal = document.querySelector('.welcom-modal');
 const welcom_mhell = document.querySelector('.welcom-mhell');
 const admin_modal = document.querySelector('.admin-modal');
 const admin_mhell = document.querySelector('.admin-mhell');
+const id_checkbtn = document.querySelector('.id_checkbtn');
+const pw_info = document.querySelector('.pw_info');
+const upw_first = document.querySelector('#upw_first');
+const upw_second = document.querySelector('#upw_second');
+const find_uid = document.querySelector('#find_uid');
+const find_ukeyword = document.querySelector('#find_ukeyword');
+const find_btn = document.querySelector('.find_btn');
+const change_pw = document.querySelector('#change_pw');
+const change_pw_ck = document.querySelector('#change_pw_ck');
+const change_btn = document.querySelector('.change_btn');
 const log_ent = document.querySelectorAll('.log_ent');
 const sign_ent = document.querySelectorAll('.sign_ent');
 
 let time_date = new Date();
 let pass_age = time_date.getFullYear() - 19;
 let user_id, user_pw, user_name, user_age, sta_us, days;
+let id_pas = false;
+let password_pas = false;
 
 let admin_id = 'admin';
 let admin_pw = 'admin1';
@@ -53,7 +65,6 @@ sign_ent.forEach((btn) => {
     });
 });
 
-// birth.attributes('max', `${pass_age}-12-31`);
 login_open.addEventListener('click', () => {
     modal_log.style.display = 'block';
     document.querySelector('body').style.overflow = 'hidden';
@@ -78,6 +89,7 @@ log_close.addEventListener('click', () => {
 sig_close.addEventListener('click', () => {
     modal_sig.style.display = 'none';
     document.querySelector('body').style.overflow = 'auto';
+    pw_info.innerText = '';
 });
 
 log_sig.addEventListener('click', () => {
@@ -92,18 +104,115 @@ log_sig.addEventListener('mouseout', () => {
     log_sig.innerText = '회원이 아니신가요?';
 });
 
+upw_first.addEventListener('keyup', () => {
+    password_check();
+});
+upw_second.addEventListener('keyup', () => {
+    password_check();
+});
+
+find_btn.addEventListener('click', () => {
+    find_pw();
+});
+
+change_pw.addEventListener('keyup', () => {
+    update_ck();
+});
+change_pw_ck.addEventListener('keyup', () => {
+    update_ck();
+});
+
+change_btn.addEventListener('click', () => {
+    if(password_pas = true) {
+        update_pw();
+    } else {
+        alert('비밀번호가 일치하지 않습니다.');
+    }
+});
+
+id_checkbtn.addEventListener('click', () => {
+    var chk_yes = document.getElementById('user_id').value;
+    if(chk_yes == '') {
+        alert(`아이디를 입력하세요!`);
+        id_pas = false;
+    } else if(chk_yes.includes('admin')) {
+        alert(`'${chk_yes}' 아이디는 사용 불가능합니다.`);
+        id_pas = false;
+    } else {
+        alert(`'${chk_yes}' 아이디는 사용이 가능합니다.`);
+        id_pas = true;
+    }
+});
+
+function st_input_ck() {
+    var name_chk = document.getElementById('user_name').value;
+    var age_chk = document.getElementById('user_age').value;
+    var keyword_chk = document.getElementById('user_keyword').value;
+    if(id_pas == true && password_pas == true && name_chk && age_chk && keyword_chk) {
+        modal_sig.style.display = 'none';
+        save();
+    } else if(password_pas == true && name_chk && age_chk) {
+        alert('아이디 중복확인하세요!');
+    } else if(id_pas == true && name_chk && age_chk) {
+        alert('비밀번호가 일치하지 않습니다!');
+    } else {
+        alert('빈 칸 없이 모두 입력하세요!');
+    }
+}
+
+function password_check() {
+    password_pas = false;
+    if(upw_first.value) {
+        upw_first.value == upw_second.value ? pw_info.innerText = '비밀번호가 일치합니다.' : pw_info.innerText = '비밀번호가 일치하지 않습니다.';
+        upw_first.value == upw_second.value ? password_pas = true : password_pas = false;
+    }  else {
+        pw_info.innerText = '';
+        password_pas = false;
+    }
+}
+
+function find_pw() {
+    if(localStorage.getItem('user_id') == find_uid.value && localStorage.getItem('user_keyword') == find_ukeyword.value) {
+        alert('비밀번호 변경 승인 되었습니다.');
+        passwordFindModal.style.display = 'none';
+        document.querySelector('.change_pw').innerText = `현재 아이디: ${find_uid.value}`
+        passwordChangeModal.style.display = 'block';
+    } else {
+        alert('아이디 및 비밀번호를 확인해주세요!');
+    }
+}
+
 function save() {
     user_id = document.getElementsByName('user_id')[1].value;
     user_pw = document.getElementsByName('user_pw')[1].value;
     user_name = document.getElementById('user_name').value;
     user_age = document.getElementById('user_age').value;
+    user_keyword = document.getElementById('user_keyword').value;
     localStorage.setItem('user_id', user_id);
     localStorage.setItem('user_pw', user_pw);
     localStorage.setItem('user_name', user_name);
     localStorage.setItem('user_age', user_age);
+    localStorage.setItem('user_keyword', user_keyword);
     localStorage.setItem('state_user', 0);
     alert(`'${user_name}'님 회원가입을 축하드립니다.`);
     modal_sig.style.display = 'none';
+}
+
+function update_ck() {
+    password_pas = false;
+    if(change_pw.value) {
+        change_pw.value == change_pw_ck.value ? pw_info.innerText = '비밀번호가 일치합니다.' : pw_info.innerText = '비밀번호가 일치하지 않습니다.';
+        change_pw.value == change_pw_ck.value ? password_pas = true : password_pas = false;
+    }  else {
+        pw_info.innerText = '';
+        password_pas = false;
+    }
+}
+
+function update_pw() {
+    localStorage.setItem('user_pw', change_pw.value);
+    alert('비밀번호 변경이 완료되었습니다.');
+    passwordChangeModal.style.display = 'none';
 }
 
 function check_login() {
@@ -173,4 +282,9 @@ function con_sub() {
         cn_contents.value = '';
         cn_email.value = '';
     }
+}
+
+
+window.onload = function() {
+    birth.setAttribute('max', `${pass_age}-12-31`);
 }

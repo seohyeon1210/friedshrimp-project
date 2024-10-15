@@ -1,273 +1,253 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>런닝크루 모집페이지</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
-    <link rel="stylesheet" href="./css/navstyle.css"/>
-    <link rel="stylesheet" href="./css/imsi/recruitment.css">
-    <link rel="stylesheet" href="./css/imsi/page-style.css">
-    <link rel="stylesheet" href="./css/imsi/postedit.css">
-    <link rel="stylesheet" href="./css/imsi/postdetall.css">
-    <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
-</head>
-    <header>
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            <div class="imgHoverEvent logo-show" onclick="location.href='./mainhome.html'">
-                <div class="imgBox1">
-                    <img src="./img/f-logo.png" />
-                </div>
-                <div class="imgBox2">
-                    <img src="./img/shrimp_st_ic.png" />
-                </div>
-                <div class="imgBox3">
-                    <img src="./img/home_logo.png" />
-                </div>
-            </div>
-            <ul id="nav-bar">
-                <li>
-                    <a href="./running-diary.html" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
-                </li>
-                <li>
-                    <a href="./diet-diary.html" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
-                </li>
-                <li>
-                    <a href="./recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
-                </li>
-                <li>
-                    <a href="./honeytip-page.html" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
-                </li>
-                <li>
-                    <button type="button" class="l-btn" onclick="location.href='./start-home.html'">
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    </button>
-                </li>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>recruitment</title>
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+        <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
+        <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/recruitment-style.css"/>
+        <link rel="stylesheet" href="./css/page-style.css">
+        <link rel="stylesheet" href="./css/postdetall.css">
+        <link rel="stylesheet" href="./css/postedit.css">
+        <link rel="stylesheet" href="./css/navstyle.css" />
+    </head>
     <body>
-        <div>
-        </div>
-        <div class="header-button">
-            <button class="submit-btn" onclick="openDialog()">크루모집</button>
-        </div>
-        <div class="header-title">
-            <h1>크루모집</h1>
-            <hr class="header-line" />
-        </div>
-        <div class="crew-section">
-            <form class="main">
-                <div class="top-box">
-                    <label class="place-menu" for="lang">장소</label>
-                    <select class="place" name="languages" id="lang">
-                        <option class="option" value="seoul">서울특별시</option>
-                        <option value="busan">부산광역시</option>
-                        <option value="daegu">대구광역시</option>
-                        <option value="incheon">인천광역시</option>
-                        <option value="gwangju">광주광역시</option>
-                        <option value="daejeon">대전광역시</option>
-                        <option value="ulsan">울산광역시</option>
-                        <option value="sejong">세종특별자치시</option>
-                        <option value="gyeonggi-do">경기도</option>
-                        <option value="Gangwon">강원도</option>
-                        <option value="Chungcheongbuk-do">충청북도</option>
-                        <option value="Chungcheongnam-do">충청남도</option>
-                        <option value="Jeonbuk">전라북도</option>
-                        <option value="Jeollanam-do">전라남도</option>
-                        <option value="Gyeongsangbuk-do">경상북도</option>
-                        <option value="Gyeongsangnam-do">경상남도</option>
-                        <option value="Jeju">제주도</option>
-                    </select>
-                    <label for="date">날짜를 선택하세요</label>
-                    <input
-                        type="date"
-                        id="date"
-                        max="2070-12-31"
-                        min="2024-10-08"
-                        value="2024-10-08"
-                    />
-                    <div>
-                        <label class="place" for="money">회비</label>
-                        <select class="place" name="">
-                            <option value="실제 값1">5000</option>
-                            <option value="실제 값1">10000</option>
-                            <option value="실제 값1">15000</option>
-                            <option value="실제 값1">20000</option>
-                            <option value="실제 값1">25000</option>
-                            <option value="실제 값1">30000</option>
-                            <option value="실제 값1">35000</option>
-                            <option value="실제 값1">40000</option>
-                            <option value="실제 값1">45000</option>
-                            <option value="실제 값1">50000</option>
-                        </select>
-                    </div>
-                </div>
-            </form>
-            <div class="crew-container">
-                <i class="fa-solid fa-circle-exclamation icon-alert"></i>
-                <!-- 아이콘을 외부로 이동 -->
-                <div class="crew-box" onclick="openDetailModal()">
-                    <div class="image-container">
-                        <!-- 이미지와 아이콘을 감싸는 div -->
-                        <img class="img"
-                        src="https://th.bing.com/th/id/OIP.JPrx-_jn5OExZrLujhOqXQHaFS?w=160&h=160&c=7&r=0&o=5&pid=1.7"
-                        class="crew-image"
-                        />
-                    </div>
-                    <h3>천안역런닝</h3>
-                    <h4>모집인원4명</h4>
-                    <h4>24.10.13 3시 중앙시장</h4>
-                    <h4>회비 FREE</h4>
-                    <h5 class="h5">자세히보기</h5>
-                </div>
-                <div class="crew-box" onclick="openDetailModal()">
-                    <img class="img"
-                        src="https://th.bing.com/th/id/OIP.Jz3w_6m0zJEjNN4fw9JDSgHaHa?w=160&h=160&c=7&r=0&o=5&pid=1.7"
-                        class="crew-image"
-                    />
-                    <h3>강남역 DO RUN 모집</h3>
-                    <h4>모집인원</h4>
-                    <h4>날짜/시간/장소</h4>
-                    <h4>회비</h4>
-                    <h5 class="h5">자세히보기</h5>
-                </div>
-                <div class="crew-box" onclick="openDetailModal()">
-                    <img class="img"
-                        src="https://th.bing.com/th/id/OIP.s9XYwuniCsQfgiiCNYr1ggHaHa?w=160&h=160&c=7&r=0&o=5&pid=1.7"
-                        class="crew-image"
-                    />
-                    <h3>Adidas&Nike 런닝모집</h3>
-                    <h4>모집인원</h4>
-                    <h4>날짜/시간/장소</h4>
-                    <h4>회비</h4>
-                    <h5 class="h5">자세히보기</h5>
-                </div>
-                <div class="crew-box" onclick="openDetailModal()">
-                    <img class="img"
-                        src="https://th.bing.com/th/id/OIP.oN__gI0ZB7ePNDaTPTJujwHaD5?w=160&h=160&c=7&r=0&o=5&pid=1.7"
-                        class="crew-image"
-                    />
-                    <h3>런닝동호회</h3>
-                    <h4>모집인원</h4>
-                    <h4>날짜/시간/장소</h4>
-                    <h4>회비</h4>
-                    <h5 class="h5">자세히보기</h5>
-                </div>
-                <div class="crew-box" onclick="openDetailModal()">
-                    <img class="img"
-                        src="https://th.bing.com/th/id/OIP.SWduSaiHucwbm7SWm0jF-gHaKd?w=160&h=160&c=7&r=0&o=5&pid=1.7"
-                        class="crew-image"
-                    />
-                    <h3>청년들이여 제주로와라</h3>
-                    <h4>모집인원</h4>
-                    <h4>날짜/시간/장소</h4>
-                    <h4>회비</h4>
-                    <h5 class="h5">자세히보기</h5>
-                </div>
-                <div class="crew-box" onclick="openDetailModal()">
-                    <img class="img"
-                        src="https://th.bing.com/th/id/OIP.YBygBJQboPR13LJzA3jD5AHaHa?w=160&h=160&c=7&r=0&o=5&pid=1.7"
-                        class="crew-image"
-                    />
-                    <h3>같이뛸래요?</h3>
-                    <h4>모집인원</h4>
-                    <h4>날짜/시간/장소</h4>
-                    <h4>회비</h4>
-                    <h5 class="h5">자세히보기</h5>
-                </div>
+    <!-- 헤더 영역 -->
+<header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <div class="imgHoverEvent logo-show" onclick="location.href='./mainhome.html'">
+            <div class="imgBox1">
+                <img src="./img/f-logo copy.png" />
+            </div>
+            <div class="imgBox2">
+                <img src="./img/shrimp_st_ic copy.png" />
+            </div>
+            <div class="imgBox3">
+                <img src="./img/home_logo.png" />
             </div>
         </div>
+        <ul id="nav-bar">
+            <li>
+                <a href="./running-diary.html" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+            </li>
+            <li>
+                <a href="./diet-diary.html" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+            </li>
+            <li>
+                <a href="./recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+            </li>
+            <li>
+                <a href="./honeytip-page.html" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
+            </li>
+            <li>
+                <button type="button" class="l-btn" onclick="location.href='./start-home.html'">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-        <footer>
-            <nav data-pagination class="pagebar">
-                <a href="#" disabled><i class="fa-solid fa-chevron-left"></i></a>
-                    <ul>
-                        <li class="current"><a href="#1">1</a></li>
-                        <li><a href="#2">2</a></li>
-                        <li><a href="#3">3</a></li>
-                        <li><a href="#4">4</a></li>
-                        <li><a href="#5">5</a></li>
-                        <li><a href="#6">6</a></li>
-                        <li><a href="#9">...</a></li>
-                        <li><a href="#10">10</a></li>
-                    </ul>
-                    <a href="#2"><i class="fa-solid fa-chevron-right"></i></a>
-            </nav>
-        </footer>
-        <!-- 크루모집 모달시작 -->
-        <dialog id="myDialog">
-            <form class="modal">
-                <img class="close_ic" src="./image/close-ic.png" alt="Close Button" onclick="closeDialog()" />
-				<h1>크루모집 게시물 작성</h1>
-                <hr>
-                    <input class="input1" type="text" id="lang" placeholder="제목을 입력하세요" ></input>
-                    <input class="input1" type="text" id="lang" placeholder="인원수를 입력하세요" ></input>
-                    <input class="input1" type="text" id="lang" placeholder="모집날짜/시간/장소를 입력하세요" ></input>
-
-                    <div class="money-container">
-                        <label for="money" class="money-label">모집회비</label>
-                        <select class="money" id="money" name="money">
-                            <option value="5000">5000</option>
-                            <option value="10000">10000</option>
-                            <option value="15000">15000</option>
-                            <option value="20000">20000</option>
-                            <option value="25000">25000</option>
-                            <option value="30000">30000</option>
-                            <option value="35000">35000</option>
-                            <option value="40000">40000</option>
-                            <option value="45000">45000</option>
-                            <option value="50000">50000</option>
-                        </select>
+        <!-- 메인 영역 -->
+        <main class="main">
+            <div class="form-container">
+                <div class="container">
+                    <div class="title">
+                        <h1>크루 모집</h1>
+                        <hr>
                     </div>
-
-					<div class="flex-container">
-						<img id="preview" src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="postedit-box" />
-						<label for="file" class="upload-btn">
-							<input id="file" type="file" accept="image/*" style="display: none;" onchange="previewImage(event)" />
-							<span>Upload Image</span>
-						</label>
-					</div>
-						<textarea class="input2" id="lang" rows="5" cols="10" placeholder="상세 내용을 입력하세요"></textarea>
-						</div>
-					</div>				
-                <button class="button2">저장</button>
-			</form>
-		</dialog>
-        <!-- 크루모집 모달종료 -->
-
-        <!-- 크루상세페이지 모달시작-->
-        <dialog id="myDialog1">
-            <div class="modal-content">
-                <img class="close_ic" src="./image/close-ic.png" alt="Close Button" onclick="closeDetailModal()" />
-                <h1>천안역런닝</h1>
-                <hr>
-                <h1 class="h1">현재 게시물은 신고1건 되었습니다. 참고하시길 바랍니다!</h1>
-                <input class="input1" type="text" id="detail-title" placeholder="강남역 DO RUN 모집"></input>
-                <input class="input1" type="text" id="detail-member" placeholder="인원수 5명모집"></input>
-                <input class="input1" type="text" id="detail-info" placeholder="강남역 3번출구 3시"></input>
-                <input class="input1" type="text" id="detail-fee" placeholder="무료"></input>
-                <textarea class="input3" placeholder="페이스 러너가 되어드릴게요 ! 문의전화 010-0010-1234"></textarea>
-                
-                <div class="flex-container1">
-                    <img src="https://th.bing.com/th/id/OIP.Jz3w_6m0zJEjNN4fw9JDSgHaHa?w=160&h=160&c=7&r=0&o=5&pid=1.7"class="postdetall-box" />
                 </div>
-                <div class="report-container">
-                    <i class="fa-duotone fa-solid fa-light-emergency-on"></i>
-                    <button class="report-button" onclick="reportPost()">신고하기</button>
+            <div>
+                <button type="button" class="writebtn" onclick="openRecruitmentModal()">크루 모집</button>
+                <div class="button1">
+                    <input class="searchInput" type="text" id="searchInput" placeholder="날짜~장소 검색..." style="display:none;">
+                    <button class="button3" id="searchButton">검색</button>
                 </div>
-            </div>
-        </dialog>
+            
+            <div class="search-result">
+                    <img id="resultImage" src="" alt="Result Image" style="display:none; width: 100px;">
+                </div>
+                    <div class="containerBox">
+                        <div class="card" data-title="서울 크루모집" data-details="날짜: 2024-10-15, 장소: 서울">                        
+                            <div class="card-header">
+                                <img src="./img/3.jpg" alt="card-image" class="card-image" width="600" height="240">
+                            </div>
+                            <div class="card-body">
+                                <span class="tag tag-blue">Crew</span>
+                                <h4>서울 크루모집</h4>
+                                <p>날짜: 2024-10-15, 장소: 서울 회비: 5000원</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="readMore">
+                                    <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="./img/2.jpg" alt="card-image" class="card-image" width="600" height="240">
+                            </div>
+                            <div class="card-body" data-title="아산역 런닝" data-details="날짜: 2024-10-15, 장소: 아산">
+                                <span class="tag tag-blue">Crew</span>
+                                <h4>아산역 런닝</h4>
+                                <p>호수공원에서 뛰실분 모집합니다</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="readMore">
+                                    <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="./img/7.jpg" alt="card-image" class="card-image" width="600">
+                            </div>
+                            <div class="card-body" data-title="산악" data-details="날짜: 2024-10-15, 장소: 사랑">
+                                <span class="tag tag-blue">Crew</span>
+                                <h4>산악</h4>
+                                <p>서로 존중하고 사랑하면서 달립시다</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="readMore">
+                                    <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="containerBox">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="./img/8.jpg" alt="card-image" class="card-image" width="600">
+                                </div>
+                                <div class="card-body" data-title="인사" data-details="날짜: 2024-10-15, 장소: 인사">
+                                    <span class="tag tag-blue">Crew</span>
+                                    <h4>인사</h4>
+                                    <p>달리기로 인사합시다</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="readMore">
+                                        <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
+                                    </div>
+                                </div>
+                            </div>
         
-       
-        <!-- 크루상세페이지 모달 종료 -->
-        <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
-        <script src="./crewjs/upload.php"></script>
-        <script src="/crewjs/hover.js"></script>
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="./img/girl.jpg" alt="card-image" class="card-image" width="600" height="235">
+                                </div>
+                                <div class="card-body" data-title="해변강가" data-details="날짜: 2024-10-15, 장소: 아산">
+                                    <span class="tag tag-blue">Crew</span>
+                                    <h4>해변강가</h4>
+                                    <p>해변서 같이 뛸 사람모집</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="readMore">
+                                        <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="./img/stretching.jpg" alt="card-image" class="card-image" width="600" height="235">
+                                </div>
+                                <div class="card-body" data-title="스트레칭" data-details="날짜: 2024-10-15, 장소: 스트레칭">
+                                    <span class="tag tag-blue">Crew</span>
+                                    <h4>스트레칭</h4>
+                                    <p>스트레칭과 병행한 달리기</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="readMore">
+                                        <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <nav data-pagination class="pagebar">
+                        <a href="#" disabled><i class="fa-solid fa-chevron-left"></i></a>
+                        <ul>
+                            <li class="current"><a href="#1">1</a></li>
+                            <li><a href="#2">2</a></li>
+                            <li><a href="#3">3</a></li>
+                            <li><a href="#4">4</a></li>
+                            <li><a href="#5">5</a></li>
+                            <li><a href="#6">6</a></li>
+                            <li><a href="#9">...</a></li>
+                            <li><a href="#10">10</a></li>
+                        </ul>
+                        <a href="#2"><i class="fa-solid fa-chevron-right"></i></a>
+                    </nav>
+                </footer>
+            </div>
+    </main>
+            <!-- 크루모집 모달 시작 -->
+            <dialog id="myDialog">
+                <form class="modal">
+                    <img class="close_ic" src="./img/close-ic.png" alt="Close Button" onclick="closeDialog()" />
+                    <h1>크루모집</h1>
+                    <hr>
+                    <div>
+                        <input class="input1" type="text" id="title" placeholder="제목">
+                        <input class="input1" type="text" id="number" placeholder="인원수">
+                        <input class="input1" type="text" id="date" placeholder="날짜/시간/장소/회비 최대50.000원">
+                    </div>
+                    <textarea class="input3" id="details" rows="4" placeholder="상세페이지 입력칸 최대 50글자"></textarea>
+                    <div class="preview-container">
+                        <span>미리보기 이미지가 여기에 나타납니다.</span>
+                    </div>
+                    <label class="file-label" for="chooseFile">파일 찾기</label>
+                    <input class="file" id="chooseFile" type="file" onchange="handleFiles(this.files)" accept="image/png, image/jpeg, image/gif">
+                    <div class="btn-container">
+                        <button class="inside" type="button" onclick="saveAndCloseModal()">등록</button>
+                    </div>
+                </form>
+            </dialog>
+<!-- 크루모집 모달 끝 -->
+
+<!-- 게시글 상세보기 모달 시작 -->
+<dialog id="myDialog1">
+    <form class="modal">
+        <img class="close_ic" src="./img/close-ic.png" alt="Close Button" onclick="closeDetailDialog()" />
+        <h1>상세보기</h1>
+        <hr>
+        <div class="badge">신고된 게시물</div> <!-- 신고 배지 -->
+        <div>
+        <div>
+            <input class="input1" type="text" id="teamName" readonly>
+            <input class="input1" type="text" id="teamSize" readonly>
+            <input class="input1" type="text" id="details" readonly>
+        </div>
+        <textarea class="input3" id="description"></textarea>
+        <div class="image-container">
+            <img src="" class="postedit-box" /> <!-- 상세보기 이미지 -->
+        </div>
+        <div class="report-count-container">
+            <p>신고 횟수: <span id="reportCount">0</span></p> <!-- 신고 횟수 표시 -->
+        </div>
+        <p class="report-message">이 게시물은 신고되었습니다. 검토 중입니다.</p> <!-- 신고 메시지 -->
+        <div class="btn-container1">
+            <button class="inside1" type="button" onclick="reportPost()">신고하기</button> <!-- 신고하기 버튼 -->
+        </div>
+    </form>
+</dialog>
+<!-- 게시글 상세보기 모달 끝 -->
+    <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
+    <script src="./js/navscript.js"></script>
+    <script src="./js/upload.php"></script>
+    <script src="./js/hover.js"></script>
     </body>
 </html>
