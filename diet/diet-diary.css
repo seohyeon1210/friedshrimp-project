@@ -267,6 +267,15 @@ button:hover {
     cursor: pointer;
 }
 
+.img1{
+    margin-top: 35px;
+    margin-left: 40px;
+}
+
+p{
+    color: #888;
+}
+
 /* -------------목표설정,식단등록 모달 css 개선--------------- */
 /* 모달 기본 스타일 */
 .modal {
