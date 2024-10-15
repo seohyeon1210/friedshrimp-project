@@ -97,7 +97,7 @@ saveMealButton.addEventListener('click', () => {
 
     // div3의 아침, 점심, 저녁 카드에 정보 추가
     const mealCard = document.getElementById(`${mealType}-card`);
-    mealCard.innerHTML += `<div>${foodName} - ${foodCalories} Kcal - 먹은 시간: ${eatingTime}</div>`;
+    mealCard.innerHTML += `<div>${foodName} - ${foodCalories} Kcal</div>`;
 
     // 오늘 칼로리 업데이트
     const percentage = Math.round((consumedCalories / totalCalories) * 100);
