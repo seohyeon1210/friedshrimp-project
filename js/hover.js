@@ -186,4 +186,41 @@ function reportPost() {
         alert(`게시물이 신고되었습니다. 현재 신고 횟수: ${reportCount}`);
     }
 }
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+function filterPosts(searchTerm) {
+    // 모든 카드 박스를 가져옵니다.
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+        // 각 카드의 텍스트를 가져옵니다. (제목과 본문을 포함)
+        const title = card.querySelector('h4').innerText.toLowerCase();
+        const description = card.querySelector('p').innerText.toLowerCase();
+        
+        // 제목이나 본문에 검색어가 포함되어 있으면 해당 카드를 보여줍니다.
+        if (title.includes(searchTerm) || description.includes(searchTerm)) {
+            card.style.display = 'block';  // 검색어와 일치하는 카드는 표시
+        } else {
+            card.style.display = 'none';  // 일치하지 않으면 숨김
+        }
+    });
+}
 
+
+// 검색 버튼 클릭 시
+document.getElementById("searchButton").addEventListener("click", function() {
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput.style.display === "none") {
+        searchInput.style.display = "inline"; // 검색창 표시
+        searchInput.focus(); // 검색창에 포커스
+    } else {
+        searchInput.style.display = "none"; // 검색창 숨김
+        searchInput.value = ""; // 검색창 내용 초기화
+        filterPosts(""); // 초기 상태로 필터링
+    }
+});
+
+document.getElementById("searchInput").addEventListener("input", function() {
+    const searchTerm = this.value.toLowerCase(); // 소문자로 변환하여 비교
+    filterPosts(searchTerm);  // 입력에 따라 실시간 필터링
+});
+console.log(title, description); // 각 카드의 제목과 본문을 콘솔에 출력하여 확인

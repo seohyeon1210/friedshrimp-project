@@ -231,24 +231,8 @@ img{
     background-color: #E23E57;
     color: #FFF;
 }
-.writebtn1 {
-    background-color: #88304E;
-    color: #FFF;
-    width: 100px;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 3px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin-top: -39.2px;
-    font-size: 15px;
-    cursor: pointer;
-    margin-left: 80%;
-    font-family: Pretendard;
-}
 
-.writebtn1:hover {
+.button3:hover {
     background-color: #E23E57;
     color: #FFF;
 }
@@ -256,4 +240,35 @@ img{
 .report-count-container{
     margin-top: 10px;
     color: #E23E57;
+}
+.button1{
+    position: relative;
+    margin-left: 74%;
+    margin-top: 30px;
+}
+.button3{
+    height: 37px;
+    position: absolute;
+    top: -67px;
+    left: 70px;
+    width: 100px;
+    background-color: #892c4d;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: Pretendard;
+}
+#searchInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: -20%;
+    margin-left: 31px;
+    font-size: 14px;
+    position: absolute;
+    left: -150px;
+    display: none;
 }
