@@ -15,15 +15,24 @@ document.getElementById("searchInput").addEventListener("input", function() {
     filterPosts(searchTerm);
 });
 
-document.getElementById("deleteButton").addEventListener("click", function() {
-    const checkboxes = document.querySelectorAll(".post-checkbox:checked"); // 체크된 체크박스 선택
+// 전체 선택 기능 구현
+document.getElementById("selectAll").addEventListener("change", function() {
+    const checkboxes = document.querySelectorAll(".post-checkbox");
     checkboxes.forEach(checkbox => {
-        const row = checkbox.closest("tr"); // 체크박스의 가장 가까운 tr 찾기
-        if (row) {
-            row.remove(); // 해당 행 삭제
-        }
+        checkbox.checked = this.checked; // 전체 선택 여부에 따라 체크박스 상태 변경
     });
 });
+
+//밑에 "삭제하시겠습니까?" 팝업창 추가해서 주석처리 함
+// document.getElementById("deleteButton").addEventListener("click", function() {
+//     const checkboxes = document.querySelectorAll(".post-checkbox:checked"); // 체크된 체크박스 선택
+//     checkboxes.forEach(checkbox => {
+//         const row = checkbox.closest("tr"); // 체크박스의 가장 가까운 tr 찾기
+//         if (row) {
+//             row.remove(); // 해당 행 삭제
+//         }
+//     });
+// });
 
 function filterPosts(searchTerm) {
     const rows = document.querySelectorAll(".post-list tbody tr");
@@ -42,3 +51,21 @@ function filterPosts(searchTerm) {
         }
     });
 }
+
+// 삭제 버튼 클릭 이벤트 리스너
+document.getElementById("deleteButton").addEventListener("click", function() {
+    const checkboxes = document.querySelectorAll(".post-checkbox:checked"); // 체크된 체크박스 선택
+    if (checkboxes.length === 0) {
+        alert(" 삭제할 게시물을 선택해주세요."); // 체크된 항목이 없을 경우 경고
+        return;
+    }
+
+    // 삭제 확인 창
+    if (confirm("이 게시물을 삭제 하시겠습니까?")) {
+        checkboxes.forEach(checkbox => {
+            const row = checkbox.closest("tr"); // 체크된 체크박스의 행 찾기
+            row.remove(); // 행 삭제
+        });
+        alert("게시물이 삭제 되었습니다."); // 탈퇴 완료 메시지
+    }
+});

@@ -143,6 +143,7 @@ section#tips{
     padding: 10px;
 }
 
+
 /* --------------------식단일기 페이지 구역------------------------- */
 .container{
     width: 1140px;
@@ -187,7 +188,6 @@ section#tips{
     width: 300px;
     height: 500px;
     margin: 0 10px;
-    font-size: 25px;
 }
 
 .calorie-progress {
@@ -202,10 +202,10 @@ section#tips{
 
 .calorie-bar {
     height: 100%;
-    width: 40%;
+    width: 0%;
     background-color: #E23E57;
     position: absolute;
-}    
+}
 
 .calorie-details {
     font-size: 16px;
@@ -310,7 +310,7 @@ button:hover {
 .modal-content h2 {
     margin-bottom: 15px; 
     font-size: 24px;
-    color: #E23E57;
+    color: black;
     font-weight: bold;
 }
 
