@@ -17,7 +17,7 @@
     font-weight: 400;
     font-family: pretendard;
     -webkit-text-size-adjust: 100%;
-    margin: 2em auto;
+    margin: -2em auto;
     text-align: center;
     transition: font-size 0.2s ease-in-out;
 }

@@ -1,0 +1,68 @@
+/* 모달창스타일 */
+#myDialog {
+  width: 600px; 
+  height: 80%; 
+  padding: 10px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  background-color: #F5F5F7; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); /* 중앙 정렬 */
+  }
+
+.modal{
+  background-color: #F5F5F7;
+}
+/* 인풋스타일 */
+.input1, .input2 {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #E23E57;
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+.input3 {
+  font-family: sans-serif;
+  width: 100%;
+  height: 130px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #E23E57;
+  border-radius: 5px;
+}
+/* 이미지박스조절 */
+.postedit-box {
+  border: 1px solid #E23E57; 
+  width: 500px; 
+  height: 300px; 
+  padding: 10px; 
+  margin-top: 7px; 
+  margin-left: 30px; 
+  border-radius: 5px; 
+}
+/* 클로즈이미지 조절 */
+.close_ic {
+  display: flex;
+  position: absolute;
+  left: 95%;
+  width: 24px;  
+  height: 24px; 
+  cursor: pointer;
+}
+.inside1{
+  border: none;
+  position: absolute;
+  left: 220px;
+  margin-top: 10px;
+  background-color: #E23E57;
+  color: #FFF;
+  text-align: center;
+  padding: 10px 0;
+  width: 20%;
+  border-radius: 6px;
+  cursor: pointer;
+}
