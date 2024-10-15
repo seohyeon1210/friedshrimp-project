@@ -220,33 +220,6 @@ img{
     background-color: #E23E57;
     color: #FFF;
 }
-<<<<<<< HEAD:recruitment/recruitment-style.css
-=======
-
-.writebtn{
-    background-color: #88304E;
-    color: #FFF;
-    width: 100px;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 3px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin-top: 20px;
-    margin-right: 70px;
-    font-size: 15px;
-    cursor: pointer;
-    margin-left: 90%;
-    font-family: Pretendard;
-}
-
-.writebtn:hover{
-    background-color: #E23E57;
-    color: #FFF;
-}
-
->>>>>>> 1451bf0d5658107506b6407ed9a6e49d15dc4c9c:css/recruitment-style.css
 .l-btn{
     color: #121212;
     background: transparent;
