@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body{
+    background-color: #F5F5F7;
+
+    display: grid;
+    place-items: center;
+}
+
+i{
+    padding: 10px;
+}
+
+header{
+    width: 100%;
+    background-color: #FFF;
+    position: fixed;
+    color: #121212;
+    padding: 0 20px;
+    /* 헤더 고정 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a.logo{
+    color: #121212;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 35px;
+    cursor: pointer;
+    font-family: cursive;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+}
+
+nav ul li{
+    line-height: 60px;
+    margin: 0 5px;
+}
+
+nav ul a{
+    color: #121212;
+    font-size: 18px;
+    padding: 5px 13px;
+    border-radius: 4px;
+    transition: .4s;
+    font-family: Pretendard;
+}
+
+.active, nav ul a:hover{
+    background: #E23E57;
+    color: #FFF;
+    padding: 10px;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px;
+    font-size: 40px;
+}
+
+section#running{
+    color: #121212;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+section#food{
+    color: #121212;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+section#crew{
+    color: #121212;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+section#tips{
+    color: #121212;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.checkbtn{
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.l-btn{
+    color: #121212;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 5px 13px;
+    border-radius: 4px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.l-btn:hover{
+    background: #E23E57;
+    color: #FFF;
+    padding: 10px;
+}
+
+
+/* --------------------식단일기 페이지 구역------------------------- */
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: 125px;
+    padding-bottom: 100px;
+    font-family: Pretendard;
+}
+
+.div1{
+    display: flex;
+    gap: 1rem;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.div2{
+    display: flex;
+    gap: 1rem;
+    margin-top: 35px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 300px;
+    height: 200px;
+    margin: 0 10px;
+}
+
+.card2 {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300%;
+    max-width: 400px;
+    width: 300px;
+    height: 500px;
+    margin: 0 10px;
+}
+
+.calorie-progress {
+    width: 100%;
+    margin: 15px 0;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+}
+
+.calorie-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #E23E57;
+    position: absolute;
+}
+
+.calorie-details {
+    font-size: 16px;
+}
+
+.calorie-details span {
+    color: #E23E57;
+}
+
+.activity-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.activity-bar div {
+    height: 60px;
+    width: 25px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.activity-bar div.highlight {
+    background-color: #E23E57;
+}
+
+.footer-text {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #888;
+}
+
+.button1{
+    margin-left: 80%;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #E23E57;
+}
+
+.button2 {
+    background-color: #892c4d;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button3 {
+    background-color: #892c4d;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.img1{
+    margin-top: 35px;
+    margin-left: 40px;
+}
+
+p{
+    color: #888;
+}
+
+/* -------------목표설정,식단등록 모달 css 개선--------------- */
+/* 모달 기본 스타일 */
+.modal {
+    display: none; /* 기본적으로 숨김 처리 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 어두운 배경 */
+    backdrop-filter: blur(5px); /* 배경 블러 효과 */
+}
+
+/* 모달 내용 스타일 */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* 상단에서 조금 더 중앙으로 위치 조정 */
+    padding: 30px;
+    border: none;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    animation: fadeIn 0.3s ease-in-out; /* 부드러운 등장 애니메이션 */
+}
+
+/* 부드러운 등장 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 타이틀 아래 간격 */
+.modal-content h2 {
+    margin-bottom: 15px; 
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+}
+
+/* 입력 필드 스타일 */
+.modal-content input, .modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* 안쪽 그림자 */
+    transition: border-color 0.3s ease;
+}
+
+.modal-content input:focus, .modal-content select:focus {
+    border-color: #E23E57; /* 포커스 시 테두리 색상 */
+    outline: none;
+}
+
+/* 저장 버튼 스타일 */
+.button4 {
+    background-color: #E23E57;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.button4:hover {
+    background-color: #c92c47;
+}
+
+/* 닫기 버튼 스타일 */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
+}

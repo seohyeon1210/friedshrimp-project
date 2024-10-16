@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit Profile</title>
+        <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="./css/editprofile-style.css">
+        <link rel="stylesheet" href="../css/navstyle.css"> 
+    </head>
+    <body>
+        <header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <div class="imgHoverEvent logo-show" onclick="location.href='../mainhome.html'">
+                    <div class="imgBox1">
+                        <img src="../img/f-logo.png" />
+                    </div>
+                    <div class="imgBox2">
+                        <img src="../img/shrimp_st_ic.png" />
+                    </div>
+                    <div class="imgBox3">
+                        <img src="../img/home_logo.png" />
+                    </div>
+                </div>
+                <ul id="nav-bar">
+                    <li>
+                        <a href="../running-diary.html" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+                    </li>
+                    <li>
+                        <a href="../diet-diary.html" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+                    </li>
+                    <li>
+                        <a href="../recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                    </li>
+                    <li>
+                        <a href="../honeytip-detail.html" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
+                    </li>
+                    <li>
+                        <button type="button" class="l-btn" onclick="location.href='../start-home.html'">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <div class="container">
+                <div class="title">
+                    <h1>회원 정보 수정</h1>
+                    <hr>
+                </div>
+
+                <!-- 프로필 수정 폼 시작 -->
+
+                <div class="form-container">
+
+                    
+
+                    <form action="#" id="profileEdit">
+                        <div class="column-left">
+
+                            <div class="profile">
+                                <div class="image">
+                                    <img src="./img/profile.png" alt="프로필 기본 이미지" id="pro-image">
+                                        <br>
+                                        <input type="file" accept="image/jpeg, image/png, image/jpg" id="input" class="input">
+                                        <label for="input" class="upload">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column-right">
+                            <label for="id">이름:</label>
+                            <input type="text" name="id" id="id" value="고길동" required disabled>
+
+                            <label for="pw">비밀번호:</label>
+                            <input type="password" name="pw" id="pw" value="1234" required>
+
+                            <label for="pw">새 비밀번호:</label>
+                            <input type="password" name="pw" value="12345" required>
+
+                            <label for="pw">새 비밀번호 확인:</label>
+                            <input type="password" name="pw" value="12345" required>
+
+                            <label for="gender">성별:</label>
+                            <select name="gender" id="gender" required>
+                                <option value="male">남자</option>
+                                <option value="female">여자</option>
+                                <option value="other" selected>상관없음</option>
+                            </select>
+                            <div class="person">
+                            <label for="height">키:</label>
+                            <input type="text" name="height" id="height" value="168cm" required>
+
+                            <label for="weight">몸무게:</label>
+                            <input type="text" name="weight" id="weight" value="62kg" required>
+                            </div>
+
+                            <button class="btn" type="button" onclick="submitForm()">수정</button>
+                        </div>
+                    </form>
+                 </div>
+
+            </div>
+
+        </main>
+        <!-- 자바 스크립트 연결 -->
+        <script src="./js/editprofile-script.js"></script>
+    </body>
+</html>
