@@ -18,6 +18,7 @@
     font-family: pretendard;
     -webkit-text-size-adjust: 100%;
     margin: -2em auto;
+    margin-left: 20px;
     text-align: center;
     transition: font-size 0.2s ease-in-out;
 }

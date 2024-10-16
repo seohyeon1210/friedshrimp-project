@@ -1,4 +1,3 @@
-
 // 게시글 상세보기 모달 열기
 function openDetailModal() {
     // 크루 모집 페이지에서 저장된 값을 상세보기 모달에 입력
@@ -151,4 +150,29 @@ document.getElementById("searchInput").addEventListener("input", function() {
     const searchTerm = this.value.toLowerCase(); // 소문자로 변환하여 비교
     filterPosts(searchTerm);  // 입력에 따라 실시간 필터링
 });
+
 console.log(title, description); // 각 카드의 제목과 본문을 콘솔에 출력하여 확인
+
+    function inputLenFunc() {
+        const inpSec = document.querySelector('.input')
+    }
+
+    function inputLenFunc() {
+        const inpSec = document.querySelector('.input-number');
+        if (inpSec.value.length > 2) {
+            inpSec.value = inpSec.value.slice(0, 2); // Limit the value to the first 2 digits
+        }
+    }
+
+console.log(title, description); // 각 카드의 제목과 본문을 콘솔에 출력하여 확인
+
+    function inputLenFunc() {
+        const inpSec = document.querySelector('.input')
+    }
+
+    function inputLenFunc() {
+        const inpSec = document.querySelector('.input-number');
+        if (inpSec.value.length > 2) {
+            inpSec.value = inpSec.value.slice(0, 2); // Limit the value to the first 2 digits
+        }
+    }

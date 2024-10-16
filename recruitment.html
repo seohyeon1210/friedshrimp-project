@@ -9,7 +9,6 @@
         <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/recruitment-style.css"/>
         <link rel="stylesheet" href="./css/page-style.css">
-        <!-- <link rel="stylesheet" href="./css/postdetall.css"> -->
         <link rel="stylesheet" href="./posteit.css/postedit.css">
         <link rel="stylesheet" href="./css/navstyle.css" />
     </head>
@@ -75,7 +74,7 @@
                     <div class="containerBox">
                         <div class="card" data-title="서울 크루모집" data-details="날짜:2024-10-15, 장소:서울">                        
                             <div class="card-header">
-                                <img src="./c.imge/3.jpg" alt="card-image" class="card-image" width="600" height="240">
+                                <img src="./c.imge/3.jpg" alt="card-image" class="card-image" width="600" height="240"loading="lazy">
                             </div>
                             <div class="card-body">
                                 <span class="tag tag-blue">Crew</span>
@@ -96,7 +95,7 @@
 
                         <div class="card">
                             <div class="card-header">
-                                <img src="./c.imge/2.jpg" alt="card-image" class="card-image" width="600" height="240">
+                                <img src="./c.imge/2.jpg" alt="card-image" class="card-image" width="600" height="240"loading="lazy">
                             </div>
                             <div class="card-body" data-title="아산역 런닝" data-details="날짜: 2024-10-15, 장소: 아산">
                                 <span class="tag tag-blue">Crew</span>
@@ -115,7 +114,7 @@
 
                         <div class="card">
                             <div class="card-header">
-                                <img src="./c.imge/7.jpg" alt="card-image" class="card-image" width="600" height="240">
+                                <img src="./c.imge/7.jpg" alt="card-image" class="card-image" width="600" height="240"loading="lazy">
                             </div>
                             <div class="card-body" data-title="산악런닝" data-details="날짜: 2024-11-02, 장소: 북한산">
                                 <span class="tag tag-blue">Crew</span>
@@ -135,7 +134,7 @@
                         <div class="containerBox">
                             <div class="card">
                                 <div class="card-header">
-                                    <img src="./c.imge/8.jpg" alt="card-image" class="card-image" width="600" height="240">
+                                    <img src="./c.imge/8.jpg" alt="card-image" class="card-image" width="600" height="240"loading="lazy">
                                 </div>
                                 <div class="card-body" data-title="해안도로 러닝" data-details="날짜: 2024-11-10, 장소: 인천 해안도로">
                                     <span class="tag tag-blue">Crew</span>
@@ -154,7 +153,7 @@
         
                             <div class="card">
                                 <div class="card-header">
-                                    <img src="./c.imge/girl.jpg" alt="card-image" class="card-image" width="600" height="240">
+                                    <img src="./c.imge/girl.jpg" alt="card-image" class="card-image" width="600" height="240"loading="lazy">
                                 </div>
                                 <div class="card-body" data-title="트랙 훈련" data-details="날짜: 2024-10-25, 장소: 서울 올림픽공원 트랙">
                                     <span class="tag tag-blue">Crew</span>
@@ -173,7 +172,7 @@
         
                             <div class="card">
                                 <div class="card-header">
-                                    <img src="./c.imge/stretching.jpg" alt="card-image" class="card-image" width="600" height="240">
+                                    <img src="./c.imge/stretching.jpg" alt="card-image" class="card-image" width="600" height="240"loading="lazy">
                                 </div>
                                 <div class="card-body" data-title="스트레칭 및 러닝" data-details="날짜: 2024-10-18, 장소: 잠실 한강공원">
                                     <span class="tag tag-blue">Crew</span>
@@ -221,10 +220,9 @@
                     <h2>크루모집</h2>
                     <div>
                         <input class="input1" type="text" id="title" placeholder="제목">
-                        <input class="input-number" type="number" placeholder="인원수" min="1" max="100" />
-                        <input class="input-ndtf" type="date" placeholder="날짜" />
-                        <input class="input-ndtf" type="text" placeholder="시간" />
-                        <input class="input-ndtf" type="number" placeholder="회비" min="5000" max="50000" step="5000">
+                        <input class="input-number" value="00" type="number" oninput="inputLenFunc()" min="0" max="20"/>                        <input class="input-ndtf" type="date" placeholder="날짜" />
+                        <input class="input-ndtf" type="text" placeholder="시간" maxlength="8" />
+                        <input class="input-ndtf" value="5000" type="number" oninput="inputLenFunc()" min="5000" max="50000" step="5000"/>
                     </div>
                     <textarea class="input3" id="details" rows="4" placeholder="상세페이지 입력칸 최대 150글자" maxlength="150"></textarea>
                     <div class="preview-container">
