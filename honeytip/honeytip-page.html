@@ -12,8 +12,8 @@
     <body>
         <!-- 헤더 영역 -->
         <header>
-            <nav>
-                <input type="checkbox" id="check">
+            <nav class="honey_nav">
+                <input type="checkbox" id="check" class="checkBox">
                 <label for="check" class="checkbtn">
                     <i class="fa-solid fa-bars"></i>
                 </label>
@@ -37,6 +37,7 @@
                 </ul>
             </nav>
         </header>
+        
 
         <!-- 메인 영역 -->
         <main>
@@ -47,34 +48,13 @@
                 <hr>
                     <div class="write">
                         <!-- 모달 열기 버튼 -->
+                        <form class="search-wrapper">
+                        <input id="searchBox" class="search" type="search" placeholder="검색어를 입력하세요." />
+                        <button type="button" class="searchbtn">검색</button>
+                        </form>
                         <button type="button" class="writebtn" onclick="modal_honey()">글 쓰기</button>
                     </div>
 
-                    <!-- 모달  -->
-                    <div class="modal" id="honey_modal">
-                        <!-- 모달 컨텐츠 -->
-                        <div class="modal-box" id="modalPopup">
-                            <form class="modal-form" action="#" method="post" id="form_honey">
-                                <div class="modal-title">
-                                    <h2>알알꿀팁 작성</h2>
-                                    <!-- 모달 닫기 버튼 -->
-                                    <button id="exitBtn" type="button" class="exit" onclick="modal_exit()">&times;</button>
-                                </div>
-                                <input class="modalTitle" id="modaltitle_honey" type="text" placeholder="제목을 입력하세요." />
-                                <textarea class="modalText" id="modaltext_honey" placeholder="내용을 입력하세요."></textarea>
-                                <input class="modal-file" type="file" id="modalFile" accept="image/*" hidden>
-                                <div class="img-area" data-img="">
-                                    <i class="fa-regular fa-file-image"></i>
-                                    <h3>이미지 업로드</h3>
-                                    <p>이미지 사이즈는 <span>2MB</span> 이하여야 합니다</p>
-                                </div>
-                                <button class="select-img" type="button" onclick="file_honey()">파일 선택</button>
-                    
-                                <div class="modal-btn">
-                                    <button class="accept" id="acceptBtn" type="button" onclick="tip_honey()">저장</button>
-                                </div>
-                            </form>
-                        </div>
                         
                     </div>
 
@@ -82,7 +62,8 @@
 
 
 
-            </div> 
+            </div>
+            
             <div class="containerBox">
                 <div class="card">
                     <div class="card-header">
@@ -91,7 +72,7 @@
                     <div class="card-body">
                         <span class="tag tag-red">Tip</span>
                         <h4>올바른 다이어트 방법</h4>
-                        <p>본문입니다.</p>
+                        <p>다이어트를 할 때 가장 중요한 점은?..</p>
                     </div>
                     <div class="card-footer">
                         <div class="readMore">
@@ -107,7 +88,7 @@
                     <div class="card-body">
                         <span class="tag tag-red">Tip</span>
                         <h4>당신이 뛰는 이유</h4>
-                        <p>본문입니다.</p>
+                        <p>뛰세요뛰세요뛰세요뛰세요뛰세요뛰세요..</p>
                     </div>
                     <div class="card-footer">
                         <div class="readMore">
@@ -123,7 +104,7 @@
                     <div class="card-body">
                         <span class="tag tag-red">Tip</span>
                         <h4>컨디션이 안 좋을 때는?</h4>
-                        <p>본문입니다.</p>
+                        <p>당신의 컨디션이 안 좋은 이유는 바로..</p>
                     </div>
                     <div class="card-footer">
                         <div class="readMore">
@@ -140,7 +121,7 @@
                         <div class="card-body">
                             <span class="tag tag-red">Tip</span>
                             <h4>샐러드 재료 추천</h4>
-                            <p>본문입니다.</p>
+                            <p>샐러드샐러드샐러드샐러드샐러드샐러드..</p>
                         </div>
                         <div class="card-footer">
                             <div class="readMore">
@@ -156,7 +137,7 @@
                         <div class="card-body">
                             <span class="tag tag-red">Tip</span>
                             <h4>운동의 종류</h4>
-                            <p>본문입니다.</p>
+                            <p>아기공룡 둘리..</p>
                         </div>
                         <div class="card-footer">
                             <div class="readMore">
@@ -172,7 +153,7 @@
                         <div class="card-body">
                             <span class="tag tag-red">Tip</span>
                             <h4>운동 전 스트레칭하기</h4>
-                            <p>본문입니다.</p>
+                            <p>다양한 스트레칭의 효과..</p>
                         </div>
                         <div class="card-footer">
                             <div class="readMore">
@@ -206,6 +187,32 @@
             </footer>
 
         </main>
+
+        <!-- 모달  -->
+        <div class="modal" id="honey_modal">
+            <!-- 모달 컨텐츠 -->
+            <div class="modal-box" id="modalPopup">
+                <form class="modal-form" action="#" method="post" id="form_honey">
+                    <div class="modal-title">
+                        <h2>알알꿀팁 작성</h2>
+                        <!-- 모달 닫기 버튼 -->
+                        <button id="exitBtn" type="button" class="exit" onclick="modal_exit()">&times;</button>
+                    </div>
+                    <input class="modalTitle" id="modaltitle_honey" type="text" placeholder="제목을 입력하세요." />
+                    <textarea class="modalText" id="modaltext_honey" placeholder="내용을 입력하세요."></textarea>
+                    <input class="modal-file" type="file" id="modalFile" accept="image/*" hidden>
+                    <div class="img-area" data-img="">
+                        <i class="fa-regular fa-file-image"></i>
+                        <h3>이미지 업로드</h3>
+                        <p>이미지 사이즈는 <span>2MB</span> 이하여야 합니다</p>
+                    </div>
+                    <button class="select-img" type="button">파일 선택</button>
+        
+                    <div class="modal-btn">
+                        <button class="accept" id="acceptBtn" type="button" onclick="tip_honey()">저장</button>
+                    </div>
+                </form>
+            </div>
 
         <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>

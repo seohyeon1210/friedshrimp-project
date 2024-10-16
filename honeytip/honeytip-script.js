@@ -65,64 +65,88 @@ modal_exit = function () {
     modal.style.display = "none";
 };
 
+const rModal = document.querySelector("#honey_Rmodal");
+const rModalOpen = document.getElementById("modal-report");
+const rModalClose = document.getElementById("exitRBtn");
+
+rModal_honey = function () {
+    rModal.style.display = "block";
+};
+
+rModal_exit = function () {
+    rModal.style.display = "none";
+};
+
+const eModal = document.querySelector("#honey_Emodal");
+const eModalOpen = document.querySelector(".p-edit");
+const eModalClose = document.querySelector("exitEBtn");
+
+eModal_honey = function () {
+    eModal.style.display = "block";
+};
+
+eModal_exit = function () {
+    eModal.style.display = "none";
+};
+
 const select_image = document.querySelector(".select-img");
 const input_file = document.querySelector("#modalFile");
 const img_area = document.querySelector(".img-area");
 
 // 파일 선택
-// select_image.addEventListener("click", function () {
-//     input_file.click();
-// })
+ select_image.addEventListener("click", function () {
+     input_file.click();
+})
 
-// input_file.addEventListener("change", function () {
-//     const img_honey = this.files[0] // 배열에 저장
-//     if (img_honey.size < 2000000) { // 이미지 크기 제한
-//         const reader = new FileReader();
-//         reader.onload = () => { // 즉시 실행
-//             const all_img = img_area.querySelectorAll("img");
-//             all_img.forEach(item => item.remove());
+input_file.addEventListener("change", function () {
+    const img_honey = this.files[0] // 배열에 저장
+    if (img_honey.size < 2000000) { // 이미지 크기 제한
+        const reader = new FileReader();
+        reader.onload = () => { // 즉시 실행
+            const all_img = img_area.querySelectorAll("img");
+            all_img.forEach(item => item.remove());
             
-//             const url_img = reader.result;
-//             const img = document.createElement("img");
-//             img.src = url_img;
+            const url_img = reader.result;
+            const img = document.createElement("img");
+            img.src = url_img;
 
-//             img_area.appendChild(img);
-//             img_area.classList.add("active");
-//             img_area.dataset.img = img_honey.name;
-//         }
-//         reader.readAsDataURL(img_honey);
-//     } else {
-//         alert("이미지는 2MB 이하여야 합니다.");
-//     }
-// })
-
-function file_honey() {
-    select_image.addEventListener("click", function () {
-        input_file.click();
-    });
-
-    input_file.addEventListener("change", function () {
-        const img_honey = this.files[0] // 배열에 저장
-        if (img_honey.size < 2000000) { // 이미지 크기 제한
-            const reader = new FileReader();
-            reader.onload = () => { // 즉시 실행
-                const all_img = img_area.querySelectorAll("img");
-                all_img.forEach(item => item.remove());
-            
-                const url_img = reader.result;
-                const img = document.createElement("img");
-                img.src = url_img;
-
-                img_area.appendChild(img);
-                img_area.classList.add("active");
-                img_area.dataset.img = img_honey.name;
-            }
-            reader.readAsDataURL(img_honey);
-        } else {
-            alert("이미지는 2MB 이하여야 합니다.");
+            img_area.appendChild(img);
+            img_area.classList.add("active");
+            img_area.dataset.img = img_honey.name;
         }
-    });
-}
+        reader.readAsDataURL(img_honey);
+    } else {
+        alert("이미지는 2MB 이하여야 합니다.");
+    }
+})
+
+// function file_honey() {
+//     select_image.addEventListener("click", function () {
+//         input_file.click();
+//     });
+
+//     input_file.addEventListener("change", function () {
+//         const img_honey = this.files[0] // 배열에 저장
+//         if (img_honey.size < 2000000) { // 이미지 크기 제한
+//             const reader = new FileReader();
+//             reader.onload = () => { // 즉시 실행
+//                 const all_img = img_area.querySelectorAll("img");
+//                 all_img.forEach(item => item.remove());
+            
+//                 const url_img = reader.result;
+//                 const img = document.createElement("img");
+//                 img.src = url_img;
+
+//                 img_area.appendChild(img);
+//                 img_area.classList.add("active");
+//                 img_area.dataset.img = img_honey.name;
+//             }
+//             reader.readAsDataURL(img_honey);
+//         } else {
+//             alert("이미지는 2MB 이하여야 합니다.");
+//         }
+//     });
+// }
 
 // 글쓰기 로컬스토리지
 const title_honey = document.querySelector(".modalTitle");
@@ -136,3 +160,12 @@ function tip_honey() {
     let userTip = { modalTitle: title_honey.value, modalText: text_honey.value }
     localStorage.setItem("userTip", JSON.stringify(userTip));
 };
+
+// 검색 기능
+const searchField = document.getElementById("searchBox");
+
+searchField.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+        performSearch(searchField.value);
+    }
+});

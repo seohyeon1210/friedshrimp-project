@@ -52,7 +52,7 @@
 
                     
 
-                    <form action="#" id="profileEdit">
+                    <form action="/update-user" id="profileEdit" method="get">
                         <div class="column-left">
 
                             <div class="profile">
@@ -69,16 +69,16 @@
 
                         <div class="column-right">
                             <label for="id">이름:</label>
-                            <input type="text" name="id" id="id" value="고길동" required disabled>
+                            <input type="text" name="id" id="id" value="고길동" readonly required>
 
                             <label for="pw">비밀번호:</label>
-                            <input type="password" name="pw" id="pw" value="1234" required>
+                            <input type="password" name="pw" id="oldpw" value="1234" required>
 
                             <label for="pw">새 비밀번호:</label>
-                            <input type="password" name="pw" value="12345" required>
+                            <input type="password" name="pw" id="newpw" value="12345" required>
 
                             <label for="pw">새 비밀번호 확인:</label>
-                            <input type="password" name="pw" value="12345" required>
+                            <input type="password" name="pw" id="newpw2" value="12345" required>
 
                             <label for="gender">성별:</label>
                             <select name="gender" id="gender" required>
@@ -94,7 +94,8 @@
                             <input type="text" name="weight" id="weight" value="62kg" required>
                             </div>
 
-                            <button class="btn" type="button" onclick="edit_honey()">수정</button>
+                            <button class="btn" type="submit" onclick="edit_honey()">수정</button>
+
                         </div>
                     </form>
                  </div>
