@@ -225,6 +225,11 @@ section#tips{
     color: #6e6e73; /* 애플 특유의 회색 텍스트 */
 }
 
+.card2 p {
+    font-size: 1.3rem;
+    color: #6e6e73; /* 애플 특유의 회색 텍스트 */
+}
+
 /* 부드러운 애니메이션 */
 .card {
     opacity: 0;

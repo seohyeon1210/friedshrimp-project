@@ -69,3 +69,4 @@ document.getElementById("deleteButton").addEventListener("click", function() {
         alert("게시물이 삭제 되었습니다."); // 탈퇴 완료 메시지
     }
 });
+

@@ -224,3 +224,5 @@ document.getElementById("searchInput").addEventListener("input", function() {
     filterPosts(searchTerm);  // 입력에 따라 실시간 필터링
 });
 console.log(title, description); // 각 카드의 제목과 본문을 콘솔에 출력하여 확인
+
+
