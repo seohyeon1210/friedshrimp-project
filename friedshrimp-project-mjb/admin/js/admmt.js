@@ -41,3 +41,6 @@ document.querySelectorAll(".reset-btn").forEach(button => {
 document.querySelectorAll(".reset-btn1").forEach(button => {
     button.addEventListener("click", openDeleteModal);
 });
+
+
+

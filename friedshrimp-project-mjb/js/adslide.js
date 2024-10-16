@@ -21,3 +21,6 @@ function startAdSlide() {
 
 // 슬라이드 시작
 window.onload = startAdSlide;
+
+
+

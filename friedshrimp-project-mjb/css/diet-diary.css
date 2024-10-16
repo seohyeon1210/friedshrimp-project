@@ -9,7 +9,7 @@
     box-sizing: border-box;
 
     -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+        box-sizing: border-box;
 }
 
 body{
@@ -238,6 +238,34 @@ section#tips{
     color: #888;
 }
 
+/* 어제의 총 섭취 칼로리 영역 */
+.calorie-progress2 {
+    width: 100%;
+    margin: 15px 0;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+}
+
+.calorie-bar2 {
+    height: 100%;
+    width: 95%;
+    background-color: #3eaee2;
+    position: absolute;
+}
+
+.calorie-details {
+    font-size: 16px;
+}
+
+.footer-text2 {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #888;
+}
+
 .button1{
     margin-left: 80%;
     margin-top: 30px;
@@ -274,6 +302,11 @@ button:hover {
 
 p{
     color: #888;
+}
+
+.p2{
+    color: #E23E57;
+    font-size: large;
 }
 
 /* -------------목표설정,식단등록 모달 css 개선--------------- */
@@ -370,3 +403,4 @@ p{
     color: black;
     cursor: pointer;
 }
+
