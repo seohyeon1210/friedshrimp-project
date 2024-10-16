@@ -101,7 +101,7 @@
                                 <div class="p-btns">
                                     <!-- <button type="button" class="p-edit" onclick="location.href='honeytip-postedit.html'">수정</button>
                                     <button type="button" class="p-delete">삭제</button> -->
-                                    <button id="modal" type="button" class="p-report">신고</button>
+                                    <button id="modal" type="button" class="p-report" onclick="rModal_honey()">신고</button>
                                 </div>
                             </div>
 
@@ -115,6 +115,24 @@
             </div>
         </div>
     </main>
+
+    <div class="modalR" id="honey_Rmodal">
+        <!-- 모달 컨텐츠 -->
+        <div class="modal-Rbox" id="modalRPopup">
+            <form class="modal-Rform" action="#" method="post" id="form_Rhoney">
+                <div class="modal-Rtitle">
+                    <h2><i class="fa-solid fa-triangle-exclamation"></i>경고!</h2>
+                    <p>이 게시글을 신고하시겠습니까?</p>
+                    <!-- 모달 닫기 버튼 -->
+                    <button id="exitRBtn" type="button" class="exitR" onclick="rModal_exit()">&times;</button>
+                    <div class="report-btns">
+                        <button type="button" class="Raccept" id="r_accept">네</button>
+                        <button type="button" class="Rcancel" id="r_cancel">아니오</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>

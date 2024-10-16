@@ -67,9 +67,13 @@ nav ul a{
     font-family: Pretendard;
 }
 
-.honey_nav i:hover{
+/* .honey_nav i:hover{
     color: #FFF;
-}
+} */
+
+/* #nav-bar {
+    color: #FFF;
+} */
 
 .active, nav ul a:hover{
     background: #E23E57;

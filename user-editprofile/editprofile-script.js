@@ -60,8 +60,8 @@ document.getElementById('profileEdit').addEventListener('submit', function(event
     }
 
     // 비밀번호 길이 확인
-    if (newPassword.length < 6) {
-        alert('비밀번호는 최소 6자 이상이어야 합니다.');
+    if (newPassword.length > 10) {
+        alert('비밀번호는 최소 10자 이하이어야 합니다.');
         isValid = false;
     }
 
