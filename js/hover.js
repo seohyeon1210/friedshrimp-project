@@ -1,14 +1,4 @@
-// 모달 열기
-function openRecruitmentModal() {
-    document.querySelector('.modal-backdrop').style.display = 'block'; // 배경 보이기
-    document.getElementById('myDialog').showModal();
-}
 
-// 모달 닫기
-function closeDialog() {
-    document.querySelector('.modal-backdrop').style.display = 'none'; // 배경 숨기기
-    document.getElementById('myDialog').close();
-}
 // 게시글 상세보기 모달 열기
 function openDetailModal() {
     // 크루 모집 페이지에서 저장된 값을 상세보기 모달에 입력
@@ -29,54 +19,6 @@ function openDetailModal() {
     document.getElementById('myDialog1').showModal();
 }
 
-// 게시글 상세보기 모달 닫기
-function closeDetailDialog() {
-    document.getElementById('myDialog1').close();
-}
-
-// 파일 선택 및 크기 검사 (단일 파일)
-document.getElementById('chooseFile').addEventListener('change', function() {
-    const file = this.files[0];
-    if (file) {
-        // 파일 크기 확인 (2MB 제한)
-        if (file.size > 2 * 1024 * 1024) {
-            alert('파일 크기는 2MB를 초과할 수 없습니다.');
-            this.value = ''; // 파일 선택 초기화
-            document.getElementById('previewImage').style.display = 'none'; // 미리보기 숨기기
-            return;
-        }
-
-        // 파일 미리보기 및 저장
-        const reader = new FileReader();
-        reader.onload = function(event) {
-            const preview = document.getElementById('previewImage');
-            preview.src = event.target.result;  // 파일의 데이터를 미리보기 이미지로 설정
-            preview.style.display = 'block'; // 미리보기 표시
-
-            // 이미지 소스 저장
-            imageSrc = event.target.result;
-        }
-        reader.readAsDataURL(file); // 파일을 데이터 URL로 읽기
-    }
-});
-
-// 여러 파일 업로드를 위한 핸들러 (필요 시)
-function handleFiles(files) {
-    const previewContainer = document.querySelector('.preview-container');
-    previewContainer.innerHTML = ''; // 이전 미리보기 초기화
-
-    Array.from(files).forEach(file => {
-        const reader = new FileReader();
-        reader.onload = function(event) {
-            const img = document.createElement('img');
-            img.src = event.target.result;
-            img.style.width = 'auto'; // 미리보기 크기 조정
-            img.style.marginRight = '10px'; // 이미지 간격
-            previewContainer.appendChild(img);
-        }
-        reader.readAsDataURL(file);
-    });
-}
 let teamName = '';
 let teamSize = '';
 let details = ''; // 날짜, 시간, 장소
@@ -204,20 +146,6 @@ function filterPosts(searchTerm) {
         }
     });
 }
-
-
-// 검색 버튼 클릭 시
-document.getElementById("searchButton").addEventListener("click", function() {
-    const searchInput = document.getElementById("searchInput");
-    if (searchInput.style.display === "none") {
-        searchInput.style.display = "inline"; // 검색창 표시
-        searchInput.focus(); // 검색창에 포커스
-    } else {
-        searchInput.style.display = "none"; // 검색창 숨김
-        searchInput.value = ""; // 검색창 내용 초기화
-        filterPosts(""); // 초기 상태로 필터링
-    }
-});
 
 document.getElementById("searchInput").addEventListener("input", function() {
     const searchTerm = this.value.toLowerCase(); // 소문자로 변환하여 비교

@@ -247,17 +247,8 @@ img{
 /* 버튼 고정!! ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 .button1{
     position: relative;
-    margin-left: 77.2%;
+    margin-left: 88%;
     margin-top: 20px;
-}
-.button3{
-    background-color: #892c4d;
-    color: white;
-    padding: 10px 40px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
 }
 .button4{
     background-color: #892c4d;
@@ -268,15 +259,19 @@ img{
     font-size: 14px;
     cursor: pointer;
 }
-#searchInput {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-left: 38%;
-    font-size: 14px;
+.searchInput {
+    font-family: pretendard;
+    height: 35px;
+    font-size: 15px;
+    padding: 10px;
+    width: 160px;
+    border: solid 1px #DDD;
+    outline: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-left: -170px;
+    bottom: 0;
     position: absolute;
-    left: -300px;
-    display: none;
 }
 
 .inputput{
@@ -315,5 +310,19 @@ img{
     border: 1px solid #E23E57;
     border-radius: 5px;
     font-family: sans-serif;
-
+}
+#searchInput {
+    font-family: pretendard;
+    height: 35px;
+    font-size: 15px;
+    padding: 10px;
+    width: 160px;
+    border: solid 1px #DDD;
+    outline: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-right: 70px;
+    margin-left: 75%;
+    bottom: 0;
+    position: absolute;
 }

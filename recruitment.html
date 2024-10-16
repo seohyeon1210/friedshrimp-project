@@ -7,12 +7,10 @@
         <title>recruitment</title>
         <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
         <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
-        <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/recruitment-style.css"/>
         <link rel="stylesheet" href="./css/page-style.css">
-        <link rel="stylesheet" href="./css/postdetall.css">
-        <link rel="stylesheet" href="./css/postedit.css">
+        <!-- <link rel="stylesheet" href="./css/postdetall.css"> -->
+        <link rel="stylesheet" href="./posteit.css/postedit.css">
         <link rel="stylesheet" href="./css/navstyle.css" />
     </head>
     <body>
@@ -25,13 +23,13 @@
         </label>
         <div class="imgHoverEvent logo-show" onclick="location.href='./mainhome.html'">
             <div class="imgBox1">
-                <img src="./c.imge/f-logo copy.png" />
+                <img src="./img/f-logo copy.png" />
             </div>
             <div class="imgBox2">
-                <img src="./c.imge/shrimp_st_ic copy.png" />
+                <img src="./img/shrimp_st_ic copy.png" />
             </div>
             <div class="imgBox3">
-                <img src="./c.imge/home_logo.png" />
+                <img src="./img/home_logo.png" />
             </div>
         </div>
         <ul id="nav-bar">
@@ -65,11 +63,9 @@
                         <hr>
                     </div>
                 </div>
-                <div>
-                
+            <div>
                 <div class="button1">
-                    <button class="button3" id="searchButton">검색</button>
-                    <input class="searchInput" type="text" id="searchInput" placeholder="날짜~장소 검색..." style="display:none;">
+                    <input id="searchBox" class="searchInput" type="search" placeholder="검색어를 입력하세요." />
                     <button class="button4" onclick="openRecruitmentModal()">크루 모집</button>
                 </div>
             
@@ -77,24 +73,27 @@
                     <img id="resultImage" src="" alt="Result Image" style="display:none; width: 100px;">
                 </div>
                     <div class="containerBox">
-                        <div class="card" data-title="서울 크루모집" data-details="날짜: 2024-10-15, 장소: 서울">                        
-                            <div class="card" data-post-id="1">
+                        <div class="card" data-title="서울 크루모집" data-details="날짜:2024-10-15, 장소:서울">                        
                             <div class="card-header">
                                 <img src="./c.imge/3.jpg" alt="card-image" class="card-image" width="600" height="240">
                             </div>
                             <div class="card-body">
                                 <span class="tag tag-blue">Crew</span>
                                 <h4>서울 크루모집</h4>
-                                <p>날짜: 2024-10-15, 장소: 서울 회비: 5000원</p>
-                                <p class="report-count">신고 횟수: <span class="report-count-value">0</span></p>
+                                <p>날짜:2024-10-15 시간: 오후 3시</p>
+                                <p>장소:서울</p>
+                                <p>회비:5000원</p>
+                                <p>도심 속에서 크루들과 함께 달려보세요. 건강과 즐거움을 함께 누릴 수 있는...</p>
+                                <!-- <button class="badge1">신고됨</button>  -->
                             </div>
+                            <div class="badge1">신고횟수: 1회</div>
                             <div class="card-footer">
                                 <div class="readMore">
                                     <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
                                 </div>
                             </div>
                         </div>
-                        </div>
+
                         <div class="card">
                             <div class="card-header">
                                 <img src="./c.imge/2.jpg" alt="card-image" class="card-image" width="600" height="240">
@@ -102,7 +101,10 @@
                             <div class="card-body" data-title="아산역 런닝" data-details="날짜: 2024-10-15, 장소: 아산">
                                 <span class="tag tag-blue">Crew</span>
                                 <h4>아산역 런닝</h4>
-                                <p>호수공원에서 뛰실분 모집합니다</p>
+                                <p>날짜:2024-10-15 시간: 오전 7시</p>
+                                <p>장소:아산</p>
+                                <p>회비:5000원</p>
+                                <p>아침 공기를 마시며 호수공원에서 신나게 달리실 분을...</p>
                             </div>
                             <div class="card-footer">
                                 <div class="readMore">
@@ -115,10 +117,13 @@
                             <div class="card-header">
                                 <img src="./c.imge/7.jpg" alt="card-image" class="card-image" width="600" height="240">
                             </div>
-                            <div class="card-body" data-title="사랑" data-details="날짜: 2024-10-15, 장소: 사랑">
+                            <div class="card-body" data-title="산악런닝" data-details="날짜: 2024-11-02, 장소: 북한산">
                                 <span class="tag tag-blue">Crew</span>
-                                <h4>사랑</h4>
-                                <p>서로 존중하고 사랑하면서 달립시다</p>
+                                <h4>산악런닝</h4>
+                                <p>날짜:2024-11-02 오전 8시</p>
+                                <p>장소:북한산</p>
+                                <p>회비:10000원</p>
+                                <p>자연 속에서 힐링하며 산악 코스를 함께 달리실 분들을 모집...</p>
                             </div>
                             <div class="card-footer">
                                 <div class="readMore">
@@ -132,10 +137,13 @@
                                 <div class="card-header">
                                     <img src="./c.imge/8.jpg" alt="card-image" class="card-image" width="600" height="240">
                                 </div>
-                                <div class="card-body" data-title="인사" data-details="날짜: 2024-10-15, 장소: 인사">
+                                <div class="card-body" data-title="해안도로 러닝" data-details="날짜: 2024-11-10, 장소: 인천 해안도로">
                                     <span class="tag tag-blue">Crew</span>
-                                    <h4>인사</h4>
-                                    <p>달리기로 인사합시다</p>
+                                    <h4>해안도로 러닝</h4>
+                                    <p>날짜: 2024-11-10 시간: 오후 4시</p>
+                                    <p>장소: 인천 해안도로</p>
+                                    <p>회비:5000원</p>
+                                    <p>바다를 바라보며 해안도로를 따라 달리며 건강을...</p>
                                 </div>
                                 <div class="card-footer">
                                     <div class="readMore">
@@ -148,10 +156,13 @@
                                 <div class="card-header">
                                     <img src="./c.imge/girl.jpg" alt="card-image" class="card-image" width="600" height="240">
                                 </div>
-                                <div class="card-body" data-title="해변강가" data-details="날짜: 2024-10-15, 장소: 아산">
+                                <div class="card-body" data-title="트랙 훈련" data-details="날짜: 2024-10-25, 장소: 서울 올림픽공원 트랙">
                                     <span class="tag tag-blue">Crew</span>
-                                    <h4>해변강가</h4>
-                                    <p>해변서 같이 뛸 사람모집</p>
+                                    <h4>트랙 훈련</h4>
+                                    <p>날짜:2024-10-25 시간: 오후 5시</p>
+                                    <p>장소: 서울 올림픽공원 트랙</p>
+                                    <p>회비: 30000원</p>
+                                    <p>체계적인 트랙 훈련과 함께 달리기 실력을...</p>
                                 </div>
                                 <div class="card-footer">
                                     <div class="readMore">
@@ -164,14 +175,18 @@
                                 <div class="card-header">
                                     <img src="./c.imge/stretching.jpg" alt="card-image" class="card-image" width="600" height="240">
                                 </div>
-                                <div class="card-body" data-title="스트레칭" data-details="날짜: 2024-10-15, 장소: 스트레칭">
+                                <div class="card-body" data-title="스트레칭 및 러닝" data-details="날짜: 2024-10-18, 장소: 잠실 한강공원">
                                     <span class="tag tag-blue">Crew</span>
-                                    <h4>스트레칭</h4>
-                                    <p>스트레칭과 병행한 달리기</p>
+                                    <h4>스트레칭 및 러닝</h4>
+                                    <p>날짜: 2024-10-18 시간: 오후 6시</p>
+                                    <p>장소: 잠실 한강공원</p>
+                                    <p>회비: 30000원</p>
+                                    <p>가벼운 스트레칭과 함께 편안한 러닝을 즐기실 분...</p>
                                 </div>
                                 <div class="card-footer">
                                     <div class="readMore">
-                                        <button type="button" class="readMorebtn" onclick="openDetailModal()">자세히 보기</button>
+                                        <button type="button" class="readMorebtn" onClick="location.href='recruitment.hy'">
+                                            자세히 보기</button>
                                     </div>
                                 </div>
                             </div>
@@ -198,59 +213,59 @@
             </div>
     </main>
             <!-- 크루모집 모달 시작 -->
-            <<dialog id="myDialog">
+            <dialog id="myDialog">
                 <form class="modal">
-                    <img class="close_ic" src="./c.imge/close-ic.png" alt="Close Button" onclick="closeDialog()" />
-                    <h1>크루모집</h1>
-                    <hr>
+                    <div>
+                    <button class="close-ic" onclick="closeDetailDialog()">&times;</button>
+                    </div>
+                    <h2>크루모집</h2>
                     <div>
                         <input class="input1" type="text" id="title" placeholder="제목">
-                        <input class="input1" type="text" id="number" placeholder="인원수">
-                        <form class="inputput">
-                        <input class="input-date" type="date" placeholder="날짜" />
-                        <input class="input-time" type="text" placeholder="시간 입력" />
-                        <input class="input-fee" type="text" placeholder="회비 입력" />
-                        </form>
+                        <input class="input-number" type="number" placeholder="인원수" min="1" max="100" />
+                        <input class="input-ndtf" type="date" placeholder="날짜" />
+                        <input class="input-ndtf" type="text" placeholder="시간" />
+                        <input class="input-ndtf" type="number" placeholder="회비" min="5000" max="50000" step="5000">
                     </div>
-                    <textarea class="input3" id="details" rows="4" placeholder="상세페이지 입력칸 최대 50글자"></textarea>
+                    <textarea class="input3" id="details" rows="4" placeholder="상세페이지 입력칸 최대 150글자" maxlength="150"></textarea>
                     <div class="preview-container">
-                        <span>미리보기 이미지가 여기에 나타납니다.</span>
+                        <span>이미지사진</span>
                     </div>
-                    <label class="file-label" for="chooseFile">파일 찾기</label>
-                    <input class="file" id="chooseFile" type="file" onchange="handleFiles(this.files)" accept="image/png, image/jpeg, image/gif">
+                    <nav class="nav">
+                    <label class="file-label1" for="chooseFile">파일 선택</label>
+                    <input class="file1" id="chooseFile" type="file" onchange="handleFiles(this.files)" accept="image/png, image/jpeg, image/gif">
+                    </nav>
                     <div class="btn-container">
-                        <button class="inside" type="button" onclick="saveAndCloseModal()">등록</button>
+                        <button class="inside" type="button" onclick="saveAndCloseModal()">저장</button>
                     </div>
                 </form>
             </dialog>
 <!-- 크루모집 모달 끝 -->
 
 <!-- 게시글 상세보기 모달 시작 -->
-<dialog id="myDialog1">
+<!-- <dialog id="myDialog1">
     <form class="modal">
-        <img class="close_ic" src="./c.imge/close-ic.png" alt="Close Button" onclick="closeDetailDialog()" />
+        <img class="close_ic" src="./img/close-ic.png" alt="Close Button" onclick="closeDetailDialog()"/>
         <h1>상세보기</h1>
         <hr>
-        <div class="badge">신고된 게시물</div> <!-- 신고 배지 -->
+        <div class="badge">신고된 게시물</div> 
         <div>
-        <div>
-            <input class="input1" type="text" id="teamName" readonly>
-            <input class="input1" type="text" id="teamSize" readonly>
-            <input class="input1" type="text" id="details" readonly>
+            <input class="input5" type="text" id="teamName" readonly placeholder="서울 크루모집">
+            <input class="input-number" id="number" placeholder="5명" min="1" max="100">
+            <input class="input-date" id="deta" placeholder="2024-10-15" />
+            <input class="input-time" id="time" placeholder="오전 11시" />
+            <input class="input-fee" id="fee" placeholder="5000원" min="5000" max="50000" step="5000" />
         </div>
         <textarea class="input3" id="description"></textarea>
-        <div class="image-container">
-            <img src="" class="postedit-box" /> <!-- 상세보기 이미지 -->
+
+        <div class="preview-container12">
+            <span>이미지사진</span>
         </div>
+
         <div class="report-count-container">
-            <p>신고 횟수: <span id="reportCount">0</span></p> <!-- 신고 횟수 표시 -->
-        </div>
-        <p class="report-message">이 게시물은 신고되었습니다. 검토 중입니다.</p> <!-- 신고 메시지 -->
-        <div class="btn-container1">
-            <button class="inside1" type="button" onclick="reportPost()">신고하기</button> <!-- 신고하기 버튼 -->
+            <p>신고 횟수: <span id="reportCount">0</span></p> 
         </div>
     </form>
-</dialog>
+</dialog> -->
 <!-- 게시글 상세보기 모달 끝 -->
     <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
     <script src="./js/navscript.js"></script>
