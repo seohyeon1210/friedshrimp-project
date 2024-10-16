@@ -9,10 +9,12 @@ const run_time = document.querySelector(".run-time");
 const run_km = document.querySelector(".run-km");
 const recod_area = document.querySelector(".radd-recodes");
 const first_atitle = document.querySelector(".first_atitle");
+const running_wow = document.querySelector(".running_wow");
+const wow_atitle = document.querySelector(".wow_atitle");
 const paginationControls = document.getElementById("paginationControls");
 const pageNumbers = document.getElementById("pageNumbers");
 
-const running = JSON.parse(localStorage.getItem("running")) || [];
+let running = JSON.parse(localStorage.getItem("running")) || [];
 const loggedInUserId = "user123";
 
 let currentPage = 1;
@@ -23,6 +25,7 @@ if (running == "") {
         "user_name"
     )}님, 아직 등록된 런닝 데이터가 없습니다!`;
 }
+running_wow.style.display = "none";
 
 first_badd.addEventListener("click", () => {
     running_modal.style.display = "block";
@@ -44,7 +47,7 @@ function add_rrecode() {
 
     if (adate && artime && arkm) {
         running.push({
-            no: running.length > 0 ? running[running.length - 1].no + 1 : 0,
+            no: running.length,
             id: loggedInUserId,
             date: adate,
             time: artime,
@@ -52,8 +55,20 @@ function add_rrecode() {
             kcal: arkm * 75,
         });
         localStorage.setItem("running", JSON.stringify(running));
-        renderRecords();
+        add_record();
         close_madd();
+        if (running.length == 1) {
+            running_wow.style.display = "block";
+            wow_atitle.innerHTML = `<p class="wow_atitle"><b>${localStorage.getItem(
+                "user_name"
+            )}님, 축하드려요!!!</b>
+            <br/>처음으로 런닝 기록이 되었어요!!
+            <br/>항상 멋진 런닝 보여주세요!</p>`;
+            setTimeout(function () {
+                running_wow.style.display = "none";
+                wow_atitle.innerHTML = "";
+            }, 1500);
+        }
     } else {
         alert("빈 칸이 존재합니다! 전부 입력하세요!!");
     }
@@ -61,22 +76,30 @@ function add_rrecode() {
 
 function del_areco() {
     const rch_boxs = document.querySelectorAll(".rch-boxs");
+    const itemsToDelete = [];
+
     rch_boxs.forEach((rch_box) => {
         if (rch_box.checked) {
-            const index = [
-                ...rch_box.parentElement.parentElement.parentElement
-                    .parentElement.children,
-            ].indexOf(rch_box.parentElement.parentElement.parentElement);
-            running.splice(index, 1);
-            localStorage.setItem("running", JSON.stringify(running));
-            if (running == "") {
-                first_atitle.innerText = `${localStorage.getItem(
-                    "user_name"
-                )}님, 아직 등록된 런닝 데이터가 없습니다!`;
-            }
+            var value =
+                rch_box.parentElement.parentElement.getAttribute("value");
+            itemsToDelete.push(value);
         }
     });
-    renderRecords();
+
+    running = running.filter(
+        (item) => !itemsToDelete.includes(item.no.toString())
+    );
+
+    localStorage.setItem("running", JSON.stringify(running));
+
+    add_record();
+
+    if (running == "") {
+        first_atitle.innerText = `${localStorage.getItem(
+            "user_name"
+        )}님, 아직 등록된 런닝 데이터가 없습니다!`;
+    }
+    add_record();
 }
 
 function close_madd() {
@@ -85,7 +108,7 @@ function close_madd() {
     radd_form.reset();
 }
 
-function renderRecords() {
+function add_record() {
     recod_area.innerHTML = "";
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = Math.min(startIndex + itemsPerPage, running.length);
@@ -95,7 +118,7 @@ function renderRecords() {
         const new_list = document.createElement("li");
         new_list.classList.add("run-card");
         new_list.innerHTML = `
-            <div class="run-elem">
+            <div class="run-elem" value="${record.no}">
                 <p class="run-date">${record.date}</p>
                 <form class="relem-card">
                     <input type="checkbox" class="rch-boxs" />
@@ -131,7 +154,7 @@ function updatePagination() {
         pageButton.classList.add("pbtn");
         pageButton.addEventListener("click", () => {
             currentPage = i;
-            renderRecords();
+            add_record();
         });
         pageNumbers.appendChild(pageButton);
     }
@@ -142,18 +165,18 @@ function updatePagination() {
     document.getElementById("prevPage").onclick = () => {
         if (currentPage > 1) {
             currentPage--;
-            renderRecords();
+            add_record();
         }
     };
 
     document.getElementById("nextPage").onclick = () => {
         if (currentPage < totalPages) {
             currentPage++;
-            renderRecords();
+            add_record();
         }
     };
 }
 
 window.onload = function () {
-    renderRecords();
+    add_record();
 };
