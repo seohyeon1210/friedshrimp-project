@@ -157,23 +157,99 @@ section#tips{
     display: flex;
     margin-top: 30px;
     justify-content: center;
+    gap: 30px; 
 }
 
 .div2{
     display: flex;
     margin-top: 30px;
     justify-content: center;
+    gap: 30px; 
 }
 
 .card {
-    background-color: white;
-    border-radius: 10px;
+    background-color: #FAFAFC; /* 부드러운 회색 배경 */
+    border-radius: 20px; /* 둥근 모서리 */
     padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 250px;
-    height: 180px;
-    margin: 0 10px;
+    width: 280px;
+    height: 250px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: relative; /* 이미지와 텍스트 레이어 조정 */
+}
+
+.card2 {
+    background-color: #FAFAFC; /* 부드러운 회색 배경 */
+    border-radius: 20px; /* 둥근 모서리 */
+    padding: 20px;
+    width: 280px;
+    height: 250px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative; /* 이미지와 텍스트 레이어 조정 */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* 떠오르는 애니메이션 */
+    box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.15); /* 더 깊은 그림자 */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #1d1d1f; /* 고급스러운 검은색 */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* 카드 내부에 이미지 추가 스타일 */
+.card img {
+    width: 110px; /* 이미지 크기 */
+    height: 110px;
+    object-fit: cover; /* 이미지 비율 유지하면서 크기 맞춤 */
+    border-radius: 50%; 
+    margin-bottom: 15px;
+}
+
+/* 카드 내용 설명 텍스트 */
+.card p {
+    font-size: 1.3rem;
+    color: #6e6e73; /* 애플 특유의 회색 텍스트 */
+}
+
+.card2 p {
+    font-size: 1.3rem;
+    color: #6e6e73; /* 애플 특유의 회색 텍스트 */
+}
+
+/* 부드러운 애니메이션 */
+.card {
+    opacity: 0;
+    animation: fadeInApple 1s forwards ease-in-out;
+}
+
+@keyframes fadeInApple {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 부드러운 그라데이션 배경 */
+.div1 .card, .div2 .card {
+    background: linear-gradient(135deg, #ffffff, #f5f5f7); /* 부드러운 그라데이션 */
 }
 
 

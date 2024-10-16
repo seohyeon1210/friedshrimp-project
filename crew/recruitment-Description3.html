@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울 크루모집 상세페이지</title> <!-- 페이지 제목 변경 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" />
+    <link rel="stylesheet" href="./css/recruitment-Description.css" />
+    <link rel="stylesheet" href="./css/navstyle.css"> 
+</head>
+
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <div class="imgHoverEvent logo-show" onclick="location.href='./mainhome.html'">
+                <div class="imgBox1">
+                    <img src="./img/f-logo.png" />
+                </div>
+                <div class="imgBox2">
+                    <img src="./img/shrimp_st_ic.png" />
+                </div>
+                <div class="imgBox3">
+                    <img src="./img/home_logo.png" />
+                </div>
+            </div>
+            <ul id="nav-bar">
+                <li>
+                    <a href="./running-diary.html" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+                </li>
+                <li>
+                    <a href="./diet-diary.html" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+                </li>
+                <li>
+                    <a href="./recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                </li>
+                <li>
+                    <a href="./honeytip-page.html" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
+                </li>
+                <li>
+                    <button type="button" class="l-btn" onclick="location.href='./start-home.html'">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="title">
+                <h1>산악런닝 상세페이지</h1> 
+                <hr>
+            </div>
+
+            <div class="post-container"> 
+                <div class="postBox">
+                    <div class="post">
+                        <div class="post-box">
+
+                            <div class="post-title">
+                                <span class="tag tag-blue">Crew</span>
+                                <h2 class="postbox-title">산악런닝 런닝</h2> 
+                                <ul class="postbox-title-info">
+                                    <li class="postbox-title-date">
+                                        <i class="fa-regular fa-calendar-days"></i>
+                                        2024. 10. 15.
+                                    </li>
+                                    <li class="postbox-title-author">
+                                        <i class="fa-solid fa-user"></i>
+                                        산악런닝
+                                    </li>
+                                </ul>
+                                <figure class="featured-image">
+                                    <img src="./img/7.jpg" alt="crew featured-image">
+                                </figure>
+                                <article class="post-content">
+                                    <h2>산악 런닝 모집 개요</h2>
+                                    <p>북한산에서 모집을 진행하고 있습니다. 함께 운동하며 건강한 생활을 추구하는 여러분을 환영합니다!</p>
+                                    <h2>모집 상세 정보</h2>
+                                    <p>모집 일자: 2024년 10월 15일<br>장소: 산악런닝<br>참가비: 5000원</p>
+
+                                    <blockquote>함께 즐겁게 운동합시다!</blockquote>
+                                </article>
+
+                                <div class="p-btns">
+                                    <button type="button" class="p-edit" onclick="location.href='honeytip-postedit.html'">수정</button>
+                                    <button type="button" class="p-delete">삭제</button>
+                                    <button id="modal" type="button" class="p-report">신고</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
+    <script src="./js/honeytip-script.js"></script>
+</body>
+
+</html>

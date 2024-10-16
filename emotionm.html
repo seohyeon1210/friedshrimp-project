@@ -9,44 +9,63 @@
 </head>
 <body>
     <h1>감정 선택하기</h1>
+
     <div class="grid-container">
         <div class="grid-item1">
             기쁨
             <div class="image-container">
-                <img id="image1" src="./img/emotion/happy.jpg" alt="기쁨 이미지" onclick="updateImage(this.src)"/>
+                <img id="image1" src="./img/emotion/happy.jpg" alt="기쁨 이미지" onclick="selectEmotion('./img/emotion/happy.jpg')"/>
             </div>
         </div>
         <div class="grid-item2">
             보통
             <div class="image-container">
-                <img id="image2" src="./img/emotion/neutral.png" alt="보통 이미지" onclick="updateImage(this.src)"/>
+                <img id="image2" src="./img/emotion/neutral.png" alt="보통 이미지" onclick="selectEmotion('./img/emotion/neutral.png')"/>
             </div>
         </div>
         <div class="grid-item3">
             나쁨
             <div class="image-container">
-                <img id="image3" src="./img/emotion/bad.png" alt="나쁨 이미지" onclick="updateImage(this.src)"/>
+                <img id="image3" src="./img/emotion/bad.png" alt="나쁨 이미지" onclick="selectEmotion('./img/emotion/bad.png')"/>
             </div>
         </div>
         <div class="grid-item4">
             우울
             <div class="image-container">
-                <img id="image4" src="./img/emotion/sad.png" alt="우울 이미지" onclick="updateImage(this.src)"/>
+                <img id="image4" src="./img/emotion/sad.png" alt="우울 이미지" onclick="selectEmotion('./img/emotion/sad.png')"/>
             </div>
         </div>
         <div class="grid-item5">
             설렘
             <div class="image-container">
-                <img id="image5" src="./img/emotion/thrill.png" alt="설렘 이미지" onclick="updateImage(this.src)"/>
+                <img id="image5" src="./img/emotion/thrill.png" alt="설렘 이미지" onclick="selectEmotion('./img/emotion/thrill.png')"/>
             </div>
         </div>
         <div class="grid-item6">
             잘모르겠어요
             <div class="image-container">
-                <img id="image6" src="./img/emotion/idontno.png" alt="잘모르겠어요 이미지" onclick="updateImage(this.src)"/>
+                <img id="image6" src="./img/emotion/idontno.png" alt="잘모르겠어요 이미지" onclick="selectEmotion('./img/emotion/idontno.png')"/>
             </div>
         </div>
     </div>
 
+    <script>
+        // 선택된 이미지 경로를 localStorage에 저장하는 함수
+        function selectEmotion(imageSrc) {
+            localStorage.setItem('selectedEmotion', imageSrc);
+            alert("이미지가 선택되었습니다: " + imageSrc);
+            // 페이지 전환 없이 이미지 변경
+            updateMainImage(imageSrc);
+        }
+
+        // 선택된 이미지 경로로 mainhome.html의 이미지를 업데이트하는 함수
+        function updateMainImage(imageSrc) {
+            // mainhome.html의 이미지 업데이트 로직
+            const mainImage = document.getElementById('emotion-image');
+            if (mainImage) {
+                mainImage.src = imageSrc; // 선택한 이미지로 업데이트
+            }
+        }
+    </script>
 </body>
 </html>
