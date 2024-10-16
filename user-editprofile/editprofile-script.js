@@ -16,8 +16,14 @@ let profileimage = document.getElementById("pro-image")
 let input = document.getElementById("input")
 
 input.addEventListener('change', () => {
-    profileimage.src= URL.createObjectURL(input.files[0])
+    profileimage.src = URL.createObjectURL(input.files[0]);
 })
+
+const imageUpload = document.getElementById("input");
+
+function edit_honey() {
+    localStorage.setItem("imageUpload", imageUpload)
+}
 
 // 폼
 function submitForm() {

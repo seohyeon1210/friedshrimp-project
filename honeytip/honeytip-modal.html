@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey tip detail - 1</title>
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" />
+    <!-- <link rel="stylesheet" href="honeytip-style.css" /> -->
+     <link rel="stylesheet" href="./honeytip-modal.css"/>
+</head>
+
+<body>
+<main>
+    <div class="write">
+        <button type="button" id="writeBtn" class="writebtn" onclick="modal_honey()">글 쓰기</button>
+    </div>
+
+    <!-- <div class="modal">
+        <div class="modal-popup" id="modalPopup">
+            <div class="modal-content">
+         -->
+            <div class="modal" id="honey_modal">
+                <div class="modal-box" id="modalPopup">
+                    <form class="modal-form" action="#" method="post" id="form_honey">
+                        <div class="modal-title">
+                            <h2>알알꿀팁 작성</h2>
+                            <button id="exitBtn" class="exit">&times;</button>
+                        </div>
+                        <input class="modalTitle" id="modaltitle_honey" type="text" placeholder="제목을 입력하세요."/>
+                        <!-- <div class="modal-text" id="modalText" contenteditable="true" spellcheck="false"> -->
+                        <textarea class="modal-text" id="modalText" placeholder="내용을 입력하세요."></textarea>
+                        <input class="modal-file" type="file" id="modalFile" accept="image/*" hidden>
+                            <div class="img-area" data-img="">
+                                <i class="fa-regular fa-file-image"></i>
+                                <h3>이미지 업로드</h3>
+                                <p>이미지 사이즈는 <span>2MB</span> 이하여야 합니다</p>
+                            </div>
+                            <button class="select-img">파일 선택</button>
+
+                            <div class="modal-btn">
+                                <button class="accept" id="acceptBtn">저장</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+            <!-- </div>
+        </div>
+    </div> -->
+</main>
+
+<script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
+<script src="honeytip-script.js"></script>
+</body>
+
+</html>
