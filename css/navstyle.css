@@ -50,19 +50,19 @@ nav a.logo {
     font-family: cursive;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
     transition: 0.5s;
 }
 
-nav ul li {
+header nav ul li {
     line-height: 60px;
     margin: 0 5px;
 }
 
-nav ul a {
+header nav ul a {
     color: #121212;
     font-size: 22px;
     padding: 5px 13px;
@@ -72,7 +72,7 @@ nav ul a {
 }
 
 .active,
-nav ul a:hover {
+header nav ul a:hover {
     background: #e23e57;
     color: #fff;
     padding: 10px;
