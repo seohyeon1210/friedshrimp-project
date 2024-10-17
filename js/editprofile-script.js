@@ -53,8 +53,13 @@ document
             alert("새 비밀번호가 일치하지 않습니다.");
             isValid = false;
         }
+        let check_eng = /^[0-9]+$/;
+        if( !check_eng.test(height) || !check_eng.test(weight)){
+            alert("키와 몸무게는 숫자여야 합니다.");
+            isValid = false;
+        }
 
-        if (isNaN(parseFloat(height)) || isNaN(parseFloat(weight))) {
+        else if (isNaN(parseFloat(height)) || isNaN(parseFloat(weight))) {
             alert("키와 몸무게는 숫자여야 합니다.");
             isValid = false;
         }
