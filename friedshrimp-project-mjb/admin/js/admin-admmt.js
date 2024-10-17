@@ -5,8 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const adForm = document.getElementById("adForm");
     const postTableBody = document.querySelector(".post-list tbody");
     const adImagePreview = document.getElementById("adImagePreview"); // 모달 내 이미지 미리보기 요소
-    const modalTitle = adModal.querySelector("h2"); // 모달 제목 요소
-    const submitButton = adForm.querySelector("button[type='submit']"); // 제출 버튼
+    const adImageInput = document.getElementById("adImage"); // 이미지 파일 입력 필드
+    let isEditMode = false; // 수정 모드 여부를 확인하기 위한 변수
+    let editRow = null; // 수정할 행을 저장하는 변수
+    let currentImageUrl = ''; // 현재 이미지 URL 저장
 
     // 페이지 로드 시 모달창을 닫도록 설정
     adModal.style.display = "none";
@@ -15,8 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
     addAdButton.addEventListener("click", function () {
         adModal.style.display = "block";
         clearForm(); // 폼 초기화
-        modalTitle.textContent = "광고 추가"; // 모달 제목을 광고 추가로 설정
-        submitButton.textContent = "추가"; // 버튼 텍스트를 추가로 설정
+        isEditMode = false; // 추가 모드로 전환
+        document.querySelector("#adModal h2").innerText = "광고 추가"; // 모달 제목 변경
+        adForm.querySelector("button[type='submit']").innerText = "추가"; // 버튼 텍스트 변경
     });
 
     // 모달 닫기
@@ -30,31 +33,53 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    // 광고 추가 폼 제출
+    // 이미지 파일 선택 시 미리보기
+    adImageInput.addEventListener("change", function () {
+        const file = adImageInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                adImagePreview.src = e.target.result;
+                adImagePreview.style.display = "block"; // 이미지 미리보기 표시
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // 광고 추가 및 수정 폼 제출
     adForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
         // 광고 데이터 수집
         const title = document.getElementById("adTitle").value;
-        const imageInput = document.getElementById("adImage");
-        const imageUrl = URL.createObjectURL(imageInput.files[0]); // 선택한 이미지 URL 생성
         const startDate = document.getElementById("adStartDate").value;
         const endDate = document.getElementById("adEndDate").value;
         const description = document.getElementById("adDescription").value;
+        let imageUrl = currentImageUrl; // 기존 이미지 URL 사용
 
-        // 테이블에 광고 추가 (이미지는 표시하지 않음)
-        const newRow = document.createElement("tr");
-        newRow.innerHTML = `
-            <td><input type="checkbox" class="post-checkbox"></td>
-            <td>${startDate}</td>
-            <td>${endDate}</td>
-            <td>${title}</td>
-            <td><button class="view-button" onclick="viewAdDetails('${title}', '${imageUrl}', '${startDate}', '${endDate}', '${description}')">상세보기</button></td>
-        `;
-        postTableBody.appendChild(newRow);
+        // 새 이미지가 선택된 경우 해당 이미지로 업데이트
+        if (adImageInput.files[0]) {
+            imageUrl = URL.createObjectURL(adImageInput.files[0]);
+        }
 
-        // 개별 체크박스 클릭 시 전체 선택 체크박스 상태 업데이트
-        updateCheckboxLogic();
+        if (isEditMode && editRow) {
+            // 수정 모드일 때: 해당 행 데이터를 수정
+            editRow.cells[1].textContent = startDate;
+            editRow.cells[2].textContent = endDate;
+            editRow.cells[3].textContent = title;
+            editRow.querySelector(".view-button").setAttribute("onclick", `viewAdDetails('${title}', '${imageUrl}', '${startDate}', '${endDate}', '${description}')`);
+        } else {
+            // 추가 모드일 때: 새로운 광고 추가
+            const newRow = document.createElement("tr");
+            newRow.innerHTML = `
+                <td><input type="checkbox" class="post-checkbox"></td>
+                <td>${startDate}</td>
+                <td>${endDate}</td>
+                <td>${title}</td>
+                <td><button class="view-button" onclick="viewAdDetails('${title}', '${imageUrl}', '${startDate}', '${endDate}', '${description}')">상세보기</button></td>
+            `;
+            postTableBody.appendChild(newRow);
+        }
 
         // 모달 닫기
         adModal.style.display = "none";
@@ -63,81 +88,28 @@ document.addEventListener("DOMContentLoaded", function () {
         adForm.reset();
     });
 
-    // 이미지 미리보기 기능
-    document.getElementById("adImage").addEventListener("change", function () {
-        const file = this.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                adImagePreview.src = e.target.result; // 미리보기 이미지 설정
-                adImagePreview.style.display = "block"; // 이미지 표시
-            };
-            reader.readAsDataURL(file);
-        }
-    });
-
-    // 검색 버튼 클릭 이벤트
-    document.getElementById("searchButton").addEventListener("click", function() {
-        const searchInput = document.getElementById("searchInput");
-        if (searchInput.style.display === "none") {
-            searchInput.style.display = "inline"; // 검색창 표시
-            searchInput.focus(); // 검색창에 포커스
-        } else {
-            searchInput.style.display = "none"; // 검색창 숨김
-            searchInput.value = ""; // 검색창 내용 초기화
-            filterPosts(""); // 초기 상태로 필터링
-        }
-    });
-
-    // 검색 입력 이벤트
-    document.getElementById("searchInput").addEventListener("input", function() {
-        const searchTerm = this.value.toLowerCase(); // 소문자로 변환하여 비교
-        filterPosts(searchTerm);
-    });
-
-    // 전체 선택 체크박스 기능
-    const selectAllCheckbox = document.getElementById("selectAll");
-    selectAllCheckbox.addEventListener("change", function () {
-        const checkboxes = document.querySelectorAll(".post-checkbox");
-        checkboxes.forEach(checkbox => {
-            checkbox.checked = selectAllCheckbox.checked;
-        });
-    });
-
-    // 게시물 필터링 함수
-    function filterPosts(searchTerm) {
-        const rows = document.querySelectorAll(".post-list tbody tr");
-        rows.forEach(row => {
-            const cells = row.cells;
-            const registrationDate = cells[1].textContent.toLowerCase(); // 등록일 셀 가져오기
-            const endDate = cells[2].textContent.toLowerCase(); // 마감일 셀 가져오기
-            const title = cells[3].textContent.toLowerCase(); // 제목 셀 가져오기
-
-            // 검색어가 등록일, 마감일, 제목 중 하나라도 포함되면 표시
-            if (registrationDate.includes(searchTerm) || endDate.includes(searchTerm) || title.includes(searchTerm)) {
-                row.style.display = ""; // 일치하면 표시
-            } else {
-                row.style.display = "none"; // 그렇지 않으면 숨김
-            }
-        });
-    }
-
     // 상세보기 함수
     window.viewAdDetails = function(title, imageUrl, startDate, endDate, description) {
+        // 수정 모드로 전환
+        isEditMode = true;
+        document.querySelector("#adModal h2").innerText = "광고 수정"; // 모달 제목 변경
+        adForm.querySelector("button[type='submit']").innerText = "수정"; // 버튼 텍스트 변경
+
         // 모달에 기존 광고 데이터 표시
         document.getElementById("adTitle").value = title;
-        document.getElementById("adImage").value = ""; // 이미지 URL은 설정하지 않음, 사용자에게 다시 선택하도록 함
         document.getElementById("adStartDate").value = startDate;
         document.getElementById("adEndDate").value = endDate;
         document.getElementById("adDescription").value = description;
 
-        // 모달 내 이미지 표시
-        adImagePreview.src = imageUrl; // 이미지 URL 설정
-        adImagePreview.style.display = "block"; // 이미지 표시
+        // 이미지 미리보기 표시
+        adImagePreview.src = imageUrl;
+        adImagePreview.style.display = "block"; // 이미지 미리보기 표시
+        currentImageUrl = imageUrl; // 현재 이미지 URL 저장
 
-        // 상세보기 모드로 제목과 버튼 텍스트 변경
-        modalTitle.textContent = "광고 수정";
-        submitButton.textContent = "수정";
+        // 수정할 행 저장
+        editRow = [...postTableBody.querySelectorAll("tr")].find(
+            row => row.cells[3].textContent === title && row.cells[1].textContent === startDate
+        );
 
         adModal.style.display = "block"; // 모달 열기
     };
@@ -147,6 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
         adForm.reset();
         adImagePreview.src = ""; // 이미지 초기화
         adImagePreview.style.display = "none"; // 이미지 숨김
+        editRow = null; // 수정할 행 초기화
+        currentImageUrl = ''; // 이미지 URL 초기화
     }
 
     // 개별 체크박스 클릭 시 전체 선택 체크박스 상태 업데이트
