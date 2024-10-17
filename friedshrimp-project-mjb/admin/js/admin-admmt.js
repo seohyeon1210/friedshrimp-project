@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const adForm = document.getElementById("adForm");
     const postTableBody = document.querySelector(".post-list tbody");
     const adImagePreview = document.getElementById("adImagePreview"); // 모달 내 이미지 미리보기 요소
+    const modalTitle = adModal.querySelector("h2"); // 모달 제목 요소
+    const submitButton = adForm.querySelector("button[type='submit']"); // 제출 버튼
 
     // 페이지 로드 시 모달창을 닫도록 설정
     adModal.style.display = "none";
@@ -13,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     addAdButton.addEventListener("click", function () {
         adModal.style.display = "block";
         clearForm(); // 폼 초기화
+        modalTitle.textContent = "광고 추가"; // 모달 제목을 광고 추가로 설정
+        submitButton.textContent = "추가"; // 버튼 텍스트를 추가로 설정
     });
 
     // 모달 닫기
@@ -48,6 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <td><button class="view-button" onclick="viewAdDetails('${title}', '${imageUrl}', '${startDate}', '${endDate}', '${description}')">상세보기</button></td>
         `;
         postTableBody.appendChild(newRow);
+
+        // 개별 체크박스 클릭 시 전체 선택 체크박스 상태 업데이트
+        updateCheckboxLogic();
 
         // 모달 닫기
         adModal.style.display = "none";
@@ -88,19 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
         filterPosts(searchTerm);
     });
 
-    //밑에 "삭제하시겠습니까?" 팝업창 추가해서 주석처리 함
-    // 삭제 버튼 클릭 이벤트
-    // document.getElementById("deleteButton").addEventListener("click", function() {
-    //     const checkboxes = document.querySelectorAll(".post-checkbox:checked"); // 체크된 체크박스 선택
-    //     checkboxes.forEach(checkbox => {
-    //         const row = checkbox.closest("tr"); // 체크박스의 가장 가까운 tr 찾기
-    //         if (row) {
-    //             row.remove(); // 해당 행 삭제
-    //         }
-    //     });
-    // });
-
-    // 전체 선택 기능
+    // 전체 선택 체크박스 기능
     const selectAllCheckbox = document.getElementById("selectAll");
     selectAllCheckbox.addEventListener("change", function () {
         const checkboxes = document.querySelectorAll(".post-checkbox");
@@ -140,6 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
         adImagePreview.src = imageUrl; // 이미지 URL 설정
         adImagePreview.style.display = "block"; // 이미지 표시
 
+        // 상세보기 모드로 제목과 버튼 텍스트 변경
+        modalTitle.textContent = "광고 수정";
+        submitButton.textContent = "수정";
+
         adModal.style.display = "block"; // 모달 열기
     };
 
@@ -149,13 +148,27 @@ document.addEventListener("DOMContentLoaded", function () {
         adImagePreview.src = ""; // 이미지 초기화
         adImagePreview.style.display = "none"; // 이미지 숨김
     }
+
+    // 개별 체크박스 클릭 시 전체 선택 체크박스 상태 업데이트
+    function updateCheckboxLogic() {
+        const checkboxes = document.querySelectorAll(".post-checkbox");
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", function () {
+                const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+                selectAllCheckbox.checked = allChecked; // 모든 체크박스가 선택되면 전체 선택 체크박스도 선택
+            });
+        });
+    }
+
+    // 초기 페이지 로드 시 개별 체크박스와 전체 체크박스 동기화
+    updateCheckboxLogic();
 });
 
 // 삭제 버튼 클릭 이벤트 리스너
 document.getElementById("deleteButton").addEventListener("click", function() {
     const checkboxes = document.querySelectorAll(".post-checkbox:checked"); // 체크된 체크박스 선택
     if (checkboxes.length === 0) {
-        alert(" 삭제할 게시물을 선택해주세요."); // 체크된 항목이 없을 경우 경고
+        alert("삭제할 게시물을 선택해주세요."); // 체크된 항목이 없을 경우 경고
         return;
     }
 
@@ -165,8 +178,9 @@ document.getElementById("deleteButton").addEventListener("click", function() {
             const row = checkbox.closest("tr"); // 체크된 체크박스의 행 찾기
             row.remove(); // 행 삭제
         });
-        alert("게시물이 삭제 되었습니다."); // 탈퇴 완료 메시지
+        alert("게시물이 삭제되었습니다."); // 삭제 완료 메시지
     }
 });
+
 
 

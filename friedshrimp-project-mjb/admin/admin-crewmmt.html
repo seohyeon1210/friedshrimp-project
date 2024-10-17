@@ -58,6 +58,7 @@
                             <th>제목</th>
                             <th>장소</th>
                             <th>상세보기</th>
+                            <th class="th1">신고상태</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -66,8 +67,9 @@
                             <td>2024-10-14</td>
                             <td>wlsqo09</td>
                             <td>천안역 런닝</td>
-                            <td>몽마르트앞공원</td>
+                            <td>천안 몽마르트앞공원</td>
                             <td><button class="view-button">상세보기</button></td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" class="post-checkbox"></td>
@@ -76,29 +78,97 @@
                             <td>강남역 DO RUN 모집</td>
                             <td>강남역</td>
                             <td><button class="view-button">상세보기</button></td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" class="post-checkbox"></td>
                             <td>2024-10-12</td>
-                            <td>Gogil11</td>
+                            <td>gogil11</td>
                             <td>청년들이여 제주로와라</td>
                             <td>제주도 올레길</td>
                             <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-12</td>
+                            <td>ysm123</td>
+                            <td>서울 크루모집</td>
+                            <td>서울</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-11</td>
+                            <td>gogil11</td>
+                            <td>아산역 런닝</td>
+                            <td>아산역</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-11</td>
+                            <td>sexyguy1212</td>
+                            <td>산악</td>
+                            <td>서울</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td><i class="fa-solid fa-triangle-exclamation"></i></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-12</td>
+                            <td>sbj00</td>
+                            <td>인사</td>
+                            <td>서울</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-11</td>
+                            <td>ksh02</td>
+                            <td>해변 강가</td>
+                            <td>경기도 구리</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-10</td>
+                            <td>jyj123</td>
+                            <td>스트레칭</td>
+                            <td>파주시</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-10</td>
+                            <td>jyj123</td>
+                            <td>런닝런닝런닝</td>
+                            <td>천안역</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-10</td>
+                            <td>jyj123</td>
+                            <td>뛰사모</td>
+                            <td>천안시</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
                 <br>
                 <!-- ---------페이징 처리 영역------------  -->
                 <ul class="pagination">
-                    <li><a href="#">&lt;&lt;</a></li>
-                    <li><a href="#">&lt;</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&gt;</a></li>
-                    <li><a href="#">&gt;&gt;</a></li>
+                    <li><a href="#" id="prevPage">&lt;&lt;</a></li>
+                    <li id="pageNumbers"></li>
+                    <li><a href="#" id="nextPage">&gt;&gt;</a></li>
                 </ul>
             </div>
         </div>

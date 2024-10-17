@@ -228,9 +228,14 @@ th {
     background-color: #f0f0f0;
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
+.th1{
+    text-align: left;
+    padding: 0.5px;
 }
+
+/* tr:nth-child(even) {
+    background-color: #f9f9f9;
+} */
 
 input[type="checkbox"] {
     cursor: pointer;
