@@ -122,3 +122,7 @@ if (previewBox.firstChild) {
 
 closeDetailDialog();  // 모달 닫기
 }
+
+function move_honey1() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
