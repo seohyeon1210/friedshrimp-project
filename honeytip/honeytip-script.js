@@ -46,11 +46,10 @@ const dropFile = new DropFile("drop-file", "files");
 // 탑 버튼 스크롤
 function move_honey() {
     window.scrollTo({
-        left: 0,
         top: 0,
         behavior: "smooth"
     })
-}
+};
 
 // 글쓰기 모달
 const modal = document.querySelector("#honey_modal");
@@ -89,13 +88,25 @@ eModal_exit = function () {
     eModal.style.display = "none";
 };
 
+const dModal = document.querySelector("#honey_Dmodal");
+const dModalOpen = document.querySelector(".p-delete");
+const dModalClose = document.querySelector("exitDBtn");
+
+dModal_honey = function () {
+    dModal.style.display = "block";
+};
+
+dModal_exit = function () {
+    dModal.style.display = "none";
+}
+
 const select_image = document.querySelector(".select-img");
 const input_file = document.querySelector("#modalFile");
 const img_area = document.querySelector(".img-area");
 
 // 파일 선택
- select_image.addEventListener("click", function () {
-     input_file.click();
+select_image.addEventListener("click", function () {
+    input_file.click();
 })
 
 input_file.addEventListener("change", function () {
@@ -162,10 +173,43 @@ function tip_honey() {
 };
 
 // 검색 기능
-const searchField = document.getElementById("searchBox");
+// const searchField = document.getElementById("searchBox");
 
-searchField.addEventListener("keyup", function (event) {
-    if (event.key === "Enter") {
-        performSearch(searchField.value);
-    }
+// searchField.addEventListener("keyup", function (event) {
+//     if (event.key === "Enter") {
+//         performSearch(searchField.value);
+//     }
+// });
+
+function edit_save() {
+    alert("저장 되었습니다.");
+};
+
+function eidt_delete() {
+    alert("삭제 되었습니다.");
+};
+
+function delete_accept() {
+    alert("삭제 되었습니다.");
+};
+
+function report_accept() {
+    alert("신고 되었습니다.");
+};
+
+// 검색 기능
+document.getElementById('searchBox').addEventListener('input', function() {
+    const searchQuery = this.value.toLowerCase();
+
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        const cardTitle = card.querySelector('h4').textContent.toLowerCase();
+
+        if (cardTitle.includes(searchQuery)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
 });

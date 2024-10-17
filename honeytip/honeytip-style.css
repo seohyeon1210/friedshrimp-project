@@ -36,7 +36,7 @@ header nav {
     justify-content: space-between;
 }
 
-nav a.logo {
+header nav a.logo {
     color: #121212;
     font-size: 25px;
     text-align: center;
@@ -47,19 +47,19 @@ nav a.logo {
     font-family: cursive;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
     transition: .5s;
 }
 
-nav ul li {
+header nav ul li {
     line-height: 60px;
     margin: 0 5px;
 }
 
-nav ul a {
+header nav ul a {
     color: #121212;
     font-size: 18px;
     padding: 5px 13px;
@@ -77,7 +77,7 @@ nav ul a {
 } */
 
 .active,
-nav ul a:hover {
+header nav ul a:hover {
     background: #E23E57;
     color: #FFF;
     padding: 10px;
@@ -85,7 +85,7 @@ nav ul a:hover {
 
 main {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     scroll-behavior: smooth;
     overflow-y: scroll;
 }
@@ -284,27 +284,6 @@ a{
     position: relative;
 }
 
-.write .searchbtn{
-    background-color: #88304E;
-    color: #FFF;
-    width: 70px;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 3px;
-    text-align: center;
-    text-decoration: none;
-        /* display: block; */
-    margin-top: 20px;
-    margin-right: 70px;
-    font-size: 15px;
-    cursor: pointer;
-    margin-left: 83%;
-    font-family: Pretendard;
-    text-decoration: none;
-    bottom: 0;
-    position: absolute;
-}
-
 .write .search {
     font-family: pretendard;
     height: 35px;
@@ -316,7 +295,7 @@ a{
     border-radius: 3px;
     margin-top: 20px;
     margin-right: 70px;
-    margin-left: 68.5%;
+    margin-left: 75%;
     bottom: 0;
     position: absolute;
 }
@@ -1142,6 +1121,106 @@ a{
 .modal-Ebtn .Eaccept:hover {
     background-color: #E23E57;
     color: #FFF;
+}
+
+/* 삭제 모달 */
+.modalD {
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+}
+
+.modal-Dbox {
+    position: absolute;
+    background-color: #FFF;
+    /* max-width: 700px; */
+    width: 450px;
+    padding: 30px;
+    border-radius: 20px;
+    /* 30px */
+    font-family: pretendard;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -45%);
+    top: 50%;
+    left: 50%;
+}
+
+.modal-Dtitle {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.modal-Dform {
+    /* 부모 요소 */
+    position: relative;
+}
+
+.modal-Dtitle .exitD {
+    width: 30px;
+    font-size: 35px;
+    border: none;
+    background-color: transparent;
+    color: #DDD;
+    margin-bottom: 10px;
+    /* 자식 요소 */
+    position: absolute;
+    transition: all 0.2 ease;
+    top: -10px;
+    right: 0;
+}
+
+.modal-Dtitle i {
+    color: #88304E;
+}
+
+.modal-Dtitle h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #E23E57;
+}
+
+.modal-Dtitle p {
+    font-weight: 400;
+    font-size: 20px;
+    width: 100%;
+    color: #121212;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.delete-btns {
+    text-align: center;
+}
+
+.delete-btns .Daccept {
+    font-family: pretendard;
+    border: none;
+    background-color: #EEE1E3;
+    color: #121212;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.delete-btns .Dcancel {
+    font-family: pretendard;
+    border: none;
+    background-color: #EEE1E3;
+    color: #121212;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 5px;
 }
 
 

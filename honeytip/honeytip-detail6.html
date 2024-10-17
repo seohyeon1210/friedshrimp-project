@@ -121,12 +121,12 @@
             <form class="modal-Rform" action="#" method="post" id="form_Rhoney">
                 <div class="modal-Rtitle">
                     <h2><i class="fa-solid fa-triangle-exclamation"></i>경고!</h2>
-                    <p>이 게시글을 신고하시겠습니까?</p>
+                    <p>이 게시글을 <strong>신고</strong>하시겠습니까?</p>
                     <!-- 모달 닫기 버튼 -->
                     <button id="exitRBtn" type="button" class="exitR" onclick="rModal_exit()">&times;</button>
                     <div class="report-btns">
-                        <button type="button" class="Raccept" id="r_accept">네</button>
-                        <button type="button" class="Rcancel" id="r_cancel">아니오</button>
+                        <button type="button" class="Raccept" id="r_accept" onclick="rModal_exit(), report_accept()">네</button>
+                        <button type="button" class="Rcancel" id="r_cancel" onclick="rModal_exit()">아니오</button>
                     </div>
                 </div>
             </form>

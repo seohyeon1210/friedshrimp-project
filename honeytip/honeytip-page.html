@@ -50,7 +50,6 @@
                         <!-- 모달 열기 버튼 -->
                         <form class="search-wrapper">
                         <input id="searchBox" class="search" type="search" placeholder="검색어를 입력하세요." />
-                        <button type="button" class="searchbtn">검색</button>
                         </form>
                         <button type="button" class="writebtn" onclick="modal_honey()">글 쓰기</button>
                     </div>
@@ -88,7 +87,7 @@
                     <div class="card-body">
                         <span class="tag tag-red">Tip</span>
                         <h4>당신이 뛰는 이유</h4>
-                        <p>달리기를 하면 몸에 어떤 영향을 끼치..</p>
+                        <p>달리기를 하면 몸에 어떤 영향을 끼칠..</p>
                     </div>
                     <div class="card-footer">
                         <div class="readMore">
@@ -209,7 +208,7 @@
                     <button class="select-img" type="button">파일 선택</button>
         
                     <div class="modal-btn">
-                        <button class="accept" id="acceptBtn" type="button" onclick="tip_honey()">저장</button>
+                        <button class="accept" id="acceptBtn" type="button" onclick="edit_save(), modal_exit()">저장</button>
                     </div>
                 </form>
             </div>

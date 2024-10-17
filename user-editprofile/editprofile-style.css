@@ -233,6 +233,7 @@ input, select{
     border: 1px solid #CCC;
     border-radius: 4px;
     font-size: 16px;
+    outline: none;
 }
 
 .btn{
