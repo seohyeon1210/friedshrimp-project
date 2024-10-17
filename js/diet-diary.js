@@ -26,10 +26,14 @@ goalButton.addEventListener('click', () => {
     goalModal.style.display = 'block';
 });
 
-// 식단등록 버튼 클릭 시 모달 열기
+// 식단등록 버튼 클릭 시 모달 열기 또는 경고 메시지 표시
 const mealButton = document.querySelector('.button3');
 mealButton.addEventListener('click', () => {
-    mealModal.style.display = 'block';
+    if (totalCalories === 0) { // 목표 칼로리가 설정되지 않은 경우
+        alert("목표 칼로리를 먼저 설정 해주세요."); // 경고 메시지 표시
+    } else {
+        mealModal.style.display = 'block'; // 목표 칼로리가 설정된 경우 모달 열기
+    }
 });
 
 // 닫기 버튼 및 모달 외부 클릭 시 닫기
@@ -53,6 +57,15 @@ window.addEventListener('click', (event) => {
     }
 });
 
+// 칼로리 값이 10,000 이상인 경우 경고를 표시하는 함수
+function checkCalorieLimit(calories) {
+    if (calories > 10000) {
+        alert("칼로리 설정값이 너무 큽니다."); // 경고 메시지 표시
+        return true; // 10,000 이상이면 true 반환
+    }
+    return false; // 10,000 이하이면 false 반환
+}
+
 // 저장 버튼 클릭 시 입력한 칼로리 값을 더하여 계산
 const saveGoalButton = document.getElementById('save-goal');
 saveGoalButton.addEventListener('click', () => {
@@ -60,6 +73,11 @@ saveGoalButton.addEventListener('click', () => {
     const breakfastCalories = parseInt(breakfastInput.value) || 0;
     const lunchCalories = parseInt(lunchInput.value) || 0;
     const dinnerCalories = parseInt(dinnerInput.value) || 0;
+
+    // 칼로리 제한 체크
+    if (checkCalorieLimit(breakfastCalories) || checkCalorieLimit(lunchCalories) || checkCalorieLimit(dinnerCalories)) {
+        return; // 경고가 발생하면 함수 중단
+    }
 
     // 목표 칼로리 계산
     totalCalories = breakfastCalories + lunchCalories + dinnerCalories;
@@ -93,6 +111,11 @@ saveMealButton.addEventListener('click', () => {
     if (!foodName || foodCalories < 0) {
         alert("모든 필드를 올바르게 입력해주세요.");
         return;
+    }
+
+    // 칼로리 제한 체크
+    if (checkCalorieLimit(foodCalories)) {
+        return; // 경고가 발생하면 함수 중단
     }
 
     // 섭취한 칼로리 업데이트
@@ -148,10 +171,3 @@ function updateCalorieComparison() {
 
 // 초기 상태 업데이트
 updateCalorieComparison();
-
-
-
-
-
-
-
