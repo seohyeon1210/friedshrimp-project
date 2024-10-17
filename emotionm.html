@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>감정 선택</title>
+    <link rel="stylesheet" href="./css/emotionm.css"/>
+</head>
+<body>
+    <h1>감정 선택하기</h1>
+    <div class="grid-container">
+        <div class="grid-item1">
+            기쁨
+            <div class="image-container">
+                <img id="image1" src="./img/emotion/happy.jpg" alt="기쁨 이미지" onclick="updateImage(this.src)"/>
+            </div>
+        </div>
+        <div class="grid-item2">
+            보통
+            <div class="image-container">
+                <img id="image2" src="./img/emotion/neutral.png" alt="보통 이미지" onclick="updateImage(this.src)"/>
+            </div>
+        </div>
+        <div class="grid-item3">
+            나쁨
+            <div class="image-container">
+                <img id="image3" src="./img/emotion/bad.png" alt="나쁨 이미지" onclick="updateImage(this.src)"/>
+            </div>
+        </div>
+        <div class="grid-item4">
+            우울
+            <div class="image-container">
+                <img id="image4" src="./img/emotion/sad.png" alt="우울 이미지" onclick="updateImage(this.src)"/>
+            </div>
+        </div>
+        <div class="grid-item5">
+            설렘
+            <div class="image-container">
+                <img id="image5" src="./img/emotion/thrill.png" alt="설렘 이미지" onclick="updateImage(this.src)"/>
+            </div>
+        </div>
+        <div class="grid-item6">
+            잘모르겠어요
+            <div class="image-container">
+                <img id="image6" src="./img/emotion/idontno.png" alt="잘모르겠어요 이미지" onclick="updateImage(this.src)"/>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
