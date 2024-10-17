@@ -59,69 +59,94 @@
                 <h1>서울 크루모집</h1> 
                 <hr>
             </div>
-
+    
             <div class="post-container1">
                 <div class="postBox1">
                     <div class="post1">
                         <div class="back">
-                            <button type="button" class="p-back-page" 
-                            onclick="location.href='recruitment.html'">
-                            <i class="fa-solid fa-arrow-left-long fa-2x"></i></button>
+                            <button type="button" class="p-back-page" onclick="location.href='recruitment.html'">
+                                <i class="fa-solid fa-arrow-left-long fa-2x"></i>
+                            </button>
                         </div>
                         <div class="post-box">
-
                             <div class="post-title"> 
                                 <span class="tag tag-blue">Crew</span>
                                 <h2 class="postbox-title">서울 크루모집</h2>
                             </div>
-                                <ul class="postbox-title-info">
-                                    <li>
-                                        <i class="fa-regular fa-calendar-days"></i>
-                                        2024. 10. 15.
-                                    </li>
-                                    <li class="postbox-title-author">
-                                        <i class="fa-solid fa-user"></i>
-                                        백상현
-                                    </li>
-                                </ul>
+                            <ul class="postbox-title-info">
+                                <li>
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    2024. 10. 15.
+                                </li>
+                                <li class="postbox-title-author">
+                                    <i class="fa-solid fa-user"></i>
+                                    백상현
+                                </li>
+                            </ul>
+                            <figure class="featured-image">
+                                <img src="./img/seoul.png" alt="crew featured-image">
+                            </figure>
+                            <article class="post-content">
+                                <h2>서울 크루 모집</h2>
+                                <p>도심 속에서 크루들과 함께 달려보세요! 서울의 아름다운 거리와 공원을 배경으로 건강과 즐거움을 함께 나누는 사람들을 모집하고 있습니다.</p>
+                                <h2>모집 상세 내용</h2>
+                                <p>모집 일자: 2024년 10월 15일<br>장소: 서울 일대<br>참가비: 5000원<br>훈련 일정: 매주 화요일과 목요일 저녁 7시부터 8시까지<br>신청 방법: 온라인 신청서 작성 후 참가비 입금</p>
+                                <blockquote>함께 달리는 길 위에서 더 나은 나를 만나는 경험을 해보세요. 서울크루와 함께 건강한미래를 만들어갑시다!</blockquote>
+                                <strong><div class="badge" id="reportMessage" style="display:none;">신고된 게시물 입니다.</div></strong>
+                            </article>
+                            <div class="p-btns">
+                                <button type="button" class="p-edit">수정</button>
+                                <button type="button" class="p-delete">삭제</button>
+                                <button id="reportBtn" type="button" class="p-report" onclick="openReportModal()">신고</button>
                             </div>
-                                <figure class="featured-image">
-                                    <img src="./img/seoul.png" alt="crew featured-image">
-                                </figure>
-                                <article class="post-content">
-                                    <h2>서울 크루 모집</h2>
-                                    <p>도심 속에서 크루들과 함께 달려보세요! 서울의 아름다운 거리와 공원을 배경으로 건강과 즐거움을 함께 나누는 사람들을 모집하고 있습니다. 
-                                    크루와 함께하는 활동은 단순한 운동을 넘어서 새로운 친구를 만나고, 서로의 목표를 응원하는 소중한 경험이 될 것입니다. 
-                                    여러분의 건강한 생활을 위해 함께 나아가는 크루의 일원이 되어보세요!</p>
-                                    
-                                    <h2>모집 상세 내용</h2>
-                                    <p>모집 일자: 2024년 10월 15일<br>장소: 서울 일대<br>참가비: 5000원<br>훈련 일정: 매주 화요일과 목요일 저녁 7시부터 8시까지<br>신청 방법: 온라인 신청서 작성 후 참가비 입금</p>
-
-                                    <blockquote>함께 달리는 길 위에서 더 나은 나를 만나는 경험을 해보세요. 서울크루와 함께 건강한미래를 만들어갑시다!</blockquote>
-                                    <div class="badge" id="reportBadge" style="display: none;">신고된 게시물</div>
-
-
-                                </article>
-
-                                <div class="p-btns">
-                                    <button type="button" class="p-edit">수정</button>
-                                    <button type="button" class="p-delete">삭제</button>
-                                    <button id="reportBtn" type="button" class="p-report" onclick="openReportModal()">신고</button>
-                                </div>
-
                         </div>
                     </div>
                 </div>
             </div>
             <div class="top1">
-                <button id="topBtn" class="move-btn" type="button" onclick="move_honey1()">
-                    <i class="fa-solid fa-angles-up"></i>
+                <button id="topBtn" class="move-btn" type="button" onclick="move_honeyy()"><i class="fa-solid fa-angles-up"></i></button>
                 </button>
             </div>
-        </div>
+
         </div>
     </main>
+   
+    <!-- 수정 모달 -->
+    <div class="modalEE" id="honey_Emodal1">
+        <!-- 모달 컨텐츠 -->
+        <div class="modal-Eboxx" id="modalEPopup">
+            <form class="modal-Eform" action="#" method="post" id="form_Ehoney">
+                <div class="modal-Etitle">
+                    <h2>크루모집 수정</h2>
+                    
+                    <!-- 모달 닫기 버튼 -->
+                    <button id="exitEBtnn" type="button" class="exitE" onclick="eModal_exit()">&times;</button>
+                </div>
+                <input class="modalETitle" id="modalEtitle_honey" type="text" value="서울 크루 모집" />
+                <div>
+                    <input class="input-number1" value="00" type="number" oninput="inputLenFunc()" min="0" max="20"/>                        
+                    <input class="input-ndtf1" type="date" placeholder="날짜" />
+                    <input class="input-time1" type="text" placeholder="시간" maxlength="8" />
+                    <input class="input-ndtf1" value="5000" type="number"  oninput="validateInput()" min="5000" max="50000" step="5000"/>
+                </div>
+                <textarea class="modalEText" id="modalEtext_honey">
+    도심 속에서 크루들과 함께 달려보세요! 서울의 아름다운 거리와 공원을 배경으로 건강과 즐거움을 함께 나누는 사람들을 모집하고 있습니다. 
+    크루와 함께하는 활동은 단순한 운동을 넘어서 새로운 친구를 만나고, 서로의 목표를 응원하는 소중한 경험이 될 것입니다. 
+    여러분의 건강한 생활을 위해 함께 나아가는 크루의 일원이 되어보세요!
+                </textarea>
+                <input class="modal-Efile" type="file" id="modalEFile" accept="image/*" hidden>
+                <div class="img-area">
+                    <img src="img/seoul.png" height="285px">
+                </div>
+                <button class="select-Eimg" type="file">파일 선택</button>
     
+                <div class="modal-Ebtn">
+                    <button class="Eaccept" id="EacceptBtn" type="button" onclick="eModal_exit(), edit_save()">저장</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div class="modalR" id="honey_Rmodal">
     <!-- 모달 컨텐츠 -->
     <div class="modal-Rbox" id="modalRPopup">
@@ -130,7 +155,6 @@
                 <h2><i class="fa-solid fa-triangle-exclamation"></i>경고!</h2>
                 <p>이 게시글을 <strong>신고</strong>하시겠습니까?</p>
                 <!-- 모달 닫기 버튼 -->
-                <button id="exitRBtn" type="button" class="exitR" onclick="rModal_exit()">&times;</button>
                 <div class="report-btns">
                     <button type="button" class="Raccept" id="r_accept" onclick="confirmReport()">네</button>
                     <button type="button" class="Rcancel" id="r_cancel" onclick="rModal_exit()">아니오</button>
@@ -139,6 +163,39 @@
         </form>
     </div>
 </div>
+
+
+<div class="modalD" id="honey_Dmodal1">
+    <!-- 삭제 모달 컨텐츠 -->
+    <div class="modal-Dbox" id="modalDPopup">
+        <form class="modal-Dform" action="#" method="post" id="form_Dhoney">
+            <div class="modal-Dtitle">
+                <h2>게시물 삭제</h2>
+                <p>이 게시글을 삭제하시겠습니까?</p>
+                <!-- 삭제 모달 닫기 버튼 -->
+                <div class="delete-btns">
+                    <button type="button" class="Daccept" id="d_accept" onclick="delete_accept()">네</button>
+                    <button type="button" class="Dcancel" id="d_cancel" onclick="dModal_exit()">아니오</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>function move_honeyy() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+};
+</script>
+<script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
+<script src="hover.js"></script>
+<script src="https://unpkg.com/dialog-polyfill@0.5.4/dist/dialog-polyfill.js"></script>
+</body>
+
+</html>
+
     <!-- 게시글 상세보기 모달 시작 -->
 <!-- <dialog id="myDialog1">
     <form class="modal">
@@ -165,11 +222,3 @@
     </form>
 </dialog> -->
 <!-- 게시글 상세보기 모달 끝 -->
-
-<script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
-<script src="./hover.js"></script>
-<script src="https://unpkg.com/dialog-polyfill@0.5.4/dist/dialog-polyfill.js"></script>
-</body>
-
-</html>

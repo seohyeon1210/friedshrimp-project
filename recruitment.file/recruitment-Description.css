@@ -8,7 +8,6 @@
     text-decoration: none;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 body{
@@ -552,6 +551,7 @@ a{
     background-color: #FFF;
     border-radius: 8px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    font-family: Pretendard;
 }
 
 .post-content h2,
@@ -559,6 +559,7 @@ a{
 .post-content ul,
 .post-content blockquote {
     margin-bottom: 32px;
+    font-family: Pretendard;
 }
 
 .post-content h2 {
@@ -577,7 +578,7 @@ a{
     padding-bottom: 16px;
     border-radius: 8px;
     background-color: #008DDA;
-    color: #1b1919;
+    color: #fcf5f5;
     line-height: 150%;
     position: relative;
     font-size: 20px;
@@ -586,7 +587,7 @@ a{
 
 .post-content blockquote:hover {
     background-color: #EEE1E3;
-    color: #008DDA;
+    color: #191a1b;
 }
 
 .p-btns .p-edit {
@@ -674,72 +675,304 @@ a{
 
 
 .badge {
-    font-family: Pretendard;
-    font-size: 2rem;
     text-align: center;
-    background-color: #ffcccc; /* 연한 빨간색 배경 */
-    color: #d8000c; /* 빨간색 텍스트 */
-    padding: 15px 15px;
-    border-radius: 5px;
-    margin-bottom: 2px;
-    font-weight: bold; /* 두껍게 표시 */
-  }
-  
-/* 신고 모달 */
-/* .modalOpen{
-    background-color: #FFF;
+    padding-top: 16px;
+    padding-left: 32px;
+    padding-right: 16px;
+    padding-bottom: 16px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    pointer-events: none;
-    padding: 20px;
-    transition: opacity 0.3s ease-in-out;
-    opacity: 0;
+    background-color: #DDD;
+    color: #e90909ef;
+    line-height: 150%;
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+  
+/* 수정 모달 */
+.input-ndtf1{
+    border: none;
+    background-color:#EEE;
+    width: 27.3%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 1em;
+    font-family: Pretendard; 
+  }
+  .input-time1{
+    border: none;
+    background-color:#EEE;
+    width: 24.6%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 1em;
+    font-family: Pretendard; 
+  }
+  .input-number1{
+    border: none;
+    background-color:#EEE;
+    width: 15%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 1em;
+    font-family: Pretendard; 
+  }
+
+  .modalEE {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+    display: none;
 }
 
-.modal-content{
-    max-width: 500px;
-    width: 100%;
-    height: 150px;
+.modal-Eboxx {
+    /* display: none; 기본적으로 숨김 */
+    position: absolute;
     background-color: #FFF;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    transform: scale(0.8);
+    width: 450px;
+    height: 755px;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -45%);
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
 }
 
-.modal.show{
-    opacity: 1;
-    pointer-events: auto;
+.modal-Etitle {
+    padding: 10px;
+    margin-top: -50px;
+    justify-content: space-between;
 }
 
-.modal.show .modal-content{
-    opacity: 1;
-    transform: scale(1);
+.modal-Eform {
+    /* 부모 요소 */
+    position: relative;
+    padding: -70px;
 }
+.exitE{
+    width: 30px;
+    font-size: 35px;
+    border: none;
+    background-color: transparent;
+    color: #aaa;
+    margin-bottom: 10px;
+    /* 자식 요소 */
+    position: absolute;
+    transition: all 0.2 ease;
+    top: -5px;
+    right: -35px;
 
-.exit{
+}
+.modal-Etitle  {
+    font-family: pretendard;
+    font-weight: 400;
+    min-height: -20px;
+    width: 100%;
+    padding: 10px 10px 10px 14px;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    background: #EEE;
     color: #121212;
-    float: right;
-    font-size: 24px;
+    margin-bottom: 10px;
+}
+.modalETitle{
+    font-family: pretendard;
+    font-weight: 400;
+    min-height: -20px;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    background: #EEE;
+    color: #121212;
+    width: 100%;
+    padding: 10px 10px 10px 14px;
     font-weight: bold;
-    cursor: pointer;
 }
 
-.exit:hover{
+.modal-Eboxx .modal-Eform .modalEText {
+    font-family: pretendard;
+    font-weight: 400px;
+    min-height: 150px;
+    width: 100%;
+    padding: 10px 10px 10px 14px;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    background: #EEE;
     color: #121212;
-} */
-/* 
-.p-btns2{
-    position: fixed;
-} */
+    margin-bottom: 10px;
+}
 
+.select-Eimg {
+    font-family: pretendard;
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    border-radius: 15px;
+    border: none;
+    background-color: #E23E57;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    transition: all .3s ease;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.select-Eimg:hover {
+    background-color: #88304E;
+}
+.modal-Ebtn {
+    text-align: center;
+}
+
+.modalEText {
+    font-family: pretendard;
+    font-weight: 400;
+    min-height: 200px;
+    width: 100%;
+    padding: 10px 10px 10px 14px;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    background: #EEE;
+    color: #121212;
+    margin-bottom: 10px;
+}
+
+.modal-Ebtn .Eaccept {
+    font-family: pretendard;
+    border: none;
+    background-color: #EEE1E3;
+    color: #88304E;
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.modal-Ebtn .Eaccept:hover {
+    background-color: #E23E57;
+    color: #FFF;
+}
+
+/* 삭제 모달 */
+.modalD {
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+}
+
+.modal-Dbox {
+    position: absolute;
+    background-color: #FFF;
+    /* max-width: 700px; */
+    width: 450px;
+    padding: 30px;
+    border-radius: 20px;
+    /* 30px */
+    font-family: pretendard;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -45%);
+    top: 50%;
+    left: 50%;
+}
+
+.modal-Dtitle {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.modal-Dform {
+    /* 부모 요소 */
+    position: relative;
+}
+
+.modal-Dtitle .exitD {
+    width: 30px;
+    font-size: 35px;
+    border: none;
+    background-color: transparent;
+    color: #DDD;
+    margin-bottom: 10px;
+    /* 자식 요소 */
+    position: absolute;
+    transition: all 0.2 ease;
+    top: -10px;
+    right: 0;
+}
+
+.modal-Dtitle i {
+    color: #88304E;
+}
+
+.modal-Dtitle h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #E23E57;
+}
+
+.modal-Dtitle p {
+    font-weight: 400;
+    font-size: 20px;
+    width: 100%;
+    color: #121212;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.delete-btns {
+    text-align: center;
+}
+
+.delete-btns .Daccept {
+    font-family: pretendard;
+    border: none;
+    background-color: #EEE1E3;
+    color: #121212;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.delete-btns .Dcancel {
+    font-family: pretendard;
+    border: none;
+    background-color: #EEE1E3;
+    color: #121212;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 5px;
+}
