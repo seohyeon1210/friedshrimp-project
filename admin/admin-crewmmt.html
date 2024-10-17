@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Fried Shrimp 크루 모집 페이지</title>
+        <link rel="stylesheet" href="./css/admin-crewmmt.css">
+    </head>
+    <body>
+        <!-- --------------상단 메뉴 바 영역-------------------- -->
+        <header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <a href="./admin-mainhome.html" class="logo">Fried <br> Shrimp</a>
+                <ul id="nav-bar">
+                    <li>
+                        <a href="./admin-membermmt.html" class="btn"><i class="fa-solid fa-user"></i>회원관리</a>
+                    </li>
+                    <li>
+                        <a href="./admin-crewmmt.html" class="btn"><i class="fa-solid fa-people-group"></i>크루모집관리</a>
+                    </li>
+                    <li>
+                        <a href="./admin-tipmmt.html" class="btn"><i class="fa-solid fa-circle-exclamation"></i>알알꿀팁관리</a>
+                    </li>
+                    <li>
+                        <a href="./admin-admmt.html" class="btn"><i class="fa-solid fa-rectangle-ad"></i>광고물관리</a>
+                    </li>
+                    <li>
+                        <button type="button" class="l-btn" onclick="location.href='../start-home.html'"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- 알알꿀팁게시글관리 영역 -->
+        <div class="container">
+            <div>
+                <h1>크루 모집 관리</h1>
+                <hr>
+                <div class="button1">
+                    <input type="text" id="searchInput" placeholder="날짜~장소 검색..." style="display:none;">
+                    <button class="button3" id="searchButton">검색</button>
+                    <button class="button2" id="deleteButton">삭제</button>
+                </div>
+            </div>
+            
+            <div class="post-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="selectAll"></th>
+                            <th>등록일</th>
+                            <th>작성자</th>
+                            <th>제목</th>
+                            <th>장소</th>
+                            <th>상세보기</th>
+                            <th class="th1">신고상태</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-14</td>
+                            <td>wlsqo09</td>
+                            <td>천안역 런닝</td>
+                            <td>천안 몽마르트앞공원</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-13</td>
+                            <td>ysm123</td>
+                            <td>강남역 DO RUN 모집</td>
+                            <td>강남역</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-12</td>
+                            <td>gogil11</td>
+                            <td>청년들이여 제주로와라</td>
+                            <td>제주도 올레길</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-12</td>
+                            <td>ysm123</td>
+                            <td>서울 크루모집</td>
+                            <td>서울</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-11</td>
+                            <td>gogil11</td>
+                            <td>아산역 런닝</td>
+                            <td>아산역</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-11</td>
+                            <td>sexyguy1212</td>
+                            <td>산악</td>
+                            <td>서울</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td><i class="fa-solid fa-triangle-exclamation"></i></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-12</td>
+                            <td>sbj00</td>
+                            <td>인사</td>
+                            <td>서울</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-11</td>
+                            <td>ksh02</td>
+                            <td>해변 강가</td>
+                            <td>경기도 구리</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-10</td>
+                            <td>jyj123</td>
+                            <td>스트레칭</td>
+                            <td>파주시</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-10</td>
+                            <td>jyj123</td>
+                            <td>런닝런닝런닝</td>
+                            <td>천안역</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="post-checkbox"></td>
+                            <td>2024-10-10</td>
+                            <td>jyj123</td>
+                            <td>뛰사모</td>
+                            <td>천안시</td>
+                            <td><button class="view-button">상세보기</button></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <!-- ---------페이징 처리 영역------------  -->
+                <ul class="pagination">
+                    <li><a href="#" id="prevPage">&lt;&lt;</a></li>
+                    <li id="pageNumbers"></li>
+                    <li><a href="#" id="nextPage">&gt;&gt;</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="./js/admin-crewmmt.js"></script>
+        <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
+    </body>
+</html>

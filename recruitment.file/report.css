@@ -1,0 +1,131 @@
+/* 신고 모달 */
+.modalR {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: none;
+}
+
+.modal-Rbox {
+  position: absolute;
+  background-color: #FFF;
+  /* max-width: 700px; */
+  width: 450px;
+  padding: 30px;
+  border-radius: 20px;
+  /* 30px */
+  font-family: pretendard;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -45%);
+  top: 50%;
+  left: 50%;
+}
+
+.modal-Rtitle {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.modal-Rform {
+  /* 부모 요소 */
+  position: relative;
+}
+
+.modal-Rtitle .exitR {
+  width: 30px;
+  font-size: 35px;
+  border: none;
+  background-color: transparent;
+  color: #DDD;
+  margin-bottom: 10px;
+  /* 자식 요소 */
+  position: absolute;
+  transition: all 0.2 ease;
+  top: -10px;
+  right: 0;
+}
+
+.modal-Rtitle i {
+  color: #88304E;
+}
+
+.modal-Rtitle h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+  color: #E23E57;
+}
+
+.modal-Rtitle p {
+  font-weight: 400;
+  font-size: 20px;
+  width: 100%;
+  color: #121212;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.report-btns {
+  text-align: center;
+}
+
+.report-btns .Raccept {
+  font-family: pretendard;
+  border: none;
+  background-color: #EEE1E3;
+  color: #121212;
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.report-btns .Rcancel {
+  font-family: pretendard;
+  border: none;
+  background-color: #EEE1E3;
+  color: #121212;
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin: 5px;
+}
+.report-badge {
+  font-family: Pretendard;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #ffcccc; /* 연한 빨간색 배경 */
+  color: #d8000c; /* 빨간색 텍스트 */
+  padding: 15px 15px;
+  border-radius: 5px;
+  margin-top: -55px;
+  font-weight: bold; /* 두껍게 표시 */
+}
+.report-badge-move{
+  margin-top: -100px;
+}
+.p-btns .p-report {
+  background-color: #E23E57;
+  color: #FFF;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  float: right;
+  font-family: Pretendard;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  width: 100px;
+}
+
+.p-btns .p-report:hover {
+  background-color: #88304E;
+}

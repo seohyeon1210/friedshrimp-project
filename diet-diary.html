@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Fried Shrimp 식단일기 페이지</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
+        <link rel="stylesheet" href="./css/diet-diary.css">
+        <link rel="stylesheet" href="./css/navstyle.css"> 
+    
+    </head>
+    <body>
+        <!-- --------------상단 메뉴 바 영역-------------------- -->
+        <header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <div class="imgHoverEvent logo-show" onclick="location.href='./mainhome.html'">
+                    <div class="imgBox1">
+                        <img src="./img/f-logo.png" />
+                    </div>
+                    <div class="imgBox2">
+                        <img src="./img/shrimp_st_ic.png" />
+                    </div>
+                    <div class="imgBox3">
+                        <img src="./img/home_logo.png" />
+                    </div>
+                </div>
+                <ul id="nav-bar">
+                    <li>
+                        <a href="./running-diary.html" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+                    </li>
+                    <li>
+                        <a href="./diet-diary.html" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+                    </li>
+                    <li>
+                        <a href="./recruitment.file/recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                    </li>
+                    <li>
+                        <a href="./honeytip/honeytip-page.html" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
+                    </li>
+                    <li>
+                        <button type="button" class="l-btn" onclick="location.href='./start-home.html'">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-------------- 식단일기페이지 영역 --------------->
+        <div class="container">
+
+            <div>
+                <h1>식단 일기</h1>
+                <hr>
+                <div class="button1">
+                <button class="button2">목표설정</button>
+                <button class="button3">식단등록</button>
+                </div>
+            </div>
+
+            <div class="div1">
+                <div class="card">
+                    <h3>어제의 총 섭취 칼로리</h3>
+                    <div class="calorie-progress2">
+                        <div class="calorie-bar2"></div>
+                    </div>
+                    <div class="calorie-details2">
+                        <strong>1900 / 2000 Kcal</strong>
+                    </div>
+                    <div class="footer-text2">
+                        어제는 목표보다 100kcal 덜 드셨네요!
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>어제와 오늘 칼로리 비교</h3>
+                    <br>
+                    <p class="p2" id="calorieComparisonMessage"></p>
+                </div>
+
+                <div class="card calorie-card">
+                    <h3>오늘 칼로리</h3>
+                    <div class="calorie-progress">
+                        <div class="calorie-bar"></div>
+                    </div>
+                    <div class="calorie-details">
+                        <strong id="today-calorie">0 / 0 Kcal</strong>
+                    </div>
+                    <div class="footer-text">
+                        아직 <span>0kcal</span>가 남았어요!
+                    </div>
+                </div>
+            </div>
+
+            <div class="div2">
+                <div class="card2" id="breakfast-card">
+                    <h3>아침</h3>
+                    <br>
+                    <p>먹은음식 - kcal</p>
+                    <br>
+                    <p><hr></p>
+                    <br>
+                </div>
+                <div class="card2" id="lunch-card">
+                    <h3>점심</h3>
+                    <br>
+                    <p>먹은음식 - kcal</p>
+                    <br>
+                    <p><hr></p>
+                    <br>
+                </div>
+                <div class="card2" id="dinner-card">
+                    <h3>저녁</h3>
+                    <br>
+                    <p>먹은음식 - kcal</p>
+                    <br>
+                    <p><hr></p>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+            <!-- 목표설정 모달 영역 -->
+            <!-- 아침, 점심, 저녁 칼로리 입력 모달 -->
+            <div id="goal-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="close-goal">&times;</span>
+                    <h2>칼로리 입력</h2>
+
+                    <!-- 아침 칼로리 입력 -->
+                    <div class="input-group">
+                        <label for="breakfast-calorie">아침 칼로리:</label>
+                        <input type="number" id="breakfast-calorie" placeholder="칼로리 입력" max="10000" />
+                    </div>
+
+                    <!-- 점심 칼로리 입력 -->
+                    <div class="input-group">
+                        <label for="lunch-calorie">점심 칼로리:</label>
+                        <input type="number" id="lunch-calorie" placeholder="칼로리 입력" max="10000" />
+                    </div>
+
+                    <!-- 저녁 칼로리 입력 -->
+                    <div class="input-group">
+                        <label for="dinner-calorie">저녁 칼로리:</label>
+                        <input type="number" id="dinner-calorie" placeholder="칼로리 입력" max="10000" />
+                    </div>
+
+                    <!-- 저장 버튼 -->
+                    <button class="button4"  id="save-goal">저장</button>
+
+                    <!-- 계산된 목표 칼로리 표시 -->
+                    <div class="input-group">
+                        <h3>계산된 목표 칼로리: <span id="total-calories">0</span> Kcal</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 식단 등록 모달 영역 -->
+            <div id="meal-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="close-meal">&times;</span>
+                    <h2>식단 등록</h2>
+
+                    <!-- 식사 종류 선택 -->
+                    <div class="input-group">
+                        <label for="meal-type">식사 종류:</label>
+                        <select id="meal-type">
+                            <option value="breakfast">아침</option>
+                            <option value="lunch">점심</option>
+                            <option value="dinner">저녁</option>
+                        </select>
+                    </div>
+
+                    <!-- 음식 이름 입력 -->
+                    <div class="input-group">
+                        <label for="food-name">음식 이름:</label>
+                        <input type="text" id="food-name" placeholder="음식 이름 입력" />
+                    </div>
+
+                    <!-- 칼로리 입력 -->
+                    <div class="input-group">
+                        <label for="food-calorie">칼로리:</label>
+                        <input type="number" id="food-calorie" placeholder="칼로리 입력" max="30000" />
+                    </div>
+
+                    <!-- 저장 버튼 -->
+                    <button class="button4" id="save-meal">저장</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 상단메뉴바관련js -->
+        <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>   
+        <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
+        
+        <!-- 식단일기관련js -->
+        <script src="./js/diet-diary.js"></script>
+    </body>
+</html>
