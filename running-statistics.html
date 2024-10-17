@@ -11,11 +11,14 @@
     <body>
         <header>
             <nav>
-                <input type="checkbox" id="check">
+                <input type="checkbox" id="check" />
                 <label for="check" class="checkbtn">
                     <i class="fa-solid fa-bars"></i>
                 </label>
-                <div class="imgHoverEvent logo-show" onclick="location.href='./mainhome.html'">
+                <div
+                    class="imgHoverEvent logo-show"
+                    onclick="location.href='./mainhome.html'"
+                >
                     <div class="imgBox1">
                         <img src="./img/f-logo.png" />
                     </div>
@@ -28,19 +31,35 @@
                 </div>
                 <ul id="nav-bar">
                     <li>
-                        <a href="./running-diary.html" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+                        <a href="./running-diary.html" class="n-btn"
+                            ><i class="fa-solid fa-person-running"></i>런닝
+                            일기</a
+                        >
                     </li>
                     <li>
-                        <a href="./diet-diary.html" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+                        <a href="./diet-diary.html" class="n-btn"
+                            ><i class="fa-solid fa-bowl-food"></i>식단 일기</a
+                        >
                     </li>
                     <li>
-                        <a href="./recruitment.file/recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                        <a
+                            href="./recruitment.file/recruitment.html"
+                            class="n-btn"
+                            ><i class="fa-solid fa-people-group"></i>크루</a
+                        >
                     </li>
                     <li>
-                        <a href="./honeytip/honeytip-page.html" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
+                        <a href="./honeytip/honeytip-page.html" class="n-btn"
+                            ><i class="fa-solid fa-circle-exclamation"></i>알알
+                            꿀팁</a
+                        >
                     </li>
                     <li>
-                        <button type="button" class="l-btn" onclick="location.href='./start-home.html'">
+                        <button
+                            type="button"
+                            class="l-btn"
+                            onclick="location.href='./start-home.html'"
+                        >
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
                         </button>
                     </li>
@@ -68,16 +87,22 @@
                             <p class="rscard-title">이번 주 종합 수치</p>
                             <div class="rscard-total">
                                 <div class="rscard-att">
-                                    <div class="rscard-elem">2시간</div>
-                                    <p class="elem-title">시간</p>
+                                    <div class="rscard-elem" id="update_rtime">
+                                        1시간
+                                    </div>
+                                    <p class="elem-title">런닝 시간</p>
                                 </div>
                                 <div class="rscard-att">
-                                    <div class="rscard-elem">40km</div>
-                                    <p class="elem-title">거리</p>
+                                    <div class="rscard-elem">7km</div>
+                                    <p class="elem-title" id="update_rkm">
+                                        런닝 거리
+                                    </p>
                                 </div>
                                 <div class="rscard-att">
-                                    <div class="rscard-elem">600Kcal</div>
-                                    <p class="elem-title">소모칼로리</p>
+                                    <div class="rscard-elem">525Kcal</div>
+                                    <p class="elem-title" id="update_rkcal">
+                                        런닝 소모칼로리
+                                    </p>
                                 </div>
                             </div>
                         </div>

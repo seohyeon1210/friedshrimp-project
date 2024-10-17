@@ -21,7 +21,7 @@ main{
 /* 크루 스타일 시작 */
 
 .containerBox{
-    margin: 0 auto;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

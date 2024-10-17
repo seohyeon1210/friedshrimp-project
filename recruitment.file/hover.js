@@ -1,82 +1,34 @@
+// Function to open the recruitment modal
 function openRecruitmentModal() {
     const modal = document.getElementById('myDialog');
     modal.showModal(); 
 }
 
+// Function to close the detail dialog modal
 function closeDetailDialog() {
     const modal = document.getElementById('myDialog');
     modal.close(); 
 }
 
-// Open the new 'honey_Rmodal' modal when 신고 is clicked
+// Open the report modal when 신고 is clicked
 function openReportModal() {
     const modal = document.getElementById('honey_Rmodal');
     modal.style.display = 'block'; // Show the modal
 }
 
-// Close the 'honey_Rmodal' modal
+// Close the report modal
 function rModal_exit() {
     const modal = document.getElementById('honey_Rmodal');
     modal.style.display = 'none'; // Hide the modal
 }
 
-// Handle the accept button in the modal
-function report_accept() {
-    alert("Report Accepted"); // Handle your report acceptance logic here
-}
-
-
-
+// Handle file upload and image preview
 function handleFiles(files) {
     const file = files[0];
+    const sizeLimit = 2 * 1024 * 1024; // 2MB limit
+
     if (file) {
-        const sizeLimit = 2 * 1024 * 1024; 
-            alert("파일 크기가 2MB를 초과할 수 없습니다.");
-            return;
-        }
-        // Additional file handling logic here
-    }
-
-function saveAndCloseModal() {
-    // Implement save logic here
-    closeDetailDialog();
-}
-function inputLenFunc() {
-    const inputs = document.querySelectorAll('.input-number');
-    inputs.forEach(input => {
-        const max = input.getAttribute('max');
-        if (input.value > max) {
-            input.value = max;
-        }
-    });
-}
-
-// 검색기능
-function filterCards() {
-    const input = document.getElementById('searchInput');
-    const filter = input.value.toLowerCase(); // 입력값을 소문자로 변환
-    const cards = document.querySelectorAll('.card'); // 모든 카드 요소 선택
-
-    cards.forEach(card => {
-        const title = card.getAttribute('data-title').toLowerCase(); // 카드의 제목
-        const date = card.querySelector('.card-body p:nth-of-type(1)').textContent.toLowerCase(); // 날짜
-        const fee = card.querySelector('.card-body p:nth-of-type(3)').textContent.toLowerCase(); // 회비
-        const location = card.querySelector('.card-body p:nth-of-type(2)').textContent.toLowerCase(); // 장소
-
-        // 입력값이 카드의 제목, 날짜, 회비, 장소 중 하나에 포함되어 있으면 보이기
-        if (title.includes(filter) || date.includes(filter) || fee.includes(filter) || location.includes(filter)) {
-            card.style.display = ""; // 카드 보이기
-        } else {
-            card.style.display = "none"; // 카드 숨기기
-        }
-    });
-}
-
-// 업로드
-function handleFiles(files) {
-    const file = files[0];
-    if (file) {
-        const sizeLimit = 2 * 1024 * 1024; // 2MB limit
+        // Check file size
         if (file.size > sizeLimit) {
             alert("파일 크기가 2MB를 초과할 수 없습니다.");
             return;
@@ -86,43 +38,80 @@ function handleFiles(files) {
         reader.onload = function(e) {
             const previewImage = document.getElementById('previewImage');
             previewImage.src = e.target.result;
-            previewImage.style.display = 'block';
+            previewImage.style.display = 'block'; // Show the preview image
+
+            // Update upload UI
+            document.getElementById('uploadIcon').style.display = 'none'; // Hide upload icon
+            document.getElementById('uploadText').style.display = 'none'; // Hide upload text
+            document.getElementById('sizeInfo').style.display = 'none'; // Hide size info
         };
-        reader.readAsDataURL(file);
+        reader.readAsDataURL(file); // Read the image file
     }
 }
 
-// 이미지 미리보기 함수
-function previewAndUpload(files) {
-    const file = files[0];
-    if (file) {
-    const reader = new FileReader();
-
-    reader.onload = function(event) {
-    const imgElement = document.createElement('img');
-    imgElement.src = event.target.result;
-    const previewBox = document.getElementById('imagePreview');
-    previewBox.innerHTML = '';  // 기존 미리보기 삭제
-    previewBox.appendChild(imgElement);
-    };
-
-    reader.readAsDataURL(file);
-}
-}
-
-// 모달의 저장 버튼 클릭 시 메인 페이지에 이미지 등록
+// Save and close the modal
 function saveAndCloseModal() {
-const previewBox = document.getElementById('imagePreview');
-const mainPageBox = document.getElementById('mainPageImage');  // 메인 페이지의 이미지 위치
+    // Perform any save operations if needed
 
-if (previewBox.firstChild) {
-    mainPageBox.innerHTML = '';  // 기존 이미지 삭제
-    mainPageBox.appendChild(previewBox.firstChild.cloneNode(true));  // 미리보기 이미지 복사
+    // Close the modal after saving
+    closeDetailDialog(); 
 }
 
-closeDetailDialog();  // 모달 닫기
+// Close the detail dialog modal
+function closeDetailDialog() {
+    const modal = document.getElementById('myDialog');
+    modal.close(); 
 }
 
+
+// Ensure input value does not exceed maximum
+function inputLenFunc() {
+    const inputs = document.querySelectorAll('.input-number');
+    inputs.forEach(input => {
+        const max = input.getAttribute('max');
+        if (input.value > max) {
+            input.value = max; // Set value to max if exceeded
+        }
+    });
+}
+
+// Search functionality to filter cards
+function filterCards() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase(); // Convert input to lowercase
+    const cards = document.querySelectorAll('.card'); // Select all card elements
+
+    cards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase(); // Card title
+        const date = card.querySelector('.card-body p:nth-of-type(1)').textContent.toLowerCase(); // Date
+        const fee = card.querySelector('.card-body p:nth-of-type(3)').textContent.toLowerCase(); // Fee
+        const location = card.querySelector('.card-body p:nth-of-type(2)').textContent.toLowerCase(); // Location
+
+        // Show card if filter matches
+        if (title.includes(filter) || date.includes(filter) || fee.includes(filter) || location.includes(filter)) {
+            card.style.display = ""; // Show card
+        } else {
+            card.style.display = "none"; // Hide card
+        }
+    });
+}
+
+// Smooth scroll to top
 function move_honey1() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+
+// Open the report modal and handle the report logic
+function openReportModal() {
+    // Show the report badge
+    const reportBadge = document.getElementById('reportBadge');
+    reportBadge.style.display = 'block'; // Display the "신고된 게시물" badge
+
+    // Hide the report button
+    const reportBtn = document.getElementById('reportBtn');
+    reportBtn.style.display = 'none'; // Hide the 신고 button
+
+    // Optionally, you can display a modal or alert to confirm the report action
+    alert("게시물이 신고되었습니다.");
 }

@@ -22,3 +22,9 @@ function emotionlevelm() {
 function openEmotionPopup() {
     window.open('./emotionm.html', 'emotionPopup', 'width=700,height=500');
 }
+
+window.onload = function () {
+    document.getElementById("pro-image").src = `${localStorage.getItem(
+        "profileImage"
+    )}`;
+};

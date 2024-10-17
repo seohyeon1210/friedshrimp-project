@@ -207,36 +207,42 @@
             </div>
     </main>
             <!-- 크루모집 모달 시작 -->
-            <dialog id="myDialog">
-                <form class="modal">
-                    <div>
-                    <button class="close-ic" onclick="closeDetailDialog()">&times;</button>
-                    </div>
-                    <h2>크루모집</h2>
-                    <div>
-                        <input class="input1" type="text" id="title" placeholder="제목">
-                        <input class="input-number" value="00" type="number" oninput="inputLenFunc()" min="0" max="20"/>                        
-                        <input class="input-ndtf" type="date" placeholder="날짜" />
-                        <input class="input-ndtf" type="text" placeholder="시간" maxlength="8" />
-                        <input class="input-ndtf" value="5000" type="number" oninput="inputLenFunc()" min="5000" max="50000" step="5000"/>
-                    </div>
-                    <textarea class="input3" id="details" rows="4" placeholder="상세페이지 입력칸 최대 150글자" maxlength="150"></textarea>
-                    <div class="image-upload-box">
-                        <div class="upload-icon">
-                            <i class="fa-solid fa-file-arrow-up"></i>
-                        </div>
-                        <p class="upload-text">이미지 업로드</p>
-                        <p class="size-info">이미지 사이즈는 <strong>2MB</strong> 이하여야 합니다</p>
-                    </div>
-                    <nav class="nav">
-                    <label class="file-label1" for="chooseFile">파일 선택</label>
-                    <input class="file1" id="chooseFile" type="file" onchange="handleFiles(this.files)" accept="image/png, image/jpeg, image/gif">
-                    </nav>
-                    <div class="btn-container">
-                        <button class="inside" type="button" onclick="saveAndCloseModal()">저장</button>
-                    </div>
-                </form>
-            </dialog>
+            <!-- Modal Structure -->
+<dialog id="myDialog">
+    <form class="modal">
+        <button class="close-ic" onclick="closeDetailDialog()">&times;</button>
+        <h2>크루모집</h2>
+        <div>
+            <input class="input1" type="text" id="title" placeholder="제목">
+            <input class="input-number" value="00" type="number" oninput="inputLenFunc()" min="0" max="20"/>                        
+            <input class="input-ndtf" type="date" placeholder="날짜" />
+            <input class="input-ndtf" type="text" placeholder="시간" maxlength="8" />
+            <input class="input-ndtf" value="5000" type="number" oninput="inputLenFunc()" min="5000" max="50000" step="5000"/>
+        </div>
+        <textarea class="input3" id="details" rows="4" placeholder="상세페이지 입력칸 최대 150글자" maxlength="150"></textarea>
+        
+        <!-- Image Upload Section -->
+        <div class="image-upload-box">
+            <div class="upload-icon" id="uploadIcon">
+                <i class="fa-solid fa-file-arrow-up"></i>
+            </div>
+            <p class="upload-text" id="uploadText">이미지 업로드</p>
+            <p class="size-info" id="sizeInfo">이미지 사이즈는 <strong>2MB</strong> 이하여야 합니다</p>
+            <img id="previewImage" style="display: none;" alt="Image Preview" />
+        </div>
+        
+        <nav class="nav">
+            <label class="file-label1" for="chooseFile">파일 선택</label>
+            <input class="file1" id="chooseFile" type="file" onchange="handleFiles(this.files)" accept="image/png, image/jpeg, image/gif">
+        </nav>
+        
+        <div class="btn-container">
+            <button class="inside" type="button" onclick="saveAndCloseModal()">저장</button>
+        </div>
+    </form>
+</dialog>
+
+
 <!-- 크루모집 모달 끝 -->
 
 <script

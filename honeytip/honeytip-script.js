@@ -64,9 +64,11 @@ modal_exit = function () {
     modal.style.display = "none";
 };
 
+// 신고 버튼
 const rModal = document.querySelector("#honey_Rmodal");
 const rModalOpen = document.getElementById("modal-report");
 const rModalClose = document.getElementById("exitRBtn");
+const reportM = document.querySelector(".reportMessage");
 
 rModal_honey = function () {
     rModal.style.display = "block";
@@ -76,6 +78,12 @@ rModal_exit = function () {
     rModal.style.display = "none";
 };
 
+report_text = function () {
+    reportM.style.display = "block";
+    hhh();
+}
+
+// 수정 버튼
 const eModal = document.querySelector("#honey_Emodal");
 const eModalOpen = document.querySelector(".p-edit");
 const eModalClose = document.querySelector("exitEBtn");
@@ -195,6 +203,7 @@ function delete_accept() {
 
 function report_accept() {
     alert("신고 되었습니다.");
+    reportM.style.display = "block"
 };
 
 // 검색 기능
@@ -213,3 +222,7 @@ document.getElementById('searchBox').addEventListener('input', function() {
         }
     });
 });
+
+function hhh() {
+    document.getElementById("modal_report").style.display = "none";
+};

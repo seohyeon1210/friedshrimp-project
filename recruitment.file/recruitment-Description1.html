@@ -98,16 +98,16 @@
                                     <p>모집 일자: 2024년 10월 15일<br>장소: 서울 일대<br>참가비: 5000원<br>훈련 일정: 매주 화요일과 목요일 저녁 7시부터 8시까지<br>신청 방법: 온라인 신청서 작성 후 참가비 입금</p>
 
                                     <blockquote>함께 달리는 길 위에서 더 나은 나를 만나는 경험을 해보세요. 서울크루와 함께 건강한미래를 만들어갑시다!</blockquote>
-                                    <div class="badge">신고된 게시물</div>  
+                                    <div class="badge" id="reportBadge" style="display: none;">신고된 게시물</div>
+
 
                                 </article>
 
                                 <div class="p-btns">
                                     <button type="button" class="p-edit">수정</button>
                                     <button type="button" class="p-delete">삭제</button>
-                                    <button id="modal" type="button" class="p-report" onclick="openReportModal()">신고</button>
+                                    <button id="reportBtn" type="button" class="p-report" onclick="openReportModal()">신고</button>
                                 </div>
-                            </div>
 
                         </div>
                     </div>
@@ -123,22 +123,22 @@
     </main>
     
     <div class="modalR" id="honey_Rmodal">
-        <!-- 모달 컨텐츠 -->
-        <div class="modal-Rbox" id="modalRPopup">
-            <form class="modal-Rform" action="#" method="post" id="form_Rhoney">
-                <div class="modal-Rtitle">
-                    <h2><i class="fa-solid fa-triangle-exclamation"></i>경고!</h2>
-                    <p>이 게시글을 <strong>신고</strong>하시겠습니까?</p>
-                    <!-- 모달 닫기 버튼 -->
-                    <button id="exitRBtn" type="button" class="exitR" onclick="rModal_exit()">&times;</button>
-                    <div class="report-btns">
-                        <button type="button" class="Raccept" id="r_accept" onclick="rModal_exit(), report_accept()">네</button>
-                        <button type="button" class="Rcancel" id="r_cancel" onclick="rModal_exit()">아니오</button>
-                    </div>
+    <!-- 모달 컨텐츠 -->
+    <div class="modal-Rbox" id="modalRPopup">
+        <form class="modal-Rform" action="#" method="post" id="form_Rhoney">
+            <div class="modal-Rtitle">
+                <h2><i class="fa-solid fa-triangle-exclamation"></i>경고!</h2>
+                <p>이 게시글을 <strong>신고</strong>하시겠습니까?</p>
+                <!-- 모달 닫기 버튼 -->
+                <button id="exitRBtn" type="button" class="exitR" onclick="rModal_exit()">&times;</button>
+                <div class="report-btns">
+                    <button type="button" class="Raccept" id="r_accept" onclick="confirmReport()">네</button>
+                    <button type="button" class="Rcancel" id="r_cancel" onclick="rModal_exit()">아니오</button>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
+</div>
     <!-- 게시글 상세보기 모달 시작 -->
 <!-- <dialog id="myDialog1">
     <form class="modal">

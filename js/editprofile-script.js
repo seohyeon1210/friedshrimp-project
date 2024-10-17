@@ -34,53 +34,57 @@ function edit_honey() {
 //     }
 // }
   
-document.getElementById('profileEdit').addEventListener('submit', function(event) {
-    event.preventDefault();  // 폼 제출 막기
+document
+    .getElementById("profileEdit")
+    .addEventListener("submit", function (event) {
+        event.preventDefault(); // 폼 제출 막기
 
-    var oldPassword = document.getElementById('oldpw').value;
-    var newPassword = document.getElementById('newpw').value;
-    var confirmNewPassword = document.getElementById('newpw2').value;
-    var height = document.getElementById('height').value;
-    var weight = document.getElementById('weight').value;
-    var gender = document.getElementById('gender').value;
-    var image = document.getElementById('input').files[0];
+        var oldPassword = document.getElementById("oldpw").value;
+        var newPassword = document.getElementById("newpw").value;
+        var confirmNewPassword = document.getElementById("newpw2").value;
+        var height = document.getElementById("height").value;
+        var weight = document.getElementById("weight").value;
+        var gender = document.getElementById("gender").value;
+        var image = document.getElementById("input").files[0];
 
-    var isValid = true;
+        var isValid = true;
 
-    if (newPassword !== confirmNewPassword) {
-        alert('새 비밀번호가 일치하지 않습니다.');
-        isValid = false;
-    }
-
-    if (isNaN(parseFloat(height)) || isNaN(parseFloat(weight))) {
-        alert('키와 몸무게는 숫자여야 합니다.');
-        isValid = false;
-    }
-
-    if (newPassword.length > 10) {
-        alert('비밀번호는 최소 10자 이하이어야 합니다.');
-        isValid = false;
-    }
-
-    if (isValid) {
-        localStorage.setItem('password', newPassword);
-        localStorage.setItem('height', height);
-        localStorage.setItem('weight', weight);
-        localStorage.setItem('gender', gender);
-
-        if (image) {
-            var reader = new FileReader();
-            reader.onload = function() {
-                var base64String = reader.result;
-                localStorage.setItem('profileImage', base64String);
-                alert('회원정보가 저장되었습니다.');
-            };
-            reader.readAsDataURL(image);
-        } else {
-            alert('회원정보가 저장되었습니다.');
+        if (newPassword !== confirmNewPassword) {
+            alert("새 비밀번호가 일치하지 않습니다.");
+            isValid = false;
         }
-    }
-});
+
+        if (isNaN(parseFloat(height)) || isNaN(parseFloat(weight))) {
+            alert("키와 몸무게는 숫자여야 합니다.");
+            isValid = false;
+        }
+
+        if (newPassword.length > 10) {
+            alert("비밀번호는 최소 10자 이하이어야 합니다.");
+            isValid = false;
+        }
+
+        if (isValid) {
+            localStorage.setItem("password", newPassword);
+            localStorage.setItem("height", height);
+            localStorage.setItem("weight", weight);
+            localStorage.setItem("gender", gender);
+
+            if (image) {
+                var reader = new FileReader();
+                reader.onload = function () {
+                    var base64String = reader.result;
+                    localStorage.setItem("profileImage", base64String);
+                    alert("회원정보가 저장되었습니다.");
+                };
+                reader.readAsDataURL(image);
+            } else {
+                alert("회원정보가 저장되었습니다.");
+            }
+            location.href = "./mainhome.html";
+        }
+    });
+
 
 window.onload = function() {
     if (localStorage.getItem('password')) {

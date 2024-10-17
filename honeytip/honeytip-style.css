@@ -705,6 +705,22 @@ a{
     background-color: #88304E;
 }
 
+/* 신고된 게시물 */
+.reportMessage{
+    padding-top: 16px;
+    padding-left: 32px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    border-radius: 8px;
+    background-color: #DDD;
+    color: #FFF;
+    line-height: 150%;
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
 /* 글쓰기 모달 */
 .modal {
     display: none;
