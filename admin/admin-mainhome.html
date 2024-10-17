@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Fried Shrimp 관리자 메인 페이지</title>
+        <link rel="stylesheet" href="./css/admin-mainhome.css">
+    </head>
+    <body>
+        <!-- --------------navstyle(상단 메뉴 바)-------------------- -->
+        <header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <a href="./admin-mainhome.html" class="logo">Fried <br> Shrimp</a>
+                <ul id="nav-bar">
+                    <li>
+                        <a href="./admin-membermmt.html" class="btn"><i class="fa-solid fa-user"></i>회원관리</a>
+                    </li>
+                    <li>
+                        <a href="./admin-crewmmt.html" class="btn"><i class="fa-solid fa-people-group"></i>크루모집관리</a>
+                    </li>
+                    <li>
+                        <a href="./admin-tipmmt.html" class="btn"><i class="fa-solid fa-circle-exclamation"></i>알알꿀팁관리</a>
+                    </li>
+                    <li>
+                        <a href="./admin-admmt.html" class="btn"><i class="fa-solid fa-rectangle-ad"></i>광고물관리</a>
+                    </li>
+                    <li>
+                        <button type="button" class="l-btn" onclick="location.href='../start-home.html'"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!---------- 관리자 메인페이지 구역 -------------->
+        <div class="container">
+            <div>
+                <h1>게시물 관리</h1>
+                <hr>
+            </div>
+
+            <div class="div1">
+                <div class="card" onclick="location.href='./admin-membermmt.html'">
+                    <img src="../img/profile.png" alt="회원관리">
+                    <h3>회원관리</h3>
+                    <p>회원 관리 시스템을 확인하세요.</p>
+                </div>
+                <div class="card" onclick="location.href='./admin-crewmmt.html'">
+                    <img src="../img/8.jpg" alt="크루모집 관리">
+                    <h3>크루모집 게시판 관리</h3>
+                    <p>크루모집 현황을 관리하세요.</p>
+                </div>
+                <div class="card" onclick="location.href='./admin-tipmmt.html'">
+                    <img src="../img/desperate.jpg" alt="알알꿀팁 관리">
+                    <h3>알알꿀팁 게시판 관리</h3>
+                    <p>유용한 팁들을 확인하세요.</p>
+                </div>
+                <div class="card" onclick="location.href='./admin-admmt.html'">
+                    <img src="../img/ad_image/ad2.gif" alt="광고물 관리">
+                    <h3>광고물 관리</h3>
+                    <p>게시된 광고를 관리하세요.</p>
+                </div>
+            </div>
+
+            <div class="div2">
+                <div class="card2">
+                    <h3>오늘 가입자 수</h3>
+                    <p>10명</p>
+                    <br>
+                    <h3>탈퇴자 수</h3>
+                    <p>2명</p>
+                    <br>
+                    <h3>총 회원 수</h3>
+                    <p>1200명</p>
+                    <br>
+                </div>           
+                <div class="card2">
+                    <h3>신고접수 게시물</h3>
+                    <br>
+                    <p>2개</p>
+                    <br>
+                    <h3>현재 게시된 광고 수</h3>
+                    <br>
+                    <p>3개</p>
+                </div>           
+            </div>
+
+        </div>
+
+        <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
+    </body>
+</html>
+        

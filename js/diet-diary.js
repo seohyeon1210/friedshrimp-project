@@ -11,6 +11,10 @@ const dinnerInput = document.getElementById('dinner-calorie');
 const todayCaloriesDisplay = document.getElementById('today-calorie'); // 수정된 ID
 // 총 칼로리 표시할 요소
 const totalCaloriesDisplay = document.getElementById('total-calories');
+const calorieComparisonMessage = document.getElementById('calorieComparisonMessage'); // 추가된 ID
+
+// 어제의 총 섭취 칼로리
+const yesterdayCalories = 1900;
 
 // 총 칼로리 변수 초기화
 let totalCalories = 0; // 목표 칼로리 총합
@@ -84,10 +88,9 @@ saveMealButton.addEventListener('click', () => {
     const mealType = document.getElementById('meal-type').value;
     const foodName = document.getElementById('food-name').value.trim(); // Trim whitespace
     const foodCalories = parseInt(document.getElementById('food-calorie').value) || 0;
-    const eatingTime = document.getElementById('eating-time').value;
 
     // 입력값 검증
-    if (!foodName || foodCalories < 0 || !eatingTime) {
+    if (!foodName || foodCalories < 0) {
         alert("모든 필드를 올바르게 입력해주세요.");
         return;
     }
@@ -97,7 +100,7 @@ saveMealButton.addEventListener('click', () => {
 
     // div3의 아침, 점심, 저녁 카드에 정보 추가
     const mealCard = document.getElementById(`${mealType}-card`);
-    mealCard.innerHTML += `<div>${foodName} - ${foodCalories} Kcal, 먹은 시간: ${eatingTime}</div>`;
+    mealCard.innerHTML += `<div>${foodName} - ${foodCalories} Kcal </div>`;
 
     // 오늘 칼로리 업데이트
     const percentage = Math.round((consumedCalories / totalCalories) * 100);
@@ -106,11 +109,13 @@ saveMealButton.addEventListener('click', () => {
     // 남은 칼로리 업데이트
     updateRemainingCalories();
 
+    // 메시지 업데이트
+    updateCalorieComparison();
+
     // 모달 닫기 및 입력 필드 초기화
     mealModal.style.display = 'none';
     document.getElementById('food-name').value = '';
     document.getElementById('food-calorie').value = '';
-    document.getElementById('eating-time').value = '';
 });
 
 // 남은 칼로리를 업데이트하는 함수
@@ -127,5 +132,26 @@ function updateRemainingCalories() {
 
     calorieBar.style.width = `${usedPercentage}%`; // 칼로리 막대 너비 설정
 }
+
+// 오늘의 칼로리와 어제의 칼로리를 비교하는 함수
+function updateCalorieComparison() {
+    const difference = yesterdayCalories - consumedCalories;
+
+    if (difference > 0) {
+        calorieComparisonMessage.innerText = `오늘은 어제보다 ${difference}kcal 적게 먹었어요!`;
+    } else if (difference < 0) {
+        calorieComparisonMessage.innerText = `오늘은 어제보다 ${Math.abs(difference)}kcal 더 많이 먹었어요!`;
+    } else {
+        calorieComparisonMessage.innerText = `오늘은 어제와 같은 칼로리를 섭취했어요!`;
+    }
+}
+
+// 초기 상태 업데이트
+updateCalorieComparison();
+
+
+
+
+
 
 

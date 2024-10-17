@@ -102,6 +102,10 @@
     opacity: 0.5; /* 마우스 오버 시 불투명도 변경 (선택 사항) */
 }
 
+.imge:hover {
+    opacity: 0.5; /* 마우스 오버 시 불투명도 변경 (선택 사항) */
+}
+
 
 .profile-button {
     width: 80px; /* 이미지 너비 200px 설정 */
@@ -262,6 +266,27 @@
     right: 10px; /* 오른쪽 화살표 위치 설정 */
 }
 
+.crewarrow  {
+    height: 50px;
+    position: absolute; /* 절대 위치 설정 */
+    top: 50%; /* 세로 중앙 정렬 */
+    transform: translateY(-50%); /* 중앙 정렬 */
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경색 설정 */
+    color: white; /* 글자 색상 설정 */
+    border: none; /* 테두리 제거 */
+    padding: 10px; /* 내부 여백 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
+    font-size: 20px; /* 글씨 크기 설정 */
+}
+
+.crewarrow.left {
+    left: 10px; /* 왼쪽 화살표 위치 설정 */
+}
+
+.crewarrow.right {
+    right: 10px; /* 오른쪽 화살표 위치 설정 */
+}
+
 
 /* 추가 콘텐츠용 작은 div 스타일 */
 .small-div {
@@ -380,6 +405,7 @@
     border-radius: 1em; /* 둥근 모서리 설정 */
     height: 350px;
     width: 358px;
+    overflow: hidden;
 }
 
 .card-body {
@@ -411,13 +437,15 @@
 
 .tag-cardcolor{
     background: #E23E57;
+    border-radius: 1em;
     /* 그라데이션 요소 */
     /* background: linear-gradient(to bottom, #E23E57, white); */
     color: white;
 }
 
 .tag-crewcolor{
-    background: blue;
+    background: #3962eb;
+    border-radius: 1em;
     /* 그라데이션 요소 */
     /* background: linear-gradient(to bottom, #E23E57, white); */
     color: white;
@@ -429,8 +457,10 @@
     grid-column: 3 / 4; /* 세 번째 열에 위치 */
     grid-row: 3 / 4; /* 세 번째 행에 위치 */
     height: 360px;
+    width: 358px;
     box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 1em;
+    overflow: hidden;
 }
 
 
@@ -461,31 +491,117 @@
 
 
 .adslides {
-    position: relative; /* 슬라이드 버튼을 위한 위치 조정 */
-    display: flex; /* 슬라이드를 수평으로 배치 */
-    height: 350px; /* 높이 350px 설정 */
-    width: 358px; 
-    overflow: hidden; /* 슬라이드 범위를 벗어나는 부분을 숨김 */
-    transition: transform 0.5s ease; /* 슬라이드 전환 애니메이션 */
+    position: relative;
+    display: flex;
+    height: 350px;
+    width: calc(358px * 3);
+    transition: transform 0.5s ease;
 }
 
 .adslide {
-    flex-shrink: 0; /* 슬라이드가 축소되지 않도록 설정 */
-    height: 350px; /* 슬라이드 높이 설정 */
-    width: 358px; /* 슬라이드 너비 설정 */
+    flex-shrink: 0;
+    height: 350px;
+    width: 358px;
+    
 }
 /* 각 슬라이드 배경색 설정 */
 .adslide1 {
     background-color: white; /* 첫 번째 슬라이드 배경색 설정 */
-
+    border-radius: 1em;
 }
 
 .adslide2 {
-    background-color: rgb(161, 161, 161);
+    background-color: white;
 
 }
 
 .adslide3 {
-    background-color: rgb(104, 102, 102);
+    background-color: white;
+
+}
+
+
+.slide-controls {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    bottom: 80px;
+}
+
+.slide-btn {
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.slide-btn:hover {
+    background-color: #00aaf8;
+}
+
+.active-btn {
+    background-color: #E23E57;
+    color: white;
+}
+
+
+.slide-controls2 {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    bottom: 80px;
+}
+
+.slide-btn2 {
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.slide-btn2:hover {
+    background-color: #00aaf8;
+}
+
+.active-btn2 {
+    background-color: #E23E57;
+    color: white;
+}
+
+
+
+.crewslides {
+    position: relative;
+    display: flex;
+    height: 360px;
+    width: calc(358px * 3);
+    transition: transform 0.5s ease;
+}
+
+.crewslide {
+    flex-shrink: 0;
+    height: 360px;
+    width: 358px;
+    
+}
+/* 각 슬라이드 배경색 설정 */
+.crewslide1 {
+    background-color: white; /* 첫 번째 슬라이드 배경색 설정 */
+    border-radius: 1em;
+}
+
+.crewslide2 {
+    background-color: white;
+
+}
+
+.crewslide3 {
+    background-color: white;
 
 }

@@ -9,8 +9,8 @@
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
     <link rel="stylesheet" href="./css/mainstyles.css"> 
-    <link rel="stylesheet" href="./css/navstyle.css"> 
     <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/navstyle.css"> 
 </head>
 <body>
   <!-- 헤더 영역 -->
@@ -39,7 +39,7 @@
                 <a href="./diet-diary.html" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
             </li>
             <li>
-                <a href="./recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                <a href="./recruitment.file/recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
             </li>
             <li>
                 <a href="./honeytip/honeytip-page.html" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
@@ -71,7 +71,7 @@
                 <div class="profile-hello" id="profile-hello"></div>
                 <div>
                     <!-- <img class="emotion-box" id="emotion-image" src="./img/emotion/thrill.png" onclick="emotionlevelm()" style="cursor: pointer;"> -->
-                    <img class="emotion-box" id="emotion-image" src="./img/emotion/thrill.png" onclick="openEmotionPopup()" style="cursor: pointer;">
+                    <img class="emotion-box" id="emotion-image" src="./img/emotion/happy.jpg" onclick="openEmotionPopup()" style="cursor: pointer;">
                 </div>
             </div>
             <!-- 2번 슬라이드 -->
@@ -153,10 +153,11 @@
             <!-- 1번 슬라이드: 프로필 등록 박스 -->
             <div class="adslide adslide1">
                 <div class="card-header">
-                    <img src="./img/weight-loss.jpg" alt="card-image" class="card-image" width="358px" height="170px">
+                    <img class=imge src="./img/weight-loss.jpg" alt="card-image" class="card-image" width="358px" height="200px"
+                    onclick="location.href='./honeytip/honeytip-detail1.html'">
                 </div>
                 <div class="card-body">
-                    <span class="tag-cardcolor">Tip</span>
+                    <span class="tag-cardcolor">&nbsp;&nbsp;Tip</span>
                     <h4>올바른 다이어트 방법</h4>
                 </div>
                 <div class="card-footer"></div>
@@ -164,86 +165,115 @@
             <!-- 2번 슬라이드 -->
             <div class="adslide adslide2">
                 <div class="card-header">
-                    <img src="./img/weight-loss.jpg" alt="card-image" class="card-image" width="358px" height="170px">
+                    <img class=imge src="./img/running.jpg" alt="card-image" class="card-image" width="358px" height="200px"
+                    onclick="location.href='./honeytip/honeytip-detail2.html'">
                 </div>
                 <div class="card-body">
-                    <span class="tag-cardcolor">Tip</span>
-                    <h4>올바른 다이어트 방법</h4>
+                    <span class="tag-cardcolor">&nbsp;&nbsp;Tip</span>
+                    <h4>당신이 뛰는 이유</h4>
                 </div>
                 <div class="card-footer"></div>
             </div>
             <!-- 3번 슬라이드 -->
             <div class="adslide adslide3">
                 <div class="card-header">
-                    <img src="./img/weight-loss.jpg" alt="card-image" class="card-image" width="358px" height="170px">
+                    <img class=imge src="./img/desperate.jpg" alt="card-image" class="card-image" width="358px" height="200px"
+                    onclick="location.href='./honeytip/honeytip-detail3.html'">
                 </div>
                 <div class="card-body">
-                    <span class="tag-cardcolor">Tip</span>
-                    <h4>올바른 다이어트 방법</h4>
+                    <span class="tag-cardcolor">&nbsp;&nbsp;Tip</span>
+                    <h4>컨디션이 안 좋을 때는</h4>
                 </div>
                 <div class="card-footer"></div>
             </div>
         </div>
         <!-- 좌/우 화살표 버튼은 슬라이드 컨테이너와 같은 레벨에 배치 -->
-        <button class="adarrow left" onclick="prevSlide2()">&#10094;</button>
-        <button class="adarrow right" onclick="nextSlide2()">&#10095;</button>
+        <div class="slide-controls">
+            <button class="slide-btn" onclick="goToSlide(0)"></button>
+            <button class="slide-btn" onclick="goToSlide(1)"></button>
+            <button class="slide-btn" onclick="goToSlide(2)"></button>
+        </div>
     </div>
     <!-- Right bottom left div -->
     <div class="small-div adbanner"> 
         <div class="ad-slides">
-            <img src="./img/ad_image/ad1.jpg" alt="Ad 1" width="358px" height="170px" 
+            <img class=imge src="./img/ad_image/ad1.jpg" alt="Ad 1" width="358px" height="170px" 
             onclick="location.href='https://smartstore.naver.com/neoshell/products/5006647672'">
-            <img src="./img/ad_image/ad2.gif" alt="Ad 2" width="358px" height="170px" 
+            <img class=imge src="./img/ad_image/ad2.gif" alt="Ad 2" width="358px" height="170px" 
             onclick="location.href='https://www.nike.com/kr/t/%ED%8E%98%EA%B0%80%EC%88%98%EC%8A%A4-41-%EB%82%A8%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-k2kls9T1/FD2722-002'">
-            <img src="./img/ad_image/ad3.jpg" alt="Ad 3" width="358px" height="170px" 
+            <img class=imge src="./img/ad_image/ad3.jpg" alt="Ad 3" width="358px" height="170px" 
             onclick="location.href='https://brand.naver.com/pisnet/products/10748085499'">
         </div>
     </div>
 
     <!-- Right bottom right div -->
         <div class="small-div crew-box">
-            <!-- <div class="image-container">
-                    <img
-                    src="https://th.bing.com/th/id/OIP.JPrx-_jn5OExZrLujhOqXQHaFS?w=358&h=170&c=7&r=0&o=5&pid=1.7"
-                    class="crew-image"
-                    />
-                <h2>천안역 런닝</h2>
-                <h4>모집인원 : 4명</h4>
-                <h4>일시 : 24/10/13 3시</h4>
-                <h4>장소 : 중앙시장</h4>
-                <h4>회비 : FREE</h4>
-            </div> -->
-
-            <div class="image-container">
-                <img src="https://th.bing.com/th/id/OIP.JPrx-_jn5OExZrLujhOqXQHaFS?w=358&h=170&c=7&r=0&o=5&pid=1.7" class="crew-image">
+            <div class="crewslides">
+                <div class="crewslide crewslide1">
+                    <div class="crew-header">
+                        <img class=imge src="./img/3.jpg"  width="358px" height="200px"
+                        onclick="location.href='./recruitment.file/recruitment-Description1.html'">
+                    </div>
+                        <div class="crew-body">
+                        <span class="tag-crewcolor">&nbsp;&nbsp;Crew</span>
+                        <h4>서울 크루모집</h4>
+                        </div>
+                        <div class="crew-footer"></div>
+                <!-- 2번 슬라이드 -->
+                </div>
+                <div class="crewslide crewslide2">
+                    <div class="crew-header">
+                        <img class=imge src="./img/2.jpg" width="358px" height="200px"
+                        onclick="location.href='./recruitment.file/recruitment-Description2.html'">
+                    </div>
+                    <div class="crew-body">
+                        <span class="tag-crewcolor">&nbsp;&nbsp;Crew</span>
+                        <h4>아산역 런닝</h4>
+                    </div>
+                    <div class="crew-footer"></div>
+                </div>
+                <!-- 3번 슬라이드 -->
+                <div class="crewslide crewslide3">
+                    <div class="crew-header">
+                        <img class=imge src="./img/7.jpg" width="358px" height="200px"
+                        onclick="location.href='./recruitment.file/recruitment-Description3.html'">
+                    </div>
+                    <div class="crew-body">
+                        <span class="tag-crewcolor">&nbsp;&nbsp;Crew</span>
+                        <h4>산악</h4>
+                    </div>
+                    <div class="crew-footer"></div>
+                </div>
             </div>
-            <div class="crew-body">
-                <span class="tag-crewcolor">CREW</span>
-                <h4>천안역 런닝모임</h4>
-                <h5>모집인원 : 4명</h5>
-                <h5>일시 : 2024.10.13 / 15시</h5>
-                <h5>장소 : 중앙시장</h5>
-                <h5>회비 : FREE</h5>
-            </div>
-            <div class="crew-footer">
-
-                <!-- <div class="readMore">
-                    <button type="button" class="readMorebtn" onclick="location.href='./recruitment.html'">게시글보기</button>
-                </div> -->
-            </div>
+        <!-- 좌/우 화살표 버튼은 슬라이드 컨테이너와 같은 레벨에 배치 -->
+        <div class="slide-controls2">
+            <button class="slide-btn2" onclick="goToSlide3(0)"></button>
+            <button class="slide-btn2" onclick="goToSlide3(1)"></button>
+            <button class="slide-btn2" onclick="goToSlide3(2)"></button>
+        </div>
+        </div>
     </div>
-</div>
+
+    <script>
+        // 페이지 로드 시 localStorage에서 저장된 이미지를 불러와서 설정
+        window.onload = function() {
+            const selectedImage = localStorage.getItem('selectedEmotion');
+            if (selectedImage) {
+                document.getElementById('emotion-image').src = selectedImage; // 이미지 경로 업데이트
+                alert("선택된 이미지가 로드되었습니다: " + selectedImage);
+            } else {
+                alert("선택된 이미지가 없습니다.");
+            }
+        }
+    </script>
 <!-- JavaScript 파일 연결 -->
 <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
 <script src="./js/mainslide.js"></script>
-<script src="./js/mainslide2.js"></script>
 <script src="./js/hello.js"></script>
 <script src="./js/adslide.js"></script>
 <script src="./js/diet-diary.js"></script>
 <script src="./js/navscript.js"></script>
-<script src="./js/start.js"></script>
 <script src="./js/mainnav.js"></script>
 <script src="./js/emotionm.js"></script>
-<script src="./js/main
 </body>
 </html>

@@ -1,0 +1,787 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #EEE;
+    display: grid;
+    place-items: center;
+}
+
+i{
+    padding: 10px;
+    color: #121212;
+}
+
+header{
+    width: 100%;
+    background-color: #FFF;
+    position: fixed;
+    color: #121212;
+    padding: 0 20px;
+    /* 헤더 고정 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a.logo{
+    color: #121212;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 35px;
+    cursor: pointer;
+    font-family: cursive;
+}
+
+nav ul:not(:where([class~='pagebar'] *)){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+}
+
+nav ul li:not(:where([class~='pagebar'] *)){
+    line-height: 60px;
+    margin: 0 5px;
+}
+
+nav ul a:not(:where([class~='pagebar'] *)){
+    color: #121212;
+    font-size: 18px;
+    padding: 5px 13px;
+    border-radius: 4px;
+    transition: .4s;
+    font-family: Pretendard;
+}
+
+.active, nav ul a:hover:not(:where([class~='pagebar'] *)){
+    background: #E23E57;
+    color: #FFF;
+    padding: 10px;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px;
+    font-size: 40px;
+}
+
+section#running{
+    color: #121212;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+section#food{
+    color: #121212;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+section#crew{
+    color: #121212;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+section#tips{
+    color: #121212;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.checkbtn{
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/* 알알꿀팁 스타일 시작 */
+
+.containerBox{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin-block: 2rem;
+    gap: 2rem;
+}
+
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: 135px;
+    padding-bottom: 15px;
+    font-family: Pretendard;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem);
+    overflow: hidden;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    background: white;
+}
+
+.card-body{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.tag{
+    align-self: flex-start;
+    padding: .25em .75em;
+    border-radius: 1em;
+    font-size: 0.75rem;
+}
+
+.tag + .tag{
+    margin-left: .5em;
+}
+
+.tag-blue{
+    font-family: Pretendard;
+    background: #3962eb;
+    /* 그라데이션 요소 */
+    /* background: linear-gradient(to bottom, #E23E57, white); */
+    color: white;
+}
+.card-body h4{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.card-footer{
+    display: flex;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+
+.readMorebtn{
+    background-color: white;
+    color: #88304E;
+    width: 100px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    margin-right: 70px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: Pretendard;
+    text-decoration: none;
+}
+
+.readMorebtn:hover{
+    background-color: #E23E57;
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* a링크 글자색 없애기 */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.writebtn{
+    background-color: #88304E;
+    color: #FFF;
+    width: 100px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    margin-right: 70px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 90%;
+    font-family: Pretendard;
+    text-decoration: none;
+}
+
+.writebtn:hover{
+    background-color: #E23E57;
+    color: #FFF;
+}
+
+.l-btn{
+    color: #121212;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 5px 13px;
+    border-radius: 4px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.l-btn:hover{
+    background: #E23E57;
+    color: #FFF;
+    padding: 10px;
+}
+
+.containerform{
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    display: flex;
+    height: 775px;
+}
+
+.form-container{
+    margin: 0 20px;
+}
+
+.column-left{
+    padding: 70px;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.column-right{
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* 포스팅 작성 */
+.texteditor {
+    max-width: 991px;
+    width: 100%;
+    background: #FFF;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.toolbar {
+    padding: 16px;
+    background: #DDD;
+    /* border-radius: 8px; */
+}
+
+.toolbar .btn-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.toolbar .btn-toolbar button {
+    background: #FFF;
+    border: 2px solid #DDD;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+#contentByhoney {
+    padding: 16px;
+    outline: none;
+    /* outline-color: #DDD; */
+    border: 2px solid #DDD;
+    height: 500px;
+    max-height: 500px;
+    overflow: auto;
+}
+
+/* 대표 이미지 */
+#root{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 350px;
+}
+
+.fileTitle{
+    text-align: center;
+    margin-top: 130px;
+}
+
+.fileImage{
+    /* display: flex; */
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.fileImage .upload-box{
+    width: 100%;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.fileImage .upload-box .drag-file{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #DDD;
+}
+
+.fileImage .upload-box .drag-file .image{
+    width: 40px;
+    /* height: 350px; */
+}
+.fileImage .upload-box .drag-file .message{
+    margin-bottom: 0;
+}
+.fileImage .upload-box .drag-file .preview{
+    display: none;
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 100%;
+    height: 100%;
+}
+.fileImage .upload-box .file-label{
+    margin-top: 30px;
+    background-color: #E23E57;
+    color: #FFF;
+    text-align: center;
+    padding: 10px 0;
+    width: 65%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.fileImage .upload-box .file{
+    display: none;
+}
+
+.btn{
+    background-color: #88304E;
+    color: #FFF;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+    font-family: Pretendard;
+    margin-top: 100px;
+    width: 100px;
+}
+
+.btn:hover{
+    background-color: #E23E57;
+}
+
+
+.textForm{
+    margin-bottom: 20px;
+}
+.textTitle{
+    padding: 10px;
+    width: 500px;
+    font-size: 16px;
+    border: 2px solid #DDD;
+    color: #121212;
+    outline: none;
+}
+
+@media (max-width: 700px) {
+    .fileImage{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .fileImage .upload-box{
+        width: 100%;
+        box-sizing: border-box;
+        margin-right: 0;
+    }
+    .fileImage .upload-box .drag-file{
+        height: 150px;
+    }
+    .fileImage .files{
+        width: 100%;
+        box-sizing: border-box;
+        margin-right: 0;
+        overflow: initial;
+    }
+}
+
+/* 알알꿀팁 상세 페이지 */
+.post-container{
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 65px;
+    position: relative;
+}
+
+.post {
+    margin: 0 20px;
+}
+
+.post-box {
+    margin: 0 20px;
+}
+
+.post-title {
+    margin-bottom: 64px;
+    margin: 0 20px;
+}
+
+.post-title .tag-red {
+    background: #E23E57;
+    /* 그라데이션 요소 */
+    /* background: linear-gradient(to bottom, #E23E57, white); */
+    color: white;
+    position: absolute;
+    margin-top: -25px;
+}
+
+.postbox-title {
+    font-size: 42px;
+    margin-top: 65px;
+    margin-bottom: 16px;
+    color: #121212;
+}
+
+.postbox-title-info {
+    display: flex;
+    list-style: none;
+}
+
+.postbox-title-info li {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #121212;
+    font-weight: 400;
+}
+
+.postbox-title-info li>i {
+    color: blue;
+}
+
+.featured-image {
+    width: 100%;
+    height: 510px;
+    overflow: hidden;
+    margin-bottom: 64px;
+    border-radius: 8px;
+    filter: drop-shadow(0px 4px 4px #D2DAE5);
+}
+
+.featured-image img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-content {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding-left: 96px;
+    padding-right: 96px;
+    background-color: #FFF;
+    border-radius: 8px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+}
+
+.post-content h2,
+.post-content p,
+.post-content ul,
+.post-content blockquote {
+    margin-bottom: 32px;
+}
+
+.post-content h2 {
+    font-size: 24px;
+}
+
+.post-content p {
+    line-height: 150%;
+    font-size: 18px;
+}
+
+.post-content blockquote {
+    padding-top: 16px;
+    padding-left: 32px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    border-radius: 8px;
+    background-color: #E23E57;
+    color: #FFF;
+    line-height: 150%;
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.post-content blockquote:hover {
+    background-color: #EEE1E3;
+    color: #88304E;
+}
+
+.p-btns .p-edit {
+    background-color: #88304E;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Pretendard;
+    margin-top: 100px;
+    margin-right: 15px;
+    width: 100px;
+}
+
+.p-btns .p-edit:hover {
+    background-color: #E23E57;
+}
+
+.p-btns .p-delete {
+    background-color: #88304E;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Pretendard;
+    margin-top: 100px;
+    margin-right: 15px;
+    width: 100px;
+}
+
+.p-btns .p-delete:hover {
+    background-color: #E23E57;
+}
+
+
+.p-btns .p-report{
+    background-color: #E23E57;
+    color: #FFF;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+    font-family: Pretendard;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    width: 100px;
+}
+
+.p-btns .p-report:hover {
+    background-color: #88304E;
+}
+
+.p-btns .P-back{
+    background-color: #E23E57;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+    font-family: Pretendard;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+}
+
+.p-btns .P-back:hover {
+    background-color: #E23E57;
+}
+/* 신고 모달 */
+/* .modalOpen{
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    padding: 20px;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content{
+    max-width: 500px;
+    width: 100%;
+    height: 150px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: scale(0.8);
+}
+
+.modal.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal.show .modal-content{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.exit{
+    color: #121212;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.exit:hover{
+    color: #121212;
+} */
+/* 
+.p-btns2{
+    position: fixed;
+} */
+
+/* 페이징네이션 */
+[data-pagination],
+[data-pagination] *,
+[data-pagination] *::before,
+[data-pagination] *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: auto;
+}
+
+[data-pagination] {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 400;
+    font-family: pretendard;
+    -webkit-text-size-adjust: 100%;
+    margin: 1em auto;
+    text-align: center;
+    transition: font-size 0.2s ease-in-out;
+}
+
+[data-pagination] ul {
+    list-style: none;
+    display: inline;
+    font-size: 100%;
+    margin: 0;
+    padding: 0.5em;
+}
+
+[data-pagination] ul li {
+    display: inline-block;
+    font-size: 100%;
+    width: auto;
+    border-radius: 3px;
+}
+
+[data-pagination]>a {
+    font-size: 140%;
+}
+
+[data-pagination] a {
+    color: #121212;
+    font-size: 100%;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+[data-pagination] a:focus,
+[data-pagination] a:hover {
+    color: #E23E57;
+}
+
+[data-pagination] li.current {
+    background: #EEE;
+}
+
+[data-pagination] .disabled,
+[data-pagination] [hidden],
+[data-pagination] [disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+}

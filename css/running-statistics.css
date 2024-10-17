@@ -20,7 +20,7 @@ body {
     margin: 20px 10px 0 0;
 }
 .run-state .rstate-contents .rstate-title .rstate-btns .rsbtn {
-    background-color: #88304E;
+    background-color: #88304e;
     color: #ffffff;
     border-radius: 3px;
     width: 100px;
@@ -42,27 +42,28 @@ body {
 }
 .run-state .rstate-contents .rstate-main .rstate-top {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .run-state .rstate-contents .rstate-main .rstate-bottom {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .run-state .rstate-contents .rstate-main .rstate-card {
     display: flex;
     flex-direction: column;
-    width: 49%;
-    height: 350px;
+    width: 100%;
+    height: 650px;
     padding: 20px;
     margin: 10px;
     border: 1px solid #121212;
     border-radius: 1em;
     box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 }
 .run-state .rstate-contents .rstate-main .rstate-card .rscard-img {
     margin-top: 20px;
-    width: 500px;
-    height: 250px;
+    width: 100%;
+    height: 550px;
     border-radius: 10px;
     border: #88304e solid 1px;
 }
@@ -75,11 +76,21 @@ body {
     flex-direction: row;
     margin: 15px -10px 0 -10px;
 }
-.run-state .rstate-contents .rstate-main .rstate-card .rscard-total .rscard-att {
+.run-state
+    .rstate-contents
+    .rstate-main
+    .rstate-card
+    .rscard-total
+    .rscard-att {
     display: flex;
     flex-direction: column;
 }
-.run-state .rstate-contents .rstate-main .rstate-card .rscard-total .elem-title {
+.run-state
+    .rstate-contents
+    .rstate-main
+    .rstate-card
+    .rscard-total
+    .elem-title {
     text-align: center;
     font-weight: bold;
     margin-top: -15px;
@@ -89,14 +100,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 160px;
+    width: 350px;
     height: 20vh;
     padding: 20px;
     margin: 30px 4px;
     border: none;
     border-radius: 15px;
     font-size: 30px;
-    background-color: #d64545d7;
+    background-color: #88304e;
     color: #ffffff;
 }
 .run-state .rstate-contents .rstate-main .rstate-card .rscard-elem:hover {
@@ -104,4 +115,19 @@ body {
     color: #121212;
     transition: 2s;
     font-weight: bold;
+}
+.st_up_page {
+    border: none;
+    background-color: #88304e;
+    color: #ffffff;
+    border-radius: 2px;
+    font-size: 20px;
+    width: 120px;
+    padding: 15px;
+    float: right;
+    margin-right: 80px;
+    margin-bottom: 100px;
+}
+.st_up_page:hover {
+    background-color: #e23e57;
 }

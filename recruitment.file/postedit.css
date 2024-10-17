@@ -1,0 +1,176 @@
+/* 크루모집모달 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #FFF;
+  }
+  
+  #myDialog {
+  max-width: 450px; 
+  height: 82%; 
+  padding: 10px; 
+  border: none;
+  border-radius: 1em;
+  box-shadow: 0 0.1rem 1rem rgba(53, 46, 46, 0.1);
+  background-color: #FFF; 
+  top: 50%; 
+  left: 50%;
+  padding: 30px;
+  transform: translate(-50%, -50%); /* 중앙 정렬 */
+  }
+  
+  .modal{
+    top: 0; /* 상단 정렬 */
+    left: 0;
+    right: 0;
+    height: 100%; /* 전체 화면 높이 */
+  }
+  
+  /* 인풋스타일 */
+  .input1, 
+  .input2  {
+    border: none;
+    background-color:#EEE;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 1em;
+    font-family: Pretendard; 
+    font-size: 20px;
+  }
+  .input3 {
+    border: none;
+    background-color:#EEE;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 1em;
+    font-family: Pretendard; 
+  }
+  .input-ndtf{
+    border: none;
+    background-color:#EEE;
+    width: 25.8%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 1em;
+    font-family: Pretendard; 
+  }
+  .input-number{
+    border: none;
+    background-color:#EEE;
+    width: 17.6%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 1em;
+    font-family: Pretendard; 
+  }
+  /* 클로즈이미지 조절 */
+  .close-ic { 
+    background-color: #FFF; 
+    color: #aaa; 
+    float: right; 
+    font-size: 30px; 
+    font-weight: bold; 
+    border: none; 
+  } 
+  .close-ci:hover, .close:focus { 
+      color: #aaa; 
+      cursor: pointer; 
+  } 
+  
+  /* 크루모집 이미지박스조절 */
+  .image-upload-box {
+    width: 100%; /* Adjust the width to match your layout */
+    height: 300px;
+    background-color: #EEE;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-family: Pretendard;
+  }
+  .upload-icon {
+    width: 100%; /* Adjust the icon size if needed */
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  
+  .upload-text {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    font-family: Pretendard;
+  }
+  
+  .size-info {
+    font-size: 20px;
+    color: #888;
+  }
+  
+  .size-info strong {
+    color: #333;
+    font-weight: 600;
+  }
+  /* 파일선택 */
+  .file-label1{
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    border-radius: 15px;
+    border: none;
+    background-color: #E23E57;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    transition: all .3s ease;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .file-label1:hover {
+    background-color: #88304E;
+  }
+  .file1{
+    display: none;
+    position: absolute;
+    top: 620px; 
+    padding: 10px 20px;
+  }
+  /* 저장버튼 */
+  .inside{
+    font-family: pretendard;
+    border: none;
+    position: absolute;
+    left: 175px;
+    margin-top: -3px;
+    background-color: #EEE1E3;
+    color: #88304E;
+    text-align: center;
+    padding: 10px 0;
+    width: 20%;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .important-box{
+    position: absolute;
+    top: 100%;
+    
+  
+  }

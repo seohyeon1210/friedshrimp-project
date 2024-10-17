@@ -70,10 +70,14 @@
                 <div class="content_modal">
                     <form class="start_form">
                         <button class="res-btn" type="reset">
-                            <img class="close_ic log_close" src="./img/close-ic.png" />
+                            <img
+                                class="close_ic log_close"
+                                src="./img/close-ic.png"
+                            />
                         </button>
                         <input
                             name="user_id"
+                            id="login_id"
                             class="form_deco log_ent"
                             type="text"
                             placeholder="아이디"
@@ -129,13 +133,26 @@
                                 type="text"
                                 placeholder="아이디"
                                 maxlength="10"
-                                
                             />
-                            <button type="button" class="id_checkbtn">중복확인</button>
+                            <button
+                                type="button"
+                                class="id_checkbtn"
+                                onclick="id_checkfun()"
+                            >
+                                중복확인
+                            </button>
+                            <button
+                                type="button"
+                                class="btn_rock"
+                                onclick="id_rock_unrock('1')"
+                            >
+                                ID변경
+                            </button>
                         </div>
                         <input
                             name="user_pw"
-                            id = 'upw_first';
+                            id="upw_first"
+                            ;
                             class="form_deco sign_ent"
                             type="password"
                             placeholder="비밀번호"
@@ -143,7 +160,8 @@
                         />
                         <input
                             name="user_pw2"
-                            id = 'upw_second';
+                            id="upw_second"
+                            ;
                             class="form_deco sign_ent"
                             type="password"
                             placeholder="비밀번호 확인"
@@ -155,7 +173,7 @@
                             class="form_deco sign_ent"
                             type="text"
                             placeholder="이름"
-                            maxlength="5"
+                            maxlength="15"
                         />
                         <input
                             id="user_age"
@@ -168,6 +186,7 @@
                             class="form_deco sign_ent"
                             type="text"
                             placeholder="비밀번호 키워드"
+                            maxlength="10"
                         />
                         <button
                             type="button"
@@ -210,10 +229,7 @@
                             required
                         />
                         <div class="find_btns">
-                            <button
-                                type="button"
-                                class="find_btn login_ck"
-                            >
+                            <button type="button" class="find_btn login_ck">
                                 확인
                             </button>
                         </div>
@@ -234,7 +250,7 @@
                                 id="closePasswordChangeModal"
                             />
                         </button>
-                        <p class="change_pw"></p>
+                        <p class="change_id"></p>
                         <input
                             id="change_pw"
                             class="form_deg"
@@ -251,11 +267,11 @@
                             maxlength="10"
                             required
                         />
-                        <p class="pw_info"></p>
+                        <p class="pw_info2"></p>
                         <div class="find_btns">
                             <button
                                 type="button"
-                                class="change_btn login_ck"
+                                class="login_ck"
                                 id="confirmPasswordChange"
                             >
                                 변경 저장
@@ -392,30 +408,41 @@
                     <div class="cn-right">
                         <form class="cn-form">
                             <div class="form-group">
-                                <label for="cn-name">이름</label>
-                                <input type="text" id="cn-name" />
+                                <input
+                                    type="text"
+                                    id="cn-name"
+                                    maxlength="20"
+                                    placeholder="이름을 입력하세요"
+                                />
                             </div>
                             <div class="form-group">
-                                <label for="cn-email">이메일</label>
-                                <input type="email" id="cn-email" />
+                                <input
+                                    type="email"
+                                    id="cn-email"
+                                    maxlength="27"
+                                    placeholder="이메일을 입력하세요"
+                                />
                             </div>
                             <div class="form-group">
-                                <label for="cn-contents">내용</label>
-                                <textarea id="cn-contents"></textarea>
+                                <textarea
+                                    id="cn-contents"
+                                    maxlength="50"
+                                    placeholder="내용은 최대 50글자"
+                                ></textarea>
                             </div>
                             <button
                                 type="button"
                                 class="cn-btns"
                                 onclick="con_sub()"
                             >
-                                SEND
+                                문의하기
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="/js/resetpw.js"></script>
+        <script src="./js/resetpw.js"></script>
         <script src="./js/start-home.js"></script>
         <script src="./js/navscript.js"></script>
         <script

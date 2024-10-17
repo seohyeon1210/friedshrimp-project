@@ -34,7 +34,7 @@
                         <a href="./diet-diary.html" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
                     </li>
                     <li>
-                        <a href="./recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                        <a href="./recruitment.file/recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
                     </li>
                     <li>
                         <a href="./honeytip/honeytip-page.html" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
@@ -63,7 +63,35 @@
                     </div>
                 </div>
                 <div class="rstate-main">
-                    <div class="rstate-top">
+                    <div class="rstate-bottom">
+                        <div class="rstate-card" style="height: 370px">
+                            <p class="rscard-title">이번 주 종합 수치</p>
+                            <div class="rscard-total">
+                                <div class="rscard-att">
+                                    <div class="rscard-elem">2시간</div>
+                                    <p class="elem-title">시간</p>
+                                </div>
+                                <div class="rscard-att">
+                                    <div class="rscard-elem">40km</div>
+                                    <p class="elem-title">거리</p>
+                                </div>
+                                <div class="rscard-att">
+                                    <div class="rscard-elem">600Kcal</div>
+                                    <p class="elem-title">소모칼로리</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rstate-card">
+                            <p class="rscard-title">
+                                저번 주/이번 주 소모칼로리 비교
+                            </p>
+                            <img
+                                class="rscard-img"
+                                src="./img/running-kcal.PNG"
+                            />
+                        </div>
+                    </div>
+                    <div class="rstate-top1">
                         <div class="rstate-card">
                             <p class="rscard-title">
                                 저번 주/이번 주 런닝시간 비교
@@ -83,43 +111,12 @@
                             />
                         </div>
                     </div>
-                    <div class="rstate-bottom">
-                        <div class="rstate-card">
-                            <p class="rscard-title">
-                                저번 주/이번 주 소모칼로리 비교
-                            </p>
-                            <img
-                                class="rscard-img"
-                                src="./img/running-kcal.PNG"
-                            />
-                        </div>
-                        <div class="rstate-card">
-                            <p class="rscard-title">이번 주 종합 수치</p>
-                            <div class="rscard-total">
-                                <div class="rscard-att">
-                                    <div class="rscard-elem">
-                                        2시간
-                                    </div>
-                                    <p class="elem-title">시간</p>
-                                </div>
-                                <div class="rscard-att">
-                                    <div class="rscard-elem">
-                                        40km
-                                    </div>
-                                    <p class="elem-title">거리</p>
-                                </div>
-                                <div class="rscard-att">
-                                    <div class="rscard-elem">
-                                        600Kcal
-                                    </div>
-                                    <p class="elem-title">소모칼로리</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
+        <button type="button" class="st_up_page" onclick="up_page()">
+            위로가기
+        </button>
         <script src="./js/navscript.js"></script>
         <script
             src="https://kit.fontawesome.com/1e52e7745d.js"

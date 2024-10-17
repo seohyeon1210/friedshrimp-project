@@ -7,7 +7,8 @@
         <title>Fried Shrimp 식단일기 페이지</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"/>
         <link rel="stylesheet" href="./css/diet-diary.css">
-        <link rel="stylesheet" href="./css/navstyle.css" />
+        <link rel="stylesheet" href="./css/navstyle.css"> 
+    
     </head>
     <body>
         <!-- --------------상단 메뉴 바 영역-------------------- -->
@@ -36,7 +37,7 @@
                         <a href="./diet-diary.html" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
                     </li>
                     <li>
-                        <a href="./recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                        <a href="./recruitment.file/recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
                     </li>
                     <li>
                         <a href="./honeytip/honeytip-page.html" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
@@ -64,11 +65,22 @@
 
             <div class="div1">
                 <div class="card">
-                    어제의 총 섭취 칼로리
+                    <h3>어제의 총 섭취 칼로리</h3>
+                    <div class="calorie-progress2">
+                        <div class="calorie-bar2"></div>
+                    </div>
+                    <div class="calorie-details2">
+                        <strong>1900 / 2000 Kcal</strong>
+                    </div>
+                    <div class="footer-text2">
+                        어제는 목표보다 100kcal 덜 드셨네요!
+                    </div>
                 </div>
 
                 <div class="card">
-                    오늘은 어제보다 100kcal 적게 먹었어요!
+                    <h3>어제와 오늘 칼로리 비교</h3>
+                    <br>
+                    <p class="p2" id="calorieComparisonMessage"></p>
                 </div>
 
                 <div class="card calorie-card">
@@ -80,20 +92,35 @@
                         <strong id="today-calorie">0 / 0 Kcal</strong>
                     </div>
                     <div class="footer-text">
-                        아직 <span>1200kcal</span>가 남았어요!
+                        아직 <span>0kcal</span>가 남았어요!
                     </div>
                 </div>
             </div>
 
             <div class="div2">
                 <div class="card2" id="breakfast-card">
-                    아침
+                    <h3>아침</h3>
+                    <br>
+                    <p>먹은음식 - kcal</p>
+                    <br>
+                    <p><hr></p>
+                    <br>
                 </div>
                 <div class="card2" id="lunch-card">
-                    점심
+                    <h3>점심</h3>
+                    <br>
+                    <p>먹은음식 - kcal</p>
+                    <br>
+                    <p><hr></p>
+                    <br>
                 </div>
                 <div class="card2" id="dinner-card">
-                    저녁
+                    <h3>저녁</h3>
+                    <br>
+                    <p>먹은음식 - kcal</p>
+                    <br>
+                    <p><hr></p>
+                    <br>
                 </div>
             </div>
         </div>
@@ -108,19 +135,19 @@
                     <!-- 아침 칼로리 입력 -->
                     <div class="input-group">
                         <label for="breakfast-calorie">아침 칼로리:</label>
-                        <input type="number" id="breakfast-calorie" placeholder="칼로리 입력" />
+                        <input type="number" id="breakfast-calorie" placeholder="칼로리 입력" max="10000" />
                     </div>
 
                     <!-- 점심 칼로리 입력 -->
                     <div class="input-group">
                         <label for="lunch-calorie">점심 칼로리:</label>
-                        <input type="number" id="lunch-calorie" placeholder="칼로리 입력" />
+                        <input type="number" id="lunch-calorie" placeholder="칼로리 입력" max="10000" />
                     </div>
 
                     <!-- 저녁 칼로리 입력 -->
                     <div class="input-group">
                         <label for="dinner-calorie">저녁 칼로리:</label>
-                        <input type="number" id="dinner-calorie" placeholder="칼로리 입력" />
+                        <input type="number" id="dinner-calorie" placeholder="칼로리 입력" max="10000" />
                     </div>
 
                     <!-- 저장 버튼 -->
@@ -158,13 +185,7 @@
                     <!-- 칼로리 입력 -->
                     <div class="input-group">
                         <label for="food-calorie">칼로리:</label>
-                        <input type="number" id="food-calorie" placeholder="칼로리 입력" />
-                    </div>
-
-                    <!-- 먹은 시간 입력 -->
-                    <div class="input-group">
-                        <label for="eating-time">먹은 시간:</label>
-                        <input type="time" id="eating-time" />
+                        <input type="number" id="food-calorie" placeholder="칼로리 입력" max="30000" />
                     </div>
 
                     <!-- 저장 버튼 -->
