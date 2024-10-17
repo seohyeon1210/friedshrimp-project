@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>크루모집 상세페이지</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" />
+    <link rel="stylesheet" href="./recruitment-Description.css" />
+    <link rel="stylesheet" href="../css/navstyle.css"/>
+    <link rel="stylesheet" href="./report.css">
+</head>
+
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <div class="imgHoverEvent logo-show" onclick="location.href='../mainhome.html'">
+                <div class="imgBox1">
+                    <img src="../img/f-logo.png" />
+                </div>
+                <div class="imgBox2">
+                    <img src="../img/shrimp_st_ic.png" />
+                </div>
+                <div class="imgBox3">
+                    <img src="../img/home_logo.png" />
+                </div>
+            </div>
+            <ul id="nav-bar">
+                <li>
+                    <a href="../running-diary.html" class="n-btn"><i class="fa-solid fa-person-running"></i>런닝 일기</a>
+                </li>
+                <li>
+                    <a href="../diet-diary.html" class="n-btn"><i class="fa-solid fa-bowl-food"></i>식단 일기</a>
+                </li>
+                <li>
+                    <a href="./recruitment.html" class="n-btn"><i class="fa-solid fa-people-group"></i>크루</a>
+                </li>
+                <li>
+                    <a href="../honeytip/honeytip-page.html" class="n-btn"><i class="fa-solid fa-circle-exclamation"></i>알알 꿀팁</a>
+                </li>
+                <li>
+                    <button type="button" class="l-btn" onclick="location.href='../start-home.html'">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="title">
+                <h1>해안도로 런닝</h1> 
+                <hr>
+            </div>
+
+            <div class="post-container1">
+                <div class="postBox1">
+                    <div class="post1">
+                        <div class="back">
+                            <button type="button" class="p-back-page" 
+                            onclick="location.href='recruitment.html'">
+                            <i class="fa-solid fa-arrow-left-long fa-2x"></i></button>
+                        </div>
+                        <div class="post-box">
+
+                            <div class="post-title"> 
+                                <span class="tag tag-blue">Crew</span>
+                                <h2 class="postbox-title">해안도로 런닝</h2>
+                            </div>
+                                <ul class="postbox-title-info">
+                                    <li>
+                                        <i class="fa-regular fa-calendar-days"></i>
+                                        2024. 10. 15.
+                                    </li>
+                                    <li class="postbox-title-author">
+                                        <i class="fa-solid fa-user"></i>
+                                        이슬기
+                                    </li>
+                                </ul>
+                            </div>
+                                <figure class="featured-image">
+                                    <img src="./img/road.jpg" alt="crew featured-image">
+                                </figure>
+                                <article class="post-content">
+                                    <h2>해안도로 런닝</h2>
+                                    <p>해안도로 런닝을 진행하고 있습니다.  아침 경치보면서 함께 달려봐요 상쾌한 하루를 시작해봅시다!!
+                                        전 운동하며 건강한 생활을 추구하는 여러분을 환영합니다!</p>
+                                    <h2>모집 상세 정보</h2>
+                                    <p>모집 일자: 2024년 10월 15일<br>장소: 해안도로 런닝<br>참가비: 5000원</p>
+
+                                    <blockquote>같이 해안도로를 달립시다!</blockquote>
+            
+                                </article>
+
+                                <div class="p-btns">
+                                    <button type="button" class="p-edit">수정</button>
+                                    <button type="button" class="p-delete">삭제</button>
+                                    <button id="modal" type="button" class="p-report" onclick="openReportModal()">신고</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top1">
+                <button id="topBtn" class="move-btn" type="button" onclick="move_honey1()">
+                    <i class="fa-solid fa-angles-up"></i>
+                </button>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <div class="modalR" id="honey_Rmodal">
+        <!-- 모달 컨텐츠 -->
+        <div class="modal-Rbox" id="modalRPopup">
+            <form class="modal-Rform" action="#" method="post" id="form_Rhoney">
+                <div class="modal-Rtitle">
+                    <h2><i class="fa-solid fa-triangle-exclamation"></i>경고!</h2>
+                    <p>이 게시글을 <strong>신고</strong>하시겠습니까?</p>
+                    <!-- 모달 닫기 버튼 -->
+                    <button id="exitRBtn" type="button" class="exitR" onclick="rModal_exit()">&times;</button>
+                    <div class="report-btns">
+                        <button type="button" class="Raccept" id="r_accept" onclick="rModal_exit(), report_accept()">네</button>
+                        <button type="button" class="Rcancel" id="r_cancel" onclick="rModal_exit()">아니오</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/1e52e7745d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
+    <script src="./hover.js"></script>
+    <script src="https://unpkg.com/dialog-polyfill@0.5.4/dist/dialog-polyfill.js"></script>
+</body>
+
+</html>
