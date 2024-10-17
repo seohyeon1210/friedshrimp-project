@@ -521,7 +521,7 @@ a{
     margin-top: 60px;
     margin-bottom: -15px;
     margin-left: 30px;
-    color: #008DDA;
+    color: black;
 }
 
 .postbox-title-info {
@@ -559,6 +559,7 @@ a{
 .post-content ul,
 .post-content blockquote {
     margin-bottom: 32px;
+    color: black;
 }
 
 .post-content h2 {
