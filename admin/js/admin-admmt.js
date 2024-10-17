@@ -139,6 +139,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     updateCheckboxLogic();
+
+    // 검색 기능 구현 (제목 및 날짜 검색)
+    searchInput.addEventListener("input", function () {
+        const filter = searchInput.value.toLowerCase();
+        const rows = postTableBody.getElementsByTagName("tr");
+
+        Array.from(rows).forEach(row => {
+            const title = row.cells[3].textContent.toLowerCase();
+            const startDate = row.cells[1].textContent.toLowerCase();
+            const endDate = row.cells[2].textContent.toLowerCase();
+
+            if (title.includes(filter) || startDate.includes(filter) || endDate.includes(filter)) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    });
 });
 
 // 삭제 버튼 클릭 이벤트 리스너
@@ -157,6 +175,7 @@ document.getElementById("deleteButton").addEventListener("click", function () {
         alert("게시물이 삭제되었습니다.");
     }
 });
+
 
 
 
