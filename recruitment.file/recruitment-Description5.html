@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>서울 크루모집 상세페이지</title> <!-- 페이지 제목 변경 -->
+    <title>크루모집 상세페이지</title> 
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" />
-    <link rel="stylesheet" href="./css/recruitment-Description.css" />
-    <link rel="stylesheet" href="./css/navstyle.css"> 
+    <link rel="stylesheet" href="./recruitment-Description.css" />
+    <link rel="stylesheet" href="/css/navstyle.css"> 
 </head>
 
 <body>
@@ -55,42 +55,53 @@
     <main>
         <div class="container">
             <div class="title">
-                <h1> 스트레칭 및 런닝</h1> 
+                <h1>올림픽공원 모집</h1> 
                 <hr>
             </div>
 
-            <div class="post-container"> 
-                <div class="postBox">
-                    <div class="post">
+            <div class="post-container1">
+                <div class="postBox1">
+                    <div class="post1">
+                        <div class="back">
+                            <button type="button" class="p-back-page" 
+                            onclick="location.href='recruitment.html'">
+                            <i class="fa-solid fa-arrow-left-long fa-2x"></i></button>
+                        </div>
                         <div class="post-box">
 
                             <div class="post-title"> 
                                 <span class="tag tag-blue">Crew</span>
-                                <h2 class="postbox-title">스트레칭 및 런닝</h2> 
+                                <h2 class="postbox-title">트랙 훈련</h2>
+                            </div>
                                 <ul class="postbox-title-info">
-                                    <li class="postbox-title-date">
-                                        <i class="fa-solid fa-people-group"></i>
+                                    <li>
+                                        <i class="fa-regular fa-calendar-days"></i>
                                         2024. 10. 15.
                                     </li>
                                     <li class="postbox-title-author">
                                         <i class="fa-solid fa-user"></i>
-                                        고길동
+                                        안양기
                                     </li>
                                 </ul>
+                            </div>
                                 <figure class="featured-image">
-                                    <img src="./img/stretching.jpg" alt="crew featured-image">
+                                    <img src="./img/drinks-2578446_640.jpg" alt="crew featured-image">
                                 </figure>
                                 <article class="post-content">
-                                    <h2>스트레칭 및 런닝모집 개요</h2>
-                                    <p>한강공원에서 모집을 진행하고 있습니다. 함께 운동하며 건강한 생활을 추구하는 여러분을 환영합니다!</p>
+                                    <h2>트랙 훈련 모집 개요</h2>
+                                    <p> 올림픽공원에서 모집을 진행하고 있습니다. 이번 트랙 훈련은 다양한 레벨의 주자들이 함께 참여하여, 서로의 기술을 발전시키고 건강한 생활을 추구하는 좋은 기회를 제공합니다. 
+                                        전문 코치가 함께 하여 올바른 훈련 방법과 영양 관리에 대한 조언도 받을 수 있습니다. 모든 연령대와 능력의 주자들을 환영합니다!</p>
+                                    
                                     <h2>모집 상세 정보</h2>
-                                    <p>모집 일자: 2024년 10월 15일<br>장소: 한강공원<br>참가비: 5000원</p>
+                                    <p>모집 일자: 2024년 10월 15일<br>장소: 올림픽공원<br>참가비: 20000원<br>훈련 시간: 매주 화요일과 목요일, 오후 7시부터 9시까지<br>신청 방법: 웹사이트를 통해 신청서를 작성해 주세요.</p>
+                                    
+                                    <blockquote>운동은 몸을 강하게 만들 뿐만 아니라, 마음을 평온하게 해줍니다. 그리고 훈련이 끝난 후에는 시원한 맥주 한잔과 함께 오늘의 노고를 나누며 새로운 친구도 만나보세요! 함께 뛰고, 함께 즐기는 시간을 가져보세요!</blockquote>
+                                    
 
-                                    <blockquote>함께 즐겁게 운동합시다!</blockquote>
                                 </article>
 
                                 <div class="p-btns">
-                                    <button type="button" class="p-edit" onclick="location.href='honeytip-postedit.html'">수정</button>
+                                    <button type="button" class="p-edit">수정</button>
                                     <button type="button" class="p-delete">삭제</button>
                                     <button id="modal" type="button" class="p-report">신고</button>
                                 </div>
@@ -100,6 +111,12 @@
                     </div>
                 </div>
             </div>
+            <div class="top1">
+                <button id="topBtn" class="move-btn" type="button" onclick="move_honey1()">
+                    <i class="fa-solid fa-angles-up"></i>
+                </button>
+            </div>
+        </div>
         </div>
     </main>
 

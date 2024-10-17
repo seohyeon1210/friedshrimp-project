@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>서울 크루모집 상세페이지</title> <!-- 페이지 제목 변경 -->
+    <title>크루모집 상세페이지</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" />
-    <link rel="stylesheet" href="./css/recruitment-Description.css" />
+    <link rel="stylesheet" href="./recruitment-Description.css" />
     <link rel="stylesheet" href="/css/navstyle.css"> 
 </head>
 
@@ -55,48 +55,51 @@
     <main>
         <div class="container">
             <div class="title">
-                <h1>서울 크루모집</h1> 
+                <h1>해안도로 런닝</h1> 
                 <hr>
             </div>
 
-            <div class="post-container">
-                <div class="postBox">
-                    <div class="post">
-                        <div>
-                            <button type="button" class="p-back" 
+            <div class="post-container1">
+                <div class="postBox1">
+                    <div class="post1">
+                        <div class="back">
+                            <button type="button" class="p-back-page" 
                             onclick="location.href='recruitment.html'">
                             <i class="fa-solid fa-arrow-left-long fa-2x"></i></button>
                         </div>
                         <div class="post-box">
+
                             <div class="post-title"> 
                                 <span class="tag tag-blue">Crew</span>
-
-                                <h2 class="postbox-title">서울 크루모집</h2> 
+                                <h2 class="postbox-title">해안도로 런닝</h2>
+                            </div>
                                 <ul class="postbox-title-info">
-                                    <li class="postbox-title-date">
+                                    <li>
                                         <i class="fa-regular fa-calendar-days"></i>
                                         2024. 10. 15.
                                     </li>
                                     <li class="postbox-title-author">
                                         <i class="fa-solid fa-user"></i>
-                                        백상현
+                                        이슬기
                                     </li>
                                 </ul>
+                            </div>
                                 <figure class="featured-image">
-                                    <img src="./img/3.jpg" alt="crew featured-image">
+                                    <img src="./img/road.jpg" alt="crew featured-image">
                                 </figure>
                                 <article class="post-content">
-                                    <h2>서울 크루모집 개요</h2>
-                                    <p>도심 속에서 크루들과 함께 달려보세요. 건강과 즐거움을 함께 누릴 수 있는 사람들을
-                                        서울에서 크루모집을 진행하고 있습니다. 함께 운동하며 건강한 생활을 추구하는 여러분을 환영합니다!</p>
+                                    <h2>해안도로 런닝</h2>
+                                    <p>해안도로 런닝을 진행하고 있습니다.  아침 경치보면서 함께 달려봐요 상쾌한 하루를 시작해봅시다!!
+                                        전 운동하며 건강한 생활을 추구하는 여러분을 환영합니다!</p>
                                     <h2>모집 상세 정보</h2>
-                                    <p>모집 일자: 2024년 10월 15일<br>장소: 서울 일대<br>참가비: 5000원</p>
+                                    <p>모집 일자: 2024년 10월 15일<br>장소: 해안도로 런닝<br>참가비: 5000원</p>
 
-                                    <blockquote>함께 즐겁게 운동합시다!</blockquote>
+                                    <blockquote>같이 해안도로를 달립시다!</blockquote>
+            
                                 </article>
 
                                 <div class="p-btns">
-                                    <button type="button" class="p-edit" onclick="location.href='honeytip-postedit.html'">수정</button>
+                                    <button type="button" class="p-edit">수정</button>
                                     <button type="button" class="p-delete">삭제</button>
                                     <button id="modal" type="button" class="p-report">신고</button>
                                 </div>
@@ -106,6 +109,12 @@
                     </div>
                 </div>
             </div>
+            <div class="top1">
+                <button id="topBtn" class="move-btn" type="button" onclick="move_honey1()">
+                    <i class="fa-solid fa-angles-up"></i>
+                </button>
+            </div>
+        </div>
         </div>
     </main>
 

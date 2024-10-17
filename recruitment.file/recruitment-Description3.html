@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>서울 크루모집 상세페이지</title> <!-- 페이지 제목 변경 -->
+    <title>크루모집 상세페이지</title> 
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" />
-    <link rel="stylesheet" href="./css/recruitment-Description.css" />
-    <link rel="stylesheet" href="./css/navstyle.css"> 
+    <link rel="stylesheet" href="./recruitment-Description.css" />
+    <link rel="stylesheet" href="/css/navstyle.css"> 
 </head>
 
 <body>
@@ -55,42 +55,50 @@
     <main>
         <div class="container">
             <div class="title">
-                <h1>아산역 런닝모집</h1> 
+                <h1>산악회</h1> 
                 <hr>
             </div>
 
-            <div class="post-container"> 
-                <div class="postBox">
-                    <div class="post">
+            <div class="post-container1">
+                <div class="postBox1">
+                    <div class="post1">
+                        <div class="back">
+                            <button type="button" class="p-back-page" 
+                            onclick="location.href='recruitment.html'">
+                            <i class="fa-solid fa-arrow-left-long fa-2x"></i></button>
+                        </div>
                         <div class="post-box">
 
                             <div class="post-title"> 
-                            <span class="tag tag-blue">Crew</span>
-                                <h2 class="postbox-title">아산역 런닝</h2> 
+                                <span class="tag tag-blue">Crew</span>
+                                <h2 class="postbox-title">산악회 모집</h2>
+                            </div>
                                 <ul class="postbox-title-info">
-                                    <li class="postbox-title-date">
+                                    <li>
                                         <i class="fa-regular fa-calendar-days"></i>
                                         2024. 10. 15.
                                     </li>
                                     <li class="postbox-title-author">
                                         <i class="fa-solid fa-user"></i>
-                                        이운용
+                                        안은영
                                     </li>
                                 </ul>
+                            </div>
                                 <figure class="featured-image">
-                                    <img src="./img/2.jpg" alt="crew featured-image">
+                                    <img src="./img/mount.webp" alt="crew featured-image">
                                 </figure>
                                 <article class="post-content">
-                                    <h2>아산역 런닝모집 개요</h2>
-                                    <p>아산역에서 크루모집을 진행하고 있습니다. 함께 운동하며 건강한 생활을 추구하는 여러분을 환영합니다!</p>
-                                    <h2>모집 상세 정보</h2>
-                                    <p>모집 일자: 2024년 10월 15일<br>장소: 호수 공원<br>참가비: 5000원</p>
+                                    <h2>산악 런닝 모집</h2>
+                                    <p>지리산에서의 산악 런닝 모집에 참여하세요! 평소 산타기를 즐기시거나 트레킹을 자주 하시는 분들을 위한 프로그램입니다. 지리산의 아름다운 자연 속에서 함께 운동하며 건강한 생활을 추구하는 여러분을 환영합니다. 트레킹의 즐거움과 도전의 기회를 통해 몸과 마음이 더욱 강해지는 경험을 하실 수 있습니다!</p>
+                                    
+                                    <h2>모집 상세 내용</h2>
+                                    <p>모집 일자: 2024년 10월 15일<br>장소: 지리산<br>참가비: 10000원<br>훈련 일정: 매주 수요일과 금요일 오전 6시부터 8시까지<br>신청 방법: 프라이드 쉬림프로 연락해서 알려주세요.</p>
+                                    <blockquote>지리산에서의 도전이 여러분을 더욱 강하게 만들 것입니다.</blockquote> 
 
-                                    <blockquote>함께 즐겁게 운동합시다!</blockquote>
                                 </article>
 
                                 <div class="p-btns">
-                                    <button type="button" class="p-edit" onclick="location.href='honeytip-postedit.html'">수정</button>
+                                    <button type="button" class="p-edit">수정</button>
                                     <button type="button" class="p-delete">삭제</button>
                                     <button id="modal" type="button" class="p-report">신고</button>
                                 </div>
@@ -100,6 +108,12 @@
                     </div>
                 </div>
             </div>
+            <div class="top1">
+                <button id="topBtn" class="move-btn" type="button" onclick="move_honey1()">
+                    <i class="fa-solid fa-angles-up"></i>
+                </button>
+            </div>
+        </div>
         </div>
     </main>
 
