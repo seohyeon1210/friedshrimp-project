@@ -202,9 +202,14 @@
                             <li><a href="#10">10</a></li>
                         </ul>
                         <a href="#2"><i class="fa-solid fa-chevron-right"></i></a>
+                        <div id="posts-container">
+                            <!-- Your boxes will be displayed here -->
+                        </div>
+                        <div id="no-posts-message" style="display: none;">게시물이 아직 없습니다</div> <!-- 이곳의 display 속성을 변경 -->
                     </nav>
                 </footer>
             </div>
+        </div>
     </main>
             <!-- 크루모집 모달 시작 -->
             <!-- Modal Structure -->
@@ -217,7 +222,7 @@
             <input class="input-number" value="00" type="number" oninput="inputLenFunc()" min="0" max="20"/>                        
             <input class="input-ndtf" type="date" placeholder="날짜" />
             <input class="input-ndtf" type="text" placeholder="시간" maxlength="8" />
-            <input class="input-ndtf" value="5000" type="number" oninput="inputLenFunc()" min="5000" max="50000" step="5000"/>
+            <input class="input-ndtf" id="numberInput" value="5000" type="number" oninput="validateInput()" min="5000" max="50000" step="5000" />
         </div>
         <textarea class="input3" id="details" rows="4" placeholder="상세페이지 입력칸 최대 150글자" maxlength="150"></textarea>
         
@@ -245,12 +250,9 @@
 
 <!-- 크루모집 모달 끝 -->
 
-<script
-            src="https://kit.fontawesome.com/1e52e7745d.js"
-            crossorigin="anonymous"
-        ></script>
-  <script src="hover.js"></script>
-  <script src="upload.php"></script>
-  <script src="navscript.js"></script>
-    </body>
+        <script src="https://kit.fontawesome.com/1e52e7745d.js"crossorigin="anonymous"></script>
+        <script src="hover.js"></script>
+        <script src="upload.php"></script>
+        <script src="navscript.js"></script>
+    </body> 
 </html>

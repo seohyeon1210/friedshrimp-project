@@ -1,25 +1,55 @@
-// Function to open the recruitment modal
+function validateInput() {
+    const input = document.getElementById('numberInput');
+    const value = input.value;
+
+    // Check if the value is more than 5 digits
+    if (value.length > 5) {
+        // Set the value to the first 5 digits
+        input.value = value.slice(0, 5);
+    }
+
+    // Check if the value exceeds the max limit
+    const max = input.getAttribute('max');
+    if (Number(input.value) > Number(max)) {
+        input.value = max; // Set value to max if exceeded
+    }
+}
+
+// Function to open a modal by id
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'block';
+}
+
+// Function to close a modal by id
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none';
+}
+
+// Open the recruitment modal
 function openRecruitmentModal() {
-    const modal = document.getElementById('myDialog');
-    modal.showModal(); 
+    openModal('myDialog');
 }
 
-// Function to close the detail dialog modal
+// Close the detail dialog modal
 function closeDetailDialog() {
-    const modal = document.getElementById('myDialog');
-    modal.close(); 
+    closeModal('myDialog');
 }
 
-// Open the report modal when 신고 is clicked
+// Open the report modal
 function openReportModal() {
-    const modal = document.getElementById('honey_Rmodal');
-    modal.style.display = 'block'; // Show the modal
+    openModal('honey_Rmodal');
 }
 
 // Close the report modal
 function rModal_exit() {
-    const modal = document.getElementById('honey_Rmodal');
-    modal.style.display = 'none'; // Hide the modal
+    closeModal('honey_Rmodal');
+}
+
+// Close the report modal
+function rModal_exit() {
+    closeModal('honey_Rmodal');
 }
 
 // Handle file upload and image preview
@@ -28,7 +58,6 @@ function handleFiles(files) {
     const sizeLimit = 2 * 1024 * 1024; // 2MB limit
 
     if (file) {
-        // Check file size
         if (file.size > sizeLimit) {
             alert("파일 크기가 2MB를 초과할 수 없습니다.");
             return;
@@ -36,14 +65,13 @@ function handleFiles(files) {
 
         const reader = new FileReader();
         reader.onload = function(e) {
-            const previewImage = document.getElementById('previewImage');
-            previewImage.src = e.target.result;
-            previewImage.style.display = 'block'; // Show the preview image
+            document.getElementById('previewImage').src = e.target.result;
+            document.getElementById('previewImage').style.display = 'block'; // Show the preview image
 
-            // Update upload UI
-            document.getElementById('uploadIcon').style.display = 'none'; // Hide upload icon
-            document.getElementById('uploadText').style.display = 'none'; // Hide upload text
-            document.getElementById('sizeInfo').style.display = 'none'; // Hide size info
+            // Hide upload UI elements
+            document.getElementById('uploadIcon').style.display = 'none';
+            document.getElementById('uploadText').style.display = 'none';
+            document.getElementById('sizeInfo').style.display = 'none';
         };
         reader.readAsDataURL(file); // Read the image file
     }
@@ -51,20 +79,11 @@ function handleFiles(files) {
 
 // Save and close the modal
 function saveAndCloseModal() {
-    // Perform any save operations if needed
-
-    // Close the modal after saving
-    closeDetailDialog(); 
+    // Perform save operations here if necessary
+    closeDetailDialog();
 }
 
-// Close the detail dialog modal
-function closeDetailDialog() {
-    const modal = document.getElementById('myDialog');
-    modal.close(); 
-}
-
-
-// Ensure input value does not exceed maximum
+// Ensure input value does not exceed the maximum value
 function inputLenFunc() {
     const inputs = document.querySelectorAll('.input-number');
     inputs.forEach(input => {
@@ -75,19 +94,18 @@ function inputLenFunc() {
     });
 }
 
-// Search functionality to filter cards
+// Search functionality to filter cards based on user input
 function filterCards() {
-    const input = document.getElementById('searchInput');
-    const filter = input.value.toLowerCase(); // Convert input to lowercase
-    const cards = document.querySelectorAll('.card'); // Select all card elements
+    const filter = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
 
     cards.forEach(card => {
-        const title = card.getAttribute('data-title').toLowerCase(); // Card title
-        const date = card.querySelector('.card-body p:nth-of-type(1)').textContent.toLowerCase(); // Date
-        const fee = card.querySelector('.card-body p:nth-of-type(3)').textContent.toLowerCase(); // Fee
-        const location = card.querySelector('.card-body p:nth-of-type(2)').textContent.toLowerCase(); // Location
+        const title = card.getAttribute('data-title').toLowerCase();
+        const date = card.querySelector('.card-body p:nth-of-type(1)').textContent.toLowerCase();
+        const fee = card.querySelector('.card-body p:nth-of-type(3)').textContent.toLowerCase();
+        const location = card.querySelector('.card-body p:nth-of-type(2)').textContent.toLowerCase();
 
-        // Show card if filter matches
+        // Toggle visibility based on search criteria
         if (title.includes(filter) || date.includes(filter) || fee.includes(filter) || location.includes(filter)) {
             card.style.display = ""; // Show card
         } else {
@@ -96,22 +114,90 @@ function filterCards() {
     });
 }
 
-// Smooth scroll to top
-function move_honey1() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+// Open/close modals for edit and delete actions
+document.querySelector(".p-edit").addEventListener("click", () => openModal('honey_Emodal1'));
+document.getElementById("exitEBtnn").addEventListener("click", () => closeModal('honey_Emodal1'));
+document.querySelector(".p-delete").addEventListener("click", () => openModal('honey_Dmodal1'));
+document.getElementById("exitDBtnn").addEventListener("click", () => closeModal('honey_Dmodal1'));
+
+// Save changes in edit modal
+function edit_save() {
+    alert("저장되었습니다.");
+    closeModal('honey_Emodal1');
 }
 
-
-// Open the report modal and handle the report logic
-function openReportModal() {
-    // Show the report badge
-    const reportBadge = document.getElementById('reportBadge');
-    reportBadge.style.display = 'block'; // Display the "신고된 게시물" badge
-
-    // Hide the report button
-    const reportBtn = document.getElementById('reportBtn');
-    reportBtn.style.display = 'none'; // Hide the 신고 button
-
-    // Optionally, you can display a modal or alert to confirm the report action
-    alert("게시물이 신고되었습니다.");
+// Confirm delete action
+function delete_accept() {
+    alert("삭제되었습니다.");
+    closeModal('honey_Dmodal1');
 }
+function dModal_exit() {
+    closeModal('honey_Dmodal1');
+}
+
+function confirmReport() {
+    rModal_exit(); // 신고 모달 닫기
+     // 신고가 접수되었다는 알림창 표시
+     alert("신고가 접수되었습니다!"); 
+
+    // 신고 버튼 숨기기
+    document.getElementById("reportBtn").style.display = "none"; 
+    // 신고 메시지 표시
+    document.getElementById("reportMessage").style.display = "block"; 
+    // 신고 배지 표시
+    document.getElementById("reportBadge").style.display = "block"; 
+}
+
+document.querySelectorAll('.pagebar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
+
+        const page = this.getAttribute('href').substring(1); // Get the page number
+        const postsContainer = document.getElementById('posts-container');
+        const noPostsMessage = document.getElementById('no-posts-message');
+
+        if (page === "2") {
+            // Hide the posts and show the message for page 2
+            postsContainer.style.display = 'none';
+            noPostsMessage.style.display = 'block';
+        } else {
+            // Show posts for other pages (update this logic as needed)
+            postsContainer.style.display = 'block';
+            noPostsMessage.style.display = 'none';
+            // You can add logic here to display the relevant posts for the clicked page
+        }
+    });
+});
+document.querySelectorAll('.pagebar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
+
+        const page = this.getAttribute('href').substring(1); // Get the page number
+        const postsContainer = document.getElementById('posts-container');
+        const noPostsMessage = document.getElementById('no-posts-message');
+
+        // Logic to determine if there are posts for the selected page
+        let hasPosts = false; // Change this based on your logic or data
+
+        if (page === "1") {
+            hasPosts = true; // Assuming page 1 has posts
+            // Add code to display posts for page 1
+        } else if (page === "2") {
+            // Assuming page 2 has no posts
+            hasPosts = false;
+        } else {
+            // Logic for other pages can be added here
+        }
+
+        if (hasPosts) {
+            postsContainer.style.display = 'block'; // Show posts
+            noPostsMessage.style.display = 'none'; // Hide no posts message
+            // Add code to populate the postsContainer with posts
+        } else {
+            postsContainer.style.display = 'none'; // Hide posts
+            noPostsMessage.style.display = 'block'; // Show no posts message
+        }
+    });
+});
+
+
