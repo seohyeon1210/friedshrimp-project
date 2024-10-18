@@ -348,7 +348,6 @@
     width: 100%; /* 부모 요소의 너비에 맞춤 */
     height: 100%; /* 부모 요소의 높이에 맞춤 */
     object-fit: cover;
-    display: none; /* 기본적으로 이미지를 숨김 */
 }
 
 
@@ -490,7 +489,7 @@
 }
 
 
-.adslides {
+.hnslides {
     position: relative;
     display: flex;
     height: 350px;
@@ -498,24 +497,23 @@
     transition: transform 0.5s ease;
 }
 
-.adslide {
+.hnslide {
     flex-shrink: 0;
     height: 350px;
     width: 358px;
     
 }
 /* 각 슬라이드 배경색 설정 */
-.adslide1 {
+.hnslide1 {
     background-color: white; /* 첫 번째 슬라이드 배경색 설정 */
-    border-radius: 1em;
 }
 
-.adslide2 {
+.hnslide2 {
     background-color: white;
 
 }
 
-.adslide3 {
+.hnslide3 {
     background-color: white;
 
 }
