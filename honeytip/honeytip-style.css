@@ -716,7 +716,8 @@ a{
     color: #FFF;
     line-height: 150%;
     position: relative;
-    font-size: 24px;
+    font-size: 20px;
+    cursor: pointer;
     display: none;
 }
 

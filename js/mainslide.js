@@ -25,8 +25,8 @@ document.querySelector('.arrow.right').addEventListener('click', () => clearInte
 
 
 let currentSlide2 = 0;
-const slides2 = document.querySelector('.adslides');
-const totalSlides2 = document.querySelectorAll('.adslide').length;
+const slides2 = document.querySelector('.hnslides');
+const totalSlides2 = document.querySelectorAll('.hnslide').length;
 
 let autoSlide2 = setInterval(nextSlide2, 2000); // 3초마다 다음 슬라이드로 전환
 
